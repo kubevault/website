@@ -6,39 +6,11 @@ disableKinds:
   - taxonomyTerm
 menu:
   main:
-    - name: "Database"
-      identifier: database
-      weight: 15
-      url: https://kubedb.com/docs/latest/setup/install/
     - name: "Documentation"
       weight: 20
     - name: "Community"
       identifier: community
       weight: 25
-    - name: Elasticsearch
-      identifier: elasticsearch
-      parent: database
-      weight: 10
-    - name: Memcached
-      identifier: memcached
-      parent: database
-      weight: 20
-    - name: MongoDB
-      identifier: mongodb
-      parent: database
-      weight: 30
-    - name: MySQL
-      identifier: mysql
-      parent: database
-      weight: 40
-    - name: PostgreSQL
-      identifier: postgres
-      parent: database
-      weight: 50
-    - name: Redis
-      identifier: redis
-      parent: database
-      weight: 60
     - name: GitHub
       identifier: github
       parent: community
