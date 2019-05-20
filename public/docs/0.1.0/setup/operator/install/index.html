@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2D9AED" />
+    <title>KubeDB Home</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    
+
+    
+    
+
+
+
+
+
+<header>
+  
+  <div class="header-bottom-area header-area documentation-page" id="header">
+    <div class="container section">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./../index.html">
+            <img src="/assets/images/logo-color-kube.png" alt="" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="acNav"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="acNav" class="navbar-menu main-menu">
+          <div class="navbar-end">
+            
+            <div class="navbar-start">
+              <a href="./../pricing/index.html" class="navbar-item">
+                Commercial Support
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Database
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Item-1
+                  </a>
+                  <a class="navbar-item">
+                    Item-2
+                  </a>
+                  <a class="navbar-item">
+                    Item-3
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item">
+                    Item-4
+                  </a>
+                </div>
+              </div>
+
+              <a href="../documentations/welcome.html" class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                v 0.110
+              </a>
+              <a class="navbar-item">
+                Community
+              </a>
+            </div>
+            
+            <div class="navbar-item">
+              <div class="buttons main-menu-button">
+                <a class="button is-small">
+                  <span><i class="fa fa-github" aria-hidden="true"></i></span
+                  >Star
+                </a>
+                <div class="star-count">
+                  565
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="documentation-menu">
+      <div class="container section">
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            
+            <div class="responsive-menu">
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="acNav3"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            
+            <nav class="documentation-navbar">
+              <div id="acNav3" class="navbar-menu nav-menu main-menu">
+                <div class="navbar-centered">
+                  
+                  <div class="navbar-start">
+                    
+                    
+                      
+                        
+                          <a href="/docs/0.1.0/" class=" navbar-item">Welcome</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/concepts/" class=" navbar-item">Concepts</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/setup/" class=" is-active  navbar-item">Setup</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/guides/" class=" navbar-item">Guides</a>
+                        
+                      
+                        
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                              Reference
+                            </a>
+                            <div class="navbar-dropdown">
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/operator/" class="navbar-item">Vault Operator</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/csi-driver/" class="navbar-item">Vault CSI Driver</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/cli/" class="navbar-item">KubeVault CLI</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/unsealer/" class="navbar-item">Vault Unsealer</a>
+                                
+                              
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</header>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="documentation-area">
+  <div class="container section">
+    <div class="columns">
+      <div class="column is-3">
+        
+        <div class="kd-left-sidebar">
+          <div class="kd-version">
+            
+            <div class="control has-icons-left">
+              <div class="select">
+                
+                
+                <select>
+                  
+                    
+                    
+                      
+                        <option>master</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option  selected >0.1.0</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option >0.2.0</option>
+                      
+                    
+                  
+                </select>
+              </div>
+              <span class="icon is-left">
+                <i class="fa fa-globe"></i>
+              </span>
+            </div>
+          </div>
+
+          
+            
+            
+              
+            
+              
+            
+              
+                
+                  
+
+                  
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                
+              
+            
+              
+            
+              
+            
+          
+
+          
+          <div class="kd-sidebar-menu">
+            
+              
+
+              
+              
+
+                
+              
+
+                
+              
+
+                
+                  
+
+                  
+                  
+
+                    
+                      
+
+
+
+
+  
+
+
+
+<div class="item">
+  <input type="checkbox" id="6ce5a53940e0e1d45b99e39153da1e55-1" >
+  <label for="6ce5a53940e0e1d45b99e39153da1e55-1"><a href="/docs/0.1.0/setup/">Setup</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="6ce5a53940e0e1d45b99e39153da1e55-2" checked>
+  <label for="6ce5a53940e0e1d45b99e39153da1e55-2"><a>Vault Operator</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li class="is-active"><a href="/docs/0.1.0/setup/operator/install/">Install</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/setup/operator/uninstall/">Uninstall</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="6ce5a53940e0e1d45b99e39153da1e55-3" >
+  <label for="6ce5a53940e0e1d45b99e39153da1e55-3"><a>CSI Driver</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/setup/csi-driver/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/setup/csi-driver/install/">Install</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/setup/csi-driver/uninstall/">Uninstall</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="6ce5a53940e0e1d45b99e39153da1e55-4" >
+  <label for="6ce5a53940e0e1d45b99e39153da1e55-4"><a>KubeVault CLI</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/setup/cli/install/">Install</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="6ce5a53940e0e1d45b99e39153da1e55-5" >
+  <label for="6ce5a53940e0e1d45b99e39153da1e55-5"><a>Developer Guide</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/setup/developer-guide/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/setup/developer-guide/release/">Release</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+                  
+
+                
+              
+
+                
+              
+
+                
+              
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        
+      </div>
+      <div class="column is-7">
+        <div class="full-info">
+          
+
+<blockquote>
+<p>New to KubeVault? Please start <a href="/docs/0.1.0/concepts/README">here</a>.</p>
+</blockquote>
+
+<h1 id="installation-guide">Installation Guide</h1>
+
+<p>Vault operator can be installed via a script or as a Helm chart.</p>
+
+<p><ul class="nav nav-tabs" id="installerTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="script-tab" data-toggle="tab" href="#script" role="tab" aria-controls="script" aria-selected="true">Script</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="helm-tab" data-toggle="tab" href="#helm" role="tab" aria-controls="helm" aria-selected="false">Helm</a>
+  </li>
+</ul>
+<div class="tab-content" id="installerTabContent">
+  <div class="tab-pane fade show active" id="script" role="tabpanel" aria-labelledby="script-tab"></p>
+
+<h2 id="using-script">Using Script</h2>
+
+<p>To install Vault operator in your Kubernetes cluster, run the following command:</p>
+
+<pre><code class="language-console">$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh | bash
+</code></pre>
+
+<p>After successful installation, you should have a <code>vault-operator-***</code> pod running in the <code>kube-system</code> namespace.</p>
+
+<pre><code class="language-console">$ kubectl get pods -n kube-system | grep vault-operator
+vault-operator-846d47f489-jrb58       1/1       Running   0          48s
+</code></pre>
+
+<h4 id="customizing-installer">Customizing Installer</h4>
+
+<p>The installer script and associated yaml files can be found in the <a href="https://github.com/kubevault/operator/tree/0.1.0/hack/deploy">/hack/deploy</a> folder. You can see the full list of flags available to installer using <code>-h</code> flag.</p>
+
+<pre><code class="language-console">$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh | bash -s -- -h
+install.sh - install Vault operator
+
+install.sh [options]
+
+options:
+-h, --help                             show brief help
+-n, --namespace=NAMESPACE              specify namespace (default: kube-system)
+    --docker-registry                  docker registry used to pull Vault images (default: kubevault)
+    --image-pull-secret                name of secret used to pull Vault images
+    --run-on-master                    run Vault operator on master
+    --enable-mutating-webhook          enable/disable mutating webhooks for Kubernetes workloads
+    --enable-validating-webhook        enable/disable validating webhooks for Vault CRDs
+    --bypass-validating-webhook-xray   if true, bypasses validating webhook xray checks
+    --enable-status-subresource        if enabled, uses status sub resource for crds
+    --use-kubeapiserver-fqdn-for-aks   if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.com/Azure/AKS/issues/522 (default true)
+    --enable-analytics                 send usage events to Google Analytics (default: true)
+    --uninstall                        uninstall Vault operator
+    --purge                            purges Vault CRD objects and crds
+    --install-catalog                  installs Vault server version catalog (default: all)
+    --monitoring-agent                 specify which monitoring agent to use (default: none)
+    --monitor-operator                 specify whether to monitor Vault operator (default: false)
+    --prometheus-namespace             specify the namespace where Prometheus server is running or will be deployed (default: same namespace as vault-operator)
+    --servicemonitor-label             specify the label for ServiceMonitor crd. Prometheus crd will use this label to select the ServiceMonitor. (default: 'app: vault-operator')
+    --cluster-name                     Name of cluster used in a multi-cluster setup
+</code></pre>
+
+<p>If you would like to run Vault operator pod in <code>master</code> instances, pass the <code>--run-on-master</code> flag:</p>
+
+<pre><code class="language-console">$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh \
+    | bash -s -- --run-on-master
+</code></pre>
+
+<p>Vault operator will be installed in a <code>kube-system</code> namespace by default. If you would like to run Vault operator pod in <code>vault</code> namespace, pass the <code>--namespace=vault</code> flag:</p>
+
+<pre><code class="language-console">$ kubectl create namespace vault
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh \
+    | bash -s -- --namespace=vault [--run-on-master]
+</code></pre>
+
+<p>If you are using a private Docker registry, you need to pull the following images:</p>
+
+<ul>
+<li><a href="https://hub.docker.com/r/kubevault/vault-operator">kubevault/vault-operator</a></li>
+<li><a href="https://hub.docker.com/r/kubevault/vault-unsealer">kubevault/vault-unsealer</a></li>
+<li><a href="https://hub.docker.com/r/kubevault/csi-vault">kubevault/csi-vault</a></li>
+</ul>
+
+<p>To pass the address of your private registry and optionally a image pull secret use flags <code>--docker-registry</code> and <code>--image-pull-secret</code> respectively.</p>
+
+<pre><code class="language-console">$ kubectl create namespace vault
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh \
+    | bash -s -- --docker-registry=MY_REGISTRY [--image-pull-secret=SECRET_NAME]
+</code></pre>
+
+<p>Vault operator implements <a href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#validatingadmissionwebhook">validating admission webhooks</a> to validate KubeVault CRDs and <strong>mutating webhooks</strong> for KubeVault crds. This is enabled by default for Kubernetes 1.9.0 or later releases. To disable this feature, pass the <code>--enable-validating-webhook=false</code> and <code>--enable-mutating-webhook=false</code> flag respectively.</p>
+
+<pre><code class="language-console">$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh \
+    | bash -s -- --enable-validating-webhook=false --enable-mutating-webhook=false
+</code></pre>
+
+<p></div>
+<div class="tab-pane fade" id="helm" role="tabpanel" aria-labelledby="helm-tab"></p>
+
+<h2 id="using-helm">Using Helm</h2>
+
+<p>Vault operator can be installed via <a href="https://helm.sh/">Helm</a> using the <a href="https://github.com/kubevault/operator/tree/0.1.0/chart/vault-operator">chart</a> from <a href="https://github.com/appscode/charts">AppsCode Charts Repository</a>. To install the chart with the release name <code>my-release</code>:</p>
+
+<pre><code class="language-console">$ helm repo add appscode https://charts.appscode.com/stable/
+$ helm repo update
+$ helm search appscode/vault
+NAME                    CHART VERSION APP VERSION   DESCRIPTION
+appscode/vault-operator 0.1.0         0.1.0         Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+appscode/vault-catalog  0.1.0         0.1.0         Vault Catalog by AppsCode - Catalog for vault versions
+
+# Step 1: Install vault-operator chart
+$ helm install appscode/vault-operator --name vault-operator --version 0.1.0 \
+  --namespace kube-system
+
+# Step 2: wait until crds are registered
+$ kubectl get crds -l app=vault -w
+NAME                                        AGE
+vaultservers.kubevault.com                  12s
+vaultserverversions.catalog.kubevault.com    8s
+
+# Step 3: Install catalog of Vault versions
+$ helm install appscode/vault-catalog --name vault-catalog
+
+# Step 3(a): Install catalog of Vault versions
+$ helm install appscode/vault-catalog --name vault-catalog --version 0.1.0 \
+  --namespace kube-system
+
+# Step 3(b): Or, if previously installed, upgrade catalog of Vault versions
+$ helm upgrade vault-catalog appscode/vault-catalog --version 0.1.0 \
+  --namespace kube-system
+</code></pre>
+
+<p>To see the detailed configuration options, visit <a href="https://github.com/kubevault/operator/tree/master/chart/vault-operator">here</a>.</p>
+
+<p></div></p>
+
+<h3 id="installing-in-gke-cluster">Installing in GKE Cluster</h3>
+
+<p>If you are installing Vault operator on a GKE cluster, you will need cluster admin permissions to install Vault operator. Run the following command to grant admin permision to the cluster.</p>
+
+<pre><code class="language-console">$ kubectl create clusterrolebinding &quot;cluster-admin-$(whoami)&quot; \
+  --clusterrole=cluster-admin \
+  --user=&quot;$(gcloud config get-value core/account)&quot;
+</code></pre>
+
+<h2 id="verify-installation">Verify installation</h2>
+
+<p>To check if Vault operator pods have started, run the following command:</p>
+
+<pre><code class="language-console">$ kubectl get pods --all-namespaces -l app=vault-operator --watch
+
+NAMESPACE     NAME                              READY   STATUS    RESTARTS   AGE
+kube-system   vault-operator-746d568685-m2w65   1/1     Running   0          5m44s
+</code></pre>
+
+<p>Once the operator pods are running, you can cancel the above command by typing <code>Ctrl+C</code>.</p>
+
+<p>Now, to confirm CRD groups have been registered by the operator, run the following command:</p>
+
+<pre><code class="language-console">$ kubectl get crd -l app=vault
+
+NAME                                        CREATED AT
+awsaccesskeyrequests.engine.kubevault.com   2019-01-08T05:57:21Z
+awsroles.engine.kubevault.com               2019-01-08T05:57:21Z
+vaultpolicies.policy.kubevault.com          2019-01-08T05:57:21Z
+vaultpolicybindings.policy.kubevault.com    2019-01-08T05:57:21Z
+vaultservers.kubevault.com                  2019-01-08T05:57:17Z
+vaultserverversions.catalog.kubevault.com   2019-01-08T05:57:21Z
+
+</code></pre>
+
+<p>Now, you are ready to <a href="/docs/0.1.0/guides/README">deploy and manage Vault</a> using Vault operator.</p>
+
+<h2 id="configuring-rbac">Configuring RBAC</h2>
+
+<p>Vault operator creates multiple CRDs. Vault operator installer will create 2 user facing cluster roles:</p>
+
+<table>
+<thead>
+<tr>
+<th>ClusterRole</th>
+<th>Aggregates To</th>
+<th>Desription</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>kubevault:core:admin</td>
+<td>admin</td>
+<td>Allows admin access to Vault operator CRDs, intended to be granted within a namespace using a RoleBinding.</td>
+</tr>
+
+<tr>
+<td>kubevault:core:edit</td>
+<td>admin, edit</td>
+<td>Allows edit access to Vault operator CRDs, intended to be granted within a namespace using a RoleBinding.</td>
+</tr>
+
+<tr>
+<td>kubevault:core:view</td>
+<td>view</td>
+<td>Allows read-only access to Vault operator CRDs, intended to be granted within a namespace using a RoleBinding.</td>
+</tr>
+</tbody>
+</table>
+
+<p>These user facing roles supports <a href="https://kubernetes.io/docs/admin/authorization/rbac/#aggregated-clusterroles">ClusterRole Aggregation</a> feature in Kubernetes 1.9 or later clusters.</p>
+
+<h2 id="using-kubectl-for-vaultserver">Using kubectl for VaultServer</h2>
+
+<pre><code class="language-console"># List all VaultServer objects
+$ kubectl get vaultserver --all-namespaces
+
+# List VaultServer objects for a namespace
+$ kubectl get vaultserver -n &lt;namespace&gt;
+
+# Get VaultServer YAML
+$ kubectl get vaultserver -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe VaultServer. Very useful to debug problems.
+$ kubectl describe vaultserver -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-vaultpolicy">Using kubectl for VaultPolicy</h2>
+
+<pre><code class="language-console"># List all VaultPolicy objects
+$ kubectl get vaultpolicy --all-namespaces
+
+# List VaultPolicy objects for a namespace
+$ kubectl get vaultpolicy -n &lt;namespace&gt;
+
+# Get VaultPolicy YAML
+$ kubectl get vaultpolicy -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe VaultPolicy. Very useful to debug problems.
+$ kubectl describe vaultpolicy -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-vaultpolicybinding">Using kubectl for VaultPolicyBinding</h2>
+
+<pre><code class="language-console"># List all VaultPolicyBinding objects
+$ kubectl get vaultpolicybinding --all-namespaces
+
+# List VaultPolicyBinding objects for a namespace
+$ kubectl get vaultpolicybinding -n &lt;namespace&gt;
+
+# Get VaultPolicyBinding YAML
+$ kubectl get vaultpolicybinding -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe VaultPolicyBinding. Very useful to debug problems.
+$ kubectl describe vaultpolicybinding -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-awsrole">Using kubectl for AWSRole</h2>
+
+<pre><code class="language-console"># List all AWSRole objects
+$ kubectl get awsrole --all-namespaces
+
+# List AWSRole objects for a namespace
+$ kubectl get awsrole -n &lt;namespace&gt;
+
+# Get AWSRole YAML
+$ kubectl get awsrole -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe AWSRole. Very useful to debug problems.
+$ kubectl describe awsrole -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-awsaccesskeyrequest">Using kubectl for AWSAccessKeyRequest</h2>
+
+<pre><code class="language-console"># List all AWSAccessKeyRequest objects
+$ kubectl get awsaccesskeyrequest --all-namespaces
+
+# List AWSAccessKeyRequest objects for a namespace
+$ kubectl get awsaccesskeyrequest -n &lt;namespace&gt;
+
+# Get AWSAccessKeyRequest YAML
+$ kubectl get awsaccesskeyrequest -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe AWSAccessKeyRequest. Very useful to debug problems.
+$ kubectl describe awsaccesskeyrequest -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-databaseaccessrequest">Using kubectl for DatabaseAccessRequest</h2>
+
+<pre><code class="language-console"># List all DatabaseAccessRequest objects
+$ kubectl get databaseaccessrequest --all-namespaces
+
+# List DatabaseAccessRequest objects for a namespace
+$ kubectl get databaseaccessrequest -n &lt;namespace&gt;
+
+# Get DatabaseAccessRequest YAML
+$ kubectl get databaseaccessrequest -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe DatabaseAccessRequest. Very useful to debug problems.
+$ kubectl describe databaseaccessrequest -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-postgresrole">Using kubectl for PostgresRole</h2>
+
+<pre><code class="language-console"># List all PostgresRole objects
+$ kubectl get postgresrole --all-namespaces
+
+# List PostgresRole objects for a namespace
+$ kubectl get postgresrole -n &lt;namespace&gt;
+
+# Get PostgresRole YAML
+$ kubectl get postgresrole -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe PostgresRole. Very useful to debug problems.
+$ kubectl describe postgresrole -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-mysqlrole">Using kubectl for MySQLRole</h2>
+
+<pre><code class="language-console"># List all MySQLRole objects
+$ kubectl get mysqlrole --all-namespaces
+
+# List MySQLRole objects for a namespace
+$ kubectl get mysqlrole -n &lt;namespace&gt;
+
+# Get MySQLRole YAML
+$ kubectl get mysqlrole -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe MySQLRole. Very useful to debug problems.
+$ kubectl describe mysqlrole -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="using-kubectl-for-mongodbrole">Using kubectl for MongoDBRole</h2>
+
+<pre><code class="language-console"># List all MongoDBRole objects
+$ kubectl get mongodbrole --all-namespaces
+
+# List MongoDBRole objects for a namespace
+$ kubectl get mongodbrole -n &lt;namespace&gt;
+
+# Get MongoDBRole YAML
+$ kubectl get mongodbrole -n &lt;namespace&gt; &lt;name&gt; -o yaml
+
+# Describe MongoDBRole. Very useful to debug problems.
+$ kubectl describe mongodbrole -n &lt;namespace&gt; &lt;name&gt;
+</code></pre>
+
+<h2 id="detect-vault-operator-version">Detect Vault operator version</h2>
+
+<p>To detect Vault operator version, exec into the operator pod and run <code>vault version</code> command.</p>
+
+<pre><code class="language-console">$ POD_NAMESPACE=kube-system
+$ POD_NAME=$(kubectl get pods -n $POD_NAMESPACE -l app=vault-operator -o jsonpath={.items[0].metadata.name})
+$ kubectl exec -it $POD_NAME -n $POD_NAMESPACE vault-operator version
+
+Version = 0.1.0
+VersionStrategy = tag
+Os = alpine
+Arch = amd64
+CommitHash = 85b0f16ab1b915633e968aac0ee23f877808ef49
+GitBranch = release-0.5
+GitTag = 0.1.0
+CommitTimestamp = 2017-10-10T05:24:23
+
+</code></pre>
+
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="right-sidebar-area">
+          
+          <div class="search-area">
+            <form action="#">
+              <input type="text" placeholder="Search..." />
+              <button class="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          
+
+          
+          <div class="tbl-of-contents">
+            <h4>What's on this Page</h4>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#installation-guide">Installation Guide</a>
+<ul>
+<li><a href="#using-script">Using Script</a>
+<ul>
+<li>
+<ul>
+<li><a href="#customizing-installer">Customizing Installer</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#using-helm">Using Helm</a>
+<ul>
+<li><a href="#installing-in-gke-cluster">Installing in GKE Cluster</a></li>
+</ul></li>
+<li><a href="#verify-installation">Verify installation</a></li>
+<li><a href="#configuring-rbac">Configuring RBAC</a></li>
+<li><a href="#using-kubectl-for-vaultserver">Using kubectl for VaultServer</a></li>
+<li><a href="#using-kubectl-for-vaultpolicy">Using kubectl for VaultPolicy</a></li>
+<li><a href="#using-kubectl-for-vaultpolicybinding">Using kubectl for VaultPolicyBinding</a></li>
+<li><a href="#using-kubectl-for-awsrole">Using kubectl for AWSRole</a></li>
+<li><a href="#using-kubectl-for-awsaccesskeyrequest">Using kubectl for AWSAccessKeyRequest</a></li>
+<li><a href="#using-kubectl-for-databaseaccessrequest">Using kubectl for DatabaseAccessRequest</a></li>
+<li><a href="#using-kubectl-for-postgresrole">Using kubectl for PostgresRole</a></li>
+<li><a href="#using-kubectl-for-mysqlrole">Using kubectl for MySQLRole</a></li>
+<li><a href="#using-kubectl-for-mongodbrole">Using kubectl for MongoDBRole</a></li>
+<li><a href="#detect-vault-operator-version">Detect Vault operator version</a></li>
+</ul></li>
+</ul>
+</nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+    <section class="cta-area section-padding pt-0">
+      <div class="container section">
+        <div class="cta-padding">
+          <div class="columns">
+            <div class="column is-6">
+              
+              <div class="cta-text">
+                <h2>Ready to get Start?</h2>
+                <p>Create a Free Account and refer your friend</p>
+              </div>
+              
+            </div>
+            <div class="column is-6 has-text-right is-mobile">
+              <div class="cta-button d-table">
+                
+                <div class="cta-button-inner d-table-cell">
+                  <a href="#" class="button kd-button kd-primary"
+                    >Try Now for FREE</a
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <footer class="footer-area">
+      <div class="footer-top">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="single-footer-widget">
+                
+                <div class="footer-logo">
+                  <a href="#"
+                    ><img
+                      src="/assets/images/logo-color-appscode.png"
+                      alt=""
+                      class="img"
+                  /></a>
+                </div>
+                
+
+                
+                <div class="subscription-form">
+                  <form action="#">
+                    <label for="email">Subscribe Our Newsletter</label>
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input
+                          class="input"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="info@gmail.com"
+                        />
+                      </div>
+                      <div class="control">
+                        <a class="button kd-primary">
+                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+
+                
+                <div class="contact-information">
+                  <h4>Have any Inquiry?</h4>
+                  <ul class="all-contact-info">
+                    <li>
+                      <a href="callto:+123456789"
+                        ><span
+                          ><i class="fa fa-phone" aria-hidden="true"></i></span
+                        >+123 456 789</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="mailto:appscode@gmail.com"
+                        ><span
+                          ><i
+                            class="fa fa-envelope-o"
+                            aria-hidden="true"
+                          ></i></span
+                        >appscode@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Products</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Voyager</a></li>
+                    <li><a href="#">KubeDB</a></li>
+                    <li><a href="#">Pharmer Stash </a></li>
+                    <li><a href="#">Service Broker</a></li>
+                    <li><a href="#">Kubed</a></li>
+                    <li><a href="#">Guard</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Searchlight</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Offerings</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open source </a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Company</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Seles Inquiry</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Legal</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Service Level Agreement</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <p>All rights reserved © 2018. Appscode, Inc..</p>
+            </div>
+            <div class="column is-4 is-mobile has-text-centered">
+              <div class="footer-inline-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+            <div class="column is-4 is-mobile has-text-right">
+              <div class="socail-link-inline">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

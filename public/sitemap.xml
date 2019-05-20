@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/s3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/s3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsaccesskeyrequest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsaccesskeyrequest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsrole/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsrole/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/azure_key_vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/azure_key_vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/azure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/azure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/aws-iam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/tls/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/token/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/userpass/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/databaseaccessrequest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/eks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/eks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/aks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/aks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/gke/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/gke/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/dynamodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/etcd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/features/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/grafana/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/grafana/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/inmem/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/cli/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/cli/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/external-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/external-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mongodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mongodb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/builtin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/coreos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/swift/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/swift/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/policy-management/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/policy-management/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/postgresql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/postgresrole/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/postgresrole/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/release/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/release/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/pricing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/support/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/support/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/uninstall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/uninstall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/uninstall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/uninstall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/multi-cluster-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/multi-cluster-vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_approve/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_approve/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_deny/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_deny/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/policy-management/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/policy-management/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserverversion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserverversion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicybinding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/what-is-kubevault/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/what-is-kubevault/</loc>
+  </url>
+  
+</urlset>

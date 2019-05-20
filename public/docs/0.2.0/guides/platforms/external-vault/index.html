@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2D9AED" />
+    <title>KubeDB Home</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    
+
+    
+    
+
+
+
+
+
+<header>
+  
+  <div class="header-bottom-area header-area documentation-page" id="header">
+    <div class="container section">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./../index.html">
+            <img src="/assets/images/logo-color-kube.png" alt="" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="acNav"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="acNav" class="navbar-menu main-menu">
+          <div class="navbar-end">
+            
+            <div class="navbar-start">
+              <a href="./../pricing/index.html" class="navbar-item">
+                Commercial Support
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Database
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Item-1
+                  </a>
+                  <a class="navbar-item">
+                    Item-2
+                  </a>
+                  <a class="navbar-item">
+                    Item-3
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item">
+                    Item-4
+                  </a>
+                </div>
+              </div>
+
+              <a href="../documentations/welcome.html" class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                v 0.110
+              </a>
+              <a class="navbar-item">
+                Community
+              </a>
+            </div>
+            
+            <div class="navbar-item">
+              <div class="buttons main-menu-button">
+                <a class="button is-small">
+                  <span><i class="fa fa-github" aria-hidden="true"></i></span
+                  >Star
+                </a>
+                <div class="star-count">
+                  565
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="documentation-menu">
+      <div class="container section">
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            
+            <div class="responsive-menu">
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="acNav3"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            
+            <nav class="documentation-navbar">
+              <div id="acNav3" class="navbar-menu nav-menu main-menu">
+                <div class="navbar-centered">
+                  
+                  <div class="navbar-start">
+                    
+                    
+                      
+                        
+                          <a href="/docs/0.2.0/" class=" navbar-item">Welcome</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/concepts/" class=" navbar-item">Concepts</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/setup/" class=" navbar-item">Setup</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/guides/" class=" is-active  navbar-item">Guides</a>
+                        
+                      
+                        
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                              Reference
+                            </a>
+                            <div class="navbar-dropdown">
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/operator/" class="navbar-item">Vault Operator</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/csi-driver/" class="navbar-item">Vault CSI Driver</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/cli/" class="navbar-item">KubeVault CLI</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/unsealer/" class="navbar-item">Vault Unsealer</a>
+                                
+                              
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</header>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="documentation-area">
+  <div class="container section">
+    <div class="columns">
+      <div class="column is-3">
+        
+        <div class="kd-left-sidebar">
+          <div class="kd-version">
+            
+            <div class="control has-icons-left">
+              <div class="select">
+                
+                
+                <select>
+                  
+                    
+                    
+                      
+                        <option>master</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option >0.1.0</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option  selected >0.2.0</option>
+                      
+                    
+                  
+                </select>
+              </div>
+              <span class="icon is-left">
+                <i class="fa fa-globe"></i>
+              </span>
+            </div>
+          </div>
+
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  
+
+                  
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                
+              
+            
+              
+            
+          
+
+          
+          <div class="kd-sidebar-menu">
+            
+              
+
+              
+              
+
+                
+              
+
+                
+              
+
+                
+              
+
+                
+                  
+
+                  
+                  
+
+                    
+                      
+
+
+
+
+  
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-1" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-1"><a href="/docs/0.2.0/guides/">Guides</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-2" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-2"><a>Secret Engines</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-3" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-3"><a>AWS</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/aws/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/aws/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-4" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-4"><a>Key/Value</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-5" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-5"><a>MongoDB</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-6" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-6"><a>MySQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-7" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-7"><a>PKI</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-8" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-8"><a>PostgreSQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-9" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-9"><a>Policy Management</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/policy-management/overview/">Overview</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-10" checked>
+  <label for="ff4019fb533eafd80ab22698df8a3214-10"><a>Platforms</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/eks/">EKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/aks/">AKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/gke/">GKE</a></li>
+        
+      
+        
+          <li class="is-active"><a href="/docs/0.2.0/guides/platforms/external-vault/">External Vault</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/multi-cluster-vault/">Multi-Cluster</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-11" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-11"><a>Guides Monitoring</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/overview/">Overview</a></li>
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-12" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-12"><a>Vault Server</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/grafana/">Grafana Dashboard</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-13" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-13"><a>CSI Driver</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/coreos/">Prometheus Operator</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="ff4019fb533eafd80ab22698df8a3214-14" >
+  <label for="ff4019fb533eafd80ab22698df8a3214-14"><a>Vault Operator</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/builtin/">Builtin Prometheus</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+                  
+
+                
+              
+
+                
+              
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        
+      </div>
+      <div class="column is-7">
+        <div class="full-info">
+          
+
+<blockquote>
+<p>New to KubeVault? Please start <a href="/docs/0.2.0/concepts/README">here</a>.</p>
+</blockquote>
+
+<h1 id="manage-external-vault-using-vault-operator">Manage External Vault using Vault Operator</h1>
+
+<p>You can manage external Vault (not deployed by Vault operator) by Vault operator. You can do following operations using Vault operator:</p>
+
+<ul>
+<li><p>Manage Vault <a href="https://www.vaultproject.io/docs/concepts/policies.html">policy</a> using <a href="/docs/0.2.0/concepts/policy-crds/vaultpolicy">VaultPolicy</a> and <a href="/docs/0.2.0/concepts/policy-crds/vaultpolicybinding">VaultPolicyBinding</a>. Guides can be found <a href="/docs/0.2.0/guides/policy-management/policy-management">here</a>.</p></li>
+
+<li><p>Manage <a href="https://www.vaultproject.io/docs/secrets/aws/index.html#aws-secrets-engine">AWS secret engine</a> using <a href="/docs/0.2.0/concepts/secret-engine-crds/awsrole">AWSRole</a> and <a href="/docs/0.2.0/concepts/secret-engine-crds/awsaccesskeyrequest">AWSAccessKeyRequest</a>. Guides can be found <a href="/docs/0.2.0/guides/secret-engines/aws/vault-operator">here</a>.</p></li>
+
+<li><p>Manage <a href="https://www.vaultproject.io/api/secret/databases/postgresql.html">PostgreSQL Database secret engine</a> using <a href="/docs/0.2.0/concepts/database-crds/postgresrole">PostgresRole</a> and <a href="/docs/0.2.0/concepts/database-crds/databaseaccessrequest">DatabaseAccessRequest</a>. Guides can be found <a href="/docs/0.2.0/guides/secret-engines/postgres/vault-operator">here</a>.</p></li>
+
+<li><p>Manage <a href="https://www.vaultproject.io/api/secret/databases/mysql-maria.html">MySQL Database secret engine</a> using <a href="/docs/0.2.0/concepts/database-crds/mysql">MySQLRole</a> and <a href="/docs/0.2.0/concepts/database-crds/databaseaccessrequest">DatabaseAccessRequest</a>. Guides can be found <a href="/docs/0.2.0/guides/secret-engines/mysql/vault-operator">here</a>.</p></li>
+
+<li><p>Manage <a href="https://www.vaultproject.io/api/secret/databases/mongodb.html">MongoDB Database secret engine</a> using <a href="/docs/0.2.0/concepts/database-crds/mongodb">MongoDBRole</a> and <a href="/docs/0.2.0/concepts/database-crds/databaseaccessrequest">DatabaseAccessRequest</a>. Guides can be found <a href="/docs/0.2.0/guides/secret-engines/mongodb/vault-operator">here</a>.</p></li>
+</ul>
+
+<p>In this tutorial, we are going to show how we can use Vault operator for Vault which is not provisioned by Vault operator.</p>
+
+<p>We have a Vault running which can be accessible by the address <code>http://vault.default.svc:8200</code> from Kubernetes cluster. Vault operator use <a href="/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding">AppBinding</a> to communicate with Vault. <a href="/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding">AppBinding</a> provides a way of specifying Vault connection information and credential. Following authentication methods are currently supported by Vault operator using AppBinding:</p>
+
+<ul>
+<li><a href="https://www.vaultproject.io/docs/auth/token.html#token-auth-method">Token Auth Method</a></li>
+<li><a href="https://www.vaultproject.io/docs/auth/kubernetes.html">Kubernetes Auth Method</a></li>
+<li><a href="https://www.vaultproject.io/docs/auth/aws.html#iam-auth-method">AWS IAM Auth Method</a></li>
+<li><a href="https://www.vaultproject.io/docs/auth/userpass.html">Userpass Auth Method</a></li>
+<li><a href="https://www.vaultproject.io/docs/auth/cert.html">TLS Certificates Auth Method</a></li>
+</ul>
+
+<p>Vault authentication using AppBinding can be found in <a href="/docs/0.2.0/concepts/vault-server-crds/auth-methods/overview">here</a>.</p>
+
+<p>In this tutorial, we are going to use <a href="https://www.vaultproject.io/docs/auth/kubernetes.html">Kubernetes Auth Method</a>.</p>
+
+<p>Now, we are going to enable and configure <a href="https://www.vaultproject.io/docs/auth/kubernetes.html">Kubenetes auth</a> in Vault.</p>
+
+<ul>
+<li>Create a service account and cluster role bindings that allow that service account to authenticate with the review token API.</li>
+</ul>
+
+<pre><code class="language-console">  $ cat examples/guides/provider/external-vault/token-reviewer-sa.yaml
+  apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: token-reviewer
+    namespace: demo
+
+  $ cat examples/guides/provider/external-vault/token-review-binding.yaml
+  apiVersion: rbac.authorization.k8s.io/v1beta1
+  kind: ClusterRoleBinding
+  metadata:
+    name: role-tokenreview-binding
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:auth-delegator
+  subjects:
+  - kind: ServiceAccount
+    name: token-reviewer
+    namespace: demo⏎
+
+  $ kubectl apply -f examples/guides/provider/external-vault/token-reviewer-sa.yaml
+  serviceaccount/token-reviewer created
+
+  $ kubectl apply -f examples/guides/provider/external-vault/token-review-binding.yaml
+  clusterrolebinding.rbac.authorization.k8s.io/role-tokenreview-binding created
+</code></pre>
+
+<ul>
+<li>Enable Kubernetes auth in Vault.</li>
+</ul>
+
+<pre><code class="language-console">  $ vault auth enable kubernetes
+  Success! Enabled Kubernetes auth method at: kubernetes/
+</code></pre>
+
+<ul>
+<li>Configure Kubernetes auth in Vault.</li>
+</ul>
+
+<pre><code class="language-console">  $ kubectl get sa token-reviewer -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;
+  token-reviewer-token-fvqsv
+
+  $ export SA_JWT_TOKEN=$(kubectl get secret token-reviewer-token-fvqsv -n demo -o jsonpath=&quot;{.data.token}&quot; | base64 --decode; echo)
+
+  $ export SA_CA_CRT=$(kubectl get secret token-reviewer-token-fvqsv -n demo -o jsonpath=&quot;{.data['ca\.crt']}&quot; | base64 --decode; echo)
+
+  $ vault write auth/kubernetes/config \
+      token_reviewer_jwt=&quot;$SA_JWT_TOKEN&quot; \
+      kubernetes_host=&quot;https://192.168.99.100:8443&quot; \
+      kubernetes_ca_cert=&quot;$SA_CA_CRT&quot;
+  Success! Data written to: auth/kubernetes/config
+</code></pre>
+
+<p>We are going to create Vault <a href="https://www.vaultproject.io/docs/concepts/policies.html">policy</a>. It has permission to manage policy and Kubernetes role in Vault.</p>
+
+<pre><code class="language-console">$ cat examples/guides/provider/external-vault/policy-admin.hcl
+path &quot;sys/policy/*&quot; {
+  capabilities = [&quot;create&quot;, &quot;update&quot;, &quot;read&quot;, &quot;delete&quot;, &quot;list&quot;]
+}
+
+path &quot;sys/policy&quot; {
+  capabilities = [&quot;read&quot;, &quot;list&quot;]
+}
+
+path &quot;auth/kubernetes/role&quot; {
+  capabilities = [&quot;read&quot;, &quot;list&quot;]
+}
+
+path &quot;auth/kubernetes/role/*&quot; {
+  capabilities = [&quot;create&quot;, &quot;update&quot;, &quot;read&quot;, &quot;delete&quot;, &quot;list&quot;]
+}
+
+$ vault policy write policy-admin examples/guides/provider/external-vault/policy-admin.hcl
+Success! Uploaded policy: policy-admin
+</code></pre>
+
+<p>We are going to assign the above policy to a service account <code>policy-admin</code> so that we can use that service account to manage policy and Kubernetes role.</p>
+
+<pre><code class="language-console">$ cat examples/guides/provider/external-vault/policy-admin-sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: policy-admin
+  namespace: demo
+
+$ kubectl apply -f examples/guides/provider/external-vault/policy-admin-sa.yaml
+serviceaccount/policy-admin created
+
+$ vault write auth/kubernetes/role/policy-admin-role \
+    bound_service_account_names=policy-admin \
+    bound_service_account_namespaces=demo \
+    policies=policy-admin \
+    ttl=24h
+Success! Data written to: auth/kubernetes/role/policy-admin-role
+</code></pre>
+
+<p>Now, we are going create AppBinding that will contain Vault information. For authentication, service account <code>policy-admin</code> and Kubernetes role <code>policy-admin-role</code> will be used.</p>
+
+<pre><code class="language-console">$ cat examples/guides/provider/external-vault/vault-app.yaml
+apiVersion: appcatalog.appscode.com/v1alpha1
+kind: AppBinding
+metadata:
+  name: vault-app
+  namespace: demo
+spec:
+  clientConfig:
+    url: http://vault.default.svc:8200
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN1RENDQWFDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFOTVFzd0NRWURWUVFERXdKallUQWUKRncweE9ERXlNamN3TkRVNU1qVmFGdzB5T0RFeU1qUXdORFU1TWpWYU1BMHhDekFKQmdOVkJBTVRBbU5oTUlJQgpJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBMVhid2wyQ1NNc2VQTU5RRzhMd3dUVWVOCkI1T05oSTlDNzFtdUoyZEZjTTlUc1VDQnlRRk1weUc5dWFvV3J1ZDhtSWpwMVl3MmVIUW5udmoybXRmWGcrWFcKSThCYkJUaUFKMWxMMFE5MlV0a1BLczlXWEt6dTN0SjJUR1hRRDhhbHZhZ0JrR1ViOFJYaUNqK2pnc1p6TDRvQQpNRWszSU9jS0xnMm9ldFZNQ0hwNktpWTBnQkZiUWdJZ1A1TnFwbksrbU02ZTc1ZW5hWEdBK2V1d09FT0YwV0Z2CmxGQmgzSEY5QlBGdTJKbkZQUlpHVDJKajBRR1FNeUxodEY5Tk1pZTdkQnhiTWhRVitvUXp2d1EvaXk1Q2pndXQKeDc3d29HQ2JtM0o4cXRybUg2Tjl6Tlc3WlR0YTdLd05PTmFoSUFEMSsrQm5rc3JvYi9BYWRKT0tMN2dLYndJRApBUUFCb3lNd0lUQU9CZ05WSFE4QkFmOEVCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBTkJna3Foa2lHCjl3MEJBUXNGQUFPQ0FRRUFXeWFsdUt3Wk1COWtZOEU5WkdJcHJkZFQyZnFTd0lEOUQzVjN5anBlaDVCOUZHN1UKSS8wNmpuRVcyaWpESXNHNkFDZzJKOXdyaSttZ2VIa2Y2WFFNWjFwZHRWeDZLVWplWTVnZStzcGdCRTEyR2NPdwpxMUhJb0NrekVBMk5HOGRNRGM4dkQ5WHBQWGwxdW5veWN4Y0VMeFVRSC9PRlc4eHJxNU9vcXVYUkxMMnlKcXNGCmlvM2lJV3EvU09Yajc4MVp6MW5BV1JSNCtSYW1KWjlOcUNjb1Z3b3R6VzI1UWJKWWJ3QzJOSkNENEFwOUtXUjUKU2w2blk3NVMybEdSRENsQkNnN2VRdzcwU25seW5mb3RaTUpKdmFzbStrOWR3U0xtSDh2RDNMMGNGOW5SOENTSgpiTjBiZzczeVlWRHgyY3JRYk0zcko4dUJnY3BsWlRpUy91SXJ2QT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  parameters:
+    serviceAccountName: policy-admin
+    policyControllerRole: policy-admin-role
+    authPath: kubernetes
+
+$ kubectl apply -f examples/guides/provider/external-vault/vault-app.yaml
+appbinding.appcatalog.appscode.com/vault-app created
+</code></pre>
+
+<p>If Vault operator uses the above AppBinding <code>vault-app</code>, then it will have the permission that is given to service account <code>policy-admin</code> by <code>policy-admin-role</code> role. Now, we are going to create <a href="/docs/0.2.0/concepts/policy-crds/vaultpolicy">VaultPolicy</a> using <code>vault-app</code> AppBinding.</p>
+
+<pre><code class="language-console">$ cat examples/guides/provider/external-vault/demo-policy.yaml
+apiVersion: policy.kubevault.com/v1alpha1
+kind: VaultPolicy
+metadata:
+  name: demo-policy
+  namespace: demo
+spec:
+  vaultAppRef:
+    name: vault-app
+    namespace: demo
+  policy: |
+    path &quot;secret/*&quot; {
+      capabilities = [&quot;create&quot;, &quot;read&quot;, &quot;update&quot;, &quot;delete&quot;, &quot;list&quot;]
+    }
+
+$ kubectl apply -f  examples/guides/provider/external-vault/demo-policy.yaml
+vaultpolicy.policy.kubevault.com/demo-policy created
+
+$ kubectl get vaultpolicies -n demo
+NAME          STATUS    AGE
+demo-policy   Success   3s
+
+# To resolve the naming conflict, name of policy in Vault will follow this format: 'k8s.{spec.clusterName or -}.{spec.namespace}.{spec.name}'. For this case, it is 'k8s.-.demo.demo-policy'.
+$ vault policy list
+default
+k8s.-.demo.demo-policy
+policy-admin
+root
+
+$ vault policy read k8s.-.demo.demo-policy
+path &quot;secret/*&quot; {
+  capabilities = [&quot;create&quot;, &quot;read&quot;, &quot;update&quot;, &quot;delete&quot;, &quot;list&quot;]
+}
+</code></pre>
+
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="right-sidebar-area">
+          
+          <div class="search-area">
+            <form action="#">
+              <input type="text" placeholder="Search..." />
+              <button class="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          
+
+          
+          <div class="tbl-of-contents">
+            <h4>What's on this Page</h4>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#manage-external-vault-using-vault-operator">Manage External Vault using Vault Operator</a></li>
+</ul>
+</nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+    <section class="cta-area section-padding pt-0">
+      <div class="container section">
+        <div class="cta-padding">
+          <div class="columns">
+            <div class="column is-6">
+              
+              <div class="cta-text">
+                <h2>Ready to get Start?</h2>
+                <p>Create a Free Account and refer your friend</p>
+              </div>
+              
+            </div>
+            <div class="column is-6 has-text-right is-mobile">
+              <div class="cta-button d-table">
+                
+                <div class="cta-button-inner d-table-cell">
+                  <a href="#" class="button kd-button kd-primary"
+                    >Try Now for FREE</a
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <footer class="footer-area">
+      <div class="footer-top">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="single-footer-widget">
+                
+                <div class="footer-logo">
+                  <a href="#"
+                    ><img
+                      src="/assets/images/logo-color-appscode.png"
+                      alt=""
+                      class="img"
+                  /></a>
+                </div>
+                
+
+                
+                <div class="subscription-form">
+                  <form action="#">
+                    <label for="email">Subscribe Our Newsletter</label>
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input
+                          class="input"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="info@gmail.com"
+                        />
+                      </div>
+                      <div class="control">
+                        <a class="button kd-primary">
+                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+
+                
+                <div class="contact-information">
+                  <h4>Have any Inquiry?</h4>
+                  <ul class="all-contact-info">
+                    <li>
+                      <a href="callto:+123456789"
+                        ><span
+                          ><i class="fa fa-phone" aria-hidden="true"></i></span
+                        >+123 456 789</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="mailto:appscode@gmail.com"
+                        ><span
+                          ><i
+                            class="fa fa-envelope-o"
+                            aria-hidden="true"
+                          ></i></span
+                        >appscode@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Products</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Voyager</a></li>
+                    <li><a href="#">KubeDB</a></li>
+                    <li><a href="#">Pharmer Stash </a></li>
+                    <li><a href="#">Service Broker</a></li>
+                    <li><a href="#">Kubed</a></li>
+                    <li><a href="#">Guard</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Searchlight</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Offerings</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open source </a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Company</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Seles Inquiry</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Legal</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Service Level Agreement</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <p>All rights reserved © 2018. Appscode, Inc..</p>
+            </div>
+            <div class="column is-4 is-mobile has-text-centered">
+              <div class="footer-inline-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+            <div class="column is-4 is-mobile has-text-right">
+              <div class="socail-link-inline">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

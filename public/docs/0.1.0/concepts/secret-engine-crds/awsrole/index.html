@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2D9AED" />
+    <title>KubeDB Home</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    
+
+    
+    
+
+
+
+
+
+<header>
+  
+  <div class="header-bottom-area header-area documentation-page" id="header">
+    <div class="container section">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./../index.html">
+            <img src="/assets/images/logo-color-kube.png" alt="" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="acNav"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="acNav" class="navbar-menu main-menu">
+          <div class="navbar-end">
+            
+            <div class="navbar-start">
+              <a href="./../pricing/index.html" class="navbar-item">
+                Commercial Support
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Database
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Item-1
+                  </a>
+                  <a class="navbar-item">
+                    Item-2
+                  </a>
+                  <a class="navbar-item">
+                    Item-3
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item">
+                    Item-4
+                  </a>
+                </div>
+              </div>
+
+              <a href="../documentations/welcome.html" class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                v 0.110
+              </a>
+              <a class="navbar-item">
+                Community
+              </a>
+            </div>
+            
+            <div class="navbar-item">
+              <div class="buttons main-menu-button">
+                <a class="button is-small">
+                  <span><i class="fa fa-github" aria-hidden="true"></i></span
+                  >Star
+                </a>
+                <div class="star-count">
+                  565
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="documentation-menu">
+      <div class="container section">
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            
+            <div class="responsive-menu">
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="acNav3"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            
+            <nav class="documentation-navbar">
+              <div id="acNav3" class="navbar-menu nav-menu main-menu">
+                <div class="navbar-centered">
+                  
+                  <div class="navbar-start">
+                    
+                    
+                      
+                        
+                          <a href="/docs/0.1.0/" class=" navbar-item">Welcome</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/concepts/" class=" is-active  navbar-item">Concepts</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/setup/" class=" navbar-item">Setup</a>
+                        
+                      
+                        
+                          <a href="/docs/0.1.0/guides/" class=" navbar-item">Guides</a>
+                        
+                      
+                        
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                              Reference
+                            </a>
+                            <div class="navbar-dropdown">
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/operator/" class="navbar-item">Vault Operator</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/csi-driver/" class="navbar-item">Vault CSI Driver</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/cli/" class="navbar-item">KubeVault CLI</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.1.0/reference/unsealer/" class="navbar-item">Vault Unsealer</a>
+                                
+                              
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</header>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="documentation-area">
+  <div class="container section">
+    <div class="columns">
+      <div class="column is-3">
+        
+        <div class="kd-left-sidebar">
+          <div class="kd-version">
+            
+            <div class="control has-icons-left">
+              <div class="select">
+                
+                
+                <select>
+                  
+                    
+                    
+                      
+                        <option>master</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option  selected >0.1.0</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option >0.2.0</option>
+                      
+                    
+                  
+                </select>
+              </div>
+              <span class="icon is-left">
+                <i class="fa fa-globe"></i>
+              </span>
+            </div>
+          </div>
+
+          
+            
+            
+              
+            
+              
+                
+                  
+
+                  
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                
+              
+            
+              
+            
+              
+            
+              
+            
+          
+
+          
+          <div class="kd-sidebar-menu">
+            
+              
+
+              
+              
+
+                
+              
+
+                
+                  
+
+                  
+                  
+
+                    
+                      
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-1" >
+  <label for="2e5b3980fb8188091f988528d7c35183-1"><a href="/docs/0.1.0/concepts/">Overview</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-2" >
+  <label for="2e5b3980fb8188091f988528d7c35183-2"><a href="/docs/0.1.0/concepts/what-is-kubevault/">What is KubeVault</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-3" >
+  <label for="2e5b3980fb8188091f988528d7c35183-3"><a>Vault Server</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/vaultserver/">Vault Server</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/vaultserverversion/">Vault Server Version</a></li>
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-4" >
+  <label for="2e5b3980fb8188091f988528d7c35183-4"><a>Unsealer</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/">Aws KMS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/unsealer/azure_key_vault/">Azure Key Vault</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/unsealer/google_kms_gcs/">Google Cloud KMS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/unsealer/kubernetes_secret/">Kubernetes Secret</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/unsealer/unsealer/">Unsealer Unsealer</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-5" >
+  <label for="2e5b3980fb8188091f988528d7c35183-5"><a>Storage</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/azure/">Azure</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/dynamodb/">Dynamodb</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/etcd/">Etcd</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/gcs/">GCS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/inmem/">In Memory</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/mysql/">MySQL</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/postgresql/">PostgreSQL</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/s3/">AWS S3</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/storage/swift/">OpenStack Swift</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-6" >
+  <label for="2e5b3980fb8188091f988528d7c35183-6"><a>Authentication</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/">AppBinding</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/">AppBinding</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/">AWS IAM</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/">Kubernetes</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/">TLS Certificates</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/">Token</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/">Userpass</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-7" checked>
+  <label for="2e5b3980fb8188091f988528d7c35183-7"><a>Secret Engines</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li class="is-active"><a href="/docs/0.1.0/concepts/secret-engine-crds/awsrole/">AwsRole</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/secret-engine-crds/awsaccesskeyrequest/">AWSAccessKeyRequest</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-8" >
+  <label for="2e5b3980fb8188091f988528d7c35183-8"><a>Concepts Policy Crds</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/policy-crds/vaultpolicy/">VaultPolicy</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/policy-crds/vaultpolicybinding/">VaultPolicyBinding</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="2e5b3980fb8188091f988528d7c35183-9" >
+  <label for="2e5b3980fb8188091f988528d7c35183-9"><a>Concepts Database Crds</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/database-crds/mongodb/">MongoDBRole</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/database-crds/mysql/">MySQLRole</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/database-crds/postgresrole/">PostgresRole</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.1.0/concepts/database-crds/databaseaccessrequest/">DatabaseAccessRequest</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+                  
+
+                
+              
+
+                
+              
+
+                
+              
+
+                
+              
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        
+      </div>
+      <div class="column is-7">
+        <div class="full-info">
+          
+
+<blockquote>
+<p>New to KubeVault? Please start <a href="/docs/0.1.0/concepts/README">here</a>.</p>
+</blockquote>
+
+<h1 id="awsrole-crd">AWSRole CRD</h1>
+
+<p>Vault operator will configure <a href="https://www.vaultproject.io/api/secret/aws/index.html#configure-root-iam-credentials">root IAM credentials</a> and create <a href="https://www.vaultproject.io/api/secret/aws/index.html#create-update-role">role</a> according to <code>AWSRole</code> CRD (CustomResourceDefinition) specification. If the user deletes the <code>AWSRole</code> CRD, then respective role will also be deleted from Vault.</p>
+
+<pre><code class="language-yaml">apiVersion: engine.kubevault.com/v1alpha1
+kind: AWSRole
+metadata:
+  name: &lt;name&gt;
+  namespace: &lt;namespace&gt;
+spec:
+  ...
+status:
+  ...
+</code></pre>
+
+<blockquote>
+<p>Note: To resolve the naming conflict, name of the role in Vault will follow this format: <code>k8s.{spec.clusterName}.{spec.namespace}.{spec.name}</code></p>
+</blockquote>
+
+<h2 id="awsrole-spec">AWSRole Spec</h2>
+
+<p>AWSRole <code>spec</code> contains root IAM credentials configuration and role information.</p>
+
+<pre><code class="language-yaml">apiVersion: engine.kubevault.com/v1alpha1
+kind: AWSRole
+metadata:
+  name: aws-role
+  namespace: demo
+spec:
+  credentialType: iam_user
+  policy: |
+    {
+      &quot;Version&quot;: &quot;2012-10-17&quot;,
+      &quot;Statement&quot;: [
+        {
+          &quot;Effect&quot;: &quot;Allow&quot;,
+          &quot;Action&quot;: &quot;ec2:*&quot;,
+          &quot;Resource&quot;: &quot;*&quot;
+        }
+      ]
+    }
+  authManagerRef:
+    namespace: demo
+    name: vault-app
+  config:
+    credentialSecret: aws-cred
+    region: us-east-1
+    leaseConfig:
+      lease: 1h
+      leaseMax: 1h
+</code></pre>
+
+<p>AWSRole Spec has following fields:</p>
+
+<h3 id="spec-authmanagerref">spec.authManagerRef</h3>
+
+<p><code>spec.authManagerRef</code> specifies the name and namespace of <a href="/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding">AppBinding</a> that contains information to communicate with Vault.</p>
+
+<pre><code class="language-yaml">spec:
+  authManagerRef:
+    name: vault-app
+    namespace: demo
+</code></pre>
+
+<h3 id="spec-config">spec.config</h3>
+
+<p><code>spec.config</code> is a required field that specifies the configuration of the root IAM credentials to communicate with AWS. If credentials already exist, this will overwrite them.</p>
+
+<pre><code class="language-yaml">spec:
+  config:
+    credentialSecret: aws-cred
+    region: us-east-1
+    leaseConfig:
+      lease: 1h
+      leaseMax: 1h
+</code></pre>
+
+<p>It has following fields:</p>
+
+<ul>
+<li><p><code>config.credentialSecret</code> : <code>Required</code>. Specifies the name of the secret containing AWS credentials. The secret must contains following fields:</p>
+
+<ul>
+<li><code>access_key</code></li>
+<li><code>secret_key</code></li>
+</ul></li>
+
+<li><p><code>config.region</code> : <code>Required</code>. Specifies the AWS region.</p></li>
+
+<li><p><code>config.iamEndpoint</code> : <code>Optional</code>. Specifies a custom HTTP IAM endpoint to use.</p></li>
+
+<li><p><code>config.stsEndpoint</code> : <code>Optional</code>. Specifies a custom HTTP STS endpoint to use.</p></li>
+
+<li><p><code>config.maxRetries</code> : <code>Optional</code>. Specifies the number of max retries the client should use for recoverable errors.</p></li>
+
+<li><p><code>config.leaseConfig</code> : <code>Optional</code>. Specifies the lease configuration.</p>
+
+<pre><code class="language-yaml">config:
+  leaseConfig:
+    lease: 1h
+    leaseMax: 1h
+</code></pre>
+
+<p>It has following fields:
+- <code>leaseConfig.lease</code> : <code>Optional</code>. Specifies the lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).
+- <code>leaseConfig.leaseMax</code> : <code>Optional</code>. Specifies the maximum lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).</p>
+
+<h3 id="spec-credentialtype">spec.credentialType</h3>
+
+<p><code>spec.credentialType</code> is a required field that specifies the type of credential to be used when retrieving credentials from the role. Supported types: <code>iam_user</code>, <code>assumed_role</code> and <code>federation_token</code>.</p>
+
+<pre><code class="language-yaml">spec:
+credentialType: iam_user
+</code></pre></li>
+</ul>
+
+<h3 id="spec-rolearns">spec.roleARNs</h3>
+
+<p><code>spec.roleARNs</code> is an optional field that specifies the list of ARNs of the AWS roles this Vault role is allowed to assume.</p>
+
+<pre><code class="language-yaml">spec:
+  roleARNs:
+    - arn:aws:iam::452618475015:role/hello.world
+</code></pre>
+
+<h3 id="spec-policyarns">spec.policyARNs</h3>
+
+<p><code>spec.policyARNs</code> is an optional field that specifies the list of ARNs of the AWS managed policies to be attached to IAM users when they are requested.</p>
+
+<pre><code class="language-yaml">spec:
+  policyARNs:
+    - arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
+</code></pre>
+
+<h3 id="spec-policydocument">spec.policyDocument</h3>
+
+<p><code>spec.policyDocument</code> is an optional field that specifies the IAM policy document for the role.</p>
+
+<pre><code class="language-yaml">spec:
+  policyDocument: |
+    {
+      &quot;Version&quot;: &quot;2012-10-17&quot;,
+      &quot;Statement&quot;: [
+        {
+          &quot;Effect&quot;: &quot;Allow&quot;,
+          &quot;Action&quot;: &quot;ec2:*&quot;,
+          &quot;Resource&quot;: &quot;*&quot;
+        }
+      ]
+    }
+</code></pre>
+
+<h3 id="spec-defaultststtl">spec.defaultSTSTTL</h3>
+
+<p><code>spec.defaultSTSTTL</code> is an optional field that specifies the default TTL for STS credentials. When a TTL is not specified when STS credentials are requested, and a default TTL is specified on the role, then this default TTL will be used. Valid only when <code>spec.credentialType</code> is one of <code>assumed_role</code> or <code>federation_token</code>.</p>
+
+<pre><code class="language-yaml">spec:
+  defaultSTSTTL: &quot;1h&quot;
+</code></pre>
+
+<h3 id="spec-maxststtl">spec.maxSTSTTL</h3>
+
+<p><code>spec.maxSTSTTL</code> is an optional field that specifies the max allowed TTL for STS credentials. Valid only when <code>spec.credentialType</code> is one of <code>assumed_role</code> or <code>federation_token</code>.</p>
+
+<pre><code class="language-yaml">spec:
+  maxSTSTTL: &quot;1h&quot;
+</code></pre>
+
+<h3 id="spec-policy">spec.policy</h3>
+
+<p><code>spec.policy</code> is an optional field that specifies the IAM policy in JSON format. This field is for backwards compatibility only.</p>
+
+<h3 id="spec-arn">spec.arn</h3>
+
+<p><code>spec.arn</code> is an optional field that specifies the full ARN reference to the desired existing policy. This field is for backwards compatibility only.</p>
+
+<h2 id="awsrole-status">AWSRole Status</h2>
+
+<p><code>status</code> shows the status of the AWSRole. It is maintained by Vault operator. It contains following fields:</p>
+
+<ul>
+<li><p><code>phase</code> : Indicates whether the role successfully applied in vault or not or in progress or failed</p></li>
+
+<li><p><code>conditions</code> : Represent observations of a AWSRole.</p></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="right-sidebar-area">
+          
+          <div class="search-area">
+            <form action="#">
+              <input type="text" placeholder="Search..." />
+              <button class="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          
+
+          
+          <div class="tbl-of-contents">
+            <h4>What's on this Page</h4>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#awsrole-crd">AWSRole CRD</a>
+<ul>
+<li><a href="#awsrole-spec">AWSRole Spec</a>
+<ul>
+<li><a href="#spec-authmanagerref">spec.authManagerRef</a></li>
+<li><a href="#spec-config">spec.config</a></li>
+<li><a href="#spec-credentialtype">spec.credentialType</a></li>
+<li><a href="#spec-rolearns">spec.roleARNs</a></li>
+<li><a href="#spec-policyarns">spec.policyARNs</a></li>
+<li><a href="#spec-policydocument">spec.policyDocument</a></li>
+<li><a href="#spec-defaultststtl">spec.defaultSTSTTL</a></li>
+<li><a href="#spec-maxststtl">spec.maxSTSTTL</a></li>
+<li><a href="#spec-policy">spec.policy</a></li>
+<li><a href="#spec-arn">spec.arn</a></li>
+</ul></li>
+<li><a href="#awsrole-status">AWSRole Status</a></li>
+</ul></li>
+</ul>
+</nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+    <section class="cta-area section-padding pt-0">
+      <div class="container section">
+        <div class="cta-padding">
+          <div class="columns">
+            <div class="column is-6">
+              
+              <div class="cta-text">
+                <h2>Ready to get Start?</h2>
+                <p>Create a Free Account and refer your friend</p>
+              </div>
+              
+            </div>
+            <div class="column is-6 has-text-right is-mobile">
+              <div class="cta-button d-table">
+                
+                <div class="cta-button-inner d-table-cell">
+                  <a href="#" class="button kd-button kd-primary"
+                    >Try Now for FREE</a
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <footer class="footer-area">
+      <div class="footer-top">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="single-footer-widget">
+                
+                <div class="footer-logo">
+                  <a href="#"
+                    ><img
+                      src="/assets/images/logo-color-appscode.png"
+                      alt=""
+                      class="img"
+                  /></a>
+                </div>
+                
+
+                
+                <div class="subscription-form">
+                  <form action="#">
+                    <label for="email">Subscribe Our Newsletter</label>
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input
+                          class="input"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="info@gmail.com"
+                        />
+                      </div>
+                      <div class="control">
+                        <a class="button kd-primary">
+                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+
+                
+                <div class="contact-information">
+                  <h4>Have any Inquiry?</h4>
+                  <ul class="all-contact-info">
+                    <li>
+                      <a href="callto:+123456789"
+                        ><span
+                          ><i class="fa fa-phone" aria-hidden="true"></i></span
+                        >+123 456 789</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="mailto:appscode@gmail.com"
+                        ><span
+                          ><i
+                            class="fa fa-envelope-o"
+                            aria-hidden="true"
+                          ></i></span
+                        >appscode@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Products</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Voyager</a></li>
+                    <li><a href="#">KubeDB</a></li>
+                    <li><a href="#">Pharmer Stash </a></li>
+                    <li><a href="#">Service Broker</a></li>
+                    <li><a href="#">Kubed</a></li>
+                    <li><a href="#">Guard</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Searchlight</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Offerings</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open source </a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Company</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Seles Inquiry</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Legal</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Service Level Agreement</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <p>All rights reserved © 2018. Appscode, Inc..</p>
+            </div>
+            <div class="column is-4 is-mobile has-text-centered">
+              <div class="footer-inline-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+            <div class="column is-4 is-mobile has-text-right">
+              <div class="socail-link-inline">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2D9AED" />
+    <title>KubeDB Home</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    
+
+    
+    
+
+
+
+
+
+<header>
+  
+  <div class="header-bottom-area header-area documentation-page" id="header">
+    <div class="container section">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./../index.html">
+            <img src="/assets/images/logo-color-kube.png" alt="" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="acNav"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="acNav" class="navbar-menu main-menu">
+          <div class="navbar-end">
+            
+            <div class="navbar-start">
+              <a href="./../pricing/index.html" class="navbar-item">
+                Commercial Support
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Database
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Item-1
+                  </a>
+                  <a class="navbar-item">
+                    Item-2
+                  </a>
+                  <a class="navbar-item">
+                    Item-3
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item">
+                    Item-4
+                  </a>
+                </div>
+              </div>
+
+              <a href="../documentations/welcome.html" class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                v 0.110
+              </a>
+              <a class="navbar-item">
+                Community
+              </a>
+            </div>
+            
+            <div class="navbar-item">
+              <div class="buttons main-menu-button">
+                <a class="button is-small">
+                  <span><i class="fa fa-github" aria-hidden="true"></i></span
+                  >Star
+                </a>
+                <div class="star-count">
+                  565
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="documentation-menu">
+      <div class="container section">
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            
+            <div class="responsive-menu">
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="acNav3"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            
+            <nav class="documentation-navbar">
+              <div id="acNav3" class="navbar-menu nav-menu main-menu">
+                <div class="navbar-centered">
+                  
+                  <div class="navbar-start">
+                    
+                    
+                      
+                        
+                          <a href="/docs/0.2.0/" class=" navbar-item">Welcome</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/concepts/" class=" navbar-item">Concepts</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/setup/" class=" navbar-item">Setup</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/guides/" class=" is-active  navbar-item">Guides</a>
+                        
+                      
+                        
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                              Reference
+                            </a>
+                            <div class="navbar-dropdown">
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/operator/" class="navbar-item">Vault Operator</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/csi-driver/" class="navbar-item">Vault CSI Driver</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/cli/" class="navbar-item">KubeVault CLI</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/unsealer/" class="navbar-item">Vault Unsealer</a>
+                                
+                              
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</header>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="documentation-area">
+  <div class="container section">
+    <div class="columns">
+      <div class="column is-3">
+        
+        <div class="kd-left-sidebar">
+          <div class="kd-version">
+            
+            <div class="control has-icons-left">
+              <div class="select">
+                
+                
+                <select>
+                  
+                    
+                    
+                      
+                        <option>master</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option >0.1.0</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option  selected >0.2.0</option>
+                      
+                    
+                  
+                </select>
+              </div>
+              <span class="icon is-left">
+                <i class="fa fa-globe"></i>
+              </span>
+            </div>
+          </div>
+
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  
+
+                  
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                
+              
+            
+              
+            
+          
+
+          
+          <div class="kd-sidebar-menu">
+            
+              
+
+              
+              
+
+                
+              
+
+                
+              
+
+                
+              
+
+                
+                  
+
+                  
+                  
+
+                    
+                      
+
+
+
+
+  
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-1" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-1"><a href="/docs/0.2.0/guides/">Guides</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-2" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-2"><a>Secret Engines</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-3" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-3"><a>AWS</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/aws/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/aws/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-4" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-4"><a>Key/Value</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-5" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-5"><a>MongoDB</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-6" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-6"><a>MySQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-7" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-7"><a>PKI</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-8" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-8"><a>PostgreSQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-9" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-9"><a>Policy Management</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/policy-management/overview/">Overview</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-10" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-10"><a>Platforms</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/eks/">EKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/aks/">AKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/gke/">GKE</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/external-vault/">External Vault</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/multi-cluster-vault/">Multi-Cluster</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-11" checked>
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-11"><a>Guides Monitoring</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/overview/">Overview</a></li>
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-12" checked>
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-12"><a>Vault Server</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li class="is-active"><a href="/docs/0.2.0/guides/monitoring/vault-server/grafana/">Grafana Dashboard</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-13" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-13"><a>CSI Driver</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/coreos/">Prometheus Operator</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="9dcec6846b14ef06880c1e5b5b72293f-14" >
+  <label for="9dcec6846b14ef06880c1e5b5b72293f-14"><a>Vault Operator</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/builtin/">Builtin Prometheus</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+                  
+
+                
+              
+
+                
+              
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        
+      </div>
+      <div class="column is-7">
+        <div class="full-info">
+          
+
+<blockquote>
+<p>New to KubeVault? Please start <a href="/docs/0.2.0/concepts/README">here</a>.</p>
+</blockquote>
+
+<h1 id="visualize-vault-server-data-using-grafana-dashboard">Visualize Vault server data using Grafana dashboard</h1>
+
+<p>Grafana provides an elegant graphical user interface to visualize data. You can create beautiful dashboard easily with a meaningful representation of your Prometheus metrics.</p>
+
+<p>If there is no grafana instance running on your cluster, then you can <a href="https://github.com/appscode/third-party-tools/blob/master/monitoring/grafana/README.md">read this tutorial</a> to deploy one.</p>
+
+<h2 id="add-prometheus-data-source">Add Prometheus Data Source</h2>
+
+<p>We have to add our Prometheus server <code>prometheus-prometheus-0</code> as data source of grafana. We are going to use a <code>ClusterIP</code> service to connect Prometheus server with grafana. Let&rsquo;s create a service to select Prometheus server <code>prometheus-prometheus-0</code>,</p>
+
+<pre><code class="language-console">$ kubectl apply -f https://raw.githubusercontent.com/kubevault/docs/master/docs/examples/monitoring/vault-server/prometheus-service.yaml
+service/prometheus created
+</code></pre>
+
+<p>Below the YAML for the service we have created above,</p>
+
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+  namespace: monitoring
+spec:
+  type: ClusterIP
+  ports:
+  - name: web
+    port: 9090
+    protocol: TCP
+    targetPort: 9090
+  selector:
+    app: prometheus
+</code></pre>
+
+<p>Now, follow these steps to add the Prometheus server as data source of Grafana UI.</p>
+
+<ol>
+<li><p>From Grafana UI, go to <code>Configuration</code> option from sidebar and click on <code>Data Sources</code>.</p>
+
+<p align="center">
+  <img alt="Grafana: Data Sources"  src="/docs/0.2.0/images/monitoring/grafana-data-source-1.jpg" style="padding: 10px;">
+</p></li>
+
+<li><p>Then, click on <code>Add data source</code>.</p>
+
+<p align="center">
+  <img alt="Grafana: Add data source"  src="/docs/0.2.0/images/monitoring/grafana-data-source-2.png" style="padding: 10px;">
+</p></li>
+
+<li><p>Now, configure <code>Name</code>, <code>Type</code> and <code>URL</code> fields as specified below and keep rest of the configuration to their default value then click <code>Save&amp;Test</code> button.</p>
+
+<ul>
+<li><em>Name: Vault-Operator</em> (you can give any name)</li>
+<li><em>Type: Prometheus</em></li>
+<li><em>URL: <a href="http://prometheus.monitoring.svc:9090">http://prometheus.monitoring.svc:9090</a></em>
+(url format: http://{prometheus service name}.{namespace}.svc:{port})</li>
+</ul>
+
+<p align="center">
+  <img alt="Grafana: Configure data source"  src="/docs/0.2.0/images/monitoring/grafana-data-source-3.png" style="padding: 10px;">
+</p></li>
+</ol>
+
+<p>Once you have added Prometheus data source successfully, you are ready to create a dashboard to visualize the metrics.</p>
+
+<h2 id="import-vault-server-dashboard">Import Vault server Dashboard</h2>
+
+<p>Vault server comes with a pre-configured Grafana dashboard. You can download json configuration of the dashboard from <a href="/docs/0.2.0/examples/monitoring/grafana/dashboard.json">here</a>.</p>
+
+<p>Follow these steps to import the preconfigured stash dashboard,</p>
+
+<ol>
+<li><p>From Grafana UI, go to <code>Create</code> option from sidebar and click on <code>import</code>.</p>
+
+<p align="center">
+    <img alt="Grafana: Import dashboard"  src="/docs/0.2.0/images/monitoring/grafana-import-1.png" style="padding: 10px;">
+</p></li>
+
+<li><p>Then, paste <code>json</code> from <a href="/docs/0.2.0/examples/monitoring/grafana/dashboard.json">here</a> or upload <code>json</code> configuration file of the dashboard using <code>Upload .json File</code> button.</p>
+
+<p align="center">
+  <img alt="Grafana: Provide dashboard ID"  src="/docs/0.2.0/images/monitoring/grafana-import-2.png" style="padding: 10px;">
+</p></li>
+
+<li><p>Now on <code>prometheus-infra</code> field, select the data source name that we have given to our Prometheus data source earlier. Then click on <code>Import</code> button.</p>
+
+<p align="center">
+    <img alt="Grafana: Select data source"  src="/docs/0.2.0/images/monitoring/grafana-import-4.png" style="padding: 10px;">
+</p></li>
+</ol>
+
+<p>Once you have imported the dashboard successfully, you will be greeted with dashboard.</p>
+
+<p align="center">
+      <img alt="Grafana: Stash dashboard"  src="/docs/0.2.0/images/monitoring/grafana-import-3.png" style="padding: 10px;">
+</p>
+
+<h2 id="cleanup">Cleanup</h2>
+
+<p>To cleanup the Kubernetes resources created by this tutorial, run:</p>
+
+<pre><code class="language-console">kubectl delete -n demo service prometheus
+</code></pre>
+
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="right-sidebar-area">
+          
+          <div class="search-area">
+            <form action="#">
+              <input type="text" placeholder="Search..." />
+              <button class="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          
+
+          
+          <div class="tbl-of-contents">
+            <h4>What's on this Page</h4>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#visualize-vault-server-data-using-grafana-dashboard">Visualize Vault server data using Grafana dashboard</a>
+<ul>
+<li><a href="#add-prometheus-data-source">Add Prometheus Data Source</a></li>
+<li><a href="#import-vault-server-dashboard">Import Vault server Dashboard</a></li>
+<li><a href="#cleanup">Cleanup</a></li>
+</ul></li>
+</ul>
+</nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+    <section class="cta-area section-padding pt-0">
+      <div class="container section">
+        <div class="cta-padding">
+          <div class="columns">
+            <div class="column is-6">
+              
+              <div class="cta-text">
+                <h2>Ready to get Start?</h2>
+                <p>Create a Free Account and refer your friend</p>
+              </div>
+              
+            </div>
+            <div class="column is-6 has-text-right is-mobile">
+              <div class="cta-button d-table">
+                
+                <div class="cta-button-inner d-table-cell">
+                  <a href="#" class="button kd-button kd-primary"
+                    >Try Now for FREE</a
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <footer class="footer-area">
+      <div class="footer-top">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="single-footer-widget">
+                
+                <div class="footer-logo">
+                  <a href="#"
+                    ><img
+                      src="/assets/images/logo-color-appscode.png"
+                      alt=""
+                      class="img"
+                  /></a>
+                </div>
+                
+
+                
+                <div class="subscription-form">
+                  <form action="#">
+                    <label for="email">Subscribe Our Newsletter</label>
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input
+                          class="input"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="info@gmail.com"
+                        />
+                      </div>
+                      <div class="control">
+                        <a class="button kd-primary">
+                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+
+                
+                <div class="contact-information">
+                  <h4>Have any Inquiry?</h4>
+                  <ul class="all-contact-info">
+                    <li>
+                      <a href="callto:+123456789"
+                        ><span
+                          ><i class="fa fa-phone" aria-hidden="true"></i></span
+                        >+123 456 789</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="mailto:appscode@gmail.com"
+                        ><span
+                          ><i
+                            class="fa fa-envelope-o"
+                            aria-hidden="true"
+                          ></i></span
+                        >appscode@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Products</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Voyager</a></li>
+                    <li><a href="#">KubeDB</a></li>
+                    <li><a href="#">Pharmer Stash </a></li>
+                    <li><a href="#">Service Broker</a></li>
+                    <li><a href="#">Kubed</a></li>
+                    <li><a href="#">Guard</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Searchlight</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Offerings</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open source </a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Company</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Seles Inquiry</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Legal</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Service Level Agreement</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <p>All rights reserved © 2018. Appscode, Inc..</p>
+            </div>
+            <div class="column is-4 is-mobile has-text-centered">
+              <div class="footer-inline-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+            <div class="column is-4 is-mobile has-text-right">
+              <div class="socail-link-inline">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

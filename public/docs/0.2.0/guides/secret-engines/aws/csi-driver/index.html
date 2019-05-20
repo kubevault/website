@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#2D9AED" />
+    <title>KubeDB Home</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma-carousel.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/bulma.min.css" />
+    
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+
+  <body>
+    
+
+    
+    
+
+
+
+
+
+<header>
+  
+  <div class="header-bottom-area header-area documentation-page" id="header">
+    <div class="container section">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./../index.html">
+            <img src="/assets/images/logo-color-kube.png" alt="" />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="acNav"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="acNav" class="navbar-menu main-menu">
+          <div class="navbar-end">
+            
+            <div class="navbar-start">
+              <a href="./../pricing/index.html" class="navbar-item">
+                Commercial Support
+              </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Database
+                </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    Item-1
+                  </a>
+                  <a class="navbar-item">
+                    Item-2
+                  </a>
+                  <a class="navbar-item">
+                    Item-3
+                  </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item">
+                    Item-4
+                  </a>
+                </div>
+              </div>
+
+              <a href="../documentations/welcome.html" class="navbar-item">
+                Documentation
+              </a>
+              <a class="navbar-item">
+                v 0.110
+              </a>
+              <a class="navbar-item">
+                Community
+              </a>
+            </div>
+            
+            <div class="navbar-item">
+              <div class="buttons main-menu-button">
+                <a class="button is-small">
+                  <span><i class="fa fa-github" aria-hidden="true"></i></span
+                  >Star
+                </a>
+                <div class="star-count">
+                  565
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="documentation-menu">
+      <div class="container section">
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            
+            <div class="responsive-menu">
+              <a
+                role="button"
+                class="navbar-burger burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="acNav3"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            
+            <nav class="documentation-navbar">
+              <div id="acNav3" class="navbar-menu nav-menu main-menu">
+                <div class="navbar-centered">
+                  
+                  <div class="navbar-start">
+                    
+                    
+                      
+                        
+                          <a href="/docs/0.2.0/" class=" navbar-item">Welcome</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/concepts/" class=" navbar-item">Concepts</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/setup/" class=" navbar-item">Setup</a>
+                        
+                      
+                        
+                          <a href="/docs/0.2.0/guides/" class=" is-active  navbar-item">Guides</a>
+                        
+                      
+                        
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                              Reference
+                            </a>
+                            <div class="navbar-dropdown">
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/operator/" class="navbar-item">Vault Operator</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/csi-driver/" class="navbar-item">Vault CSI Driver</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/cli/" class="navbar-item">KubeVault CLI</a>
+                                
+                              
+                                
+                                  <a href="/docs/0.2.0/reference/unsealer/" class="navbar-item">Vault Unsealer</a>
+                                
+                              
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</header>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<div class="documentation-area">
+  <div class="container section">
+    <div class="columns">
+      <div class="column is-3">
+        
+        <div class="kd-left-sidebar">
+          <div class="kd-version">
+            
+            <div class="control has-icons-left">
+              <div class="select">
+                
+                
+                <select>
+                  
+                    
+                    
+                      
+                        <option>master</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option >0.1.0</option>
+                      
+                    
+                  
+                    
+                    
+                      
+                        <option  selected >0.2.0</option>
+                      
+                    
+                  
+                </select>
+              </div>
+              <span class="icon is-left">
+                <i class="fa fa-globe"></i>
+              </span>
+            </div>
+          </div>
+
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  
+
+                  
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                
+              
+            
+              
+            
+          
+
+          
+          <div class="kd-sidebar-menu">
+            
+              
+
+              
+              
+
+                
+              
+
+                
+              
+
+                
+              
+
+                
+                  
+
+                  
+                  
+
+                    
+                      
+
+
+
+
+  
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-1" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-1"><a href="/docs/0.2.0/guides/">Guides</a></label>
+</div>
+
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-2" checked>
+  <label for="06f4a082e70837c37fec1666ab5e9b20-2"><a>Secret Engines</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-3" checked>
+  <label for="06f4a082e70837c37fec1666ab5e9b20-3"><a>AWS</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/aws/overview/">Overview</a></li>
+        
+      
+        
+          <li class="is-active"><a href="/docs/0.2.0/guides/secret-engines/aws/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-4" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-4"><a>Key/Value</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/kv/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-5" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-5"><a>MongoDB</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-6" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-6"><a>MySQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/mysql/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-7" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-7"><a>PKI</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/pki/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-8" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-8"><a>PostgreSQL</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/overview/">Overview</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/secret-engines/postgres/csi-driver/">CSI Driver</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-9" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-9"><a>Policy Management</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/policy-management/overview/">Overview</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-10" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-10"><a>Platforms</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/eks/">EKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/aks/">AKS</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/gke/">GKE</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/external-vault/">External Vault</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/platforms/multi-cluster-vault/">Multi-Cluster</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+
+                    
+                      
+                        
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-11" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-11"><a>Guides Monitoring</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/overview/">Overview</a></li>
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-12" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-12"><a>Vault Server</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-server/grafana/">Grafana Dashboard</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-13" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-13"><a>CSI Driver</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/builtin/">Builtin Prometheus</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/csi-driver/coreos/">Prometheus Operator</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+        
+          
+
+
+
+
+
+
+<div class="item">
+  <input type="checkbox" id="06f4a082e70837c37fec1666ab5e9b20-14" >
+  <label for="06f4a082e70837c37fec1666ab5e9b20-14"><a>Vault Operator</a> <span><i class="fa fa-angle-right"
+              aria-hidden="true"></i></span></label>
+  <div class="item">
+    <ul>
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/coreos/">Prometheus Operator</a></li>
+        
+      
+        
+          <li ><a href="/docs/0.2.0/guides/monitoring/vault-operator/builtin/">Builtin Prometheus</a></li>
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+        
+      
+    </ul>
+  </div>
+</div>
+
+
+                      
+
+                    
+                    
+                  
+                  
+
+                
+              
+
+                
+              
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        
+      </div>
+      <div class="column is-7">
+        <div class="full-info">
+          
+
+<blockquote>
+<p>New to KubeVault? Please start <a href="/docs/0.2.0/concepts/README">here</a>.</p>
+</blockquote>
+
+<h1 id="mount-aws-iam-secrets-into-kubernetes-pod-using-csi-driver">Mount AWS IAM Secrets into Kubernetes pod using CSI Driver</h1>
+
+<h2 id="before-you-begin">Before you Begin</h2>
+
+<p>At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using <a href="https://github.com/kubernetes/minikube">Minikube</a>.</p>
+
+<p>To keep things isolated, this tutorial uses a separate namespace called <code>demo</code> throughout this tutorial.</p>
+
+<pre><code class="language-console">$ kubectl create ns demo
+namespace/demo created
+</code></pre>
+
+<blockquote>
+<p>Note: YAML files used in this tutorial stored in <a href="https://github.com/kubevault/docs/tree/master/docs/examples/csi-driver/aws">docs/examples/csi-driver/aws</a> folder in github repository <a href="https://github.com/kubevault/docs">KubeVault/docs</a></p>
+</blockquote>
+
+<h2 id="configure-aws">Configure AWS</h2>
+
+<p>Create IAM policy on AWS with following and copy the value of policy ARN:</p>
+
+<pre><code class="language-json">{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;iam:AttachUserPolicy&quot;,
+        &quot;iam:CreateAccessKey&quot;,
+        &quot;iam:CreateUser&quot;,
+        &quot;iam:DeleteAccessKey&quot;,
+        &quot;iam:DeleteUser&quot;,
+        &quot;iam:DeleteUserPolicy&quot;,
+        &quot;iam:DetachUserPolicy&quot;,
+        &quot;iam:ListAccessKeys&quot;,
+        &quot;iam:ListAttachedUserPolicies&quot;,
+        &quot;iam:ListGroupsForUser&quot;,
+        &quot;iam:ListUserPolicies&quot;,
+        &quot;iam:PutUserPolicy&quot;,
+        &quot;iam:RemoveUserFromGroup&quot;
+      ],
+      &quot;Resource&quot;: [
+        &quot;arn:aws:iam::ACCOUNT-ID-WITHOUT-HYPHENS:user/vault-*&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<p align="center">
+  <img alt="AWS IAM Policy" src="/docs/0.2.0/images/csi-driver-policy-aws.jpg" style="padding: 10px;">
+</p>
+
+<h2 id="configure-vault">Configure Vault</h2>
+
+<p>The following steps are required to retrieve <code>AWS</code> IAM secrets using Vault server into a Kubernetes pod.</p>
+
+<ul>
+<li><strong>Vault server:</strong> used to provision and manager AWS IAM credentials</li>
+<li><strong>Appbinding:</strong> required to connect <code>CSI driver</code> with Vault server</li>
+<li><strong>Role:</strong> using this role <code>CSI driver</code> can access credentials from Vault server</li>
+</ul>
+
+<p>There are two ways to configure Vault server. You can use either use <code>Vault Operator</code> or use <code>vault</code> cli to manually configure a Vault server.</p>
+
+<p><ul class="nav nav-tabs" id="conceptsTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="operator-tab" data-toggle="tab" href="#operator" role="tab" aria-controls="operator" aria-selected="true">Using Vault Operator</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="csi-driver-tab" data-toggle="tab" href="#csi-driver" role="tab" aria-controls="csi-driver" aria-selected="false">Using Vault CLI</a>
+  </li>
+</ul>
+<div class="tab-content" id="conceptsTabContent">
+  <details open class="tab-pane fade show active" id="operator" role="tabpanel" aria-labelledby="operator-tab"></p>
+
+<p><summary>Using Vault Operator</summary></p>
+
+<p>Follow <a href="/docs/0.2.0/guides/secret-engines/aws/overview">this</a> tutorial to manage AWS IAM secrets with <code>Vault operator</code>. After successful configuration you should have following resources present in your cluster.</p>
+
+<ul>
+<li>AppBinding: An appbinding with name <code>vault-app</code> in <code>demo</code> namespace</li>
+<li>Role: A role named <code>k8s.-.demo.demo-role</code> which have access to read database credential</li>
+</ul>
+
+<p></details>
+<details class="tab-pane fade" id="csi-driver" role="tabpanel" aria-labelledby="csi-driver-tab"></p>
+
+<p><summary>Using Vault CLI</summary></p>
+
+<p>You can use Vault cli to manually configure an existing Vault server. The Vault server may be running inside a Kubernetes cluster or running outside a Kubernetes cluster. If you don&rsquo;t have a Vault server, you can deploy one by running the following command:</p>
+
+<pre><code>```console
+$ kubectl apply -f https://raw.githubusercontent.com/kubevault/docs/master/docs/examples/csi-driver/vault-install.yaml
+service/vault created
+statefulset.apps/vault created
+```
+</code></pre>
+
+<p>To use secret from <code>AWS</code> secret engine, you have to do following things.</p>
+
+<ol>
+<li><p><strong>Enable <code>AWS</code> Engine:</strong> To enable <code>AWS</code> secret engine run the following command.</p>
+
+<pre><code class="language-console">$ vault secrets enable aws
+Success! Enabled the aws secrets engine at: aws/
+</code></pre>
+
+<ol>
+<li><strong>Create Engine Policy:</strong>  To read secret from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
+</ol>
+
+<pre><code class="language-yaml"># capability of get secret
+path &quot;aws/creds/*&quot; {
+    capabilities = [&quot;read&quot;]
+}
+</code></pre>
+
+<p>Write this policy into vault naming <code>test-policy</code> with following command:</p>
+
+<pre><code class="language-console">$ vault policy write test-policy policy.hcl
+Success! Uploaded policy: test-policy
+</code></pre>
+
+<ol>
+<li><strong>Crete AWS config:</strong> To communicate with AWS for generating IAM credentials, Vault needs to configure credentials. Run:</li>
+</ol>
+
+<pre><code class="language-console">$ vault write aws/config/root \
+  access_key=AKIAJWVN5Z4FOFT7NLNA \
+  secret_key=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 \
+  region=us-east-1
+Success! Data written to: aws/config/root
+</code></pre></li>
+
+<li><p><strong>Configure a Vault Role:</strong> We need to configure a vault role that maps to a set of permissions in AWS and an AWS credential type. When users generate credentials, they are generated against this role,</p>
+
+<pre><code class="language-console">$ vault write aws/roles/k8s.-.demo.demo-role \
+  arn=arn:aws:iam::452618475015:policy/vaultiampolicy \ # In AWS configuration ACCOUNT-ID-WITHOUT-HYPHENS = vaultiampolicy
+  credential_type=iam_user \
+  policy_document=-&lt;&lt;EOF
+{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: &quot;ec2:*&quot;,
+      &quot;Resource&quot;: &quot;*&quot;
+    }
+  ]
+}
+EOF
+Success! Data written to: aws/roles/k8s.-.demo.demo-role
+</code></pre>
+
+<p>Here, <code>k8s.-.demo.demo-role</code> will be treated as secret name on storage class.</p>
+
+<h2 id="configure-cluster">Configure Cluster</h2>
+
+<ol>
+<li><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</li>
+</ol>
+
+<pre><code class="language-yaml">apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: role-awscreds-binding
+  namespace: demo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: aws-vault
+  namespace: demo
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: aws-vault
+  namespace: demo
+</code></pre></li>
+</ol>
+
+<p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p>
+
+<ol>
+<li><p><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth back-end, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</p>
+
+<pre><code class="language-console">export VAULT_SA_NAME=$(kubectl get sa aws-vault -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;)
+
+export SA_JWT_TOKEN=$(kubectl get secret $VAULT_SA_NAME -n demo -o jsonpath=&quot;{.data.token}&quot; | base64 --decode; echo)
+
+export SA_CA_CRT=$(kubectl get secret $VAULT_SA_NAME -n demo -o jsonpath=&quot;{.data['ca\.crt']}&quot; | base64 --decode; echo)
+
+export K8S_HOST=&lt;host-ip&gt;
+export K8s_PORT=6443
+</code></pre>
+
+<p>Now, we can enable the Kubernetes authentication back-end and create a Vault named role that is attached to this service account. Run:</p>
+
+<pre><code class="language-console">$ vault auth enable kubernetes
+Success! Enabled Kubernetes auth method at: kubernetes/
+
+$ vault write auth/kubernetes/config \
+    token_reviewer_jwt=&quot;$SA_JWT_TOKEN&quot; \
+    kubernetes_host=&quot;https://$K8S_HOST:$K8s_PORT&quot; \
+    kubernetes_ca_cert=&quot;$SA_CA_CRT&quot;
+Success! Data written to: auth/kubernetes/config
+
+$ vault write auth/kubernetes/role/aws-cred-role \
+    bound_service_account_names=aws-vault \
+    bound_service_account_namespaces=demo \
+    policies=test-policy \
+    ttl=24h
+Success! Data written to: auth/kubernetes/role/aws-cred-role
+</code></pre>
+
+<p>Here, <code>aws-cred-role</code> is the name of the role.</p></li>
+
+<li><p><strong>Create AppBinding:</strong> To connect CSI driver with Vault, we need to create an <code>AppBinding</code>. First we need to make sure, if <code>AppBinding</code> CRD is installed in your cluster by running:</p>
+
+<pre><code class="language-console">$ kubectl get crd -l app=catalog
+NAME                                          CREATED AT
+appbindings.appcatalog.appscode.com           2018-12-12T06:09:34Z
+</code></pre>
+
+<p>If you don&rsquo;t see that CRD, you can register it via the following command:</p>
+
+<pre><code class="language-console">kubectl apply -f https://raw.githubusercontent.com/kmodules/custom-resources/master/api/crds/appbinding.yaml
+
+</code></pre>
+
+<p>If AppBinding CRD is installed, Create AppBinding with the following data:</p>
+
+<pre><code class="language-yaml">apiVersion: appcatalog.appscode.com/v1alpha1
+kind: AppBinding
+metadata:
+  name: vault-app
+  namespace: demo
+spec:
+clientConfig:
+  url: http://165.227.190.238:30001 # Replace this with Vault URL
+parameters:
+  apiVersion: &quot;kubevault.com/v1alpha1&quot;
+  kind: &quot;VaultServerConfiguration&quot;
+  usePodServiceAccountForCSIDriver: true
+  authPath: &quot;kubernetes&quot;
+  policyControllerRole: aws-cred-role # we created this in previous step
+</code></pre>
+
+<p></details>
+</div></p>
+
+<h2 id="mount-secrets-into-a-kubernetes-pod">Mount secrets into a Kubernetes pod</h2>
+
+<p>After configuring <code>Vault server</code>, now we have <code>vault-app</code> AppBinding in <code>demo</code> namespace, <code>k8s.-.demo.demo-role</code> access role which have access into <code>database</code> path.</p>
+
+<p>So, we can create <code>StorageClass</code> now.</p>
+
+<p><strong>Create StorageClass:</strong> Create <code>storage-class.yaml</code> file with following content, then run <code>kubectl apply -f storage-class.yaml</code></p>
+
+<pre><code class="language-yaml">kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: vault-aws-storage
+  namespace: demo
+annotations:
+  storageclass.kubernetes.io/is-default-class: &quot;false&quot;
+provisioner: secrets.csi.kubevault.com
+parameters:
+  ref: demo/vault-app # namespace/AppBinding, we created this in previous step
+  engine: AWS # vault engine name
+  role: k8s.-.demo.demo-role # role name on vault which you want get access
+  path: aws # specify the secret engine path, default is aws
+</code></pre></li>
+</ol>
+
+<h2 id="test-verify">Test &amp; Verify</h2>
+
+<ul>
+<li><p><strong>Create PVC:</strong> Create a <code>PersistantVolumeClaim</code> with following data. This makes sure a volume will be created and provisioned on your behalf.</p>
+
+<pre><code class="language-yaml">  apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    name: csi-pvc
+    namespace: demo
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 1Gi
+    storageClassName: vault-aws-storage
+    volumeMode: DirectoryOrCreate
+</code></pre>
+
+<ul>
+<li><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</li>
+</ul>
+
+<pre><code class="language-yaml">  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: mypod
+    namespace: demo
+  spec:
+    containers:
+    - name: mypod
+      image: busybox
+      command:
+        - sleep
+        - &quot;3600&quot;
+      volumeMounts:
+      - name: my-vault-volume
+        mountPath: &quot;/etc/foo&quot;
+        readOnly: true
+    serviceAccountName: aws-vault
+    volumes:
+      - name: my-vault-volume
+        persistentVolumeClaim:
+          claimName: csi-pvc
+</code></pre>
+
+<p>Check if the Pod is running successfully, by running:</p>
+
+<pre><code class="language-console">$kubectl describe pods/my-pod
+</code></pre>
+
+<ul>
+<li><strong>Verify Secret:</strong> If the Pod is running successfully, then check inside the app container by running</li>
+</ul>
+
+<pre><code class="language-console">$ kubectl exec -ti mypod /bin/sh -n demo
+/ # ls /etc/foo
+access_key  secret_key
+/ # cat /etc/foo/access_key
+AKIAIH4QGZQOCMIWYLDA
+</code></pre></li>
+</ul>
+
+<p>So, we can see that the aws IAM credentials <code>access_key</code> and  <code>secret_key</code> are mounted into the pod</p>
+
+<h2 id="cleaning-up">Cleaning up</h2>
+
+<p>To cleanup the Kubernetes resources created by this tutorial, run:</p>
+
+<pre><code class="language-console">$ kubectl delete ns demo
+namespace &quot;demo&quot; deleted
+</code></pre>
+
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="right-sidebar-area">
+          
+          <div class="search-area">
+            <form action="#">
+              <input type="text" placeholder="Search..." />
+              <button class="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+          
+
+          
+          <div class="tbl-of-contents">
+            <h4>What's on this Page</h4>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#mount-aws-iam-secrets-into-kubernetes-pod-using-csi-driver">Mount AWS IAM Secrets into Kubernetes pod using CSI Driver</a>
+<ul>
+<li><a href="#before-you-begin">Before you Begin</a></li>
+<li><a href="#configure-aws">Configure AWS</a></li>
+<li><a href="#configure-vault">Configure Vault</a></li>
+<li><a href="#configure-cluster">Configure Cluster</a></li>
+<li><a href="#mount-secrets-into-a-kubernetes-pod">Mount secrets into a Kubernetes pod</a></li>
+<li><a href="#test-verify">Test &amp; Verify</a></li>
+<li><a href="#cleaning-up">Cleaning up</a></li>
+</ul></li>
+</ul>
+</nav>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+<section></section>
+
+    
+
+    
+    
+    <section class="cta-area section-padding pt-0">
+      <div class="container section">
+        <div class="cta-padding">
+          <div class="columns">
+            <div class="column is-6">
+              
+              <div class="cta-text">
+                <h2>Ready to get Start?</h2>
+                <p>Create a Free Account and refer your friend</p>
+              </div>
+              
+            </div>
+            <div class="column is-6 has-text-right is-mobile">
+              <div class="cta-button d-table">
+                
+                <div class="cta-button-inner d-table-cell">
+                  <a href="#" class="button kd-button kd-primary"
+                    >Try Now for FREE</a
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <footer class="footer-area">
+      <div class="footer-top">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="single-footer-widget">
+                
+                <div class="footer-logo">
+                  <a href="#"
+                    ><img
+                      src="/assets/images/logo-color-appscode.png"
+                      alt=""
+                      class="img"
+                  /></a>
+                </div>
+                
+
+                
+                <div class="subscription-form">
+                  <form action="#">
+                    <label for="email">Subscribe Our Newsletter</label>
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input
+                          class="input"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="info@gmail.com"
+                        />
+                      </div>
+                      <div class="control">
+                        <a class="button kd-primary">
+                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+
+                
+                <div class="contact-information">
+                  <h4>Have any Inquiry?</h4>
+                  <ul class="all-contact-info">
+                    <li>
+                      <a href="callto:+123456789"
+                        ><span
+                          ><i class="fa fa-phone" aria-hidden="true"></i></span
+                        >+123 456 789</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="mailto:appscode@gmail.com"
+                        ><span
+                          ><i
+                            class="fa fa-envelope-o"
+                            aria-hidden="true"
+                          ></i></span
+                        >appscode@gmail.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Products</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Voyager</a></li>
+                    <li><a href="#">KubeDB</a></li>
+                    <li><a href="#">Pharmer Stash </a></li>
+                    <li><a href="#">Service Broker</a></li>
+                    <li><a href="#">Kubed</a></li>
+                    <li><a href="#">Guard</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Searchlight</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Offerings</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Open source </a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Company</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Seles Inquiry</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="column is-2">
+              <div class="single-footer-widget">
+                
+                <div class="footer-menu">
+                  <h4>Legal</h4>
+                  <ul class="footer-link">
+                    <li><a href="#">Service Level Agreement</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container section">
+          <div class="columns">
+            <div class="column is-4">
+              <p>All rights reserved © 2018. Appscode, Inc..</p>
+            </div>
+            <div class="column is-4 is-mobile has-text-centered">
+              <div class="footer-inline-link">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+            </div>
+            <div class="column is-4 is-mobile has-text-right">
+              <div class="socail-link-inline">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-twitter" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    
+    <script src="/assets/js/bulma-carousel.min.js"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

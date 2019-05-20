@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vault Server Authentication on Run production-grade databases easily on Kubernetes</title>
+    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/</link>
+    <description>Recent content in Vault Server Authentication on Run production-grade databases easily on Kubernetes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AppBinding | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/</guid>
+      <description>New to KubeVault? Please start here.
+ AppBinding CRD AppBinding CRD provides a way to specify connection information, credential and parameters that are necessary for communicating with app/service. In Vault operator, AppBinding used to communicate with vault, database, etc. This also provides flexibility to use external app/service.
+apiVersion: appcatalog.appscode.com/v1alpha1 kind: AppBinding metadata: name: vault-app namespace: demo spec: ...  AppBinding Spec AppBinding spec contains connection, credential and parameters information.</description>
+    </item>
+    
+    <item>
+      <title>Configure AWS IAM Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure AWS IAM Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For AWS IAM authentication, it has to be enabled and configured in Vault. To perform this authenticaion:
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be &amp;quot;kubevault.com/aws&amp;quot;.
+ The specified secret data can have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure Kubernetes Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Kubernetes Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Kubernetes Authentication, it has to be enabled and configured in Vault. In Vault operator, it can be performed in two ways:
+ Using ServiceAccount Name Using ServiceAccount Token Secret  Kubernetes Authentication using ServiceAccount Name To perform Kubernetes Authentication using ServiceAccount Name,</description>
+    </item>
+    
+    <item>
+      <title>Configure TLS Certificates Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure TLS Certificates Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For TLS Certificates authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/tls.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure Token Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Token Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. To perform Token Authentication,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubevault.com/token.
+ The specified secret data must have the following key:
+ Secret.Data[&amp;quot;token&amp;quot;] : Required. Specifies the Vault authentication token.  The specified secret must be in AppBinding&amp;rsquo;s namespace.</description>
+    </item>
+    
+    <item>
+      <title>Configure Userpass Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Userpass Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Userpass authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/basic-auth.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Vault Server Authentication Methods</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/</guid>
+      <description>  New to KubeVault? Please start here.
+ Vault Server Authentication Methods In Vault operator, usually Vault connection information are handled by AppBinding. Following authentication methods are currently supported by Vault operator using AppBinding:
+ AWS IAM Auth Method Kubernetes Auth Method TLS Certificates Auth Method Token Auth Method Userpass Auth Method  </description>
+    </item>
+    
+  </channel>
+</rss>

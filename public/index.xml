@@ -1,0 +1,1988 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Run production-grade databases easily on Kubernetes</title>
+    <link>https://kubevault-v1-hugo.firebaseapp.com/</link>
+    <description>Recent content on Run production-grade databases easily on Kubernetes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS KMS | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.awsKmsSsm To use awsKmsSsm mode specify mode.awsKmsSsm. In this mode, unseal keys and root token will be stored in AWS System Manager Parameter store and they will be encrypted using AWS encryption key.
+spec: unsealer: mode: awsKmsSsm: kmsKeyID: &amp;lt;key_id&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt;  mode.awsKmsSsm has following field:
+awsKmsSsm.kmsKeyID awsKmsSsm.kmsKeyID is a required field that specifies the ID or ARN of the AWS KMS key to encrypt values.</description>
+    </item>
+    
+    <item>
+      <title>AWS KMS | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/aws_kms_ssm/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.awsKmsSsm To use awsKmsSsm mode specify mode.awsKmsSsm. In this mode, unseal keys and root token will be stored in AWS System Manager Parameter store and they will be encrypted using AWS encryption key.
+spec: unsealer: mode: awsKmsSsm: kmsKeyID: &amp;lt;key_id&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt;  mode.awsKmsSsm has following field:
+awsKmsSsm.kmsKeyID awsKmsSsm.kmsKeyID is a required field that specifies the ID or ARN of the AWS KMS key to encrypt values.</description>
+    </item>
+    
+    <item>
+      <title>AWS S3 | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/s3/</guid>
+      <description>New to KubeVault? Please start here.
+ AWS S3 In S3 storage backend, data will be stored in AWS S3. Vault documentation for S3 storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-s3 namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: s3: bucket: &amp;quot;my-vault-bucket&amp;quot; region: &amp;quot;us-west-1&amp;quot; credentialSecret: &amp;quot;aws-credential&amp;quot;  spec.backend.s3 To use S3 as backend storage in Vault specify spec.backend.s3 in VaultServer CRD.
+spec: backend: s3: bucket: &amp;lt;bucket_name&amp;gt; endPoint: &amp;lt;end_point&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;credential_secret_name&amp;gt; sessionTokenSecret: &amp;lt;session_secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; s3ForcePathStyle: &amp;lt;true/false&amp;gt; disableSSL: &amp;lt;true/false&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>AWS S3 | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/s3/</guid>
+      <description>New to KubeVault? Please start here.
+ AWS S3 In S3 storage backend, data will be stored in AWS S3. Vault documentation for S3 storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-s3 namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: s3: bucket: &amp;quot;my-vault-bucket&amp;quot; region: &amp;quot;us-west-1&amp;quot; credentialSecret: &amp;quot;aws-credential&amp;quot;  spec.backend.s3 To use S3 as backend storage in Vault specify spec.backend.s3 in VaultServer CRD.
+spec: backend: s3: bucket: &amp;lt;bucket_name&amp;gt; endPoint: &amp;lt;end_point&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;credential_secret_name&amp;gt; sessionTokenSecret: &amp;lt;session_secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; s3ForcePathStyle: &amp;lt;true/false&amp;gt; disableSSL: &amp;lt;true/false&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>AWSAccessKeyRequest | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsaccesskeyrequest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsaccesskeyrequest/</guid>
+      <description>New to KubeVault? Please start here.
+ AWSAccessKeyRequest CRD AWSAccessKeyRequest CRD is to request AWS credential from vault. If AWSAccessKeyRequest is approved, then Vault operator will issue credential from vault and create Kubernetes secret containing credential. The secret name will be specified in status.secret.name field.
+apiVersion: engine.kubevault.com/v1alpha1 kind: AWSAccessKeyRequest metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  AWSAccessKeyRequest Spec AWSAccessKeyRequest spec contains information about AWS role and subject.</description>
+    </item>
+    
+    <item>
+      <title>AWSAccessKeyRequest | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsaccesskeyrequest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsaccesskeyrequest/</guid>
+      <description>New to KubeVault? Please start here.
+ AWSAccessKeyRequest CRD AWSAccessKeyRequest CRD is to request AWS credential from vault. If AWSAccessKeyRequest is approved, then Vault operator will issue credential from vault and create Kubernetes secret containing credential. The secret name will be specified in status.secret.name field.
+apiVersion: engine.kubevault.com/v1alpha1 kind: AWSAccessKeyRequest metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  AWSAccessKeyRequest Spec AWSAccessKeyRequest spec contains information about AWS role and subject.</description>
+    </item>
+    
+    <item>
+      <title>AppBinding | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/appbinding/</guid>
+      <description>New to KubeVault? Please start here.
+ AppBinding CRD AppBinding CRD provides a way to specify connection information, credential and parameters that are necessary for communicating with app/service. In Vault operator, AppBinding used to communicate with vault, database, etc. This also provides flexibility to use external app/service.
+apiVersion: appcatalog.appscode.com/v1alpha1 kind: AppBinding metadata: name: vault-app namespace: demo spec: ...  AppBinding Spec AppBinding spec contains connection, credential and parameters information.</description>
+    </item>
+    
+    <item>
+      <title>AppBinding | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding/</guid>
+      <description>New to KubeVault? Please start here.
+ AppBinding CRD AppBinding CRD provides a way to specify connection information, credential and parameters that are necessary for communicating with app/service. In Vault operator, AppBinding used to communicate with vault, database, etc. This also provides flexibility to use external app/service.
+apiVersion: appcatalog.appscode.com/v1alpha1 kind: AppBinding metadata: name: vault-app namespace: demo spec: ...  AppBinding Spec AppBinding spec contains connection, credential and parameters information.</description>
+    </item>
+    
+    <item>
+      <title>AwsRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsrole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/secret-engine-crds/awsrole/</guid>
+      <description>New to KubeVault? Please start here.
+ AWSRole CRD Vault operator will configure root IAM credentials and create role according to AWSRole CRD (CustomResourceDefinition) specification. If the user deletes the AWSRole CRD, then respective role will also be deleted from Vault.
+apiVersion: engine.kubevault.com/v1alpha1 kind: AWSRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>AwsRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsrole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/secret-engine-crds/awsrole/</guid>
+      <description>New to KubeVault? Please start here.
+ AWSRole CRD Vault operator will configure root IAM credentials and create role according to AWSRole CRD (CustomResourceDefinition) specification. If the user deletes the AWSRole CRD, then respective role will also be deleted from Vault.
+apiVersion: engine.kubevault.com/v1alpha1 kind: AWSRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>Azure Key Vault | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/azure_key_vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/azure_key_vault/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.azureKeyVault To use azureKeyVault mode specify mode.azureKeyVault. In this mode, unseal keys and root token will be stored in Azure Key Vault as secret.
+spec: unsealer: mode: azureKeyVault: vaultBaseUrl: &amp;lt;vault_base_url&amp;gt; tenantID: &amp;lt;tenant_id&amp;gt; clientCertSecret: &amp;lt;secret_name&amp;gt; aadClientSecret: &amp;lt;secret_name useManagedIdentity: &amp;lt;true/false&amp;gt; cloud: &amp;lt;cloud_environment_identifier&amp;gt;  mode.azureKeyVault has following field:
+azureKeyVault.vaultBaseUrl azureKeyVault.vaultBaseUrl is a required field that specifies Azure key vault url.
+spec: unsealer: mode: azureKeyVault: vaultBaseUrl: &amp;quot;https://myvault.</description>
+    </item>
+    
+    <item>
+      <title>Azure Key Vault | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/azure_key_vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/azure_key_vault/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.azureKeyVault To use azureKeyVault mode specify mode.azureKeyVault. In this mode, unseal keys and root token will be stored in Azure Key Vault as secret.
+spec: unsealer: mode: azureKeyVault: vaultBaseUrl: &amp;lt;vault_base_url&amp;gt; tenantID: &amp;lt;tenant_id&amp;gt; clientCertSecret: &amp;lt;secret_name&amp;gt; aadClientSecret: &amp;lt;secret_name useManagedIdentity: &amp;lt;true/false&amp;gt; cloud: &amp;lt;cloud_environment_identifier&amp;gt;  mode.azureKeyVault has following field:
+azureKeyVault.vaultBaseUrl azureKeyVault.vaultBaseUrl is a required field that specifies Azure key vault url.
+spec: unsealer: mode: azureKeyVault: vaultBaseUrl: &amp;quot;https://myvault.</description>
+    </item>
+    
+    <item>
+      <title>Azure | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/azure/</guid>
+      <description>New to KubeVault? Please start here.
+ Azure In Azure storage backend, data will be stored in Azure Storage Container. Vault documentation for azure storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-azure namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: azure: accountName: &amp;quot;vault-ac&amp;quot; accountKeySecret: &amp;quot;azure-cred&amp;quot; container: &amp;quot;my-vault-storage&amp;quot;  spec.backend.azure To use Azure as backend storage in Vault specify spec.backend.azure in VaultServer CRD.
+spec: backend: azure: accountName: &amp;lt;storage_account_name&amp;gt; accountKeySecret: &amp;lt;storage_account_key_secret_name&amp;gt; container: &amp;lt;container_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>Azure | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/azure/</guid>
+      <description>New to KubeVault? Please start here.
+ Azure In Azure storage backend, data will be stored in Azure Storage Container. Vault documentation for azure storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-azure namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: azure: accountName: &amp;quot;vault-ac&amp;quot; accountKeySecret: &amp;quot;azure-cred&amp;quot; container: &amp;quot;my-vault-storage&amp;quot;  spec.backend.azure To use Azure as backend storage in Vault specify spec.backend.azure in VaultServer CRD.
+spec: backend: azure: accountName: &amp;lt;storage_account_name&amp;gt; accountKeySecret: &amp;lt;storage_account_key_secret_name&amp;gt; container: &amp;lt;container_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>Configure AWS IAM Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/aws-iam/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure AWS IAM Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For AWS IAM authentication, it has to be enabled and configured in Vault. To perform this authenticaion:
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be &amp;quot;kubevault.com/aws&amp;quot;.
+ The specified secret data can have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure AWS IAM Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/aws-iam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/aws-iam/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure AWS IAM Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For AWS IAM authentication, it has to be enabled and configured in Vault. To perform this authenticaion:
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be &amp;quot;kubevault.com/aws&amp;quot;.
+ The specified secret data can have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure Kubernetes Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/kubernetes/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Kubernetes Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Kubernetes Authentication, it has to be enabled and configured in Vault. In Vault operator, it can be performed in two ways:
+ Using ServiceAccount Name Using ServiceAccount Token Secret  Kubernetes Authentication using ServiceAccount Name To perform Kubernetes Authentication using ServiceAccount Name,</description>
+    </item>
+    
+    <item>
+      <title>Configure Kubernetes Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/kubernetes/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Kubernetes Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Kubernetes Authentication, it has to be enabled and configured in Vault. In Vault operator, it can be performed in two ways:
+ Using ServiceAccount Name Using ServiceAccount Token Secret  Kubernetes Authentication using ServiceAccount Name To perform Kubernetes Authentication using ServiceAccount Name,</description>
+    </item>
+    
+    <item>
+      <title>Configure TLS Certificates Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/tls/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure TLS Certificates Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For TLS Certificates authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/tls.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure TLS Certificates Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/tls/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure TLS Certificates Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For TLS Certificates authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/tls.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure Token Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/token/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Token Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. To perform Token Authentication,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubevault.com/token.
+ The specified secret data must have the following key:
+ Secret.Data[&amp;quot;token&amp;quot;] : Required. Specifies the Vault authentication token.  The specified secret must be in AppBinding&amp;rsquo;s namespace.</description>
+    </item>
+    
+    <item>
+      <title>Configure Token Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/token/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Token Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. To perform Token Authentication,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubevault.com/token.
+ The specified secret data must have the following key:
+ Secret.Data[&amp;quot;token&amp;quot;] : Required. Specifies the Vault authentication token.  The specified secret must be in AppBinding&amp;rsquo;s namespace.</description>
+    </item>
+    
+    <item>
+      <title>Configure Userpass Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/userpass/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Userpass Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Userpass authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/basic-auth.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Configure Userpass Auth Method for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/userpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/userpass/</guid>
+      <description>New to KubeVault? Please start here.
+ Configure Userpass Auth Method for Vault Server In Vault operator, usually Vault connection information are handled by AppBinding. For Userpass authentication, it has to be enabled and configured in Vault. To perform it,
+ You have to specify spec.secret in the AppBinding.
+ The type of the specified secret must be kubernetes.io/basic-auth.
+ The specified secret data must have the following key:</description>
+    </item>
+    
+    <item>
+      <title>Contributing | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/contributing/</guid>
+      <description>Contribution Guidelines Want to hack on Vault operator?
+AppsCode projects are Apache 2.0 licensed and accept contributions via GitHub pull requests. This document outlines some of the conventions on development workflow, commit message formatting, contact points and other resources to make it easier to get your contribution accepted.
+Certificate of Origin By contributing to this project you agree to the Developer Certificate of Origin (DCO). This document was created by the Linux Kernel community and is a simple statement that you, as a contributor, have the legal right to make the contribution.</description>
+    </item>
+    
+    <item>
+      <title>Contributing | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/contributing/</guid>
+      <description>Contribution Guidelines Want to hack on Vault operator?
+AppsCode projects are Apache 2.0 licensed and accept contributions via GitHub pull requests. This document outlines some of the conventions on development workflow, commit message formatting, contact points and other resources to make it easier to get your contribution accepted.
+Certificate of Origin By contributing to this project you agree to the Developer Certificate of Origin (DCO). This document was created by the Linux Kernel community and is a simple statement that you, as a contributor, have the legal right to make the contribution.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault/</guid>
+      <description>csi-vault Vault CSI by Appscode - Start farms
+Synopsis Vault CSI by Appscode - Start farms
+Options  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for csi-vault --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault/</guid>
+      <description>csi-vault Vault CSI by Appscode - Start farms
+Synopsis Vault CSI by Appscode - Start farms
+Options  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for csi-vault --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_run/</guid>
+      <description>csi-vault run Run Vault CSI driver
+Synopsis Run Vault CSI driver
+csi-vault run [flags]  Options  --authentication-kubeconfig string kubeconfig file pointing at the &#39;core&#39; kubernetes server with enough rights to create tokenaccessreviews.authentication.k8s.io. --authentication-skip-lookup If false, the authentication-kubeconfig will be used to lookup missing authentication configuration from the cluster. --authentication-token-webhook-cache-ttl duration The duration to cache responses from the webhook token authenticator. (default 10s) --authorization-always-allow-paths strings A list of HTTP paths to skip during authorization, i.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_run/</guid>
+      <description>csi-vault run Run Vault CSI driver
+Synopsis Run Vault CSI driver
+csi-vault run [flags]  Options  --authentication-kubeconfig string kubeconfig file pointing at the &#39;core&#39; kubernetes server with enough rights to create tokenaccessreviews.authentication.k8s.io. --authentication-skip-lookup If false, the authentication-kubeconfig will be used to lookup missing authentication configuration from the cluster. --authentication-token-webhook-cache-ttl duration The duration to cache responses from the webhook token authenticator. (default 10s) --authorization-always-allow-paths strings A list of HTTP paths to skip during authorization, i.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/csi-driver/csi-vault_version/</guid>
+      <description>csi-vault version Prints binary version number.
+Synopsis Prints binary version number.
+csi-vault version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Csi-Vault Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/csi-driver/csi-vault_version/</guid>
+      <description>csi-vault version Prints binary version number.
+Synopsis Prints binary version number.
+csi-vault version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>DatabaseAccessRequest | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</guid>
+      <description>New to KubeVault? Please start here.
+ DatabaseAccessRequest CRD DatabaseAccessRequest CRD is to request database credential from vault. If DatabaseAccessRequest is approved, then Vault operator will issue credential from vault and create Kubernetes secret containing credential. The secret name will be specified in status.secret.name field.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: DatabaseAccessRequest metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  DatabaseAccessRequest Spec DatabaseAccessRequest spec contains information about database role and subject.</description>
+    </item>
+    
+    <item>
+      <title>DatabaseAccessRequest | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/databaseaccessrequest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/databaseaccessrequest/</guid>
+      <description>New to KubeVault? Please start here.
+ DatabaseAccessRequest CRD DatabaseAccessRequest CRD is to request database credential from vault. If DatabaseAccessRequest is approved, then Vault operator will issue credential from vault and create Kubernetes secret containing credential. The secret name will be specified in status.secret.name field.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: DatabaseAccessRequest metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  DatabaseAccessRequest Spec DatabaseAccessRequest spec contains information about database role and subject.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Amazon EKS</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/eks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/eks/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Amazon EKS Here, we are going to deploy Vault in Amazon EKS using Vault operator. We are going to use AWS S3 bucket as Vault backend and awsKmsSsm unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a EKS cluster. If you don&amp;rsquo;t already have a cluster, create one from here. You can use eksctl command line tool to create EKS cluster easily.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Amazon EKS</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/eks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/eks/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Amazon EKS Here, we are going to deploy Vault in Amazon EKS using Vault operator. We are going to use AWS S3 bucket as Vault backend and awsKmsSsm unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a EKS cluster. If you don&amp;rsquo;t already have a cluster, create one from here. You can use eksctl command line tool to create EKS cluster easily.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Azure Kubernetes Service (AKS)</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/aks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/aks/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Azure Kubernetes Service (AKS) Here, we are going to deploy Vault in AKS using Vault operator. We are going to use Azure Storage Container as Vault backend and azureKeyVault unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a AKS cluster. If you don&amp;rsquo;t already have a cluster, create one from here.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Azure Kubernetes Service (AKS)</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/aks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/aks/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Azure Kubernetes Service (AKS) Here, we are going to deploy Vault in AKS using Vault operator. We are going to use Azure Storage Container as Vault backend and azureKeyVault unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a AKS cluster. If you don&amp;rsquo;t already have a cluster, create one from here.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Google Kubernetes Engine (GKE)</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/gke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/gke/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Google Kubernetes Engine (GKE) Here, we are going to deploy Vault in GKE using Vault operator. We are going to use GCS bucket as Vault backend and googleKmsGcs unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a GKE cluster. If you don&amp;rsquo;t already have a cluster, create one from here.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Vault on Google Kubernetes Engine (GKE)</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/gke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/gke/</guid>
+      <description>New to KubeVault? Please start here.
+ Deploy Vault on Google Kubernetes Engine (GKE) Here, we are going to deploy Vault in GKE using Vault operator. We are going to use GCS bucket as Vault backend and googleKmsGcs unsealer mode for automatic unsealing the Vault.
+Before You Begin At first, you need to have a GKE cluster. If you don&amp;rsquo;t already have a cluster, create one from here.</description>
+    </item>
+    
+    <item>
+      <title>Developer Guide</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Development Guide This document is intended to be the canonical source of truth for things like supported toolchain versions for building Vault operator. If you find a requirement that this doc does not capture, please submit an issue on github.
+This document is intended to be relative to the branch in which it is found. It is guaranteed that requirements will change over time for the development branch, but release branches of Vault operator should not change.</description>
+    </item>
+    
+    <item>
+      <title>Developer Guide</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Development Guide This document is intended to be the canonical source of truth for things like supported toolchain versions for building Vault operator. If you find a requirement that this doc does not capture, please submit an issue on github.
+This document is intended to be relative to the branch in which it is found. It is guaranteed that requirements will change over time for the development branch, but release branches of Vault operator should not change.</description>
+    </item>
+    
+    <item>
+      <title>Dynamodb | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/dynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/dynamodb/</guid>
+      <description>New to KubeVault? Please start here.
+ DynamoDB In DynamoDB storage backend, data will be stored in DynamoDB. Vault documentation for DynamoDB storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-dynamoDB namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: dynamoDB: table: &amp;quot;my-vault-table&amp;quot; region: &amp;quot;us-west-1&amp;quot; readCapacity: 5 writeCapacity: 5  spec.backend.dynamoDB To use dynamoDB as backend storage in Vault specify spec.backend.dynamoDB in VaultServer CRD.
+spec: backend: dynamoDB: table: &amp;lt;table_name&amp;gt; region: &amp;lt;region&amp;gt; endPoint: &amp;lt;endpoint&amp;gt; haEnabled: &amp;lt;true/false&amp;gt; readCapacity: &amp;lt;read_capacity&amp;gt; writeCapacity: &amp;lt;write_capacity&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt; sessionTokenSecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>Dynamodb | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</guid>
+      <description>New to KubeVault? Please start here.
+ DynamoDB In DynamoDB storage backend, data will be stored in DynamoDB. Vault documentation for DynamoDB storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-dynamoDB namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: dynamoDB: table: &amp;quot;my-vault-table&amp;quot; region: &amp;quot;us-west-1&amp;quot; readCapacity: 5 writeCapacity: 5  spec.backend.dynamoDB To use dynamoDB as backend storage in Vault specify spec.backend.dynamoDB in VaultServer CRD.
+spec: backend: dynamoDB: table: &amp;lt;table_name&amp;gt; region: &amp;lt;region&amp;gt; endPoint: &amp;lt;endpoint&amp;gt; haEnabled: &amp;lt;true/false&amp;gt; readCapacity: &amp;lt;read_capacity&amp;gt; writeCapacity: &amp;lt;write_capacity&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt; sessionTokenSecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>Etcd | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/etcd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/etcd/</guid>
+      <description>New to KubeVault? Please start here.
+ Etcd In Etcd storage backend, data will be stored in Etcd. Vault documentation for Etcd storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-etcd namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.backend.etcd To use Etcd as storage backend in Vault specify spec.backend.etcd in VaultServer CRD.
+spec: backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.</description>
+    </item>
+    
+    <item>
+      <title>Etcd | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</guid>
+      <description>New to KubeVault? Please start here.
+ Etcd In Etcd storage backend, data will be stored in Etcd. Vault documentation for Etcd storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-etcd namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.backend.etcd To use Etcd as storage backend in Vault specify spec.backend.etcd in VaultServer CRD.
+spec: backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.</description>
+    </item>
+    
+    <item>
+      <title>GCS | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/gcs/</guid>
+      <description>New to KubeVault? Please start here.
+ Google Cloud Storage (GCS) In Google Cloud Storage (GCS) storage backend, data will be stored in Google Cloud Storage. Vault documentation for GCS storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-gcs namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: gcs: bucket: &amp;quot;my-vault-storage&amp;quot; credentialSecret: &amp;quot;my-gcs-credential&amp;quot;  spec.backend.gcs To use GCS as backend storage in Vault specify spec.backend.gcs in VaultServer CRD.</description>
+    </item>
+    
+    <item>
+      <title>GCS | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</guid>
+      <description>New to KubeVault? Please start here.
+ Google Cloud Storage (GCS) In Google Cloud Storage (GCS) storage backend, data will be stored in Google Cloud Storage. Vault documentation for GCS storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-gcs namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: gcs: bucket: &amp;quot;my-vault-storage&amp;quot; credentialSecret: &amp;quot;my-gcs-credential&amp;quot;  spec.backend.gcs To use GCS as backend storage in Vault specify spec.backend.gcs in VaultServer CRD.</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud KMS | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.googleKmsGcs To use googleKmsGcs mode specify mode.googleKmsGcs. In this mode, unseal keys and root token will be stored in Google Cloud Storage and they will be encrypted using google cryptographic keys.
+spec: unsealer: mode: googleKmsGcs: bucket: &amp;lt;bucket_name&amp;gt; kmsProject: &amp;lt;project_name&amp;gt; kmsLocation: &amp;lt;location&amp;gt; kmsKeyRing: &amp;lt;key_ring_name&amp;gt; kmsCryptoKey: &amp;lt;crypto_key_name&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt;  mode.googleKmsGcs has following field:
+googleKmsGcs.bucket googleKmsGcs.bucket is a required field that specifies the name of the bucket to store keys.</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud KMS | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/google_kms_gcs/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.googleKmsGcs To use googleKmsGcs mode specify mode.googleKmsGcs. In this mode, unseal keys and root token will be stored in Google Cloud Storage and they will be encrypted using google cryptographic keys.
+spec: unsealer: mode: googleKmsGcs: bucket: &amp;lt;bucket_name&amp;gt; kmsProject: &amp;lt;project_name&amp;gt; kmsLocation: &amp;lt;location&amp;gt; kmsKeyRing: &amp;lt;key_ring_name&amp;gt; kmsCryptoKey: &amp;lt;crypto_key_name&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt;  mode.googleKmsGcs has following field:
+googleKmsGcs.bucket googleKmsGcs.bucket is a required field that specifies the name of the bucket to store keys.</description>
+    </item>
+    
+    <item>
+      <title>Grafana dashboard for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/grafana/</guid>
+      <description>New to KubeVault? Please start here.
+ Visualize Vault server data using Grafana dashboard Grafana provides an elegant graphical user interface to visualize data. You can create beautiful dashboard easily with a meaningful representation of your Prometheus metrics.
+If there is no grafana instance running on your cluster, then you can read this tutorial to deploy one.
+Add Prometheus Data Source We have to add our Prometheus server prometheus-prometheus-0 as data source of grafana.</description>
+    </item>
+    
+    <item>
+      <title>Grafana dashboard for Vault Server</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/grafana/</guid>
+      <description>New to KubeVault? Please start here.
+ Visualize Vault server data using Grafana dashboard Grafana provides an elegant graphical user interface to visualize data. You can create beautiful dashboard easily with a meaningful representation of your Prometheus metrics.
+If there is no grafana instance running on your cluster, then you can read this tutorial to deploy one.
+Add Prometheus Data Source We have to add our Prometheus server prometheus-prometheus-0 as data source of grafana.</description>
+    </item>
+    
+    <item>
+      <title>In Memory | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/inmem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/inmem/</guid>
+      <description>New to KubeVault? Please start here.
+ In-Memory In In-Memory backend storage, data will be kept in memory. If the Kubernetes pod on which vault is running is restarted, then all data will be lost. This is useful for development and experimentation, but use of this backend is highly discouraged in production. Vault documentation for In-Memory storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-inmem namespace: demo spec: nodes: 1 version: &amp;quot;0.</description>
+    </item>
+    
+    <item>
+      <title>In Memory | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</guid>
+      <description>New to KubeVault? Please start here.
+ In-Memory In In-Memory backend storage, data will be kept in memory. If the Kubernetes pod on which vault is running is restarted, then all data will be lost. This is useful for development and experimentation, but use of this backend is highly discouraged in production. Vault documentation for In-Memory storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-inmem namespace: demo spec: nodes: 1 version: &amp;quot;0.</description>
+    </item>
+    
+    <item>
+      <title>Install KubeVault CLI</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/cli/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/cli/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide In order to install KubeVault CLI as kubectl-plugin, download the kubectl-vault binary and move it anywhere on you PATH.
+macOS  Linux  Windows   macOS $ wget -O kubectl-vault https://github.com/kubevault/cli/releases/download/0.1.0/kubectl-vault-darwin-amd64 \ &amp;amp;&amp;amp; chmod +x kubectl-vault \ &amp;amp;&amp;amp; sudo mv kubectl-vault /usr/local/bin/   Linux $ wget -O kubectl-vault https://github.com/kubevault/cli/releases/download/0.1.0/kubectl-vault-linux-amd64 \ &amp;amp;&amp;amp; chmod +x kubectl-vault \ &amp;amp;&amp;amp; sudo mv kubectl-vault /usr/local/bin/   Windows  Download the latest release v0.</description>
+    </item>
+    
+    <item>
+      <title>Install KubeVault CLI</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/cli/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/cli/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide In order to install KubeVault CLI as kubectl-plugin, download the kubectl-vault binary and move it anywhere on you PATH.
+macOS  Linux  Windows   macOS $ wget -O kubectl-vault https://github.com/kubevault/cli/releases/download/0.2.0/kubectl-vault-darwin-amd64 \ &amp;amp;&amp;amp; chmod +x kubectl-vault \ &amp;amp;&amp;amp; sudo mv kubectl-vault /usr/local/bin/   Linux $ wget -O kubectl-vault https://github.com/kubevault/cli/releases/download/0.2.0/kubectl-vault-linux-amd64 \ &amp;amp;&amp;amp; chmod +x kubectl-vault \ &amp;amp;&amp;amp; sudo mv kubectl-vault /usr/local/bin/   Windows  Download the latest release v0.</description>
+    </item>
+    
+    <item>
+      <title>Install Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide Vault CSI driver can be installed via a script or as a Helm chart.
+Script  Helm   Using Script To install Vault CSI driver in your Kubernetes cluster, run the following command:
+# Kubernetes 1.12.x (CSI driver spec 0.3.0) $ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.1.0/hack/deploy/install.sh | bash  After successful installation, you should have csi-vault-*** pod running in the kube-system namespace.</description>
+    </item>
+    
+    <item>
+      <title>Install Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide Vault CSI driver can be installed via a script or as a Helm chart.
+Script  Helm   Using Script To install Vault CSI driver in your Kubernetes cluster, run the following command:
+# Kubernetes 1.13+ (CSI driver spec 1.0.0) $ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh | bash  After successful installation, you should have csi-vault-*** pod running in the kube-system namespace.</description>
+    </item>
+    
+    <item>
+      <title>Install Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide Vault operator can be installed via a script or as a Helm chart.
+Script  Helm   Using Script To install Vault operator in your Kubernetes cluster, run the following command:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/install.sh | bash  After successful installation, you should have a vault-operator-*** pod running in the kube-system namespace.
+$ kubectl get pods -n kube-system | grep vault-operator vault-operator-846d47f489-jrb58 1/1 Running 0 48s  Customizing Installer The installer script and associated yaml files can be found in the /hack/deploy folder.</description>
+    </item>
+    
+    <item>
+      <title>Install Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/install/</guid>
+      <description>New to KubeVault? Please start here.
+ Installation Guide Vault operator can be installed via a script or as a Helm chart.
+Script  Helm   Using Script To install Vault operator in your Kubernetes cluster, run the following command:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.2.0/hack/deploy/install.sh | bash  After successful installation, you should have a vault-operator-*** pod running in the kube-system namespace.
+$ kubectl get pods -n kube-system | grep vault-operator vault-operator-846d47f489-jrb58 1/1 Running 0 48s  Customizing Installer The installer script and associated yaml files can be found in the /hack/deploy folder.</description>
+    </item>
+    
+    <item>
+      <title>KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/</guid>
+      <description>Concepts Concepts help you learn about the different parts of the KubeVault and the abstractions it uses.
+Vault Operator  Secret Engines  Policy Management    What is KubeVault?  Overview. Provides a conceptual introduction to KubeVault operator, including the problems it solves and its high-level architecture.  Custom Resource Definitions  Vault Server. Introduces the concept of VaultServer for configuring a HashiCorp Vault server in a Kubernetes native way.</description>
+    </item>
+    
+    <item>
+      <title>KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/</guid>
+      <description>Concepts Concepts help you learn about the different parts of the KubeVault and the abstractions it uses.
+Vault Operator  Secret Engines  Policy Management    What is KubeVault?  Overview. Provides a conceptual introduction to KubeVault operator, including the problems it solves and its high-level architecture.  Custom Resource Definitions  Vault Server. Introduces the concept of VaultServer for configuring a HashiCorp Vault server in a Kubernetes native way.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Secret | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.kubernetesSecret To use kubernetesSecret mode specify mode.kubernetesSecret. In this mode, unseal keys and root token will be stored in Kubernetes secret.
+spec: unsealer: mode: kubernetesSecret: secretName: &amp;lt;secret_name&amp;gt;  mode.kubernetesSecret has following field:
+kubernetesSecret.secretName kubernetesSecret.secretName is a required field that specifies the name of Kubernetes secret. If this secret does not exist, then Unsealer will create it. The secret will be created in the same namespace of VaultServer.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Secret | Vault Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/kubernetes_secret/</guid>
+      <description>New to KubeVault? Please start here.
+ mode.kubernetesSecret To use kubernetesSecret mode specify mode.kubernetesSecret. In this mode, unseal keys and root token will be stored in Kubernetes secret.
+spec: unsealer: mode: kubernetesSecret: secretName: &amp;lt;secret_name&amp;gt;  mode.kubernetesSecret has following field:
+kubernetesSecret.secretName kubernetesSecret.secretName is a required field that specifies the name of Kubernetes secret. If this secret does not exist, then Unsealer will create it. The secret will be created in the same namespace of VaultServer.</description>
+    </item>
+    
+    <item>
+      <title>Manage AWS IAM Secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage AWS IAM Secrets using the Vault Operator You can easily manage AWS secret engine using Vault operator.
+You should be familiar with the following CRD:
+ AWSRole AWSAccessKeyRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage AWS IAM Secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage AWS IAM Secrets using the Vault Operator You can easily manage AWS secret engine using Vault operator.
+You should be familiar with the following CRD:
+ AWSRole AWSAccessKeyRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage External Vault using Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/external-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/external-vault/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage External Vault using Vault Operator You can manage external Vault (not deployed by Vault operator) by Vault operator. You can do following operations using Vault operator:
+ Manage Vault policy using VaultPolicy and VaultPolicyBinding. Guides can be found here.
+ Manage AWS secret engine using AWSRole and AWSAccessKeyRequest. Guides can be found here.
+ Manage PostgreSQL Database secret engine using PostgresRole and DatabaseAccessRequest.</description>
+    </item>
+    
+    <item>
+      <title>Manage External Vault using Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/external-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/external-vault/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage External Vault using Vault Operator You can manage external Vault (not deployed by Vault operator) by Vault operator. You can do following operations using Vault operator:
+ Manage Vault policy using VaultPolicy and VaultPolicyBinding. Guides can be found here.
+ Manage AWS secret engine using AWSRole and AWSAccessKeyRequest. Guides can be found here.
+ Manage PostgreSQL Database secret engine using PostgresRole and DatabaseAccessRequest.</description>
+    </item>
+    
+    <item>
+      <title>Manage Key/Value Secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage Key/Value Secrets using the Vault Operator You can easily manage KV secret engine using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage Key/Value Secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage Key/Value Secrets using the Vault Operator You can easily manage KV secret engine using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage MongoDB credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage MongoDB credentials using the Vault Operator You can easily manage MongoDB Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ MongoDBRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage MongoDB credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage MongoDB credentials using the Vault Operator You can easily manage MongoDB Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ MongoDBRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage MySQL/MariaDB credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage MySQL/MariaDB credentials using the Vault Operator You can easily manage MySQL Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ MySQLRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage MySQL/MariaDB credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage MySQL/MariaDB credentials using the Vault Operator You can easily manage MySQL Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ MySQLRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage PKI(certificates) secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage PKI(certificates) secrets using the Vault Operator You can easily manage PKI secret engine using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage PKI(certificates) secrets using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage PKI(certificates) secrets using the Vault Operator You can easily manage PKI secret engine using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage PostgreSQL credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage PostgreSQL credentials using the Vault Operator You can easily manage PostgreSQL Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ PostgresRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Manage PostgreSQL credentials using the Vault Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Manage PostgreSQL credentials using the Vault Operator You can easily manage PostgreSQL Database secret engine using Vault operator.
+You should be familiar with the following CRD:
+ PostgresRole DatabaseAccessRequest AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>MongoDBRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mongodb/</guid>
+      <description>New to KubeVault? Please start here.
+ MongoDBRole CRD Vault operator will create database connection config and role according to MongoDBRole CRD (CustomResourceDefinition) specification. If the user deletes the MongoDBRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: MongoDBRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>MongoDBRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mongodb/</guid>
+      <description>New to KubeVault? Please start here.
+ MongoDBRole CRD Vault operator will create database connection config and role according to MongoDBRole CRD (CustomResourceDefinition) specification. If the user deletes the MongoDBRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: MongoDBRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault CSI Driver using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault CSI Driver with builtin Prometheus This tutorial will show you how to configure builtin Prometheus scrapper to monitor Vault CSI driver.
+Before You Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault CSI Driver using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault CSI Driver with builtin Prometheus This tutorial will show you how to configure builtin Prometheus scrapper to monitor Vault CSI driver.
+Before You Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault CSI Driver using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/csi-driver/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault CSI Driver Using CoreOS Prometheus Operator CoreOS prometheus-operator provides simple and Kubernetes native way to deploy and configure Prometheus server. This tutorial will show you how to use CoreOS Prometheus operator for monitoring Vault CSI driver.
+Before You Begin  At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault CSI Driver using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/csi-driver/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault CSI Driver Using CoreOS Prometheus Operator CoreOS prometheus-operator provides simple and Kubernetes native way to deploy and configure Prometheus server. This tutorial will show you how to use CoreOS Prometheus operator for monitoring Vault CSI driver.
+Before You Begin  At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Operator using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault operator with builtin Prometheus This tutorial will show you how to configure builtin Prometheus scrapper to monitor Vault operator.
+Before You Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Operator using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault operator with builtin Prometheus This tutorial will show you how to configure builtin Prometheus scrapper to monitor Vault operator.
+Before You Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Operator using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-operator/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Operator Using CoreOS Prometheus Operator CoreOS prometheus-operator provides simple and Kubernetes native way to deploy and configure Prometheus server. This tutorial will show you how to use CoreOS Prometheus operator for monitoring Vault operator.
+Before You Begin  At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Operator using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-operator/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Operator Using CoreOS Prometheus Operator CoreOS prometheus-operator provides simple and Kubernetes native way to deploy and configure Prometheus server. This tutorial will show you how to use CoreOS Prometheus operator for monitoring Vault operator.
+Before You Begin  At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Server using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault server with builtin Prometheus The prometheus server is needed to configure so that it can discover endpoints of services. If a Prometheus server is already running in cluster and if it is configured in a way that it can discover service endpoints, no extra configuration will be needed.
+If there is no existing Prometheus server running, read this tutorial to see how to create a builtin Prometheus server with appropriate configuration.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Server using Builtin Prometheus Discovery</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/builtin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/builtin/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitor Vault server with builtin Prometheus The prometheus server is needed to configure so that it can discover endpoints of services. If a Prometheus server is already running in cluster and if it is configured in a way that it can discover service endpoints, no extra configuration will be needed.
+If there is no existing Prometheus server running, read this tutorial to see how to create a builtin Prometheus server with appropriate configuration.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Server using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/vault-server/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Server Using CoreOS Prometheus Operator The prometheus server is needed to configure so that it can discover endpoints of services. If a Prometheus server is already running in cluster and if it is configured in a way that it can discover service endpoints, no extra configuration will be needed.
+If there is no existing Prometheus server running, read this tutorial to see how to install CoreOS Prometheus Operator.</description>
+    </item>
+    
+    <item>
+      <title>Monitor Vault Server using CoreOS Prometheus Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/coreos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/vault-server/coreos/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Server Using CoreOS Prometheus Operator The prometheus server is needed to configure so that it can discover endpoints of services. If a Prometheus server is already running in cluster and if it is configured in a way that it can discover service endpoints, no extra configuration will be needed.
+If there is no existing Prometheus server running, read this tutorial to see how to install CoreOS Prometheus Operator.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Overview | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/monitoring/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Server Vault operator has native support for monitoring via Prometheus. You can use builtin Prometheus scrapper or CoreOS Prometheus Operator to monitor Vault operator. This tutorial will show you how this monitoring works with Vault operator and how to enable them.
+Overview By default the Vault operator will configure each vault pod to publish statsd metrics. The Vault operator runs a statsd-exporter container as sidecar to convert and expose those metrics in the format for Prometheus.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Overview | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/monitoring/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Monitoring Vault Server Vault operator has native support for monitoring via Prometheus. You can use builtin Prometheus scrapper or CoreOS Prometheus Operator to monitor Vault operator. This tutorial will show you how this monitoring works with Vault operator and how to enable them.
+Overview By default the Vault operator will configure each vault pod to publish statsd metrics. The Vault operator runs a statsd-exporter container as sidecar to convert and expose those metrics in the format for Prometheus.</description>
+    </item>
+    
+    <item>
+      <title>Mount AWS IAM Secrets into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/aws/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount AWS IAM Secrets into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount AWS IAM Secrets into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/aws/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount AWS IAM Secrets into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount Key/Value Secrets into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/kv/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount Key/Value Secrets into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount Key/Value Secrets into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/kv/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount Key/Value Secrets into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount MongoDB credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mongodb/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount MongoDB credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount MongoDB credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mongodb/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount MongoDB credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount MySQL/MariaDB credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/mysql/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount MySQL/MariaDB credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount MySQL/MariaDB credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/mysql/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount MySQL/MariaDB credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount PKI(certificates) Secrets into Kubernetse pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/pki/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount PKI(certificates) Secrets into Kubernetse pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount PKI(certificates) Secrets into Kubernetse pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/pki/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount PKI(certificates) Secrets into Kubernetse pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount PostgreSQL credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/secret-engines/postgres/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount PostgreSQL credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Mount PostgreSQL credentials into Kubernetes pod using CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/csi-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/postgres/csi-driver/</guid>
+      <description>New to KubeVault? Please start here.
+ Mount PostgreSQL credentials into Kubernetes pod using CSI Driver Before you Begin At first, you need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
+To keep things isolated, this tutorial uses a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>MySQL | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/mysql/</guid>
+      <description>New to KubeVault? Please start here.
+ MySQL In MySQL storage backend, data will be stored in MySQL. Vault documentation for MySQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-mysql namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: mySQL: address: &amp;quot;my.mysql.com:3306&amp;quot; userCredentialSecret: &amp;quot;mysql-cred&amp;quot;  spec.backend.mySQL To use MySQL as backend storage in Vault specify spec.backend.mySQL in VaultServer CRD.
+spec: backend: mySQL: address: &amp;lt;address&amp;gt; database: &amp;lt;database_name&amp;gt; table: &amp;lt;table_name&amp;gt; userCredentialSecret: &amp;lt;secret_name&amp;gt; tlsCASecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>MySQL | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</guid>
+      <description>New to KubeVault? Please start here.
+ MySQL In MySQL storage backend, data will be stored in MySQL. Vault documentation for MySQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-mysql namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: mySQL: address: &amp;quot;my.mysql.com:3306&amp;quot; userCredentialSecret: &amp;quot;mysql-cred&amp;quot;  spec.backend.mySQL To use MySQL as backend storage in Vault specify spec.backend.mySQL in VaultServer CRD.
+spec: backend: mySQL: address: &amp;lt;address&amp;gt; database: &amp;lt;database_name&amp;gt; table: &amp;lt;table_name&amp;gt; userCredentialSecret: &amp;lt;secret_name&amp;gt; tlsCASecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>MySQLRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mysql/</guid>
+      <description>New to KubeVault? Please start here.
+ MySQLRole CRD Vault operator will create database connection config and role according to MySQLRole CRD (CustomResourceDefinition) specification. If the user deletes the MySQLRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: MySQLRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>MySQLRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/mysql/</guid>
+      <description>New to KubeVault? Please start here.
+ MySQLRole CRD Vault operator will create database connection config and role according to MySQLRole CRD (CustomResourceDefinition) specification. If the user deletes the MySQLRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: MySQLRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Swift | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/swift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/swift/</guid>
+      <description>New to KubeVault? Please start here.
+ Swift In Swift storage backend, data will be stored in OpenStack Swift Container. Vault documentation for Swift storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-swift namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: swift: authUrl: &amp;quot;https://auth.cloud.ovh.net/v2.0/&amp;quot; container: &amp;quot;my-vault-container&amp;quot; credentialSecret: &amp;quot;os-credential&amp;quot; region: &amp;quot;BHS1&amp;quot; tenant: &amp;quot;123456789999&amp;quot;  spec.backend.swift To use Swift as backend storage in Vault specify spec.backend.swift in VaultServer CRD.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack Swift | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/swift/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/swift/</guid>
+      <description>New to KubeVault? Please start here.
+ Swift In Swift storage backend, data will be stored in OpenStack Swift Container. Vault documentation for Swift storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-swift namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: swift: authUrl: &amp;quot;https://auth.cloud.ovh.net/v2.0/&amp;quot; container: &amp;quot;my-vault-container&amp;quot; credentialSecret: &amp;quot;os-credential&amp;quot; region: &amp;quot;BHS1&amp;quot; tenant: &amp;quot;123456789999&amp;quot;  spec.backend.swift To use Swift as backend storage in Vault specify spec.backend.swift in VaultServer CRD.</description>
+    </item>
+    
+    <item>
+      <title>Overview of Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Prerequisite  Kubernetes v1.12.x --allow-privileged flag must be set to true for both the API server and the kubelet (If you use Docker) The Docker daemon of the cluster nodes must allow shared mounts Pre-installed HasiCorp Vault server. Pass --feature-gates=CSIDriverRegistry=true,CSINodeInfo=true to kubelet and kube-apiserver  Supported CSI Spec version    CSI Spec Version csi-vault:0.1.0     0.3.0 &amp;#10003;    Supported StorageClass provisioner    CSI Driver (csi-vault) Version Provisioner Name Kubernetes Version     0.</description>
+    </item>
+    
+    <item>
+      <title>Overview of Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Prerequisite  Kubernetes v1.13+ --allow-privileged flag must be set to true for both the API server and the kubelet (If you use Docker) The Docker daemon of the cluster nodes must allow shared mounts Pre-installed HasiCorp Vault server. Pass --feature-gates=CSIDriverRegistry=true,CSINodeInfo=true to kubelet and kube-apiserver  Supported CSI Spec version    CSI Spec Version csi-vault:0.1.0 csi-vault:0.2.0     0.</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/postgresql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/postgresql/</guid>
+      <description>New to KubeVault? Please start here.
+ PostgreSQL In PostgreSQL storage backend, data will be stored in PostgreSQL. Vault documentation for PostgreSQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-postgreSQL namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: postgreSQL: connectionUrlSecret: &amp;quot;my-postgres-conn&amp;quot;  spec.backend.postgreSQL To use postgreSQL as backend storage in Vault specify spec.backend.postgreSQL in VaultServer CRD.
+spec: backend: postgreSQL: connectionUrlSecret: &amp;lt;secret_name&amp;gt; table: &amp;lt;table_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL | Vault Server Storage</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</guid>
+      <description>New to KubeVault? Please start here.
+ PostgreSQL In PostgreSQL storage backend, data will be stored in PostgreSQL. Vault documentation for PostgreSQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-postgreSQL namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: postgreSQL: connectionUrlSecret: &amp;quot;my-postgres-conn&amp;quot;  spec.backend.postgreSQL To use postgreSQL as backend storage in Vault specify spec.backend.postgreSQL in VaultServer CRD.
+spec: backend: postgreSQL: connectionUrlSecret: &amp;lt;secret_name&amp;gt; table: &amp;lt;table_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
+    </item>
+    
+    <item>
+      <title>PostgresRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/postgresrole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/postgresrole/</guid>
+      <description>New to KubeVault? Please start here.
+ PostgresRole CRD Vault operator will create database connection config and role according to PostgresRole CRD (CustomResourceDefinition) specification. If the user deletes the PostgresRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: PostgresRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>PostgresRole | Vault Secret Engine</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/postgresrole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/database-crds/postgresrole/</guid>
+      <description>New to KubeVault? Please start here.
+ PostgresRole CRD Vault operator will create database connection config and role according to PostgresRole CRD (CustomResourceDefinition) specification. If the user deletes the PostgresRole CRD, then respective role will also be deleted from Vault.
+apiVersion: authorization.kubedb.com/v1alpha1 kind: PostgresRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
+    </item>
+    
+    <item>
+      <title>Release | Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/release/</guid>
+      <description>Release Process The following steps must be done from a Linux x64 bit machine.
+ Do a global replacement of tags so that docs point to the next release. Push changes to the release-x branch and apply new tag. Push all the changes to remote repo. Build and push vault docker image: console $ cd ~/go/src/github.com/appscode/vault ./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release  - Now, update the release notes in Github.</description>
+    </item>
+    
+    <item>
+      <title>Release | Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/developer-guide/release/</guid>
+      <description>Release Process The following steps must be done from a Linux x64 bit machine.
+ Do a global replacement of tags so that docs point to the next release. Push changes to the release-x branch and apply new tag. Push all the changes to remote repo. Build and push vault docker image: console $ cd ~/go/src/github.com/appscode/vault ./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release  - Now, update the release notes in Github.</description>
+    </item>
+    
+    <item>
+      <title>Support | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/support/</guid>
+      <description>Support We use Slack for public discussions. To chit chat with us or the rest of the community, join us in the AppsCode Slack team channel #vault. To sign up, use our Slack inviter.
+If you have found a bug with Vault operator or want to request for new features, please file an issue.</description>
+    </item>
+    
+    <item>
+      <title>Support | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/support/</guid>
+      <description>Support We use Slack for public discussions. To chit chat with us or the rest of the community, join us in the AppsCode Slack team channel #vault. To sign up, use our Slack inviter.
+If you have found a bug with Vault operator or want to request for new features, please file an issue.</description>
+    </item>
+    
+    <item>
+      <title>Table of Contents | Guides</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/</guid>
+      <description>Guides Guides show you how to perform tasks with Vault operator and Vault CSI driver.
+Using Vault operator  To deploy Vault in AWS EKS see here. To deploy Vault in Google GKE see here. To deploy Vault in Azure AKS see here. To manage Vault policy see here. To manage Vault AWS secret engine see here. To manage Vault MongoDB Database secret engine see here. To manage Vault MySQL Database secret engine see here.</description>
+    </item>
+    
+    <item>
+      <title>Table of Contents | Guides</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/</guid>
+      <description>Guides Guides show you how to perform tasks with Vault operator and Vault CSI driver.
+Using Vault operator  To deploy Vault in AWS EKS see here. To deploy Vault in Google GKE see here. To deploy Vault in Azure AKS see here. To manage Vault policy see here. To manage Vault AWS secret engine see here. To manage Vault MongoDB Database secret engine see here. To manage Vault MySQL Database secret engine see here.</description>
+    </item>
+    
+    <item>
+      <title>Table of Contents | Setup</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/</guid>
+      <description>Setup Setup contains instructions for installing the Vault operator and Vault CSI driver in Kubernetes.
+ Vault operator  Install Vault operator. Installation instructions for Vault operator. Uninstall Vault operator. Instructions for uninstallating Vault operator.  Vault CSI driver  Install Vault CSI driver. Installation instructions for Vault CSI driver. Uninstall Vault CSI driver. Instructions for uninstallating Vault CSI driver.  Kubectl Plugin  Install Kubectl Plugin. Installation instructions for KubeVault kubectl plugin.</description>
+    </item>
+    
+    <item>
+      <title>Table of Contents | Setup</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/</guid>
+      <description>Setup Setup contains instructions for installing the Vault operator and Vault CSI driver in Kubernetes.
+ Vault operator  Install Vault operator. Installation instructions for Vault operator. Uninstall Vault operator. Instructions for uninstallating Vault operator.  Vault CSI driver  Install Vault CSI driver. Installation instructions for Vault CSI driver. Uninstall Vault CSI driver. Instructions for uninstallating Vault CSI driver.  Kubectl Plugin  Install Kubectl Plugin. Installation instructions for KubeVault kubectl plugin.</description>
+    </item>
+    
+    <item>
+      <title>Uninstall Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/uninstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/csi-driver/uninstall/</guid>
+      <description> Uninstall Vault CSI Driver If you installed csi driver using YAML then run:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.1.0/hack/deploy/install.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE]  The above command will leave the csidriver crd objects as-is. If you wish to nuke all csidriver crd objects, also pass the --purge flag.
+If you used HELM to install Vault CSI driver, then run following command
+helm del --purge &amp;lt;name&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Uninstall Vault CSI Driver</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/uninstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/csi-driver/uninstall/</guid>
+      <description> Uninstall Vault CSI Driver If you installed csi driver using YAML then run:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE]  The above command will leave the csidriver crd objects as-is. If you wish to nuke all csidriver crd objects, also pass the --purge flag.
+If you used HELM to install Vault CSI driver, then run following command
+helm del --purge &amp;lt;name&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Uninstall Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/uninstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/uninstall/</guid>
+      <description>Uninstall Vault operator To uninstall Vault operator, run the following command:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/vault.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE] + kubectl delete deployment -l app=vault -n kube-system deployment &amp;quot;vault-operator&amp;quot; deleted + kubectl delete service -l app=vault -n kube-system service &amp;quot;vault-operator&amp;quot; deleted + kubectl delete secret -l app=vault -n kube-system No resources found + kubectl delete serviceaccount -l app=vault -n kube-system No resources found + kubectl delete clusterrolebindings -l app=vault -n kube-system No resources found + kubectl delete clusterrole -l app=vault -n kube-system No resources found + kubectl delete initializerconfiguration -l app=vault initializerconfiguration &amp;quot;vault-initializer&amp;quot; deleted  The above command will leave the Vault operator crd objects as-is.</description>
+    </item>
+    
+    <item>
+      <title>Uninstall Vault operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/uninstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/setup/operator/uninstall/</guid>
+      <description>Uninstall Vault operator To uninstall Vault operator, run the following command:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.2.0/hack/deploy/vault.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE] + kubectl delete deployment -l app=vault -n kube-system deployment &amp;quot;vault-operator&amp;quot; deleted + kubectl delete service -l app=vault -n kube-system service &amp;quot;vault-operator&amp;quot; deleted + kubectl delete secret -l app=vault -n kube-system No resources found + kubectl delete serviceaccount -l app=vault -n kube-system No resources found + kubectl delete clusterrolebindings -l app=vault -n kube-system No resources found + kubectl delete clusterrole -l app=vault -n kube-system No resources found + kubectl delete initializerconfiguration -l app=vault initializerconfiguration &amp;quot;vault-initializer&amp;quot; deleted  The above command will leave the Vault operator crd objects as-is.</description>
+    </item>
+    
+    <item>
+      <title>Unsealer Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/unsealer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/unsealer/unsealer/</guid>
+      <description>New to KubeVault? Please start here.
+ Unsealer Unsealer automates the process of initializing and unsealing Vault running in Kubernetes cluster. Also it provides facilities to store unseal keys and root token in a secure way.
+spec.unsealer To use Unsealer specify spec.unsealer in VaultServer CRD .
+spec: unsealer: secretShares: &amp;lt;num_of_secret_shares&amp;gt; secretThresold: &amp;lt;num_of_secret_threshold&amp;gt; retryPeriodSeconds: &amp;lt;retry_period&amp;gt; overwriteExisting: &amp;lt;true/false&amp;gt; mode: ...  unsealer.secretShares unsealer.secretShares is an optional field that specifies the number of shares to split the master key into.</description>
+    </item>
+    
+    <item>
+      <title>Unsealer Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/unsealer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/unsealer/unsealer/</guid>
+      <description>New to KubeVault? Please start here.
+ Unsealer Unsealer automates the process of initializing and unsealing Vault running in Kubernetes cluster. Also it provides facilities to store unseal keys and root token in a secure way.
+spec.unsealer To use Unsealer specify spec.unsealer in VaultServer CRD .
+spec: unsealer: secretShares: &amp;lt;num_of_secret_shares&amp;gt; secretThresold: &amp;lt;num_of_secret_threshold&amp;gt; retryPeriodSeconds: &amp;lt;retry_period&amp;gt; overwriteExisting: &amp;lt;true/false&amp;gt; mode: ...  unsealer.secretShares unsealer.secretShares is an optional field that specifies the number of shares to split the master key into.</description>
+    </item>
+    
+    <item>
+      <title>Use a Vault Server with Multiple Kubernetes Clusters</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/multi-cluster-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/platforms/multi-cluster-vault/</guid>
+      <description>New to KubeVault? Please start here.
+ Use a Vault Server with Multiple Kubernetes Clusters In this tutorial, we are going to show how to use Vault operator in multiple Kubernetes clusters with a single Vault server.
+To being with, we have created two GKE clusters.
+We are going to install Vault operator in demo-cluster-1. We are going to set --cluster-name flag. This flag value will be used by Vault operator when creating resources in Vault.</description>
+    </item>
+    
+    <item>
+      <title>Use a Vault Server with Multiple Kubernetes Clusters</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/multi-cluster-vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/platforms/multi-cluster-vault/</guid>
+      <description>New to KubeVault? Please start here.
+ Use a Vault Server with Multiple Kubernetes Clusters In this tutorial, we are going to show how to use Vault operator in multiple Kubernetes clusters with a single Vault server.
+To being with, we have created two GKE clusters.
+We are going to install Vault operator in demo-cluster-1. We are going to set --cluster-name flag. This flag value will be used by Vault operator when creating resources in Vault.</description>
+    </item>
+    
+    <item>
+      <title>Vault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault/</guid>
+      <description>vault KubeVault cli by AppsCode
+Synopsis KubeVault cli by AppsCode
+Options  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups. --cache-dir string Default HTTP cache directory (default &amp;quot;/home/tamal/.kube/http-cache&amp;quot;) --certificate-authority string Path to a cert file for the certificate authority --client-certificate string Path to a client certificate file for TLS --client-key string Path to a client key file for TLS --cluster string The name of the kubeconfig cluster to use --context string The name of the kubeconfig context to use --enable-status-subresource If true, uses sub resource for crds.</description>
+    </item>
+    
+    <item>
+      <title>Vault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault/</guid>
+      <description>vault KubeVault cli by AppsCode
+Synopsis KubeVault cli by AppsCode
+Options  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups. --cache-dir string Default HTTP cache directory (default &amp;quot;/home/tamal/.kube/http-cache&amp;quot;) --certificate-authority string Path to a cert file for the certificate authority --client-certificate string Path to a client certificate file for TLS --client-key string Path to a client key file for TLS --cluster string The name of the kubeconfig cluster to use --context string The name of the kubeconfig context to use --enable-status-subresource If true, uses sub resource for crds.</description>
+    </item>
+    
+    <item>
+      <title>Vault Approve</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_approve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_approve/</guid>
+      <description>vault approve Approve request
+Synopsis Approve request
+vault approve [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for approve -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault Approve</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_approve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_approve/</guid>
+      <description>vault approve Approve request
+Synopsis Approve request
+vault approve [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for approve -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault Deny</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_deny/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_deny/</guid>
+      <description>vault deny Deny request
+Synopsis Deny request
+vault deny [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for deny -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault Deny</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_deny/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_deny/</guid>
+      <description>vault deny Deny request
+Synopsis Deny request
+vault deny [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for deny -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault Policy Management</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/policy-management/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/guides/policy-management/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Vault Policy Management You can easily manage Vault Policy in Kubernetes way using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Vault Policy Management</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/policy-management/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/policy-management/overview/</guid>
+      <description>New to KubeVault? Please start here.
+ Vault Policy Management You can easily manage Vault Policy in Kubernetes way using Vault operator.
+You should be familiar with the following CRD:
+ VaultPolicy VaultPolicyBinding AppBinding  Before you begin:
+ Install Vault operator in your cluster following the steps here.
+ Deploy Vault. It could be in the Kubernetes cluster or external.
+  To keep things isolated, we are going to use a separate namespace called demo throughout this tutorial.</description>
+    </item>
+    
+    <item>
+      <title>Vault Server Authentication Methods</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/auth-methods/overview/</guid>
+      <description>  New to KubeVault? Please start here.
+ Vault Server Authentication Methods In Vault operator, usually Vault connection information are handled by AppBinding. Following authentication methods are currently supported by Vault operator using AppBinding:
+ AWS IAM Auth Method Kubernetes Auth Method TLS Certificates Auth Method Token Auth Method Userpass Auth Method  </description>
+    </item>
+    
+    <item>
+      <title>Vault Server Authentication Methods</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/auth-methods/overview/</guid>
+      <description>  New to KubeVault? Please start here.
+ Vault Server Authentication Methods In Vault operator, usually Vault connection information are handled by AppBinding. Following authentication methods are currently supported by Vault operator using AppBinding:
+ AWS IAM Auth Method Kubernetes Auth Method TLS Certificates Auth Method Token Auth Method Userpass Auth Method  </description>
+    </item>
+    
+    <item>
+      <title>Vault Server Version | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserverversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserverversion/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultServerVersion VaultServerVersion is a Kubernetes Custom Resource Definitions (CRD). It is a non-namespaced CRD. The name of this CRD will be used in .spec.version field of VaultServer CRD. It provides a way to specify the docker images of Vault, Unsealer and Exporter.
+Using a separate CRD for specifying respective docker images allow us to modify the images independently of Vault operator. This will also allow users to use their custom images.</description>
+    </item>
+    
+    <item>
+      <title>Vault Server Version | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserverversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserverversion/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultServerVersion VaultServerVersion is a Kubernetes Custom Resource Definitions (CRD). It is a non-namespaced CRD. The name of this CRD will be used in .spec.version field of VaultServer CRD. It provides a way to specify the docker images of Vault, Unsealer and Exporter.
+Using a separate CRD for specifying respective docker images allow us to modify the images independently of Vault operator. This will also allow users to use their custom images.</description>
+    </item>
+    
+    <item>
+      <title>Vault Server | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/vaultserver/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultServer CRD Vault operator will deploy Vault according to VaultServer CRD (CustomResourceDefinition) specification.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: &amp;lt;name&amp;gt; spec: ... status: ...  VaultServer Spec VaultServer Spec contains the configuration about how to deploy Vault in Kubernetes cluster. It also covers automate unsealing of Vault.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: example namespace: default spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: inmem: {} unsealer: secretShares: 4 secretThreshold: 2 mode: kubernetesSecret: secretName: vault-keys  The spec section has following parts:</description>
+    </item>
+    
+    <item>
+      <title>Vault Server | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/vault-server-crds/vaultserver/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultServer CRD Vault operator will deploy Vault according to VaultServer CRD (CustomResourceDefinition) specification.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: &amp;lt;name&amp;gt; spec: ... status: ...  VaultServer Spec VaultServer Spec contains the configuration about how to deploy Vault in Kubernetes cluster. It also covers automate unsealing of Vault.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: example namespace: default spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: inmem: {} unsealer: secretShares: 4 secretThreshold: 2 mode: kubernetesSecret: secretName: vault-keys  The spec section has following parts:</description>
+    </item>
+    
+    <item>
+      <title>Vault Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/cli/vault_version/</guid>
+      <description>vault version Prints binary version number.
+Synopsis Prints binary version number.
+vault version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_version/</guid>
+      <description>vault version Prints binary version number.
+Synopsis Prints binary version number.
+vault version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator/</guid>
+      <description>vault-operator Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+Synopsis Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+Options  --alsologtostderr log to standard error as well as files --bypass-validating-webhook-xray if true, bypasses validating webhook xray checks --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for vault-operator --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator/</guid>
+      <description>vault-operator Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+Synopsis Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+Options  --alsologtostderr log to standard error as well as files --bypass-validating-webhook-xray if true, bypasses validating webhook xray checks --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for vault-operator --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_run/</guid>
+      <description>vault-operator run Launch Vault operator
+Synopsis Launch Vault operator
+vault-operator run [flags]  Options  --audit-dynamic-configuration Enables dynamic audit configuration. This feature also requires the DynamicAuditing feature flag --audit-log-batch-buffer-size int The size of the buffer to store events before batching and writing. Only used in batch mode. (default 10000) --audit-log-batch-max-size int The maximum size of a batch. Only used in batch mode. (default 1) --audit-log-batch-max-wait duration The amount of time to wait before force writing the batch that hadn&#39;t reached the max size.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_run/</guid>
+      <description>vault-operator run Launch Vault operator
+Synopsis Launch Vault operator
+vault-operator run [flags]  Options  --audit-dynamic-configuration Enables dynamic audit configuration. This feature also requires the DynamicAuditing feature flag --audit-log-batch-buffer-size int The size of the buffer to store events before batching and writing. Only used in batch mode. (default 10000) --audit-log-batch-max-size int The maximum size of a batch. Only used in batch mode. (default 1) --audit-log-batch-max-wait duration The amount of time to wait before force writing the batch that hadn&#39;t reached the max size.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/operator/vault-operator_version/</guid>
+      <description>vault-operator version Prints binary version number.
+Synopsis Prints binary version number.
+vault-operator version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --bypass-validating-webhook-xray if true, bypasses validating webhook xray checks --enable-analytics Send analytical events to Google Analytics (default true) --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Operator Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/operator/vault-operator_version/</guid>
+      <description>vault-operator version Prints binary version number.
+Synopsis Prints binary version number.
+vault-operator version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --bypass-validating-webhook-xray if true, bypasses validating webhook xray checks --enable-analytics Send analytical events to Google Analytics (default true) --log-flush-frequency duration Maximum number of seconds between log flushes (default 5s) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --test.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer/</guid>
+      <description>vault-unsealer Automates initialisation and unsealing of Hashicorp Vault
+Synopsis Automates initialisation and unsealing of Hashicorp Vault
+Options  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for vault-unsealer --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --use-kubeapiserver-fqdn-for-aks if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer/</guid>
+      <description>vault-unsealer Automates initialisation and unsealing of Hashicorp Vault
+Synopsis Automates initialisation and unsealing of Hashicorp Vault
+Options  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) -h, --help help for vault-unsealer --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --use-kubeapiserver-fqdn-for-aks if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_run/</guid>
+      <description>vault-unsealer run Launch Vault unsealer
+Synopsis Launch Vault unsealer
+vault-unsealer run [flags]  Options  --auth.k8s-ca-cert string PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API --auth.k8s-host string Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server --auth.k8s-token-reviewer-jwt string A service account JWT used to access the TokenReview API to validate other JWTs during login.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer Run</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_run/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_run/</guid>
+      <description>vault-unsealer run Launch Vault unsealer
+Synopsis Launch Vault unsealer
+vault-unsealer run [flags]  Options  --auth.k8s-ca-cert string PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API --auth.k8s-host string Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server --auth.k8s-token-reviewer-jwt string A service account JWT used to access the TokenReview API to validate other JWTs during login.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/reference/unsealer/vault-unsealer_version/</guid>
+      <description>vault-unsealer version Prints binary version number.
+Synopsis Prints binary version number.
+vault-unsealer version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --use-kubeapiserver-fqdn-for-aks if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.</description>
+    </item>
+    
+    <item>
+      <title>Vault-Unsealer Version</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/unsealer/vault-unsealer_version/</guid>
+      <description>vault-unsealer version Prints binary version number.
+Synopsis Prints binary version number.
+vault-unsealer version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --enable-analytics Send analytical events to Google Analytics (default true) --log_backtrace_at traceLocation when logging hits line file:N, emit a stack trace (default :0) --log_dir string If non-empty, write log files in this directory --logtostderr log to standard error instead of files --stderrthreshold severity logs at or above this threshold go to stderr --use-kubeapiserver-fqdn-for-aks if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.</description>
+    </item>
+    
+    <item>
+      <title>VaultPolicy | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicy/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultPolicy CRD Vault operator will create Vault Policy according to VaultPolicy CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicy CRD, then respective policy will also be deleted from Vault.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicy metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of policy in Vault will follow this format: k8s.{spec.clusterName}.{spec.namespace}.{spec.name}</description>
+    </item>
+    
+    <item>
+      <title>VaultPolicy | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicy/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultPolicy CRD Vault operator will create Vault Policy according to VaultPolicy CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicy CRD, then respective policy will also be deleted from Vault.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicy metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of policy in Vault will follow this format: k8s.{spec.clusterName}.{spec.namespace}.{spec.name}</description>
+    </item>
+    
+    <item>
+      <title>VaultPolicyBinding | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicybinding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/policy-crds/vaultpolicybinding/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultPolicyBinding CRD Vault operator will create Vault Kuberenetes Role according to VaultPolicyBinding CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicyBinding CRD, then respective role will also be deleted from Vault.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicyBinding metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  VaultPolicyBinding Spec VaultPolicyBinding spec contains information that necessary for creating Vault Kubernetes Role.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicyBinding metadata: name: secret-admin namespace: demo spec: policies: [&amp;quot;secret-admin&amp;quot;] serviceAccountNames: [&amp;quot;sa1&amp;quot;,&amp;quot;sa2&amp;quot;] serviceAccountNamespaces: [&amp;quot;default&amp;quot;,&amp;quot;demo&amp;quot;] TTL: &amp;quot;1000&amp;quot; maxTTL: &amp;quot;2000&amp;quot; Period: &amp;quot;1000&amp;quot;  VaultPolicyBinding Spec has following fields:</description>
+    </item>
+    
+    <item>
+      <title>VaultPolicyBinding | KubeVault Concepts</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</guid>
+      <description>New to KubeVault? Please start here.
+ VaultPolicyBinding CRD Vault operator will create Vault Kuberenetes Role according to VaultPolicyBinding CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicyBinding CRD, then respective role will also be deleted from Vault.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicyBinding metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  VaultPolicyBinding Spec VaultPolicyBinding spec contains information that necessary for creating Vault Kubernetes Role.
+apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicyBinding metadata: name: secret-admin namespace: demo spec: policies: [&amp;quot;secret-admin&amp;quot;] serviceAccountNames: [&amp;quot;sa1&amp;quot;,&amp;quot;sa2&amp;quot;] serviceAccountNamespaces: [&amp;quot;default&amp;quot;,&amp;quot;demo&amp;quot;] TTL: &amp;quot;1000&amp;quot; maxTTL: &amp;quot;2000&amp;quot; Period: &amp;quot;1000&amp;quot;  VaultPolicyBinding Spec has following fields:</description>
+    </item>
+    
+    <item>
+      <title>Welcome | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/welcome/</guid>
+      <description>KubeVault KubeVault by AppsCode is a collection of tools for running HashiCorp Vault on Kubernetes. You can deploy and mange Vault using Vault operator. Using Vault operator, you can deploy Vault for following storage backends:
+ Azure Storage DynamoDB Etcd GCS In Memory MySQL PosgreSQL AWS S3 Swift  From here you can learn all about Vault operator&amp;rsquo;s architecture and how to deploy and use Vault operator.
+ Concepts. Concepts explain the CRDs (CustomResourceDefinition) used by Vault operator.</description>
+    </item>
+    
+    <item>
+      <title>Welcome | KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/welcome/</guid>
+      <description>KubeVault KubeVault by AppsCode is a collection of tools for running HashiCorp Vault on Kubernetes. You can deploy and mange Vault using Vault operator. Using Vault operator, you can deploy Vault for following storage backends:
+ Azure Storage DynamoDB Etcd GCS In Memory MySQL PosgreSQL AWS S3 Swift  From here you can learn all about Vault operator&amp;rsquo;s architecture and how to deploy and use Vault operator.
+ Concepts. Concepts explain the CRDs (CustomResourceDefinition) used by Vault operator.</description>
+    </item>
+    
+    <item>
+      <title>What is KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/what-is-kubevault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/what-is-kubevault/</guid>
+      <description>New to KubeVault? Please start here.
+ What is KubeVault Vault operator is a Kubernetes controller for HashiCorp Vault. Vault is a tool for secrets management, encryption as a service, and privileged access management. Deploying, maintaining, and managing Vault in Kubernetes could be challenging. Vault operator eases these operational tasks so that developers can focus on solving business problems.
+Why use KubeVault Vault operator makes it easy to deploy, maintain and manage Vault servers in Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>What is KubeVault</title>
+      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/what-is-kubevault/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/what-is-kubevault/</guid>
+      <description>New to KubeVault? Please start here.
+ What is KubeVault Vault operator is a Kubernetes controller for HashiCorp Vault. Vault is a tool for secrets management, encryption as a service, and privileged access management. Deploying, maintaining, and managing Vault in Kubernetes could be challenging. Vault operator eases these operational tasks so that developers can focus on solving business problems.
+Why use KubeVault Vault operator makes it easy to deploy, maintain and manage Vault servers in Kubernetes.</description>
+    </item>
+    
+  </channel>
+</rss>
