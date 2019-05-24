@@ -748,41 +748,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -863,11 +828,9 @@ statefulset.apps/vault created
 
 <pre><code class="language-console">$ vault secrets enable -version=1 kv
 Success! Enabled the kv secrets engine at: kv/
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Create Engine Policy:</strong>  To read secret from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
-</ol>
+<li><p><strong>Create Engine Policy:</strong>  To read secret from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</p>
 
 <pre><code class="language-yaml"># capability of get secret
 path &quot;kv/*&quot; {
@@ -879,11 +842,9 @@ path &quot;kv/*&quot; {
 
 <pre><code class="language-console">$ vault policy write test-policy policy.hcl
 Success! Uploaded policy: test-policy
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Write Secret on Vault:</strong> Create a secret on vault by running:</li>
-</ol>
+<li><p><strong>Write Secret on Vault:</strong> Create a secret on vault by running:</p>
 
 <pre><code class="language-console">$ vault kv put kv/my-secret my-value=s3cr3t
 Success! Data written to: kv/my-secret
@@ -914,13 +875,13 @@ Success! Data written to: kv/my-secret
     metadata:
       name: kv-vault
       namespace: demo
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p>
 
 <ol>
-<li><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth backend, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</li>
-</ol>
+<li><p><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth backend, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</p>
 
 <pre><code class="language-console">export VAULT_SA_NAME=$(kubectl get sa kv-vault -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;)
 
@@ -951,11 +912,9 @@ $ vault write auth/kubernetes/role/kvrole \
 Success! Data written to: auth/kubernetes/role/kvrole
 </code></pre>
 
-<p>Here, <code>kvrole</code> is the name of the role.</p>
+<p>Here, <code>kvrole</code> is the name of the role.</p></li>
 
-<ol>
-<li><strong>Create AppBinding:</strong> To connect CSI driver with Vault, we need to create an <code>AppBinding</code>. First we need to make sure, if <code>AppBinding</code> CRD is installed in your cluster by running:</li>
-</ol>
+<li><p><strong>Create AppBinding:</strong> To connect CSI driver with Vault, we need to create an <code>AppBinding</code>. First we need to make sure, if <code>AppBinding</code> CRD is installed in your cluster by running:</p>
 
 <pre><code class="language-console">$ kubectl get crd -l app=catalog
 NAME                                          CREATED AT
@@ -1030,39 +989,45 @@ spec:
   accessModes:</p>
 
 <ul>
-<li><p>ReadWriteOnce
+<li>ReadWriteOnce
 resources:
 requests:
   storage: 1Gi
 storageClassName: vault-kv-storage
-volumeMode: DirectoryOrCreate</p>
+volumeMode: DirectoryOrCreate
+```</li>
+</ul></li>
 
-<pre><code>
-2. **Create Pod:** Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.
+<li><p><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</p>
 
-```yaml
+<p>```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-name: mypod
-namespace: demo
+  name: mypod
+  namespace: demo
 spec:
-containers:
-- name: mypod
+  containers:</p>
+
+<ul>
+<li>name: mypod
 image: busybox
 command:
-  - sleep
-  - &quot;3600&quot;
-volumeMounts:
-- name: my-vault-volume
-  mountPath: &quot;/etc/foo&quot;
-  readOnly: true
+
+<ul>
+<li>sleep</li>
+<li>&ldquo;3600&rdquo;
+volumeMounts:</li>
+<li>name: my-vault-volume
+mountPath: &ldquo;/etc/foo&rdquo;
+readOnly: true
 serviceAccountName: kv-vault
-volumes:
-- name: my-vault-volume
-  persistentVolumeClaim:
-    claimName: csi-pvc
-</code></pre></li>
+volumes:</li>
+<li>name: my-vault-volume
+persistentVolumeClaim:
+claimName: csi-pvc
+```</li>
+</ul></li>
 </ul></li>
 </ol>
 
@@ -1081,7 +1046,8 @@ kubectl describe pods/my-pod
 my-value
 / # cat /etc/foo/my-value
 s3cr3t
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>So, we can see that the secret <code>my-secret</code> is mounted into the pod, where the secret key is mounted as file and value is the content of that file.</p>
 
@@ -1091,8 +1057,7 @@ s3cr3t
 
 <pre><code class="language-console">$ kubectl delete ns demo
 namespace &quot;demo&quot; deleted
-</code></pre></li>
-</ol>
+</code></pre>
 
         </div>
       </div>

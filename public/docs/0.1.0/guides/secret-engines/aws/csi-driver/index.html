@@ -748,41 +748,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -900,11 +865,9 @@ statefulset.apps/vault created
 
 <pre><code class="language-console">$ vault secrets enable aws
 Success! Enabled the aws secrets engine at: aws/
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Create Engine Policy:</strong>  To read secret from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
-</ol>
+<li><p><strong>Create Engine Policy:</strong>  To read secret from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</p>
 
 <pre><code class="language-yaml"># capability of get secret
 path &quot;aws/creds/*&quot; {
@@ -916,11 +879,9 @@ path &quot;aws/creds/*&quot; {
 
 <pre><code class="language-console">$ vault policy write test-policy policy.hcl
 Success! Uploaded policy: test-policy
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Crete AWS config:</strong> To communicate with AWS for generating IAM credentials, Vault needs to configure credentials. Run:</li>
-</ol>
+<li><p><strong>Crete AWS config:</strong> To communicate with AWS for generating IAM credentials, Vault needs to configure credentials. Run:</p>
 
 <pre><code class="language-console">$ vault write aws/config/root \
   access_key=AKIAJWVN5Z4FOFT7NLNA \
@@ -947,17 +908,18 @@ Success! Data written to: aws/config/root
 }
 EOF
 Success! Data written to: aws/roles/k8s.-.demo.demo-role
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>Here, <code>k8s.-.demo.demo-role</code> will be treated as secret name on storage class.</p>
 
 <h2 id="configure-cluster">Configure Cluster</h2>
 
 <ol>
-<li><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</li>
-</ol>
+<li><p><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</p>
 
-<pre><code class="language-yaml">apiVersion: rbac.authorization.k8s.io/v1beta1
+<p>```yaml
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: role-awscreds-binding
@@ -966,22 +928,22 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: system:auth-delegator
-subjects:
-- kind: ServiceAccount
-  name: aws-vault
-  namespace: demo
----
+subjects:</p>
+
+<ul>
+<li>kind: ServiceAccount
+name: aws-vault
+namespace: demo
+&mdash;
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: aws-vault
-  namespace: demo
-</code></pre></li>
-</ol>
+name: aws-vault
+namespace: demo
+``<code>
+After that, run</code>kubectl apply -f service.yaml` to create a service account.</li>
+</ul></li>
 
-<p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p>
-
-<ol>
 <li><p><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth back-end, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</p>
 
 <pre><code class="language-console">export VAULT_SA_NAME=$(kubectl get sa aws-vault -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;)
@@ -1047,7 +1009,8 @@ parameters:
 </code></pre>
 
 <p></div>
-</div></p>
+</div></p></li>
+</ol>
 
 <h2 id="mount-secrets-into-a-kubernetes-pod">Mount secrets into a Kubernetes pod</h2>
 
@@ -1057,21 +1020,20 @@ parameters:
 
 <p><strong>Create StorageClass:</strong> Create <code>storage-class.yaml</code> file with following content, then run <code>kubectl apply -f storage-class.yaml</code></p>
 
-<pre><code class="language-yaml">kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: vault-aws-storage
-  namespace: demo
-annotations:
-  storageclass.kubernetes.io/is-default-class: &quot;false&quot;
-provisioner: com.kubevault.csi.secrets
-parameters:
-  ref: demo/vault-app # namespace/AppBinding, we created this in previous step
-  engine: AWS # vault engine name
-  role: k8s.-.demo.demo-role # role name on vault which you want get access
-  path: aws # specify the secret engine path, default is aws
-</code></pre></li>
-</ol>
+<pre><code class="language-yaml">    kind: StorageClass
+    apiVersion: storage.k8s.io/v1
+    metadata:
+      name: vault-aws-storage
+      namespace: demo
+    annotations:
+      storageclass.kubernetes.io/is-default-class: &quot;false&quot;
+    provisioner: com.kubevault.csi.secrets
+    parameters:
+      ref: demo/vault-app # namespace/AppBinding, we created this in previous step
+      engine: AWS # vault engine name
+      role: k8s.-.demo.demo-role # role name on vault which you want get access
+      path: aws # specify the secret engine path, default is aws
+</code></pre>
 
 <h2 id="test-verify">Test &amp; Verify</h2>
 
@@ -1091,11 +1053,9 @@ parameters:
         storage: 1Gi
     storageClassName: vault-aws-storage
     volumeMode: DirectoryOrCreate
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</li>
-</ul>
+<li><p><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</p>
 
 <pre><code class="language-yaml">  apiVersion: v1
   kind: Pod
@@ -1123,11 +1083,9 @@ parameters:
 <p>Check if the Pod is running successfully, by running:</p>
 
 <pre><code class="language-console">$kubectl describe pods/my-pod
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><strong>Verify Secret:</strong> If the Pod is running successfully, then check inside the app container by running</li>
-</ul>
+<li><p><strong>Verify Secret:</strong> If the Pod is running successfully, then check inside the app container by running</p>
 
 <pre><code class="language-console">$ kubectl exec -ti mypod /bin/sh -n demo
 / # ls /etc/foo

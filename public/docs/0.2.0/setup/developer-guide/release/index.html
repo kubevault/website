@@ -478,41 +478,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -529,13 +494,14 @@
 <li>Do a global replacement of tags so that docs point to the next release.</li>
 <li>Push changes to the <code>release-x</code> branch and apply new tag.</li>
 <li>Push all the changes to remote repo.</li>
-<li>Build and push vault docker image:
-<code>console
-$ cd ~/go/src/github.com/appscode/vault
-./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release
-</code>
 
-- Now, update the release notes in Github. See previous release notes to get an idea what to include there.</li>
+<li><p>Build and push vault docker image:</p>
+
+<pre><code class="language-console">$ cd ~/go/src/github.com/appscode/vault
+./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release
+</code></pre></li>
+
+<li><p>Now, update the release notes in Github. See previous release notes to get an idea what to include there.</p></li>
 </ul>
 
         </div>

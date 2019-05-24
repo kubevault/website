@@ -654,41 +654,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -790,17 +755,17 @@ spec:
 <pre><code class="language-yaml">status:
   conditions:
     - type: Approved
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>It has following field:
-- <code>conditions[].type</code> : <code>Required</code>. Specifies request approval state. Supported type: <code>Approved</code> and <code>Denied</code>.
-- <code>conditions[].reason</code> : <code>Optional</code>. Specifies brief reason for the request state.
-- <code>conditions[].message</code> : <code>Optional</code>. Specifies human readable message with details about the request state.</p>
+  - <code>conditions[].type</code> : <code>Required</code>. Specifies request approval state. Supported type: <code>Approved</code> and <code>Denied</code>.
+  - <code>conditions[].reason</code> : <code>Optional</code>. Specifies brief reason for the request state.
+  - <code>conditions[].message</code> : <code>Optional</code>. Specifies human readable message with details about the request state.</p>
 
 <blockquote>
 <p>Note: Database credential will be issued if <code>conditions[].type</code> is <code>Approved</code>. Otherwise, Vault operator will not issue any credential.</p>
-</blockquote></li>
-</ul>
+</blockquote>
 
         </div>
       </div>

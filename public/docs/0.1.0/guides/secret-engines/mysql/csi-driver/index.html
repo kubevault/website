@@ -748,41 +748,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -864,11 +829,9 @@ statefulset.apps/vault created
 
 <pre><code class="language-console">$ vault secrets enable database
 Success! Enabled the database secrets engine at: database/
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Create Engine Policy:</strong>  To read database credentials from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
-</ol>
+<li><p><strong>Create Engine Policy:</strong>  To read database credentials from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</p>
 
 <pre><code class="language-yaml"># capability of get secret
 path &quot;database/creds/*&quot; {
@@ -880,11 +843,9 @@ path &quot;database/creds/*&quot; {
 
 <pre><code class="language-console">$ vault policy write test-policy policy.hcl
 Success! Uploaded policy: test-policy
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Write Secret on Vault:</strong> Configure Vault with the proper plugin and connection information by running:</li>
-</ol>
+<li><p><strong>Write Secret on Vault:</strong> Configure Vault with the proper plugin and connection information by running:</p>
 
 <pre><code class="language-console">$ vault write database/config/my-mysql-database \
     plugin_name=mysql-rds-database-plugin \
@@ -902,15 +863,15 @@ Success! Uploaded policy: test-policy
     default_ttl=&quot;1h&quot; \
     max_ttl=&quot;24h&quot;
 Success! Data written to: database/roles/k8s.-.demo.demo-role
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>Here, <code>k8s.-.demo.demo-role</code> will be treated as secret name on storage class.</p>
 
 <h2 id="configure-cluster">Configure Cluster</h2>
 
 <ol>
-<li><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</li>
-</ol>
+<li><p><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</p>
 
 <pre><code class="language-yaml">    apiVersion: rbac.authorization.k8s.io/v1beta1
     kind: ClusterRoleBinding
@@ -973,17 +934,20 @@ Success! Data written to: auth/kubernetes/role/db-cred-role
 <pre><code class="language-console">$ kubectl get crd -l app=catalog
 NAME                                          CREATED AT
 appbindings.appcatalog.appscode.com           2018-12-12T06:09:34Z
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>If you don&rsquo;t see that CRD, you can register it via the following command:</p>
 
-<pre><code class="language-console">kubectl apply -f https://raw.githubusercontent.com/kmodules/custom-resources/master/api/crds/appbinding.yaml
+<pre><code>```console
+kubectl apply -f https://raw.githubusercontent.com/kmodules/custom-resources/master/api/crds/appbinding.yaml
 
-</code></pre>
+```
 
-<p>If AppBinding CRD is installed, Create AppBinding with the following data:</p>
+If AppBinding CRD is installed, Create AppBinding with the following data:
 
-<pre><code class="language-yaml">  apiVersion: appcatalog.appscode.com/v1alpha1
+```yaml
+  apiVersion: appcatalog.appscode.com/v1alpha1
   kind: AppBinding
   metadata:
     name: vault-app
@@ -998,6 +962,7 @@ appbindings.appcatalog.appscode.com           2018-12-12T06:09:34Z
     authPath: &quot;kubernetes&quot;
     policyControllerRole: db-cred-role # we created this in previous step
 
+```
 </code></pre>
 
 <p></div>
@@ -1011,21 +976,20 @@ appbindings.appcatalog.appscode.com           2018-12-12T06:09:34Z
 
 <p><strong>Create StorageClass:</strong> Create <code>storage-class.yaml</code> file with following content, then run <code>kubectl apply -f storage-class.yaml</code></p>
 
-<pre><code class="language-yaml">kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: vault-mysql-storage
-  namespace: demo
-annotations:
-  storageclass.kubernetes.io/is-default-class: &quot;false&quot;
-provisioner: com.kubevault.csi.secrets
-parameters:
-  ref: demo/vault-app # namespace/AppBinding, we created this in previous step
-  engine: DATABASE # vault engine name
-  role: k8s.-.demo.demo-role # role name on vault which you want get access
-  path: database # specify the secret engine path, default is database
-</code></pre></li>
-</ol>
+<pre><code class="language-yaml">    kind: StorageClass
+    apiVersion: storage.k8s.io/v1
+    metadata:
+      name: vault-mysql-storage
+      namespace: demo
+    annotations:
+      storageclass.kubernetes.io/is-default-class: &quot;false&quot;
+    provisioner: com.kubevault.csi.secrets
+    parameters:
+      ref: demo/vault-app # namespace/AppBinding, we created this in previous step
+      engine: DATABASE # vault engine name
+      role: k8s.-.demo.demo-role # role name on vault which you want get access
+      path: database # specify the secret engine path, default is database
+</code></pre>
 
 <h2 id="test-verify">Test &amp; Verify</h2>
 
@@ -1045,11 +1009,9 @@ parameters:
           storage: 1Gi
       storageClassName: vault-mysql-storage
       volumeMode: DirectoryOrCreate
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</li>
-</ul>
+<li><p><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</p>
 
 <pre><code class="language-yaml">    apiVersion: v1
     kind: Pod
@@ -1088,7 +1050,8 @@ parameters:
 password  username
 # cat /etc/foo/username
 v-my-r-my54GkHL1
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>So, we can see that database credentials (username, password) are mounted to the specified path.</p>
 
@@ -1098,8 +1061,7 @@ v-my-r-my54GkHL1
 
 <pre><code class="language-console">$ kubectl delete ns demo
 namespace &quot;demo&quot; deleted
-</code></pre></li>
-</ul>
+</code></pre>
 
         </div>
       </div>

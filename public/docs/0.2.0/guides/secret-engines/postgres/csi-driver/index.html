@@ -748,41 +748,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -864,11 +829,9 @@ statefulset.apps/vault created
 
 <pre><code class="language-console">$ vault secrets enable database
 Success! Enabled the database secrets engine at: database/
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Create Engine Policy:</strong>  To read database credentials from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
-</ol>
+<li><p><strong>Create Engine Policy:</strong>  To read database credentials from engine, we need to create a policy with <code>read</code> capability. Create a <code>policy.hcl</code> file and write the following content:</p>
 
 <pre><code class="language-yaml">  # capability of get secret
   path &quot;database/creds/*&quot; {
@@ -880,11 +843,9 @@ Success! Enabled the database secrets engine at: database/
 
 <pre><code class="language-console">  $ vault policy write test-policy policy.hcl
   Success! Uploaded policy: test-policy
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Write Secret on Vault:</strong> Configure Vault with the proper plugin and connection information by running:</li>
-</ol>
+<li><p><strong>Write Secret on Vault:</strong> Configure Vault with the proper plugin and connection information by running:</p>
 
 <pre><code class="language-console">$ vault write database/config/my-postgresql-database \
     plugin_name=postgresql-database-plugin \
@@ -934,11 +895,9 @@ Success! Enabled the database secrets engine at: database/
       namespace: demo
 </code></pre>
 
-<p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p>
+<p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p></li>
 
-<ol>
-<li><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth back-end, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</li>
-</ol>
+<li><p><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth back-end, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</p>
 
 <pre><code class="language-console">export VAULT_SA_NAME=$(kubectl get sa db-vault -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;)
 
@@ -969,11 +928,9 @@ $ vault write auth/kubernetes/role/db-cred-role \
 Success! Data written to: auth/kubernetes/role/db-cred-role
 </code></pre>
 
-<p>Here, <code>db-cred-role</code> is the name of the role.</p>
+<p>Here, <code>db-cred-role</code> is the name of the role.</p></li>
 
-<ol>
-<li><strong>Create AppBinding:</strong> To connect CSI driver with Vault, we need to create an <code>AppBinding</code>. First we need to make sure, if <code>AppBinding</code> CRD is installed in your cluster by running:</li>
-</ol>
+<li><p><strong>Create AppBinding:</strong> To connect CSI driver with Vault, we need to create an <code>AppBinding</code>. First we need to make sure, if <code>AppBinding</code> CRD is installed in your cluster by running:</p>
 
 <pre><code class="language-console">$ kubectl get crd -l app=catalog
 NAME                                          CREATED AT
@@ -1052,11 +1009,9 @@ parameters:
         storage: 1Gi
     storageClassName: vault-pg-storage
     volumeMode: DirectoryOrCreate
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</li>
-</ul>
+<li><p><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</p>
 
 <pre><code class="language-yaml">  apiVersion: v1
   kind: Pod
@@ -1084,11 +1039,9 @@ parameters:
 <p>Check if the Pod is running successfully, by running:</p>
 
 <pre><code class="language-console">$kubectl describe pods/my-pod
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li><strong>Verify Secret:</strong> If the Pod is running successfully, then check inside the app container by running</li>
-</ul>
+<li><p><strong>Verify Secret:</strong> If the Pod is running successfully, then check inside the app container by running</p>
 
 <pre><code class="language-console">$ kubectl exec -it mypgpod sh
 # ls /etc/foo

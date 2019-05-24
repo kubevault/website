@@ -654,41 +654,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -804,18 +769,21 @@ spec:
     leaseMax: 1h
 </code></pre>
 
-<p>It has following fields:
-- <code>leaseConfig.lease</code> : <code>Optional</code>. Specifies the lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).
-- <code>leaseConfig.leaseMax</code> : <code>Optional</code>. Specifies the maximum lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).</p>
+<p>It has following fields:</p>
+
+<ul>
+<li><code>leaseConfig.lease</code> : <code>Optional</code>. Specifies the lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).</li>
+<li><code>leaseConfig.leaseMax</code> : <code>Optional</code>. Specifies the maximum lease value. Accepts time suffixed strings (&ldquo;1h&rdquo;).</li>
+</ul></li>
+</ul>
 
 <h3 id="spec-credentialtype">spec.credentialType</h3>
 
 <p><code>spec.credentialType</code> is a required field that specifies the type of credential to be used when retrieving credentials from the role. Supported types: <code>iam_user</code>, <code>assumed_role</code> and <code>federation_token</code>.</p>
 
 <pre><code class="language-yaml">spec:
-credentialType: iam_user
-</code></pre></li>
-</ul>
+  credentialType: iam_user
+</code></pre>
 
 <h3 id="spec-rolearns">spec.roleARNs</h3>
 

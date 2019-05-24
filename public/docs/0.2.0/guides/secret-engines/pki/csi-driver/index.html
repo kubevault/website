@@ -748,41 +748,6 @@
               
             
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           
         </div>
         
@@ -861,11 +826,9 @@ namespace/demo created
 
 <pre><code class="language-console">$ vault secrets enable pki
 Success! Enabled the pki secrets engine at: pki/
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Create Engine Policy:</strong>  To issue certificate from engine, we need to create a policy with <code>read</code>, <code>create</code>, <code>update</code>, <code>delete</code> capability. Create a <code>policy.hcl</code> file and write the following content:</li>
-</ol>
+<li><p><strong>Create Engine Policy:</strong>  To issue certificate from engine, we need to create a policy with <code>read</code>, <code>create</code>, <code>update</code>, <code>delete</code> capability. Create a <code>policy.hcl</code> file and write the following content:</p>
 
 <pre><code class="language-yaml"># capability of get secret
 path &quot;pki/*&quot; {
@@ -877,11 +840,9 @@ path &quot;pki/*&quot; {
 
 <pre><code class="language-console">$ vault policy write test-policy policy.hcl
 Success! Uploaded policy: test-policy
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li><strong>Configure CA certificate and Private key:</strong> According to Vault documentation, Vault can accept an existing key pair, or it can generate its own self-signed root. You can learn more from <a href="https://www.vaultproject.io/docs/secrets/pki/index.html#setup">here</a>. In this documentation we generate self-signed root.</li>
-</ol>
+<li><p><strong>Configure CA certificate and Private key:</strong> According to Vault documentation, Vault can accept an existing key pair, or it can generate its own self-signed root. You can learn more from <a href="https://www.vaultproject.io/docs/secrets/pki/index.html#setup">here</a>. In this documentation we generate self-signed root.</p>
 
 <pre><code class="language-console">$ vault write pki/root/generate/internal \
     common_name=my-website.com \
@@ -904,15 +865,16 @@ serial_number    7c:f1:fb:2c:6e:4d:99:0e:82:1b:08:0a:81:ed:61:3e:1d:fa:f5:29
 Success! Data written to: pki/roles/pki-role
 </code></pre>
 
-<p>Here, <code>pki-role</code> will be treated as secret name on storage class.</p>
+<p>Here, <code>pki-role</code> will be treated as secret name on storage class.</p></li>
+</ol>
 
 <h2 id="configure-cluster">Configure Cluster</h2>
 
 <ol>
-<li><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</li>
-</ol>
+<li><p><strong>Create Service Account:</strong> Create <code>service.yaml</code> file with following content:</p>
 
-<pre><code class="language-yaml">apiVersion: rbac.authorization.k8s.io/v1beta1
+<p>```yaml
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: role-pkicreds-binding
@@ -921,22 +883,22 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: system:auth-delegator
-subjects:
-- kind: ServiceAccount
-  name: pki-vault
-  namespace: demo
----
+subjects:</p>
+
+<ul>
+<li>kind: ServiceAccount
+name: pki-vault
+namespace: demo
+&mdash;
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: pki-vault
-  namespace: demo
-</code></pre></li>
-</ol>
+name: pki-vault
+namespace: demo
+``<code>
+After that, run</code>kubectl apply -f service.yaml` to create a service account.</li>
+</ul></li>
 
-<p>After that, run <code>kubectl apply -f service.yaml</code> to create a service account.</p>
-
-<ol>
 <li><p><strong>Enable Kubernetes Auth:</strong>  To enable Kubernetes auth backend, we need to extract the token reviewer JWT, Kubernetes CA certificate and Kubernetes host information.</p>
 
 <pre><code class="language-console">export VAULT_SA_NAME=$(kubectl get sa pki-vault -n demo -o jsonpath=&quot;{.secrets[*]['name']}&quot;)
@@ -975,17 +937,20 @@ Success! Data written to: auth/kubernetes/role/pki-cred-role
 <pre><code class="language-console">$ kubectl get crd -l app=catalog
 NAME                                          CREATED AT
 appbindings.appcatalog.appscode.com           2018-12-12T06:09:34Z
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>If you don&rsquo;t see that CRD, you can register it via the following command:</p>
 
-<pre><code class="language-console">kubectl apply -f https://raw.githubusercontent.com/kmodules/custom-resources/master/api/crds/appbinding.yaml
+<pre><code>```console
+kubectl apply -f https://raw.githubusercontent.com/kmodules/custom-resources/master/api/crds/appbinding.yaml
 
-</code></pre>
+```
 
-<p>If AppBinding CRD is installed, Create AppBinding with the following data:</p>
+If AppBinding CRD is installed, Create AppBinding with the following data:
 
-<pre><code class="language-yaml">apiVersion: appcatalog.appscode.com/v1alpha1
+```yaml
+apiVersion: appcatalog.appscode.com/v1alpha1
 kind: AppBinding
 metadata:
   name: vaultapp
@@ -999,6 +964,7 @@ parameters:
   usePodServiceAccountForCSIDriver: true
   authPath: &quot;kubernetes&quot;
   policyControllerRole: pki-cred-role # we created this in previous step
+```
 </code></pre>
 
 <p></details>
@@ -1012,7 +978,8 @@ parameters:
 
 <p><strong>Create StorageClass:</strong> Create <code>storage-class.yaml</code> file with following content, then run <code>kubectl apply -f storage-class.yaml</code></p>
 
-<pre><code class="language-yaml">kind: StorageClass
+<pre><code>```yaml
+kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
   name: vault-pki-storage
@@ -1025,8 +992,8 @@ parameters:
   engine: PKI # vault engine name
   role: pki-role # role name on vault which you want get access
   path: pki # specify the secret engine path, default is pki
-</code></pre></li>
-</ol>
+```
+</code></pre>
 
 <p>Here, you can pass the following parameters optionally to issue the certificate</p>
 
@@ -1066,39 +1033,45 @@ spec:
   accessModes:</p>
 
 <ul>
-<li><p>ReadWriteOnce
+<li>ReadWriteOnce
 resources:
 requests:
   storage: 1Gi
 storageClassName: vault-pki-storage
-volumeMode: DirectoryOrCreate</p>
+volumeMode: DirectoryOrCreate
+```</li>
+</ul></li>
 
-<pre><code>
-2. **Create Pod:** Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.
+<li><p><strong>Create Pod:</strong> Now we can create a Pod which refers to this volume. When the Pod is created, the volume will be attached, formatted and mounted to the specific container.</p>
 
-```yaml
+<p>```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-name: mypod
-namespace: demo
+  name: mypod
+  namespace: demo
 spec:
-containers:
-- name: mypod
+  containers:</p>
+
+<ul>
+<li>name: mypod
 image: busybox
 command:
-  - sleep
-  - &quot;3600&quot;
-volumeMounts:
-- name: my-vault-volume
-  mountPath: &quot;/etc/foo&quot;
-  readOnly: true
+
+<ul>
+<li>sleep</li>
+<li>&ldquo;3600&rdquo;
+volumeMounts:</li>
+<li>name: my-vault-volume
+mountPath: &ldquo;/etc/foo&rdquo;
+readOnly: true
 serviceAccountName: pki-vault
-volumes:
-- name: my-vault-volume
-  persistentVolumeClaim:
-    claimName: csi-pvc
-</code></pre></li>
+volumes:</li>
+<li>name: my-vault-volume
+persistentVolumeClaim:
+claimName: csi-pvc
+```</li>
+</ul></li>
 </ul></li>
 </ol>
 
@@ -1115,7 +1088,8 @@ kubectl describe pods/my-pod
 <pre><code class="language-console">$ kubectl exec -ti mypod /bin/sh
 / # ls /etc/foo
 certificate       issuing_ca        private_key       private_key_type  serial_number
-</code></pre>
+</code></pre></li>
+</ol>
 
 <h2 id="cleaning-up">Cleaning up</h2>
 
@@ -1123,8 +1097,7 @@ certificate       issuing_ca        private_key       private_key_type  serial_n
 
 <pre><code class="language-console">$ kubectl delete ns demo
 namespace &quot;demo&quot; deleted
-</code></pre></li>
-</ol>
+</code></pre>
 
         </div>
       </div>

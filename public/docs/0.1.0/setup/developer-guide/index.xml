@@ -28,7 +28,8 @@ This document is intended to be relative to the branch in which it is found. It 
       
       <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/developer-guide/release/</guid>
       <description>Release Process The following steps must be done from a Linux x64 bit machine.
- Do a global replacement of tags so that docs point to the next release. Push changes to the release-x branch and apply new tag. Push all the changes to remote repo. Build and push vault docker image: console $ cd ~/go/src/github.com/appscode/vault ./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release  - Now, update the release notes in Github.</description>
+ Do a global replacement of tags so that docs point to the next release. Push changes to the release-x branch and apply new tag. Push all the changes to remote repo. Build and push vault docker image:
+$ cd ~/go/src/github.com/appscode/vault ./hack/docker/setup.sh; env APPSCODE_ENV=prod ./hack/docker/setup.sh release  Now, update the release notes in Github. See previous release notes to get an idea what to include there.</description>
     </item>
     
   </channel>
