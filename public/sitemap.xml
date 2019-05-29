@@ -216,6 +216,10 @@
   </url>
   
   <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/whitepaper/</loc>
+  </url>
+  
+  <url>
     <loc>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/vault-server-crds/storage/dynamodb/</loc>
   </url>
   
@@ -678,6 +682,10 @@
   <url>
     <loc>https://kubevault-v1-hugo.firebaseapp.com/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kubevault-v1-hugo.firebaseapp.com/schedule-demo/</loc>
   </url>
   
   <url>
