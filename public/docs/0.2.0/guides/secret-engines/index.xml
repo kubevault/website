@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Secret Engine Guides | KubeVault on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/</link>
+    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/guides/secret-engines/</link>
     <description>Recent content in Secret Engine Guides | KubeVault on Run production-grade databases easily on Kubernetes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/guides/secret-engines/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/guides/secret-engines/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

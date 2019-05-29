@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reference | KubeVault CLI on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/</link>
+    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/</link>
     <description>Recent content in Reference | KubeVault CLI on Run production-grade databases easily on Kubernetes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vault</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault/</guid>
       <description>vault KubeVault cli by AppsCode
 Synopsis KubeVault cli by AppsCode
 Options  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups. --cache-dir string Default HTTP cache directory (default &amp;quot;/home/tamal/.kube/http-cache&amp;quot;) --certificate-authority string Path to a cert file for the certificate authority --client-certificate string Path to a client certificate file for TLS --client-key string Path to a client key file for TLS --cluster string The name of the kubeconfig cluster to use --context string The name of the kubeconfig context to use --enable-status-subresource If true, uses sub resource for crds.</description>
@@ -23,10 +23,10 @@ Options  --alsologtostderr log to standard error as well as files --analytics Se
     
     <item>
       <title>Vault Approve</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_approve/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_approve/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_approve/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_approve/</guid>
       <description>vault approve Approve request
 Synopsis Approve request
 vault approve [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for approve -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
@@ -34,10 +34,10 @@ vault approve [flags]  Options  -f, --filename strings Filename, directory, or U
     
     <item>
       <title>Vault Deny</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_deny/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_deny/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_deny/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_deny/</guid>
       <description>vault deny Deny request
 Synopsis Deny request
 vault deny [flags]  Options  -f, --filename strings Filename, directory, or URL to files identifying the resource to update -h, --help help for deny -R, --recursive Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>
@@ -45,10 +45,10 @@ vault deny [flags]  Options  -f, --filename strings Filename, directory, or URL 
     
     <item>
       <title>Vault Version</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_version/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/reference/cli/vault_version/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/reference/cli/vault_version/</guid>
       <description>vault version Prints binary version number.
 Synopsis Prints binary version number.
 vault version [flags]  Options  -h, --help help for version --short Print just the version number.  Options inherited from parent commands  --alsologtostderr log to standard error as well as files --analytics Send analytical events to Google Analytics (default true) --as string Username to impersonate for the operation --as-group stringArray Group to impersonate for the operation, this flag can be repeated to specify multiple groups.</description>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concepts Database Crds on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/</link>
+    <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/</link>
     <description>Recent content in Concepts Database Crds on Run production-grade databases easily on Kubernetes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DatabaseAccessRequest | Vault Secret Engine</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/databaseaccessrequest/</guid>
       <description>New to KubeVault? Please start here.
  DatabaseAccessRequest CRD DatabaseAccessRequest CRD is to request database credential from vault. If DatabaseAccessRequest is approved, then Vault operator will issue credential from vault and create Kubernetes secret containing credential. The secret name will be specified in status.secret.name field.
 apiVersion: authorization.kubedb.com/v1alpha1 kind: DatabaseAccessRequest metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  DatabaseAccessRequest Spec DatabaseAccessRequest spec contains information about database role and subject.</description>
@@ -23,10 +23,10 @@ apiVersion: authorization.kubedb.com/v1alpha1 kind: DatabaseAccessRequest metada
     
     <item>
       <title>MongoDBRole | Vault Secret Engine</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mongodb/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/mongodb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mongodb/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/mongodb/</guid>
       <description>New to KubeVault? Please start here.
  MongoDBRole CRD Vault operator will create database connection config and role according to MongoDBRole CRD (CustomResourceDefinition) specification. If the user deletes the MongoDBRole CRD, then respective role will also be deleted from Vault.
 apiVersion: authorization.kubedb.com/v1alpha1 kind: MongoDBRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
@@ -34,10 +34,10 @@ apiVersion: authorization.kubedb.com/v1alpha1 kind: MongoDBRole metadata: name: 
     
     <item>
       <title>MySQLRole | Vault Secret Engine</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mysql/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/mysql/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/mysql/</guid>
       <description>New to KubeVault? Please start here.
  MySQLRole CRD Vault operator will create database connection config and role according to MySQLRole CRD (CustomResourceDefinition) specification. If the user deletes the MySQLRole CRD, then respective role will also be deleted from Vault.
 apiVersion: authorization.kubedb.com/v1alpha1 kind: MySQLRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>
@@ -45,10 +45,10 @@ apiVersion: authorization.kubedb.com/v1alpha1 kind: MySQLRole metadata: name: &a
     
     <item>
       <title>PostgresRole | Vault Secret Engine</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/postgresrole/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/postgresrole/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/concepts/database-crds/postgresrole/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/concepts/database-crds/postgresrole/</guid>
       <description>New to KubeVault? Please start here.
  PostgresRole CRD Vault operator will create database connection config and role according to PostgresRole CRD (CustomResourceDefinition) specification. If the user deletes the PostgresRole CRD, then respective role will also be deleted from Vault.
 apiVersion: authorization.kubedb.com/v1alpha1 kind: PostgresRole metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of the role in Vault will follow this format: k8s.</description>

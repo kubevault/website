@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concepts Policy Crds on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/</link>
+    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/</link>
     <description>Recent content in Concepts Policy Crds on Run production-grade databases easily on Kubernetes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>VaultPolicy | KubeVault Concepts</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicy/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/vaultpolicy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicy/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/vaultpolicy/</guid>
       <description>New to KubeVault? Please start here.
  VaultPolicy CRD Vault operator will create Vault Policy according to VaultPolicy CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicy CRD, then respective policy will also be deleted from Vault.
 apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicy metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...   Note: To resolve the naming conflict, name of policy in Vault will follow this format: k8s.{spec.clusterName}.{spec.namespace}.{spec.name}</description>
@@ -23,10 +23,10 @@ apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicy metadata: name: &amp
     
     <item>
       <title>VaultPolicyBinding | KubeVault Concepts</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/policy-crds/vaultpolicybinding/</guid>
       <description>New to KubeVault? Please start here.
  VaultPolicyBinding CRD Vault operator will create Vault Kuberenetes Role according to VaultPolicyBinding CRD (CustomResourceDefinition) specification. If the user deletes the VaultPolicyBinding CRD, then respective role will also be deleted from Vault.
 apiVersion: policy.kubevault.com/v1alpha1 kind: VaultPolicyBinding metadata: name: &amp;lt;name&amp;gt; namespace: &amp;lt;namespace&amp;gt; spec: ... status: ...  VaultPolicyBinding Spec VaultPolicyBinding spec contains information that necessary for creating Vault Kubernetes Role.

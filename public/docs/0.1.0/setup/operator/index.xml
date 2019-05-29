@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Setup | Vault Operator on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/</link>
+    <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/</link>
     <description>Recent content in Setup | Vault Operator on Run production-grade databases easily on Kubernetes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install Vault operator</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/install/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/install/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/install/</guid>
       <description>New to KubeVault? Please start here.
  Installation Guide Vault operator can be installed via a script or as a Helm chart.
 Script  Helm   Using Script To install Vault operator in your Kubernetes cluster, run the following command:
@@ -25,10 +25,10 @@ $ kubectl get pods -n kube-system | grep vault-operator vault-operator-846d47f48
     
     <item>
       <title>Uninstall Vault operator</title>
-      <link>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/uninstall/</link>
+      <link>https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/uninstall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubevault-v1-hugo.firebaseapp.com/docs/0.1.0/setup/operator/uninstall/</guid>
+      <guid>https://kubevault-v1-hugo.web.app/docs/0.1.0/setup/operator/uninstall/</guid>
       <description>Uninstall Vault operator To uninstall Vault operator, run the following command:
 $ curl -fsSL https://raw.githubusercontent.com/kubevault/operator/0.1.0/hack/deploy/vault.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE] + kubectl delete deployment -l app=vault -n kube-system deployment &amp;quot;vault-operator&amp;quot; deleted + kubectl delete service -l app=vault -n kube-system service &amp;quot;vault-operator&amp;quot; deleted + kubectl delete secret -l app=vault -n kube-system No resources found + kubectl delete serviceaccount -l app=vault -n kube-system No resources found + kubectl delete clusterrolebindings -l app=vault -n kube-system No resources found + kubectl delete clusterrole -l app=vault -n kube-system No resources found + kubectl delete initializerconfiguration -l app=vault initializerconfiguration &amp;quot;vault-initializer&amp;quot; deleted  The above command will leave the Vault operator crd objects as-is.</description>
     </item>
