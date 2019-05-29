@@ -1,88 +1,10 @@
-{{ define "header" }}
+{{ define "documentation-menu" }}
 
 {{ $currentPage := . }}
 {{ $menu := .Params.menu_name }}
-
-<!-- header area start -->
-<header>
-  <!-- header bottom area start -->
-  <div class="header-bottom-area header-area documentation-page" id="header">
-    <div class="container section">
-      <nav class="navbar">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="./../index.html">
-            <img src="/assets/images/logo-color-kube.png" alt="" />
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="acNav"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="acNav" class="navbar-menu main-menu">
-          <div class="navbar-end">
-            <!-- nav menu start -->
-            <div class="navbar-start">
-              <a href="./../pricing/index.html" class="navbar-item">
-                Commercial Support
-              </a>
-
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Database
-                </a>
-
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    Item-1
-                  </a>
-                  <a class="navbar-item">
-                    Item-2
-                  </a>
-                  <a class="navbar-item">
-                    Item-3
-                  </a>
-                  <hr class="navbar-divider" />
-                  <a class="navbar-item">
-                    Item-4
-                  </a>
-                </div>
-              </div>
-
-              <a href="../documentations/welcome.html" class="navbar-item">
-                Documentation
-              </a>
-              <a class="navbar-item">
-                v 0.110
-              </a>
-              <a class="navbar-item">
-                Community
-              </a>
-            </div>
-            <!-- nav menu end -->
-            <div class="navbar-item">
-              <div class="buttons main-menu-button">
-                <a class="button is-small">
-                  <span><i class="fa fa-github" aria-hidden="true"></i></span
-                  >Star
-                </a>
-                <div class="star-count">
-                  565
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+<!-- kubeDB bottom menu start -->
+<div class="kubedb-documentation-menu">
+  <div class="container section">
     <!-- documentation menu area start -->
     <div class="documentation-menu">
       <div class="container section">
@@ -113,11 +35,11 @@
                     {{ if isset .Params "menu_name" }}
                       {{ range (index .Site.Menus .Params.menu_name) }}
                         {{ if eq (string .Pre) "dropdown" }}
-                          <div class="navbar-item has-dropdown is-hoverable">
+                          <div class="navbar-item has-dropdown ac-is-hoverable">
                             <a class="navbar-link">
                               {{ .Name }}
                             </a>
-                            <div class="navbar-dropdown">
+                            <div class="ac-dropdown">
                               {{ range .Children }}
                                 {{ if ne .Weight -1 }}
                                   <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
@@ -142,9 +64,8 @@
     </div>
     <!-- documentation menu area end -->
   </div>
-  <!-- header bottom area end -->
-</header>
-<!-- header area end -->
+</div>
+<!-- kubeDB bottom menu end -->
 {{ end }}
 
 {{ define "main" }}
@@ -152,6 +73,7 @@
 {{ $currentPage := . }}
 {{ $menu := .Params.menu_name }}
 {{ $productJson := (index $.Site.Data.products.products "docs" ) }}
+{{ $latestVersion:= (index $.Site.Data.products.products.docs "latestVersion") }}
 
 <!-- init idx -->
 {{ .Scratch.Add "idx" 0 }}
@@ -164,27 +86,45 @@
         <!-- left sidebar area start -->
         <div class="kd-left-sidebar">
           <div class="kd-version">
-            <!-- <p><span><i class="fa fa-sliders" aria-hidden="true"></i></span> 0.11.0</p> -->
-            <div class="control has-icons-left">
-              <div class="select">
-                {{ $currentBranch := (index (split .Params.menu_name "_") 1) }}
-                {{ $versions := (index $productJson "versions" ) }}
-                <select>
+            {{ $currentBranch := (index (split .Params.menu_name "_") 1) }}
+            {{ $versions := (index $productJson "versions" ) }}
+
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <button
+                  class="button is-fullwidth"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu3"
+                >
+
+                  {{ range $version := $versions }}
+                    {{ $branch := (index $version "branch") }}
+                    {{ if (index $version "v-dropdown") }}
+                      {{ if and (index $version "hostDocs") (eq $branch $currentBranch) }}
+                  <span><strong class="icon"><i class="fa fa-cog" aria-hidden="true"></i></strong>{{ $branch }}</span>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+
+                  <span class="icon is-small">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
                   {{ range $version := $versions }}
                     {{ $branch := (index $version "branch") }}
                     {{ if (index $version "v-dropdown") }}
                       {{ if (index $version "hostDocs") }}
-                        <option {{ if eq $branch $currentBranch }} selected {{ end }}>{{ $branch }}</option>
+                        <a href="/docs/{{ $branch }}/" class="dropdown-item">{{ $branch }}  {{ if eq $branch $latestVersion }} <div class="tag">New</div> {{ end }}</a>
                       {{ else }}
-                        <option>{{ $branch }}</option>
+                        <a href="https://github.com/{{ index $productJson "docRepo" }}/tree/{{ $branch }}/docs" target="_blank" class="dropdown-item">{{ $branch }}</a>
                       {{ end }}
                     {{ end }}
                   {{ end }}
-                </select>
+                </div>
               </div>
-              <span class="icon is-left">
-                <i class="fa fa-globe"></i>
-              </span>
             </div>
           </div>
 
@@ -283,6 +223,14 @@
       </div>
     </div>
   </div>
+  <script>
+    // kd version dropdown js
+    var kdDropdown = document.querySelector(".dropdown");
+    var kdDropdownBtn = document.querySelector(".dropdown-trigger");
+      kdDropdownBtn.addEventListener("click", function(){
+        kdDropdown.classList.toggle("is-active");
+      })
+  </script>
 </div>
 <!-- documentation area end -->
 {{ end }}
