@@ -1,6 +1,9 @@
 {
   "products": {
     "docs": {
+      "key": "kubevault",
+      "name": "KubeVault",
+      "datasheetFormID": "88a60e55c210a9789b1760b3be1b61860a84c626df4fa3019227034be1e0b92f",
       "url": "https://github.com/kubevault/docs.git",
       "versions": [
           { "branch": "master", "hostDocs": false, "v-dropdown": true },

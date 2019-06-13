@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#2D9AED" />
-    <title>KubeDB Home</title>
+    <title>{{.Site.Data.products.products.docs.name}} Home</title>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- Font Awesome CSS -->
@@ -15,12 +15,16 @@
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="/assets/css/bulma.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    {{ with $style := resources.Get "assets/sass/main.scss" | resources.ToCSS | resources.PostCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ end }}
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    {{ with $style := resources.Get "assets/css/responsive.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ end }}
   </head>
 
-  <body>
+  <body class="{{.Site.Data.products.products.docs.key}}">
     <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -38,7 +42,7 @@
         <div class="container section">
           <nav class="navbar">
             <div class="navbar-brand">
-              <a class="navbar-item" href="#">
+              <a class="navbar-item" href="{{.Site.Params.domain_appscode}}">
                 <img src="/assets/images/logo-color-appscode.png" alt="" />
               </a>
 
@@ -426,8 +430,8 @@
         <div class="container section">
           <nav class="navbar">
             <div class="navbar-brand">
-              <a class="navbar-item" href="index.html">
-                <img src="/assets/images/kubedb-white.png" alt="" />
+              <a class="navbar-item" href="{{.Site.BaseURL}}">
+                <img src="/assets/images/{{.Site.Data.products.products.docs.key}}-white.png" alt="" />
               </a>
 
               <a
@@ -728,29 +732,71 @@
                 </div>
                 <!-- logo end -->
 
-                <!-- subscription form start -->
-                <div class="subscription-form">
-                  <form action="#">
-                    <label for="email">Subscribe Our Newsletter</label>
-                    <div class="field has-addons">
-                      <div class="control">
-                        <input
-                          class="input"
-                          name="email"
-                          id="email"
-                          type="email"
-                          placeholder="info@gmail.com"
-                        />
-                      </div>
-                      <div class="control">
-                        <a class="button kd-primary">
-                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                        </a>
+                <!-- single modal start -->
+                <div class="modal-div">
+                  <!-- subscription button start -->
+                  <div class="subscription-form modal-button">
+                    <a class="button kd-primary">
+                      Subscribe Our Newsletter
+                      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                   <!-- subscription button end -->
+
+                  <!-- modal start -->
+                  <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-card">
+                        <header class="modal-card-head">
+                          <p class="modal-card-title">Modal title</p>
+                          <button class="delete modal-cancel" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                          <!-- Content ... -->
+                        </section>
+                        <footer class="modal-card-foot">
+                          <button class="button kd-primary">Save changes</button>
+                          <button class="button modal-cancel">Cancel</button>
+                        </footer>
                       </div>
                     </div>
-                  </form>
+                  <!-- modal end -->
                 </div>
-                <!-- subscription form end -->
+                <!-- single modal end -->
+               <script type="text/javascript">
+                  // Modal javascript start
+                  var modalButtons = document.querySelectorAll(".modal-button");
+                  var modalCloseBtns = document.querySelectorAll(".mod-close");
+                  var modalCancelBtns = document.querySelectorAll(".modal-cancel");
+                  var modal = document.querySelector(".modal");
+
+                  // .modal event listeners,
+                  modalButtons.forEach(button => {
+                    button.addEventListener("click", function(e) {
+                      modal.classList.remove("is-active");
+                      e.currentTarget.parentNode.querySelectorAll(".modal").forEach(m => {
+                        m.classList.add("is-active");
+                      });
+                    });
+                  });
+
+                  modalCloseBtns.forEach(mcb => {
+                    mcb.addEventListener("click", function(e) {
+                      e.currentTarget.parentNode.parentNode.parentNode.classList.remove(
+                        "is-active"
+                      );
+                    });
+                  });
+
+                  modalCancelBtns.forEach(mcb => {
+                    mcb.addEventListener("click", function(e) {
+                      e.currentTarget.parentNode.parentNode.parentNode.classList.remove(
+                        "is-active"
+                      );
+                    });
+                  });
+                  // Modal javascript end
+               </script>
 
                 <!-- contact information start -->
                 <div class="contact-information">
