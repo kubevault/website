@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#2D9AED" />
-    <title>KubeDB Home</title>
+    <title>KubeVault Home</title>
     
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     
@@ -15,12 +15,16 @@
     
     <link rel="stylesheet" href="/assets/css/bulma.min.css" />
     
-    <link rel="stylesheet" href="/assets/css/style.css" />
     
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/sass/main.css" />
+    
+    
+    
+    <link rel="stylesheet" href="/assets/css/responsive.min.9b1604560832c2ed8703716da193a1ed179feba7fd4d7d15d940c1d19bfc5c17.css" />
+    
   </head>
 
-  <body>
+  <body class="kubevault">
     
 
     
@@ -32,7 +36,7 @@
         <div class="container section">
           <nav class="navbar">
             <div class="navbar-brand">
-              <a class="navbar-item" href="#">
+              <a class="navbar-item" href="https://appscode-v3-hugo.web.app">
                 <img src="/assets/images/logo-color-appscode.png" alt="" />
               </a>
 
@@ -420,8 +424,8 @@
         <div class="container section">
           <nav class="navbar">
             <div class="navbar-brand">
-              <a class="navbar-item" href="index.html">
-                <img src="/assets/images/kubedb-white.png" alt="" />
+              <a class="navbar-item" href="https://kubevault-v1-hugo.web.app">
+                <img src="/assets/images/kubevault-white.png" alt="" />
               </a>
 
               <a
@@ -557,7 +561,7 @@
       </div>
       <div class="column is-6">
         <div class="form-area">
-          <script src='https://appscode.freshsales.io/web_forms/9d6f5a4d3fe306ecf3b9ca3c8e121265bcf355b2c3f198a8439cf9035bbda0e7/form.js' crossorigin='anonymous' id='fs_9d6f5a4d3fe306ecf3b9ca3c8e121265bcf355b2c3f198a8439cf9035bbda0e7'></script>
+          <script src='https://appscode.freshsales.io/web_forms/88a60e55c210a9789b1760b3be1b61860a84c626df4fa3019227034be1e0b92f/form.js' crossorigin='anonymous' id='fs_88a60e55c210a9789b1760b3be1b61860a84c626df4fa3019227034be1e0b92f'></script>
         </div>
       </div>
     </div>
@@ -631,28 +635,70 @@
                 
 
                 
-                <div class="subscription-form">
-                  <form action="#">
-                    <label for="email">Subscribe Our Newsletter</label>
-                    <div class="field has-addons">
-                      <div class="control">
-                        <input
-                          class="input"
-                          name="email"
-                          id="email"
-                          type="email"
-                          placeholder="info@gmail.com"
-                        />
-                      </div>
-                      <div class="control">
-                        <a class="button kd-primary">
-                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                        </a>
+                <div class="modal-div">
+                  
+                  <div class="subscription-form modal-button">
+                    <a class="button kd-primary">
+                      Subscribe Our Newsletter
+                      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                   
+
+                  
+                  <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-card">
+                        <header class="modal-card-head">
+                          <p class="modal-card-title">Modal title</p>
+                          <button class="delete modal-cancel" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                          
+                        </section>
+                        <footer class="modal-card-foot">
+                          <button class="button kd-primary">Save changes</button>
+                          <button class="button modal-cancel">Cancel</button>
+                        </footer>
                       </div>
                     </div>
-                  </form>
+                  
                 </div>
                 
+               <script type="text/javascript">
+                  
+                  var modalButtons = document.querySelectorAll(".modal-button");
+                  var modalCloseBtns = document.querySelectorAll(".mod-close");
+                  var modalCancelBtns = document.querySelectorAll(".modal-cancel");
+                  var modal = document.querySelector(".modal");
+
+                  
+                  modalButtons.forEach(button => {
+                    button.addEventListener("click", function(e) {
+                      modal.classList.remove("is-active");
+                      e.currentTarget.parentNode.querySelectorAll(".modal").forEach(m => {
+                        m.classList.add("is-active");
+                      });
+                    });
+                  });
+
+                  modalCloseBtns.forEach(mcb => {
+                    mcb.addEventListener("click", function(e) {
+                      e.currentTarget.parentNode.parentNode.parentNode.classList.remove(
+                        "is-active"
+                      );
+                    });
+                  });
+
+                  modalCancelBtns.forEach(mcb => {
+                    mcb.addEventListener("click", function(e) {
+                      e.currentTarget.parentNode.parentNode.parentNode.classList.remove(
+                        "is-active"
+                      );
+                    });
+                  });
+                  
+               </script>
 
                 
                 <div class="contact-information">
