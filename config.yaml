@@ -1,6 +1,7 @@
 title: Run production-grade databases easily on Kubernetes
 baseurl: https://kubevault-v1-hugo.web.app
 languageCode: en-us
+assetDir: static
 disableKinds:
   - taxonomy
   - taxonomyTerm
