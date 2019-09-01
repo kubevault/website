@@ -1,119 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vault Server Storage on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/</link>
-    <description>Recent content in Vault Server Storage on Run production-grade databases easily on Kubernetes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>AWS S3 | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/s3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/s3/</guid>
-      <description>New to KubeVault? Please start here.
- AWS S3 In S3 storage backend, data will be stored in AWS S3. Vault documentation for S3 storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-s3 namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: s3: bucket: &amp;quot;my-vault-bucket&amp;quot; region: &amp;quot;us-west-1&amp;quot; credentialSecret: &amp;quot;aws-credential&amp;quot;  spec.backend.s3 To use S3 as backend storage in Vault specify spec.backend.s3 in VaultServer CRD.
-spec: backend: s3: bucket: &amp;lt;bucket_name&amp;gt; endPoint: &amp;lt;end_point&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;credential_secret_name&amp;gt; sessionTokenSecret: &amp;lt;session_secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; s3ForcePathStyle: &amp;lt;true/false&amp;gt; disableSSL: &amp;lt;true/false&amp;gt;  spec.</description>
-    </item>
-    
-    <item>
-      <title>Azure | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/azure/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/azure/</guid>
-      <description>New to KubeVault? Please start here.
- Azure In Azure storage backend, data will be stored in Azure Storage Container. Vault documentation for azure storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-azure namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: azure: accountName: &amp;quot;vault-ac&amp;quot; accountKeySecret: &amp;quot;azure-cred&amp;quot; container: &amp;quot;my-vault-storage&amp;quot;  spec.backend.azure To use Azure as backend storage in Vault specify spec.backend.azure in VaultServer CRD.
-spec: backend: azure: accountName: &amp;lt;storage_account_name&amp;gt; accountKeySecret: &amp;lt;storage_account_key_secret_name&amp;gt; container: &amp;lt;container_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
-    </item>
-    
-    <item>
-      <title>Dynamodb | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</guid>
-      <description>New to KubeVault? Please start here.
- DynamoDB In DynamoDB storage backend, data will be stored in DynamoDB. Vault documentation for DynamoDB storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-dynamoDB namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: dynamoDB: table: &amp;quot;my-vault-table&amp;quot; region: &amp;quot;us-west-1&amp;quot; readCapacity: 5 writeCapacity: 5  spec.backend.dynamoDB To use dynamoDB as backend storage in Vault specify spec.backend.dynamoDB in VaultServer CRD.
-spec: backend: dynamoDB: table: &amp;lt;table_name&amp;gt; region: &amp;lt;region&amp;gt; endPoint: &amp;lt;endpoint&amp;gt; haEnabled: &amp;lt;true/false&amp;gt; readCapacity: &amp;lt;read_capacity&amp;gt; writeCapacity: &amp;lt;write_capacity&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt; sessionTokenSecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
-    </item>
-    
-    <item>
-      <title>Etcd | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</guid>
-      <description>New to KubeVault? Please start here.
- Etcd In Etcd storage backend, data will be stored in Etcd. Vault documentation for Etcd storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-etcd namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.backend.etcd To use Etcd as storage backend in Vault specify spec.backend.etcd in VaultServer CRD.
-spec: backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot;  spec.</description>
-    </item>
-    
-    <item>
-      <title>GCS | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</guid>
-      <description>New to KubeVault? Please start here.
- Google Cloud Storage (GCS) In Google Cloud Storage (GCS) storage backend, data will be stored in Google Cloud Storage. Vault documentation for GCS storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-gcs namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: gcs: bucket: &amp;quot;my-vault-storage&amp;quot; credentialSecret: &amp;quot;my-gcs-credential&amp;quot;  spec.backend.gcs To use GCS as backend storage in Vault specify spec.backend.gcs in VaultServer CRD.</description>
-    </item>
-    
-    <item>
-      <title>In Memory | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</guid>
-      <description>New to KubeVault? Please start here.
- In-Memory In In-Memory backend storage, data will be kept in memory. If the Kubernetes pod on which vault is running is restarted, then all data will be lost. This is useful for development and experimentation, but use of this backend is highly discouraged in production. Vault documentation for In-Memory storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-inmem namespace: demo spec: nodes: 1 version: &amp;quot;0.</description>
-    </item>
-    
-    <item>
-      <title>MySQL | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</guid>
-      <description>New to KubeVault? Please start here.
- MySQL In MySQL storage backend, data will be stored in MySQL. Vault documentation for MySQL storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-mysql namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: mySQL: address: &amp;quot;my.mysql.com:3306&amp;quot; userCredentialSecret: &amp;quot;mysql-cred&amp;quot;  spec.backend.mySQL To use MySQL as backend storage in Vault specify spec.backend.mySQL in VaultServer CRD.
-spec: backend: mySQL: address: &amp;lt;address&amp;gt; database: &amp;lt;database_name&amp;gt; table: &amp;lt;table_name&amp;gt; userCredentialSecret: &amp;lt;secret_name&amp;gt; tlsCASecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
-    </item>
-    
-    <item>
-      <title>OpenStack Swift | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/swift/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/swift/</guid>
-      <description>New to KubeVault? Please start here.
- Swift In Swift storage backend, data will be stored in OpenStack Swift Container. Vault documentation for Swift storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-swift namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: swift: authUrl: &amp;quot;https://auth.cloud.ovh.net/v2.0/&amp;quot; container: &amp;quot;my-vault-container&amp;quot; credentialSecret: &amp;quot;os-credential&amp;quot; region: &amp;quot;BHS1&amp;quot; tenant: &amp;quot;123456789999&amp;quot;  spec.backend.swift To use Swift as backend storage in Vault specify spec.backend.swift in VaultServer CRD.</description>
-    </item>
-    
-    <item>
-      <title>PostgreSQL | Vault Server Storage</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</guid>
-      <description>New to KubeVault? Please start here.
- PostgreSQL In PostgreSQL storage backend, data will be stored in PostgreSQL. Vault documentation for PostgreSQL storage can be found in here.
-apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-postgreSQL namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: postgreSQL: connectionUrlSecret: &amp;quot;my-postgres-conn&amp;quot;  spec.backend.postgreSQL To use postgreSQL as backend storage in Vault specify spec.backend.postgreSQL in VaultServer CRD.
-spec: backend: postgreSQL: connectionUrlSecret: &amp;lt;secret_name&amp;gt; table: &amp;lt;table_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt;  spec.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vault Server Storage on Tools for running HashiCorp Vault on Kubernetes</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/</link><description>Recent content in Vault Server Storage on Tools for running HashiCorp Vault on Kubernetes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS S3 | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/s3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/s3/</guid><description>New to KubeVault? Please start here.
+AWS S3 In S3 storage backend, data will be stored in AWS S3. Vault documentation for S3 storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-s3 namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: s3: bucket: &amp;quot;my-vault-bucket&amp;quot; region: &amp;quot;us-west-1&amp;quot; credentialSecret: &amp;quot;aws-credential&amp;quot; spec.backend.s3 To use S3 as backend storage in Vault specify spec.backend.s3 in VaultServer CRD.
+spec: backend: s3: bucket: &amp;lt;bucket_name&amp;gt; endPoint: &amp;lt;end_point&amp;gt; region: &amp;lt;region&amp;gt; credentialSecret: &amp;lt;credential_secret_name&amp;gt; sessionTokenSecret: &amp;lt;session_secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; s3ForcePathStyle: &amp;lt;true/false&amp;gt; disableSSL: &amp;lt;true/false&amp;gt; spec.</description></item><item><title>Azure | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/azure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/azure/</guid><description>New to KubeVault? Please start here.
+Azure In Azure storage backend, data will be stored in Azure Storage Container. Vault documentation for azure storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-azure namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: azure: accountName: &amp;quot;vault-ac&amp;quot; accountKeySecret: &amp;quot;azure-cred&amp;quot; container: &amp;quot;my-vault-storage&amp;quot; spec.backend.azure To use Azure as backend storage in Vault specify spec.backend.azure in VaultServer CRD.
+spec: backend: azure: accountName: &amp;lt;storage_account_name&amp;gt; accountKeySecret: &amp;lt;storage_account_key_secret_name&amp;gt; container: &amp;lt;container_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; spec.</description></item><item><title>Dynamodb | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/dynamodb/</guid><description>New to KubeVault? Please start here.
+DynamoDB In DynamoDB storage backend, data will be stored in DynamoDB. Vault documentation for DynamoDB storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-dynamoDB namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: dynamoDB: table: &amp;quot;my-vault-table&amp;quot; region: &amp;quot;us-west-1&amp;quot; readCapacity: 5 writeCapacity: 5 spec.backend.dynamoDB To use dynamoDB as backend storage in Vault specify spec.backend.dynamoDB in VaultServer CRD.
+spec: backend: dynamoDB: table: &amp;lt;table_name&amp;gt; region: &amp;lt;region&amp;gt; endPoint: &amp;lt;endpoint&amp;gt; haEnabled: &amp;lt;true/false&amp;gt; readCapacity: &amp;lt;read_capacity&amp;gt; writeCapacity: &amp;lt;write_capacity&amp;gt; credentialSecret: &amp;lt;secret_name&amp;gt; sessionTokenSecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; spec.</description></item><item><title>Etcd | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/etcd/</guid><description>New to KubeVault? Please start here.
+Etcd In Etcd storage backend, data will be stored in Etcd. Vault documentation for Etcd storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-etcd namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot; spec.backend.etcd To use Etcd as storage backend in Vault specify spec.backend.etcd in VaultServer CRD.
+spec: backend: etcd: address: &amp;quot;http://example.etcd.svc:2379&amp;quot; etcdApi: &amp;quot;v3&amp;quot; spec.</description></item><item><title>GCS | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/gcs/</guid><description>New to KubeVault? Please start here.
+Google Cloud Storage (GCS) In Google Cloud Storage (GCS) storage backend, data will be stored in Google Cloud Storage. Vault documentation for GCS storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-gcs namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: gcs: bucket: &amp;quot;my-vault-storage&amp;quot; credentialSecret: &amp;quot;my-gcs-credential&amp;quot; spec.backend.gcs To use GCS as backend storage in Vault specify spec.backend.gcs in VaultServer CRD.</description></item><item><title>In Memory | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/inmem/</guid><description>New to KubeVault? Please start here.
+In-Memory In In-Memory backend storage, data will be kept in memory. If the Kubernetes pod on which vault is running is restarted, then all data will be lost. This is useful for development and experimentation, but use of this backend is highly discouraged in production. Vault documentation for In-Memory storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-inmem namespace: demo spec: nodes: 1 version: &amp;quot;0.</description></item><item><title>MySQL | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/mysql/</guid><description>New to KubeVault? Please start here.
+MySQL In MySQL storage backend, data will be stored in MySQL. Vault documentation for MySQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-mysql namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: mySQL: address: &amp;quot;my.mysql.com:3306&amp;quot; userCredentialSecret: &amp;quot;mysql-cred&amp;quot; spec.backend.mySQL To use MySQL as backend storage in Vault specify spec.backend.mySQL in VaultServer CRD.
+spec: backend: mySQL: address: &amp;lt;address&amp;gt; database: &amp;lt;database_name&amp;gt; table: &amp;lt;table_name&amp;gt; userCredentialSecret: &amp;lt;secret_name&amp;gt; tlsCASecret: &amp;lt;secret_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; spec.</description></item><item><title>OpenStack Swift | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/swift/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/swift/</guid><description>New to KubeVault? Please start here.
+Swift In Swift storage backend, data will be stored in OpenStack Swift Container. Vault documentation for Swift storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-swift namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: swift: authUrl: &amp;quot;https://auth.cloud.ovh.net/v2.0/&amp;quot; container: &amp;quot;my-vault-container&amp;quot; credentialSecret: &amp;quot;os-credential&amp;quot; region: &amp;quot;BHS1&amp;quot; tenant: &amp;quot;123456789999&amp;quot; spec.backend.swift To use Swift as backend storage in Vault specify spec.backend.swift in VaultServer CRD.</description></item><item><title>PostgreSQL | Vault Server Storage</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/vault-server-crds/storage/postgresql/</guid><description>New to KubeVault? Please start here.
+PostgreSQL In PostgreSQL storage backend, data will be stored in PostgreSQL. Vault documentation for PostgreSQL storage can be found in here.
+apiVersion: kubevault.com/v1alpha1 kind: VaultServer metadata: name: vault-with-postgreSQL namespace: demo spec: nodes: 1 version: &amp;quot;0.11.1&amp;quot; backend: postgreSQL: connectionUrlSecret: &amp;quot;my-postgres-conn&amp;quot; spec.backend.postgreSQL To use postgreSQL as backend storage in Vault specify spec.backend.postgreSQL in VaultServer CRD.
+spec: backend: postgreSQL: connectionUrlSecret: &amp;lt;secret_name&amp;gt; table: &amp;lt;table_name&amp;gt; maxParallel: &amp;lt;max_parallel&amp;gt; spec.</description></item></channel></rss>

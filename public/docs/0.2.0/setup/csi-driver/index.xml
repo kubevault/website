@@ -1,48 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Setup | Vault CSI Driver on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/</link>
-    <description>Recent content in Setup | Vault CSI Driver on Run production-grade databases easily on Kubernetes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Install Vault CSI Driver</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/install/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/install/</guid>
-      <description>New to KubeVault? Please start here.
- Installation Guide Vault CSI driver can be installed via a script or as a Helm chart.
-Script  Helm   Using Script To install Vault CSI driver in your Kubernetes cluster, run the following command:
-# Kubernetes 1.13+ (CSI driver spec 1.0.0) $ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh | bash  After successful installation, you should have csi-vault-*** pod running in the kube-system namespace.</description>
-    </item>
-    
-    <item>
-      <title>Overview of Vault CSI Driver</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/overview/</guid>
-      <description>New to KubeVault? Please start here.
- Prerequisite  Kubernetes v1.13+ --allow-privileged flag must be set to true for both the API server and the kubelet (If you use Docker) The Docker daemon of the cluster nodes must allow shared mounts Pre-installed HasiCorp Vault server. Pass --feature-gates=CSIDriverRegistry=true,CSINodeInfo=true to kubelet and kube-apiserver  Supported CSI Spec version    CSI Spec Version csi-vault:0.1.0 csi-vault:0.2.0     0.</description>
-    </item>
-    
-    <item>
-      <title>Uninstall Vault CSI Driver</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/uninstall/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/setup/csi-driver/uninstall/</guid>
-      <description> Uninstall Vault CSI Driver If you installed csi driver using YAML then run:
-$ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE]  The above command will leave the csidriver crd objects as-is. If you wish to nuke all csidriver crd objects, also pass the --purge flag.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Setup | Vault CSI Driver on Tools for running HashiCorp Vault on Kubernetes</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/</link><description>Recent content in Setup | Vault CSI Driver on Tools for running HashiCorp Vault on Kubernetes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Vault CSI Driver</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/install/</guid><description>New to KubeVault? Please start here.
+Installation Guide Vault CSI driver can be installed via a script or as a Helm chart.
+Script Helm Using Script To install Vault CSI driver in your Kubernetes cluster, run the following command:
+# Kubernetes 1.13+ (CSI driver spec 1.0.0) $ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh | bash After successful installation, you should have csi-vault-*** pod running in the kube-system namespace.</description></item><item><title>Overview of Vault CSI Driver</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/overview/</guid><description>New to KubeVault? Please start here.
+Prerequisite Kubernetes v1.13+ --allow-privileged flag must be set to true for both the API server and the kubelet (If you use Docker) The Docker daemon of the cluster nodes must allow shared mounts Pre-installed HasiCorp Vault server. Pass --feature-gates=CSIDriverRegistry=true,CSINodeInfo=true to kubelet and kube-apiserver Supported CSI Spec version CSI Spec Version csi-vault:0.1.0 csi-vault:0.2.0 0.</description></item><item><title>Uninstall Vault CSI Driver</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/uninstall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/setup/csi-driver/uninstall/</guid><description> Uninstall Vault CSI Driver If you installed csi driver using YAML then run:
+$ curl -fsSL https://raw.githubusercontent.com/kubevault/csi-driver/0.2.0/hack/deploy/install.sh \ | bash -s -- --uninstall [--namespace=NAMESPACE] The above command will leave the csidriver crd objects as-is. If you wish to nuke all csidriver crd objects, also pass the --purge flag.
 If you used HELM to install Vault CSI driver, then run following command
-helm del --purge &amp;lt;name&amp;gt;  </description>
-    </item>
-    
-  </channel>
-</rss>
+helm del --purge &amp;lt;name&amp;gt;</description></item></channel></rss>

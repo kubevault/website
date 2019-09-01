@@ -1,35 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Concepts | KubeVault on Run production-grade databases easily on Kubernetes</title>
-    <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/</link>
-    <description>Recent content in Concepts | KubeVault on Run production-grade databases easily on Kubernetes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>KubeVault Concepts</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/</guid>
-      <description>Concepts Concepts help you learn about the different parts of the KubeVault and the abstractions it uses.
-Vault Operator  Secret Engines  Policy Management    What is KubeVault?  Overview. Provides a conceptual introduction to KubeVault operator, including the problems it solves and its high-level architecture.  Custom Resource Definitions  Vault Server. Introduces the concept of VaultServer for configuring a HashiCorp Vault server in a Kubernetes native way.</description>
-    </item>
-    
-    <item>
-      <title>What is KubeVault</title>
-      <link>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/what-is-kubevault/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubevault-v1-hugo.web.app/docs/0.2.0/concepts/what-is-kubevault/</guid>
-      <description>New to KubeVault? Please start here.
- What is KubeVault Vault operator is a Kubernetes controller for HashiCorp Vault. Vault is a tool for secrets management, encryption as a service, and privileged access management. Deploying, maintaining, and managing Vault in Kubernetes could be challenging. Vault operator eases these operational tasks so that developers can focus on solving business problems.
-Why use KubeVault Vault operator makes it easy to deploy, maintain and manage Vault servers in Kubernetes.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concepts | KubeVault on Tools for running HashiCorp Vault on Kubernetes</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/</link><description>Recent content in Concepts | KubeVault on Tools for running HashiCorp Vault on Kubernetes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/index.xml" rel="self" type="application/rss+xml"/><item><title>KubeVault Concepts</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/</guid><description>Concepts Concepts help you learn about the different parts of the KubeVault and the abstractions it uses.
+Vault Operator Secret Engines Policy Management What is KubeVault? Overview. Provides a conceptual introduction to KubeVault operator, including the problems it solves and its high-level architecture. Custom Resource Definitions Vault Server. Introduces the concept of VaultServer for configuring a HashiCorp Vault server in a Kubernetes native way.</description></item><item><title>What is KubeVault</title><link>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/what-is-kubevault/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kubedb-v2-hugo.web.app/docs/0.2.0/concepts/what-is-kubevault/</guid><description>New to KubeVault? Please start here.
+What is KubeVault Vault operator is a Kubernetes controller for HashiCorp Vault. Vault is a tool for secrets management, encryption as a service, and privileged access management. Deploying, maintaining, and managing Vault in Kubernetes could be challenging. Vault operator eases these operational tasks so that developers can focus on solving business problems.
+Why use KubeVault Vault operator makes it easy to deploy, maintain and manage Vault servers in Kubernetes.</description></item></channel></rss>
