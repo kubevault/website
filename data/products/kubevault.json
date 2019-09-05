@@ -22,12 +22,15 @@
   },
   "icon": {
     "src": "https://cdn.appscode.com/images/products/kubevault/kubevault-icon.png",
-    "alt": "KubeVault"
+    "alt": "KubeVault",
+    "sizes": {
+      "192x192": "https://cdn.appscode.com/images/products/kubevault/icons/android-icon-192x192.png"
+    }
   },
   "repoURL": "https://github.com/kubevault/docs",
   "starRepo": "kubevault/operator",
   "docRepo": "kubevault/docs",
-  "datasheetFormID": "88a60e55c210a9789b1760b3be1b61860a84c626df4fa3019227034be1e0b92f",
+  "datasheetFormID": "",
   "features": [
     {
       "title": "Automatic Initialization & Unsealing",
@@ -109,9 +112,9 @@
     }
   ],
   "versions": [
-      { "branch": "master", "hostDocs": false, "v-dropdown": true },
-      { "branch": "0.1.0", "hostDocs": true, "v-dropdown": true },
-      { "branch": "0.2.0", "hostDocs": true, "v-dropdown": true }
+      { "version": "master", "hostDocs": false, "show": true },
+      { "version": "0.1.0", "hostDocs": true, "show": true },
+      { "version": "0.2.0", "hostDocs": true, "show": true }
   ],
   "latestVersion": "0.2.0",
   "socialLinks": {
