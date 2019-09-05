@@ -1,0 +1,340 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=theme-color content=#2D9AED><title>KubeVault Home</title><meta name=description content="Accelerating the transition to Containers by building a Kubernetes-native Cloud"><meta name=author content="AppsCode Inc."><meta name=keywords content="application monitoring,attic,build docker image,cloud app,cloud deployment,cloud hosting,container applications,continuous deployment,deployment automation,git hosting,kubernetes autoscaling,nagios,network monitor,repository hosting,source code repository"><link rel=apple-touch-icon sizes=57x57 href=/assets/images/products/appscode/icons/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/assets/images/products/appscode/icons/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/assets/images/products/appscode/icons/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/assets/images/products/appscode/icons/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/assets/images/products/appscode/icons/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/assets/images/products/appscode/icons/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/assets/images/products/appscode/icons/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/assets/images/products/appscode/icons/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/assets/images/products/appscode/icons/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/assets/images/products/appscode/icons/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/assets/images/products/appscode/icons/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/assets/images/products/appscode/icons/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/assets/images/products/appscode/icons/favicon-16x16.png><link rel=manifest href=/assets/images/products/appscode/icons/manifest.json><meta name=msapplication-TileColor content=#ffffff><meta name=msapplication-TileImage content=/assets/images/products/appscode/icons/ms-icon-144x144.png><meta name=theme-color content=#ffffff><link rel=stylesheet href=/assets/css/font-awesome.min.css><link rel=stylesheet href=/assets/css/bulma-carousel.min.css><link rel=stylesheet href=/assets/css/bulma.min.css><link rel=stylesheet href=/assets/sass/main.min.75c8ff8a4ac980725008db49f7fca4a83d179cd53877a402c4915540bdc861a4.css></head><body class=kubevault><header><div class=header-top><div class="container section"><nav class=navbar><div class=navbar-brand><a class=navbar-item href=https://appscode.com><img src=https://cdn.appscode.com/images/products/appscode/appscode-logo.png alt=AppsCode></a>
+<a role=button class="navbar-burger burger" aria-label=menu aria-expanded=false data-target=acNav1><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div id=acNav1 class="navbar-menu main-menu"><div class=navbar-end><div class=navbar-start><div class="navbar-item has-dropdown ac-is-hoverable"><a class=navbar-link>Products</a><div class=ac-megamenu><div class=columns><div class="column is-8"><div class=columns><div class="column is-6 br-1"><a href=https://kubedb.com class="single-product-item is-kubedb"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/kubedb/kubedb-icon.png alt=KubeDB></div><h5>KubeDB</h5></div><div class=menu-body><p>Run production-grade databases easily on Kubernetes</p></div></a><a href=https://appscode.com/products/stash/ class="single-product-item is-stash"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/stash/stash-icon.png alt=Stash></div><h5>Stash</h5></div><div class=menu-body><p>Backup your Kubernetes Stateful Applications</p></div></a><a href=https://kubevault.com class="single-product-item is-kubevault"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/kubevault/kubevault-icon.png alt=KubeVault></div><h5>KubeVault</h5></div><div class=menu-body><p>Tools for running HashiCorp Vault on Kubernetes</p></div></a><a href=https://appscode.com/products/guard/ class="single-product-item is-guard"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/guard/guard-icon.png alt=Guard></div><h5>Guard</h5></div><div class=menu-body><p>Kubernetes Authentication WebHook Server</p></div></a></div><div class="column is-6 br-1"><a href=https://appscode.com/products/voyager/ class="single-product-item is-voyager"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/voyager/voyager-icon.png alt=Voyager></div><h5>Voyager</h5></div><div class=menu-body><p>Secure HAProxy Ingress Controller for
+Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="single-product-item is-swift"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/swift/swift-icon.png alt=Swift></div><h5>Swift</h5></div><div class=menu-body><p>Ajax friendly Helm Tiller Proxy</p></div></a><a href=https://appscode.com/products/searchlight/ class="single-product-item is-searchlight"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/searchlight/searchlight-icon.png alt=Searchlight></div><h5>Searchlight</h5></div><div class=menu-body><p>Alerts for Kubernetes</p></div></a><a href=https://appscode.com/products/service-broker/ class="single-product-item is-service-broker"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/service-broker/service-broker-icon.png alt=ServiceBroker></div><h5>ServiceBroker</h5></div><div class=menu-body><p>Open Service Broker for AppsCode Kubernetes Operators</p></div></a></div></div></div><div class="column is-4"><div class=columns><div class="column is-12"><a href=https://byte.builders class="single-product-item byte-builder kd-orange"><div class=menu-header><p class=intro>Introducing....</p><h5>ByteBuilders</h5></div><div class=menu-body><p>Cloud reimagined for the age of Kubernetes</p></div><p class=learn-more-btn>Learn more
+<span class=icon><i class="fa fa-long-arrow-right" aria-hidden=true></i></span></p></a><a href=https://pharmer.io class="single-product-item is-pharmer"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/pharmer/pharmer-icon.png alt=Pharmer></div><h5>Pharmer</h5></div><div class=menu-body><p>Kubernetes Cluster Manager using Kubeadm &amp; Cluster API</p></div></a><a href=https://appscode.com/products/kubed/ class="single-product-item is-kubed"><div class=menu-header><div class=menu-logo><img src=https://cdn.appscode.com/images/products/kubed/kubed-icon.png alt=Kubed></div><h5>Kubed</h5></div><div class=menu-body><p>Kubernetes cluster manager daemon</p></div></a></div></div></div></div><div class="columns has-text-centered"><div class=column><div class=menu-bottom><p>Explore apps and integrations for AppsCode products:
+<a href=https://marketplace.byte.builders>Visit the Marketplace
+<i class="fa fa-long-arrow-right" aria-hidden=true></i></a></p></div></div></div></div></div><div class="navbar-item has-dropdown ac-is-hoverable"><a class=navbar-link>Services</a><div class=ac-dropdown><a class=navbar-item href=https://appscode.com/consulting/>Consulting</a>
+<a class=navbar-item href=https://appscode.com/training/>Training</a>
+<a class=navbar-item href=https://appscode.com/support/>Support</a></div></div><a class=navbar-item href=https://blog.byte.builders>Blog</a>
+<a class=navbar-item href=https://appscode.com/contact/>Contact Us</a></div><div class=navbar-item><div class="buttons main-menu-button-top"><a class="button is-small for-chat" href=https://slack.appscode.com><span><img src=/assets/images/icon/slack.png alt></span>Slack</a>
+<a class="button is-small for-support" href=https://appscode.freshdesk.com><span><img src=/assets/images/icon/chat.png alt></span>Support Portal</a></div></div></div></div></nav></div></div><div class="header-bottom-area header-area kubedb-primary-bg customize-kubedb fixed-menu"><div class="container section"><nav class=navbar><div class=navbar-brand><a class=navbar-item href=https://kubevault.com><img src=https://cdn.appscode.com/images/products/kubevault/kubevault-logo-white.png alt=KubeVault></a>
+<a role=button class="navbar-burger burger" aria-label=menu aria-expanded=false data-target=acNav><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div id=acNav class="navbar-menu main-menu"><div class=navbar-end><div class=navbar-start><a href=/pricing/ class=navbar-item>Commercial Support</a>
+<a href=/docs/0.2.0/welcome/>Documentation</a><div class="navbar-item has-dropdown ac-is-hoverable"><a class=navbar-link>Community</a><div class=ac-dropdown><a href=https://github.com/kubevault class=navbar-item>GitHub</a>
+<a href=https://twitter.com/KubeVault class=navbar-item>Twitter</a>
+<a href=https://slack.appscode.com class=navbar-item>Slack</a></div></div></div><div class=navbar-item><div class="buttons main-menu-button"><a class=github-button href=https://github.com/kubevault/operator data-size=large data-show-count=true aria-label="Star kubevault/operator on GitHub">Star</a>
+<script async defer src=https://buttons.github.io/buttons.js></script></div></div></div></div></nav></div></div><div class=documentation-menu><div class="container section"><div class=is-centered><div class="is-half has-text-centered-desktop"><div class=responsive-menu><a role=button class="navbar-burger burger" aria-label=menu aria-expanded=false data-target=acNav3><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><nav class=documentation-navbar><div id=acNav3 class="navbar-menu nav-menu main-menu"><div class=navbar-centered><div class=navbar-start><a href=/docs/0.3.1/ class=navbar-item>Welcome</a>
+<a href=/docs/0.3.1/concepts/ class=navbar-item>Concepts</a>
+<a href=/docs/0.3.1/setup/ class=navbar-item>Setup</a><div class="navbar-item has-dropdown ac-is-hoverable"><a class=navbar-link>Guides</a><div class=ac-dropdown><a href=/docs/0.3.1/guides/aks/ class=navbar-item>AKS</a>
+<a href=/docs/0.3.1/guides/aws/ class=navbar-item>AWS</a>
+<a href=/docs/0.3.1/guides/azure/ class=navbar-item>Azure</a>
+<a href=/docs/0.3.1/guides/digitalocean/ class=navbar-item>DigitalOcean</a>
+<a href=/docs/0.3.1/guides/eks/ class=navbar-item>EKS</a>
+<a href=/docs/0.3.1/guides/gce/ class=navbar-item>GCE</a>
+<a href=/docs/0.3.1/guides/gke/ class=navbar-item>GKE</a>
+<a href=/docs/0.3.1/guides/linode/ class=navbar-item>Linode</a>
+<a href=/docs/0.3.1/guides/packet/ class=navbar-item>Packet</a></div></div><a href=/docs/0.3.1/reference/ class=navbar-item>Reference</a></div></div></div></nav></div></div></div></div></header><div class=documentation-area><div class="container section"><div class=columns><div class="column is-3"><div class=kd-left-sidebar><div class=trial-button><a href=/docs/0.2.0/setup/ class="button is-fullwidth">Try Now for FREE!</a></div><div class=kd-version><div class=dropdown><div class=dropdown-trigger><button class="button is-fullwidth" aria-haspopup=true aria-controls=dropdown-menu3>
+<span class="icon is-small"><i class="fa fa-angle-down" aria-hidden=true></i></span></button></div><div class=dropdown-menu id=dropdown-menu3 role=menu><div class=dropdown-content><a href=https://github.com/kubevault/docs/tree/master/docs target=_blank class=dropdown-item>master</a>
+<a href=/docs/0.1.0/ class=dropdown-item>0.1.0</a>
+<a href=/docs/0.2.0/ class=dropdown-item>0.2.0<div class=tag>Latest</div></a></div></div></div></div><div class=kd-sidebar-menu><div class=item><input type=checkbox id=ddb73592451b77cd46b5b45459693ee6-1>
+<label for=ddb73592451b77cd46b5b45459693ee6-1><a href=/docs/0.3.1/guides/aks/>AKS</a></label></div><div class=item><input type=checkbox id=ddb73592451b77cd46b5b45459693ee6-2 checked>
+<label for=ddb73592451b77cd46b5b45459693ee6-2><a>Quickstart</a> <span><i class="fa fa-angle-right" aria-hidden=true></i></span></label><div class=item><ul><li class=is-active><a href=/docs/0.3.1/guides/aks/quickstart/>Quickstart</a></li></ul></div></div><div class=item><input type=checkbox id=ddb73592451b77cd46b5b45459693ee6-3>
+<label for=ddb73592451b77cd46b5b45459693ee6-3><a>Credentials</a> <span><i class="fa fa-angle-right" aria-hidden=true></i></span></label><div class=item><ul><li><a href=/docs/0.3.1/guides/aks/credentials/>Credentials</a></li></ul></div></div></div></div></div><div class="column is-7"><div class=full-info><h1 id=running-kubernetes-on-azure-aks>Running Kubernetes on Azure AKS</h1><p>Following example will use <code>pharmer</code> to create a Kubernetes cluster with 1 worker node server and a master server (i,e, 2 servers in you cluster) in <a href=https://azure.microsoft.com/>Azure AJS</a>.</p><h2 id=before-you-start>Before you start</h2><p>As a prerequisite, you need to have <code>pharmer</code> installed. To install <code>pharmer</code> use the <a href=/docs/0.3.1/setup/install>setup</a> guide</p><h2 id=pharmer-storage>Pharmer storage</h2><p>To store your cluster and credential resource, you can configure pharmer to use local file system or postgres database. In this document we will use local file system (<a href=/docs/0.3.1/concepts/datastore/vfs>vfs</a>) as a storage provider. To know more click <a href=/docs/0.3.1/concepts/datastore/datastore>here</a></p><h2 id=credential-importing>Credential Importing</h2><p>You can create a credential named <code>azur</code> by running</p><pre><code class=language-console>$ pharmer create credential azur
+</code></pre><p>Follow this guide for more information <a href=/docs/0.3.1/guides/aks/credentials/>here</a></p><h2 id=cluster-provisioning>Cluster provisioning</h2><p>There are two steps to create a Kubernetes cluster using <code>pharmer</code>.
+In first step <code>pharmer</code> create basic configuration file with user choice. Then in second step <code>pharmer</code> applies those
+information to create cluster on specific provider.</p><p>Here, we discuss how to use <code>pharmer</code> to create a Kubernetes cluster on <code>azure aks</code></p><h3 id=create-cluster>Create Cluster</h3><p>We want to create a cluster with following information:
+- Provider: Azure
+- Cluster name: aksx
+- Location: eastus (Virginia)
+- Number of nodes: 1
+- Node sku: Standard_D1_v2 (cpu: 1, ram: 3.5, disk: 50)
+- Kubernetes version: 1.14.1
+- Credential name: <a href=#credential-importing>azur</a></p><p>For location code and sku details click <a href=https://github.com/pharmer/cloud/blob/master/data/json/apis/cloud.pharmer.io/v1/cloudproviders/azure.json>hrere</a></p><p>Available options in <code>pharmer</code> to create a cluster are:</p><pre><code class=language-console>Create a Kubernetes cluster for a given cloud provider
+
+Usage:
+  pharmer create cluster [flags]
+
+Aliases:
+  cluster, clusters, Cluster
+
+Examples:
+pharmer create cluster demo-cluster
+
+Flags:
+      --credential-uid string       Use preconfigured cloud credential uid
+  -h, --help                        help for cluster
+      --kubernetes-version string   Kubernetes version
+      --masters int                 Number of masters (default 1)
+      --namespace string            Namespace (default &quot;default&quot;)
+      --network-provider string     Name of CNI plugin. Available options: calico, flannel, kubenet, weavenet (default &quot;calico&quot;)
+      --nodes stringToInt           Node set configuration (default [])
+  -o, --owner string                Current user id
+      --provider string             Provider name
+      --zone string                 Cloud provider zone name
+
+Global Flags:
+      --alsologtostderr                  log to standard error as well as files
+      --analytics                        Send analytical events to Google Guard (default true)
+      --config-file string               Path to Pharmer config file
+      --env string                       Environment used to enable debugging (default &quot;prod&quot;)
+      --kubeconfig string                Paths to a kubeconfig. Only required if out-of-cluster.
+      --log-flush-frequency duration     Maximum number of seconds between log flushes (default 5s)
+      --log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
+      --log_dir string                   If non-empty, write log files in this directory
+      --logtostderr                      log to standard error instead of files (default true)
+      --master --kubeconfig              (Deprecated: switch to --kubeconfig) The address of the Kubernetes API server. Overrides any value in kubeconfig. Only required if out-of-cluster.
+      --stderrthreshold severity         logs at or above this threshold go to stderr
+  -v, --v Level                          log level for V logs
+      --vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
+</code></pre><p>So, we need to run following command to create cluster with our information.</p><pre><code class=language-console>$ pharmer create cluster aksx --v=4 --provider=aks --zone=eastus --nodes=Standard_D1_v2=1	--credential-uid=azur --kubernetes-version=1.14.1
+I0626 15:29:31.675278    8568 create.go:24] [create-cluster] &quot;level&quot;=0 &quot;msg&quot;=&quot;creating cluster&quot; &quot;cluster-name&quot;=&quot;aksx&quot;
+I0626 15:29:31.675516    8568 create.go:46] [create-cluster] &quot;level&quot;=2 &quot;msg&quot;=&quot;cluster doesn't exists, ignoring error&quot; &quot;cluster-name&quot;=&quot;aksx&quot; &quot;error&quot;=&quot;cluster `aksx` does not exist. Reason: not found&quot;
+I0626 15:29:32.724306    8568 create.go:75] [create-cluster] &quot;level&quot;=0 &quot;msg&quot;=&quot;successfully created cluster&quot; &quot;cluster-name&quot;=&quot;aksx&quot;
+</code></pre><p>To know about <a href=https://kubernetes.io/docs/concepts/cluster-administration/networking/>pod networks</a> supports in <code>pharmer</code> click <a href=/docs/0.3.1/concepts/networking/networking>here</a></p><p>The directory structure of the storage provider will be look like:</p><pre><code class=language-console>$ tree ~/.pharmer/store.d/clusters/aksx
+├──aksx
+│   ├── machineset
+│   │   └── standard-b2ms-pool.json
+│   ├── pki
+│   │   ├── ca.crt
+│   │   ├── ca.key
+│   │   ├── etcd
+│   │   │   ├── ca.crt
+│   │   │   └── ca.key
+│   │   ├── front-proxy-ca.crt
+│   │   ├── front-proxy-ca.key
+│   │   ├── sa.crt
+│   │   └── sa.key
+│   └── ssh
+│       ├── idaksx-sshkey
+│       └── idaksx-sshkey.pub
+└──aksx.json
+
+5 directories, 12 files
+
+</code></pre><p>Here,
+- <code>aksx/machineset/</code>: contains the node groups information. <a href=#cluster-scaling>Check below</a> for node group operations.You can see the node group list using following command.</p><pre><code class=language-console>$ pharmer get nodegroups -k aksx
+</code></pre><ul><li><code>aksx/pki</code>: contains the cluster certificate information containing <code>ca</code> and <code>front-proxy-ca</code>.</li><li><code>aksx/ssh</code>: has the ssh credentials on cluster&rsquo;s nodes. With this key you can <code>ssh</code> into any node on a cluster</li><li><code>aksx.json</code>: contains the cluster resource information</li></ul><p>You can view your cluster configuration file by following command.</p><pre><code class=language-yaml>$ pharmer get cluster aksx -o yaml
+apiVersion: v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: 2018-06-23T11:41:43Z
+  generation: 1529754103043035047
+  name: aksx
+  uid: 668f8658-76da-11e8-bdc8-382c4a73a7c4
+spec:
+  api:
+    advertiseAddress: &quot;&quot;
+    bindPort: 0
+  caCertName: ca
+  cloud:
+    azure:
+      azureStorageAccountName: k8saksxjzvw2p
+      resourceGroup: aksx
+      rootPassword: GJersaT_NWi8b_If
+      routeTableName: aksx-rt
+      securityGroupName: aksx-nsg
+      subnetCidr: 10.240.0.0/16
+      subnetName: aksx-subnet
+      vnetName: aksx-vnet
+    cloudProvider: aks
+    region: eastus
+    sshKeyName: aksx-4wa6cz
+    zone: eastus
+  credentialName: azure
+  frontProxyCACertName: front-proxy-ca
+  kubernetesVersion: 1.10.3
+  networking:
+    networkProvider: calico
+status:
+  cloud: {}
+  phase: Pending
+</code></pre><p>Here,</p><ul><li><code>metadata.name</code> refers the cluster name, which should be unique within your cluster list.</li><li><code>metadata.uid</code> is a unique ACID, which is generated by pharmer</li><li><code>spec.cloud</code> specifies the cloud provider information. pharmer uses <code>ubuntu-16-04-x64</code> image by default. don&rsquo;t change the instance images, otherwise cluster may not be working.</li><li><code>spc.cloud.sshKeyName</code> shows which ssh key added to cluster instance.</li><li><code>spec.kubernetesVersion</code> is the cluster server version. It can be modified.</li><li><code>spec.credentialName</code> is the credential name which is provider during cluster creation command.</li><li><code>status.phase</code> may be <code>Pending</code>, <code>Ready</code>, <code>Deleting</code>, <code>Deleted</code>, <code>Upgrading</code> depending on current cluster status.</li></ul><p>You can modify this configuration by:</p><pre><code class=language-console>$ pharmer edit cluster aksx
+</code></pre><h2 id=applying-cluster>Applying Cluster</h2><p>If everything looks ok, we can now apply the resources. This actually creates resources on <code>Scaleway</code>.
+Up to now we&rsquo;ve only been working locally.</p><p>To apply run:</p><pre><code class=language-console>$ pharmer apply aksx
+</code></pre><p>Now, <code>pharmer</code> will apply that configuration, thus create a Kubernetes cluster. After completing task the configuration file of the cluster will be look like</p><pre><code class=language-yaml> $ pharmer get cluster aksx -o yaml
+apiVersion: v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: 2018-06-23T11:41:43Z
+  generation: 1529754103043035047
+  name: aksx
+  uid: 668f8658-76da-11e8-bdc8-382c4a73a7c4
+spec:
+  api:
+    advertiseAddress: &quot;&quot;
+    bindPort: 0
+  caCertName: ca
+  cloud:
+    azure:
+      azureStorageAccountName: k8saksxjzvw2p
+      resourceGroup: aksx
+      rootPassword: GJersaT_NWi8b_If
+      routeTableName: aksx-rt
+      securityGroupName: aksx-nsg
+      subnetCidr: 10.240.0.0/16
+      subnetName: aksx-subnet
+      vnetName: aksx-vnet
+    cloudProvider: aks
+    region: eastus
+    sshKeyName: aksx-4wa6cz
+    zone: eastus
+  credentialName: azure
+  frontProxyCACertName: front-proxy-ca
+  kubernetesVersion: 1.10.3
+  networking:
+    networkProvider: calico
+status:
+  cloud: {}
+  phase: Ready
+</code></pre><p>Here,<code>status.phase</code>: is ready. So, you can use your cluster from local machine.</p><p>To get the <code>kubectl</code> configuration file(kubeconfig) on your local filesystem run the following command.</p><pre><code class=language-console>$ pharmer use cluster aksx
+</code></pre><p>If you don&rsquo;t have <code>kubectl</code> installed click <a href=https://kubernetes.io/docs/tasks/tools/install-kubectl/>here</a></p><p>Now you can run <code>kubectl get nodes</code> and verify that your kubernetes 1.9.0 is running.</p><pre><code class=language-console>$ kubectl get nodes
+NAME                        STATUS    AGE       VERSION
+aks-sd1v2p-33941960-0   Ready     agent     35m       v1.10.3
+</code></pre><h2 id=cluster-scaling>Cluster Scaling</h2><p>Scaling a cluster refers following meanings:-</p><ol><li>Increment the number of nodes of a certain node group</li><li>Decrement the number of nodes of a certain node group</li></ol><p>To see the current node groups list, you need to run following command:</p><pre><code class=language-console>$ pharmer get nodegroups -k aksx
+NAME               Cluster   Node      SKU
+Standard-D1-v2-pool   aksx      1         Standard_D1_v2
+</code></pre><h2 id=updating-existing-ng>Updating existing NG</h2><p>For scenario 1 &amp; 2 we need to update our existing node group. To update existing node group configuration run
+the following command.</p><pre><code class=language-yaml>$ pharmer edit nodegroup  Standard-D1-v2-pool -k aksx
+
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1alpha1
+kind: NodeGroup
+metadata:
+  clusterName: aksx
+  creationTimestamp: 2018-06-23T11:41:43Z
+  labels:
+    node-role.kubernetes.io/node: &quot;&quot;
+  name: Standard-D1-v2-pool
+  uid: 66ffd7c3-76da-11e8-bdc8-382c4a73a7c4
+spec:
+  nodes: 1
+  template:
+    spec:
+      sku: Standard_D1_v2
+      type: regular
+status:
+  nodes: 0
+</code></pre><p>Here,
+* <code>metadata.name</code> refers the node group name, which is unique within a cluster.
+* <code>metadata.labels</code> specifies the label of the nodegroup, which will be add to all nodes of following node group.
+* For master label will be <code>&quot;node-role.kubernetes.io/master&quot;: &quot;&quot;</code>
+* For node label will be like <code>&quot;node-role.kubernetes.io/node&quot;: &quot;&quot;</code>
+* <code>metadata.clusterName</code> indicates the cluster, which has this node group.
+* <code>spec.nodes</code> shows the number of nodes for this following group.
+* <code>spec.template.sku</code> refers the size of the machine
+* <code>status.node</code> shows the number of nodes that are really present on the current cluster while scaling</p><p>To update number of nodes for this nodegroup modify the <code>node</code> number under <code>spec</code> field.</p><p>After completing your change on the node groups, you need to apply that via <code>pharmer</code> so that changes will be applied
+on provider cluster.</p><pre><code class=language-console>$ pharmer apply aksx
+</code></pre><p>This command will take care of your actions that you applied on the node groups recently.</p><pre><code class=language-console> $ pharmer get nodegroups -k aksx
+NAME               Cluster   Node      SKU
+Standard-D1-v2-pool   aksx      2         Standard_D1_v2
+</code></pre><h2 id=cluster-backup>Cluster Backup</h2><p>To get a backup of your cluster run the following command:</p><pre><code class=language-console>$ pharmer backup cluster --cluster aksx --backup-dir=aksx-backup
+</code></pre><p>Here,
+<code>--backup-dir</code> is the flag for specifying your backup directory where phamer puts the backup file</p><p>After finishing task <code>pharmer</code> creates a <code>.tar.gz</code> file in your backup directory where you find the backup yaml of your cluster</p><h3 id=cluster-upgrading>Cluster Upgrading</h3><p>To upgrade your cluster firstly you need to check if there any update available for your cluster and latest kubernetes version.</p><p>To check run:</p><pre><code class=language-console>$ pharmer describe cluster aksx
+Name:		aksx
+Version:	1.10.3
+NodeGroup:
+  Name                  Node
+  ----                  ------
+  Standard-D1-v2-pool   1
+</code></pre><p>Then, if you decided to upgrade you cluster run the command that are showing on describe command.</p><pre><code class=language-console>$ pharmer edit cluster aksx --kubernetes-version=1.10.4
+cluster &quot;aksx&quot; updated
+</code></pre><p>You can verify your changes by checking the yaml of the cluster.</p><pre><code class=language-yaml>$ pharmer get cluster aksx -o yaml
+apiVersion: v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: 2018-06-23T11:41:43Z
+  generation: 1529758341849783579
+  name: aksx
+  uid: 668f8658-76da-11e8-bdc8-382c4a73a7c4
+spec:
+  api:
+    advertiseAddress: &quot;&quot;
+    bindPort: 0
+  caCertName: ca
+  cloud:
+    azure:
+      azureStorageAccountName: k8saksxjzvw2p
+      resourceGroup: aksx
+      rootPassword: GJersaT_NWi8b_If
+      routeTableName: aksx-rt
+      securityGroupName: aksx-nsg
+      subnetCidr: 10.240.0.0/16
+      subnetName: aksx-subnet
+      vnetName: aksx-vnet
+    cloudProvider: aks
+    region: eastus
+    sshKeyName: aksx-4wa6cz
+    zone: eastus
+  credentialName: azure
+  frontProxyCACertName: front-proxy-ca
+  kubernetesVersion: 1.10.4
+  networking:
+    networkProvider: calico
+status:
+  cloud: {}
+  phase: Upgrading
+</code></pre><p>Here, <code>spec.kubernetesVersion</code> is changed to <code>1.10.4</code> from <code>1.10.3</code></p><p>If everything looks ok, then run:</p><pre><code class=language-console>$ pharmer apply aksx
+</code></pre><h2 id=cluster-deleting>Cluster Deleting</h2><p>To delete your cluster run</p><pre><code class=language-console>$ pharmer delete cluster aksx
+</code></pre><p>Then, the yaml file looks like</p><pre><code class=language-yaml>$ pharmer get cluster aksx -o yaml
+apiVersion: v1alpha1
+kind: Cluster
+metadata:
+  creationTimestamp: 2018-06-23T11:41:43Z
+  deletionTimestamp: 2018-06-23T12:53:26Z
+  generation: 1529758341849783579
+  name: aksx
+  uid: 668f8658-76da-11e8-bdc8-382c4a73a7c4
+spec:
+  api:
+    advertiseAddress: &quot;&quot;
+    bindPort: 0
+  caCertName: ca
+  cloud:
+    azure:
+      azureStorageAccountName: k8saksxjzvw2p
+      resourceGroup: aksx
+      rootPassword: GJersaT_NWi8b_If
+      routeTableName: aksx-rt
+      securityGroupName: aksx-nsg
+      subnetCidr: 10.240.0.0/16
+      subnetName: aksx-subnet
+      vnetName: aksx-vnet
+    cloudProvider: aks
+    region: eastus
+    sshKeyName: aksx-4wa6cz
+    zone: eastus
+  credentialName: azure
+  frontProxyCACertName: front-proxy-ca
+  kubernetesVersion: 1.10.4
+  networking:
+    networkProvider: calico
+status:
+  cloud: {}
+  phase: Deleting
+</code></pre><p>Here,</p><ul><li><code>metadata.deletionTimestamp</code>: is set when cluster deletion command was applied.</li></ul><p>Now, to apply delete on provider cluster run</p><pre><code class=language-console>$ pharmer apply aksx
+</code></pre><p><strong>Congratulations !!!</strong> , you&rsquo;re an official <code>pharmer</code> user now.</p></div></div><div class="column is-2"><div class=right-sidebar-area><div class=search-area><form action=#><input id=acSearch type=text placeholder=Search...>
+<button class=search-button>
+<i class="fa fa-search" aria-hidden=true></i></button></form></div><div class=tbl-of-contents><h4>What's on this Page</h4><nav id=TableOfContents><ul><li><a href=#running-kubernetes-on-azure-aks>Running Kubernetes on Azure AKS</a><ul><li><a href=#before-you-start>Before you start</a></li><li><a href=#pharmer-storage>Pharmer storage</a></li><li><a href=#credential-importing>Credential Importing</a></li><li><a href=#cluster-provisioning>Cluster provisioning</a><ul><li><a href=#create-cluster>Create Cluster</a></li></ul></li><li><a href=#applying-cluster>Applying Cluster</a></li><li><a href=#cluster-scaling>Cluster Scaling</a></li><li><a href=#updating-existing-ng>Updating existing NG</a></li><li><a href=#cluster-backup>Cluster Backup</a><ul><li><a href=#cluster-upgrading>Cluster Upgrading</a></li></ul></li><li><a href=#cluster-deleting>Cluster Deleting</a></li></ul></li></ul></nav></div></div></div></div></div><script>var kdDropdown=document.querySelector(".dropdown");var kdDropdownBtn=document.querySelector(".dropdown-trigger");kdDropdownBtn.addEventListener("click",function(){kdDropdown.classList.toggle("is-active");})</script></div><div class=overlay-bg></div><div class=sidebar-search-area><div class=search-area-top><h3>Search</h3><div class=searchbar-area><input type=search name=search id=searchbox placeholder=Search...>
+<button onclick=queryPage(1)><i class="fa fa-search" aria-hidden=true></i></button></div><span id=searchbar-script-container style=display:none></span><div class="search-meta-information level"><div class=level-left></div></div></div><div class=search-result-wrapper></div><div class=pagination-area><div class=pagination-list></div></div></div><script type=text/javascript>var pageSize=5;var acSearch=document.querySelector("#acSearch");var bodyOverlay=document.querySelector(".overlay-bg");var sidebarSearch=document.querySelector(".sidebar-search-area");acSearch.addEventListener("click",function(){bodyOverlay.style.display="block";sidebarSearch.style.right="0";document.getElementById("searchbox").focus();bodyOverlay.addEventListener("click",function(){bodyOverlay.style.display="none";sidebarSearch.style.right="-50%";});});function encodeQueryData(data){var ret=[];for(var d in data)
+ret.push(encodeURIComponent(d)+'='+encodeURIComponent(data[d]));return ret.join('&');}
+document.querySelector(".searchbar-area input[type=search]").addEventListener("keyup",function(event){event.preventDefault();if(event.keyCode===13){queryPage(1);}});function queryPage(idx){var q=document.getElementById("searchbox").value;var cx="015199383701854252104:nhc3zij9nui";var key="AIzaSyBo15AW3hatf4fO8actJUZ_d5qZJpx0rXM";var imgSize="small";var callback="renderResult";var src="https://www.googleapis.com/customsearch/v1?"+encodeQueryData({q:q,cx:cx,key:key,imgSize:imgSize,callback:callback,start:(idx-1)*pageSize+1,num:pageSize,});var newScript=document.createElement("script");newScript.src=src;e=document.getElementById("searchbar-script-container");var child=e.lastElementChild;if(child){e.removeChild(child);}
+e.appendChild(newScript);}
+function renderSearchResultEntry(e){var out='<div class="single-search-result">'+
+'<h3><a href="'+e.link+'">'+e.title+'</a></h3>'+
+'<a href="'+e.link+'">'+e.htmlFormattedUrl+'</a>'+
+'<div class="result-description-wrapper">';if(e.pagemap&&e.pagemap.cse_thumbnail){out+='<div class="result-thumb">'+
+'<img src="'+e.pagemap.cse_thumbnail[0].src+'" alt="" />'+
+'</div>';}
+out+='<div class="result-description">'+
+'<p>'+
+e.snippet+
+'</p>'+
+'</div>'+
+'</div>'+
+'</div>';return out;}
+function renderResult(response){document.querySelector(".search-meta-information .level-left").innerHTML='<div class="level-left">'+
+'<p>'+
+'About <span class="search-count">'+response.searchInformation.formattedTotalResults+'</span> results (<span class="time-count">'+response.searchInformation.formattedSearchTime+' </span>seconds)'+
+'</p>'+
+'</div>';if(!response.items){return;}
+var searchResultWrapper=document.querySelector(".search-result-wrapper");searchResultWrapper.innerHTML="";for(var i=0;i<response.items.length;i++){searchResultWrapper.innerHTML+=renderSearchResultEntry(response.items[i]);}
+var pager='<ul>';if(response.queries.previousPage){var pageIndex=Math.floor(response.queries.previousPage[0].startIndex/pageSize)+1;pager+='<li><a href="#" onclick="queryPage('+pageIndex+')">Previous</a></li>';}
+if(response.queries.request){var pageIndex=Math.floor(response.queries.request[0].startIndex/pageSize)+1;pager+='<li><a href="#" onclick="queryPage('+pageIndex+')" class="is-active">'+pageIndex+'</a></li>';}
+if(response.queries.nextPage){var pageIndex=Math.floor(response.queries.nextPage[0].startIndex/pageSize)+1;pager+='<li><a href="#" onclick="queryPage('+pageIndex+')">Next</a></li>';}
+pager+='</ul>';document.querySelector(".pagination-area .pagination-list").innerHTML=pager;}</script><section></section><section></section><section></section><button class=go-to-top id=goTop>
+<i class="fa fa-angle-up" aria-hidden=true></i></button><footer class=footer-area><div class=footer-top><div class="container section"><div class=columns><div class="column is-4"><div class=single-footer-widget><div class=footer-logo><a href=https://appscode.com><img src=https://cdn.appscode.com/images/products/appscode/appscode-logo.png alt=AppsCode class=img></a></div><div class=subscription-form><form action="https://appscode.us17.list-manage.com/subscribe/post?u=feb2bf31969a951e7449048a3&amp;id=82fb19acb9" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=navbar-form target=_blank novalidate role=email role=email><label for=email>Subscribe to Our Newsletter</label><p class=spam-message>No spam, we promise. Your mail address is secure</p><div class="field has-addons"><div class=control><input class=input name=EMAIL id=mce-EMAIL type=email placeholder="Your work email address" required>
+<button id=mc-embedded-subscribe type=submit name=subscribe class=button>
+<i class="fa fa-paper-plane-o" aria-hidden=true></i></button></div></div></form></div><div class=contact-information><h4>Have any Inquiry?</h4><ul class=all-contact-info><li><a href=callto:&#43;1%28650%29241-8486><span><i class="fa fa-phone" aria-hidden=true></i></span>&#43;1(650)241-8486</a></li><li><a href=mailto:support@appscode.com><span><i class="fa fa-envelope-o" aria-hidden=true></i></span>support@appscode.com</a></li></ul></div></div></div><div class="column is-2"><div class=single-footer-widget><div class=footer-menu><h4>Products</h4><ul class=footer-link><li><a href=https://kubedb.com>KubeDB</a></li><li><a href=https://appscode.com/products/stash/>Stash</a></li><li><a href=https://kubevault.com>KubeVault</a></li><li><a href=https://appscode.com/products/voyager/>Voyager</a></li><li><a href=https://appscode.com/products/guard/>Guard</a></li><li><a href=https://pharmer.io>Pharmer</a></li></ul></div></div></div><div class="column is-2"><div class=single-footer-widget><div class=footer-menu><h4>Services</h4><ul class=footer-link><li><a href=https://appscode.com/pricing/>Commercial Support</a></li><li><a href=https://appscode.com/consulting/>Consulting</a></li><li><a href=https://appscode.com/training/>Training</a></li><li><a href=https://appscode.com/support/>Support</a></li></ul></div></div></div><div class="column is-2"><div class=single-footer-widget><div class=footer-menu><h4>Company</h4><ul class=footer-link><li><a href=https://appscode.com/about/>About Us</a></li><li><a href=https://blog.byte.builders>Blog</a></li><li><a href=https://appscode.com/contact/>Contact Us</a></li></ul></div></div></div><div class="column is-2"><div class=single-footer-widget><div class=footer-menu><h4>Legal</h4><ul class=footer-link><li><a href=https://appscode.com/legal/tos/>Terms of Sevice</a></li><li><a href=https://appscode.com/legal/privacy-policy/>Privacy Policy</a></li><li><a href=https://appscode.com/legal/security/>Security</a></li><li><a href=https://appscode.com/legal/sla/>Service Level Agreement</a></li></ul></div></div></div></div></div></div><div class=footer-bottom><div class="container section"><div class=columns><div class="column is-4"><p>© 2019 AppsCode Inc. All rights reserved.</p></div><div class="column is-4 is-mobile has-text-centered"><div class=footer-inline-link><a href=https://appscode.com/legal/privacy-policy/>Privacy Policy</a>
+<a href=https://appscode.com/legal/tos/>Terms of Service</a></div></div><div class="column is-4 is-mobile has-text-right"><div class=socail-link-inline><ul><li><a href=https://twitter.com/AppsCodeHQ><i class="fa fa-twitter" aria-hidden=true></i></a></li><li><a href=https://www.facebook.com/appscode><i class="fa fa-facebook" aria-hidden=true></i></a></li><li><a href=https://www.youtube.com/c/AppsCodeInc><i class="fa fa-youtube" aria-hidden=true></i></a></li></ul></div></div></div></div></div></footer><script src=/assets/js/bulma-carousel.min.js></script><script src=/assets/js/main.js></script></body></html>
