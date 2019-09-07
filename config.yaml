@@ -1,5 +1,5 @@
 title: Tools for running HashiCorp Vault on Kubernetes
-baseurl: https://kubedb.com
+baseurl: https://kubevault.com
 languageCode: en-us
 assetDir: static
 disableKinds:
