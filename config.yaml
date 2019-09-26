@@ -2,6 +2,7 @@ title: Tools for running HashiCorp Vault on Kubernetes
 baseurl: https://kubevault.com
 languageCode: en-us
 assetDir: static
+googleAnalytics: UA-62096468-4
 disableKinds:
 - taxonomy
 - taxonomyTerm
