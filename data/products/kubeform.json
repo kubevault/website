@@ -119,14 +119,15 @@
         "alt": "http"
       },
       "summary": "",
-      "description": "Kubeform is 100% open source and distributed under a commercial friendly Apache v2 license. You get the benefits of bug fixes and enhancements made by the Kubeform community as a whole and not just be its primary sponsor AppsCode Inc. Since it is open source, your engineering team has the ability to debug issues unique to your deployment and make any changes if necessary. You get the peace of mind that your critical infrastructure component is not tied to the fate of a startup."
+      "description": "Kubeform is 100% open source and distributed under a commercial friendly Apache v2 license. You get the benefits of bug fixes and enhancements made by the Kubeform community as a whole and not just by its primary sponsor AppsCode Inc. Since it is open source, your engineering team has the ability to debug issues unique to your deployment and make any changes if necessary. You get the peace of mind that your critical infrastructure component is not tied to the fate of a startup."
     }
   ],
   "versions": [
     { "version": "master", "hostDocs": false, "show": true },
-    { "version": "v0.0.1", "hostDocs": true, "show": true }
+    { "version": "v0.0.1", "hostDocs": true, "show": false },
+    { "version": "v0.1.0", "hostDocs": true, "show": true }
   ],
-  "latestVersion": "v0.0.1",
+  "latestVersion": "v0.1.0",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/kubeform/kubeform",
