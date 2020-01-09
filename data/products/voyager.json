@@ -1,30 +1,32 @@
 {
   "key": "voyager",
   "name": "Voyager",
+  "fullname": "Voyager by AppsCode",
   "tagline": "Secure HAProxy Ingress Controller for<br /> <strong>Kubernetes</strong>",
   "summary": "",
   "published": true,
+  "author": "AppsCode Inc.",
   "website": {
     "domainKey": "domain_appscode",
     "path": "/products/voyager/"
   },
   "heroImage": {
-    "src": "https://cdn.appscode.com/images/products/voyager/voyager-hero.webp",
+    "src": "/assets/images/products/voyager/voyager-hero.webp",
     "alt": "Voyager"
   },
   "logo": {
-    "src": "https://cdn.appscode.com/images/products/voyager/voyager.png",
+    "src": "/assets/images/products/voyager/voyager.png",
     "alt": "Voyager"
   },
   "logoWhite": {
-    "src": "https://cdn.appscode.com/images/products/voyager/voyager-white.png",
+    "src": "/assets/images/products/voyager/voyager-white.png",
     "alt": "Voyager"
   },
   "icon": {
-    "src": "https://cdn.appscode.com/images/products/voyager/voyager-icon.png",
+    "src": "/assets/images/products/voyager/voyager-icon.png",
     "alt": "Voyager",
     "sizes": {
-      "192x192": "https://cdn.appscode.com/images/products/voyager/icons/android-icon-192x192.png"
+      "192x192": "/assets/images/products/voyager/icons/android-icon-192x192.png"
     }
   },
   "repoURL": "https://github.com/appscode/voyager",
@@ -47,11 +49,11 @@
     {
       "title": "HTTP & TCP",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-1.png",
+        "src": "/assets/images/products/voyager/features/feature-1.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/http.svg",
+        "src": "/assets/images/products/voyager/features/http.svg",
         "alt": "http"
       },
       "summary": "",
@@ -60,11 +62,11 @@
     {
       "title": "SSL",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-2.png",
+        "src": "/assets/images/products/voyager/features/feature-2.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/ssl.svg",
+        "src": "/assets/images/products/voyager/features/ssl.svg",
         "alt": "http"
       },
       "summary": "",
@@ -73,11 +75,11 @@
     {
       "title": "Platform support",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-3.png",
+        "src": "/assets/images/products/voyager/features/feature-3.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/platform.svg",
+        "src": "/assets/images/products/voyager/features/platform.svg",
         "alt": "http"
       },
       "summary": "",
@@ -86,11 +88,11 @@
     {
       "title": "HAProxy",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-4.png",
+        "src": "/assets/images/products/voyager/features/feature-4.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/haproxy.svg",
+        "src": "/assets/images/products/voyager/features/haproxy.svg",
         "alt": "http"
       },
       "summary": "",
@@ -99,11 +101,11 @@
     {
       "title": "Prometheus",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-5.png",
+        "src": "/assets/images/products/voyager/features/feature-5.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/prometheus.svg",
+        "src": "/assets/images/products/voyager/features/prometheus.svg",
         "alt": "http"
       },
       "summary": "",
@@ -112,11 +114,11 @@
     {
       "title": "Let's Encrypt",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/feature-6.png",
+        "src": "/assets/images/products/voyager/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/voyager/features/encrypt.svg",
+        "src": "/assets/images/products/voyager/features/encrypt.svg",
         "alt": "http"
       },
       "summary": "",
@@ -125,6 +127,8 @@
   ],
   "versions": [
     { "version": "master", "hostDocs": false, "show": true },
+    { "version": "v12.0.0-rc.1", "hostDocs": true, "show": true },
+    { "version": "v12.0.0-rc.0", "hostDocs": true, "show": true },
     { "version": "v11.0.1", "hostDocs": true, "show": true },
     { "version": "v11.0.0", "hostDocs": true, "show": true },
     { "version": "10.0.0", "hostDocs": true, "show": true },
@@ -157,7 +161,7 @@
     { "version": "3.1.0", "hostDocs": false },
     { "version": "3.0.0", "hostDocs": false }
   ],
-  "latestVersion": "v11.0.1",
+  "latestVersion": "v12.0.0-rc.1",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/appscode/voyager",

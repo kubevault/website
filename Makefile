@@ -5,6 +5,12 @@ run:
 .PHONY: docs
 docs:
 	hugo-tools docs-aggregator
+	find ./data -name "*.json" -exec sed -i 's/https:\/\/cdn.appscode.com\/images/\/assets\/images/g' {} \;
+
+.PHONY: assets
+assets:
+	hugo-tools docs-aggregator --only-assets
+	find ./data -name "*.json" -exec sed -i 's/https:\/\/cdn.appscode.com\/images/\/assets\/images/g' {} \;
 
 .PHONY: gen
 gen:
@@ -29,4 +35,4 @@ release: gen-prod
 
 .PHONY: check-links
 check-links:
-	liche -r public -d http://localhost:1313 -c 10 -p -l -x "^http://localhost:9090$$"
+	liche -r public -d http://localhost:1313 -c 10 -p -l -x '^http://localhost:9090$$'
