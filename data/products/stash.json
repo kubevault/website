@@ -1,30 +1,34 @@
 {
   "key": "stash",
   "name": "Stash",
+  "fullname": "Stash by AppsCode",
   "tagline": "Backup your Kubernetes Stateful Applications",
   "summary": "",
   "published": true,
+  "author": "AppsCode Inc.",
   "website": {
     "domainKey": "domain_stash",
-    "path": ""
+    "path": "",
+    "themeColor": "#5E2DEA"
   },
+  "keywords": "kubernetes appscode backup disaster recovery volume",
   "heroImage": {
-    "src": "https://cdn.appscode.com/images/products/stash/stash-hero.png",
+    "src": "/assets/images/products/stash/stash-hero.png",
     "alt": "Stash"
   },
   "logo": {
-    "src": "https://cdn.appscode.com/images/products/stash/stash.png",
+    "src": "/assets/images/products/stash/stash.png",
     "alt": "Stash"
   },
   "logoWhite": {
-    "src": "https://cdn.appscode.com/images/products/stash/stash-white.png",
+    "src": "/assets/images/products/stash/stash-white.png",
     "alt": "Stash"
   },
   "icon": {
-    "src": "https://cdn.appscode.com/images/products/stash/stash-icon.png",
+    "src": "/assets/images/products/stash/stash-icon.png",
     "alt": "Stash",
     "sizes": {
-      "192x192": "https://cdn.appscode.com/images/products/stash/icons/android-icon-192x192.png"
+      "192x192": "/assets/images/products/stash/icons/android-icon-192x192.png"
     }
   },
   "repoURL": "https://github.com/stashed/docs",
@@ -47,11 +51,11 @@
     {
       "title": "Declarative API",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-1.png",
+        "src": "/assets/images/products/stash/features/feature-1.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/declarative-api.svg",
+        "src": "/assets/images/products/stash/features/declarative-api.svg",
         "alt": "http"
       },
       "summary": "",
@@ -60,11 +64,11 @@
     {
       "title": "Restic",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-3.png",
+        "src": "/assets/images/products/stash/features/feature-3.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/restic.svg",
+        "src": "/assets/images/products/stash/features/restic.svg",
         "alt": "http"
       },
       "summary": "",
@@ -73,11 +77,11 @@
     {
       "title": "Backup Kubernetes Volumes",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-2.png",
+        "src": "/assets/images/products/stash/features/feature-2.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/kub-workload.svg",
+        "src": "/assets/images/products/stash/features/kub-workload.svg",
         "alt": "http"
       },
       "summary": "",
@@ -86,11 +90,11 @@
     {
       "title": "Backup Database",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-2.png",
+        "src": "/assets/images/products/stash/features/feature-2.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/kub-workload.svg",
+        "src": "/assets/images/products/stash/features/kub-workload.svg",
         "alt": "http"
       },
       "summary": "",
@@ -99,11 +103,11 @@
     {
       "title": "Volume Snapshot",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-2.png",
+        "src": "/assets/images/products/stash/features/feature-2.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/kub-workload.svg",
+        "src": "/assets/images/products/stash/features/kub-workload.svg",
         "alt": "http"
       },
       "summary": "",
@@ -112,11 +116,11 @@
     {
       "title": "Cluster Snapshot",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-2.png",
+        "src": "/assets/images/products/stash/features/feature-2.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/kub-workload.svg",
+        "src": "/assets/images/products/stash/features/kub-workload.svg",
         "alt": "http"
       },
       "summary": "",
@@ -125,11 +129,11 @@
     {
       "title": "Templated Backup",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -138,11 +142,11 @@
     {
       "title": "Automatic Cleanup",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -151,11 +155,11 @@
     {
       "title": "Multiple Platforms Support",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-4.png",
+        "src": "/assets/images/products/stash/features/feature-4.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/platform-support.svg",
+        "src": "/assets/images/products/stash/features/platform-support.svg",
         "alt": "http"
       },
       "summary": "",
@@ -164,11 +168,11 @@
     {
       "title": "Multiple Architectures Support",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-4.png",
+        "src": "/assets/images/products/stash/features/feature-4.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/platform-support.svg",
+        "src": "/assets/images/products/stash/features/platform-support.svg",
         "alt": "http"
       },
       "summary": "",
@@ -177,11 +181,11 @@
     {
       "title": "Deduplication",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -190,11 +194,11 @@
     {
       "title": "Encryption",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -203,11 +207,11 @@
     {
       "title": "Extensibility",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -216,11 +220,11 @@
     {
       "title": "kubectl Plugin",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -229,11 +233,11 @@
     {
       "title": "RBAC",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-6.png",
+        "src": "/assets/images/products/stash/features/feature-6.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/rback.svg",
+        "src": "/assets/images/products/stash/features/rback.svg",
         "alt": "http"
       },
       "summary": "",
@@ -242,11 +246,11 @@
     {
       "title": "Prometheus Monitoring",
       "image": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/feature-5.png",
+        "src": "/assets/images/products/stash/features/feature-5.png",
         "alt": "http"
       },
       "icon": {
-        "src": "https://cdn.appscode.com/images/products/stash/features/prometheus.svg",
+        "src": "/assets/images/products/stash/features/prometheus.svg",
         "alt": "http"
       },
       "summary": "",
@@ -282,7 +286,7 @@
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/stashed/stash",
     "linkedin": "https://www.linkedin.com/company/appscode",
-    "twitter": "https://twitter.com/AppsCodeHQ",
+    "twitter": "https://twitter.com/KubeStash",
     "youtube": "https://www.youtube.com/c/appscodeinc"
   },
   "description": {
