@@ -5,7 +5,7 @@ menu:
     identifier: external-vault-server
     name: External Vault Server
     parent: vault-server-guides
-    weight: 10
+    weight: 30
 menu_name: docs_v0.3.0
 section_menu_id: guides
 info:

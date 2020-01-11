@@ -5,7 +5,7 @@ menu:
     identifier: secret-engines-guides
     name: Secret Engines
     parent: guides
-    weight: 10
+    weight: 30
 menu_name: docs_v0.3.0
 info:
   version: v0.3.0
