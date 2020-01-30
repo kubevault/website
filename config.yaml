@@ -50,3 +50,7 @@ menu:
     parent: community
     url: https://slack.appscode.com
     weight: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
