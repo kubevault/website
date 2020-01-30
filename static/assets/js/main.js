@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const allHeaders = document.querySelectorAll(
     ".full-info > h2,.full-info > h3,.full-info > h4"
   );
-  if (allHeaders.length > 20) {
+  if (allHeaders.length > 15) {
     let rightSidebarArea = document.querySelector(".right-sidebar-area");
     rightSidebarArea.style.position = "inherit";
   }
