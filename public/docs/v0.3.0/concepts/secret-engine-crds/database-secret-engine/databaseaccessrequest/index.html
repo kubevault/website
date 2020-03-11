@@ -65,14 +65,14 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 </code></pre></div><p>Here, we are going to describe the various sections of the <code>DatabaseAccessRequest</code> crd.</p><h3 id=databaseaccessrequest-spec>DatabaseAccessRequest Spec</h3><p>DatabaseAccessRequest <code>spec</code> contains information about database role and subject.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>:
     <span style=color:#66d9ef>apiGroup</span>: &lt;role-apiGroup<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>kind: &lt;role-kind&gt;</span>
+</span><span style=color:#e6db74>    kind: &lt;role-kind&gt;</span>
     <span style=color:#66d9ef>name</span>: &lt;role-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;role-namespace&gt;</span>
+</span><span style=color:#e6db74>    namespace: &lt;role-namespace&gt;</span>
   <span style=color:#66d9ef>subjects</span>:
     - <span style=color:#66d9ef>kind</span>: &lt;subject-kind<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>apiGroup: &lt;subject-apiGroup&gt;</span>
+</span><span style=color:#e6db74>      apiGroup: &lt;subject-apiGroup&gt;</span>
       <span style=color:#66d9ef>name</span>: &lt;subject-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;subject-namespace&gt;</span>
+</span><span style=color:#e6db74>      namespace: &lt;subject-namespace&gt;</span>
   <span style=color:#66d9ef>ttl</span>: &lt;ttl-for-leases&gt;
 </code></pre></div><p>DatabaseAccessRequest spec has the following fields:</p><h4 id=specroleref>spec.roleRef</h4><p><code>spec.roleRef</code> is a <code>required</code> field that specifies the reference to a database Role CR (i.e.<a href=/docs/v0.3.0/concepts/secret-engine-crds/database-secret-engine/mongodb>MongoDBRole</a>,
 <a href=/docs/v0.3.0/concepts/secret-engine-crds/database-secret-engine/postgresrole>PostgresRole</a>,

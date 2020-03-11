@@ -63,20 +63,20 @@ If the user deletes the VaultPolicyBinding CRD, then the respective role will al
 </code></pre></div><p>Here, we are going to describe the various sections of the <code>VaultPolicyBinding</code> crd.</p><h3 id=vaultpolicybinding-spec>VaultPolicyBinding Spec</h3><p>VaultPolicyBinding <code>spec</code> contains information that is necessary for creating an auth role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: &lt;vault-appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>vaultRoleName: &lt;role-name&gt;</span>
+</span><span style=color:#e6db74>  vaultRoleName: &lt;role-name&gt;</span>
   <span style=color:#66d9ef>policies</span>:
   - <span style=color:#66d9ef>name</span>: &lt;vault-policy-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>ref:  &lt;VaultPolicy-crd-name&gt;</span>
+</span><span style=color:#e6db74>    ref:  &lt;VaultPolicy-crd-name&gt;</span>
   <span style=color:#66d9ef>subjectRef</span>:
     <span style=color:#66d9ef>kubernetes</span>:
       <span style=color:#66d9ef>path</span>: &lt;k8s-auth-path<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>serviceAccountNames:</span>
+</span><span style=color:#e6db74>      serviceAccountNames:</span>
       - <span style=color:#e6db74>&#34;sa1&#34;</span>
       - <span style=color:#e6db74>&#34;sa2&#34;</span>
       <span style=color:#66d9ef>serviceAccountNamespaces</span>:
       - <span style=color:#e6db74>&#34;ns1&#34;</span>
       <span style=color:#66d9ef>ttl</span>: &lt;token-ttl<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxTTL: &lt;token-maxTTL&gt;</span>
+</span><span style=color:#e6db74>      maxTTL: &lt;token-maxTTL&gt;</span>
       <span style=color:#66d9ef>period</span>: &lt;token-period&gt;
 </code></pre></div><p>VaultPolicyBinding spec has the following fields:</p><h4 id=specvaultref>spec.vaultRef</h4><p><code>spec.vaultRef</code> is a <code>required</code> field that specifies the name of an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> that contains information to communicate with a Vault server. The AppBinding object must be in the same namespace with VaultPolicyBinding object.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:

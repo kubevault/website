@@ -45,7 +45,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: vault
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;secret/*&#34; {</span>
+</span><span style=color:#e6db74>    path &#34;secret/*&#34; {</span>
       capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>, <span style=color:#e6db74>&#34;update&#34;</span>, <span style=color:#e6db74>&#34;delete&#34;</span>, <span style=color:#e6db74>&#34;list&#34;</span>]
     }
 <span style=color:#66d9ef>status</span>:
@@ -58,7 +58,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>vaultPolicyName</span>: my-custom-policy
 </code></pre></div><h4 id=specpolicydocument>spec.policyDocument</h4><p><code>spec.policyDocument</code> is an <code>optional</code> field that specifies the vault policy in <code>hcl</code> format. Both <code>spec.policyDocument</code> and <code>spec.policy</code> cannot be empty at once.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;secret/*&#34; {</span>
+</span><span style=color:#e6db74>      path &#34;secret/*&#34; {</span>
         capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>, <span style=color:#e6db74>&#34;update&#34;</span>, <span style=color:#e6db74>&#34;delete&#34;</span>, <span style=color:#e6db74>&#34;list&#34;</span>]
       }
       path <span style=color:#e6db74>&#34;abc/*&#34;</span> {

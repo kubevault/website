@@ -42,11 +42,11 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
     <span style=color:#66d9ef>mode</span>:
       <span style=color:#66d9ef>azureKeyVault</span>:
         <span style=color:#66d9ef>vaultBaseURL</span>: &lt;vault_base_url<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>tenantID: &lt;tenant_id&gt;</span>
+</span><span style=color:#e6db74>        tenantID: &lt;tenant_id&gt;</span>
         <span style=color:#66d9ef>clientCertSecret</span>: &lt;secret_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>aadClientSecret: &lt;secret_name</span>
+</span><span style=color:#e6db74>        aadClientSecret: &lt;secret_name</span>
         <span style=color:#66d9ef>useManagedIdentity</span>: &lt;<span style=color:#66d9ef>true</span>/<span style=color:#66d9ef>false</span><span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>cloud: &lt;cloud_environment_identifier&gt;</span>
+</span><span style=color:#e6db74>        cloud: &lt;cloud_environment_identifier&gt;</span>
 </code></pre></div><p><code>mode.azureKeyVault</code> has the following fields:</p><h2 id=azurekeyvaultvaultbaseurl>azureKeyVault.vaultBaseURL</h2><p><code>azureKeyVault.vaultBaseURL</code> is a required field that specifies the Azure key vault URL.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>unsealer</span>:
     <span style=color:#66d9ef>mode</span>:

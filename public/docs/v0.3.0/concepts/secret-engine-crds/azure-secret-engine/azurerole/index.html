@@ -60,11 +60,11 @@ If the user deletes the <code>AzureRole</code> CRD, then the respective role wil
 </code></pre></div><blockquote><p>Note: To resolve the naming conflict, name of the role in Vault will follow this format: <code>k8s.{clusterName}.{metadata.namespace}.{metadata.name}</code></p></blockquote><p>Here, we are going to describe the various sections of the <code>AzureRole</code> crd.</p><h3 id=azurerole-spec>AzureRole Spec</h3><p>AzureRole <code>spec</code> contains either new service principal configuration or existing service principal name required for configuring a role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>path: &lt;azure-secret-engine-path&gt;</span>
+</span><span style=color:#e6db74>  path: &lt;azure-secret-engine-path&gt;</span>
   <span style=color:#66d9ef>applicationObjectID</span>: &lt;existing-application-object-id<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>azureRoles: &lt;list-of-azure-roles&gt;</span>
+</span><span style=color:#e6db74>  azureRoles: &lt;list-of-azure-roles&gt;</span>
   <span style=color:#66d9ef>ttl</span>: &lt;default-ttl<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxTTL: &lt;max-ttl&gt;</span>
+</span><span style=color:#e6db74>  maxTTL: &lt;max-ttl&gt;</span>
 </code></pre></div><p><code>AzureRole</code> spec has the following fields:</p><h4 id=specvaultref>spec.vaultRef</h4><p><code>spec.vaultRef</code> is a <code>required</code> field that specifies the name of an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> reference which is used to connect with a Vault server. AppBinding must be in the same namespace with the AzureRole object.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: vault-app

@@ -87,7 +87,7 @@ namespace/monitoring created
   <span style=color:#66d9ef>selfLink</span>: /api/v1/namespaces/kube-system/services/csi-vault-controller
   <span style=color:#66d9ef>uid</span>: 66b553a8-0a6a<span style=color:#ae81ff>-11e9</span>-ae90-02e34d62ed30
 <span style=color:#66d9ef>spec</span>:
-  <span style=color:#66d9ef>clusterIP</span>: <span style=color:#ae81ff>10.101</span><span style=color:#ae81ff>.189</span><span style=color:#ae81ff>.99</span>
+  <span style=color:#66d9ef>clusterIP</span>: <span style=color:#ae81ff>10.101.189.99</span>
   <span style=color:#66d9ef>ports</span>:
   - <span style=color:#66d9ef>name</span>: api
     <span style=color:#66d9ef>port</span>: <span style=color:#ae81ff>443</span>
@@ -161,7 +161,7 @@ $ kubectl get svc csi-vault-provisioner -n kube-system -o yaml
   <span style=color:#66d9ef>selfLink</span>: /api/v1/namespaces/kube-system/services/csi-vault-provisioner
   <span style=color:#66d9ef>uid</span>: 66b8d309-0a6a<span style=color:#ae81ff>-11e9</span>-ae90-02e34d62ed30
 <span style=color:#66d9ef>spec</span>:
-  <span style=color:#66d9ef>clusterIP</span>: <span style=color:#ae81ff>10.111</span><span style=color:#ae81ff>.29</span><span style=color:#ae81ff>.109</span>
+  <span style=color:#66d9ef>clusterIP</span>: <span style=color:#ae81ff>10.111.29.109</span>
   <span style=color:#66d9ef>ports</span>:
   - <span style=color:#66d9ef>name</span>: api
     <span style=color:#66d9ef>port</span>: <span style=color:#ae81ff>443</span>
@@ -193,7 +193,7 @@ clusterrolebinding.rbac.authorization.k8s.io/prometheus created
   <span style=color:#66d9ef>namespace</span>: monitoring
 <span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>prometheus.yml</span>: |<span style=color:#e6db74>-
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>global:</span>
+</span><span style=color:#e6db74>    global:</span>
       <span style=color:#66d9ef>scrape_interval</span>: 5s
       <span style=color:#66d9ef>evaluation_interval</span>: 5s
     <span style=color:#66d9ef>scrape_configs</span>:
@@ -310,7 +310,7 @@ configmap/prometheus-config created
       - <span style=color:#66d9ef>args</span>:
         - --config.file=/etc/prometheus/prometheus.yml
         - --storage.tsdb.path=/prometheus/
-        <span style=color:#66d9ef>image</span>: prom/prometheus:v2<span style=color:#ae81ff>.5</span><span style=color:#ae81ff>.0</span>
+        <span style=color:#66d9ef>image</span>: prom/prometheus:v2<span style=color:#ae81ff>.5.0</span>
         <span style=color:#66d9ef>imagePullPolicy</span>: IfNotPresent
         <span style=color:#66d9ef>name</span>: prometheus
         <span style=color:#66d9ef>ports</span>:

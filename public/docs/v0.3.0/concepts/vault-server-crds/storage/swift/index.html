@@ -56,15 +56,15 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>swift</span>:
       <span style=color:#66d9ef>authURL</span>: &lt;auth_url<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>container: &lt;container_name&gt;</span>
+</span><span style=color:#e6db74>      container: &lt;container_name&gt;</span>
       <span style=color:#66d9ef>credentialSecret</span>: &lt;secret_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>region: &lt;region_name&gt;</span>
+</span><span style=color:#e6db74>      region: &lt;region_name&gt;</span>
       <span style=color:#66d9ef>tenant</span>: &lt;tenant_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>tenantID: &lt;tenant_id&gt;</span>
+</span><span style=color:#e6db74>      tenantID: &lt;tenant_id&gt;</span>
       <span style=color:#66d9ef>domain</span>: &lt;domain<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>projectDomain: &lt;project_domain&gt;</span>
+</span><span style=color:#e6db74>      projectDomain: &lt;project_domain&gt;</span>
       <span style=color:#66d9ef>storageURL</span>: &lt;storage_url<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>authTokenSecret: &lt;secret_name&gt;</span>
+</span><span style=color:#e6db74>      authTokenSecret: &lt;secret_name&gt;</span>
 </code></pre></div><p>Here, we are going to describe the various attributes of the <code>spec.backend.swift</code> field.</p><h3 id=swiftauthurl>swift.authURL</h3><p><code>swift.authURL</code> is a required field that specifies the OpenStack authentication endpoint.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>swift</span>:

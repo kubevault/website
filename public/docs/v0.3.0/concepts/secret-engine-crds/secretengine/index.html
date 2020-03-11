@@ -87,7 +87,7 @@ AWS secret engine. <a href=https://www.vaultproject.io/api/secret/aws/index.html
     <span style=color:#66d9ef>credentialSecret</span>: &lt;secret-name&gt;
 </code></pre></div><p>The <code>data</code> field of the secret must contain the following key-value pairs:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>access_kay</span>: &lt;access key<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>secret_key: &lt;secret key&gt;</span>
+</span><span style=color:#e6db74>  secret_key: &lt;secret key&gt;</span>
 </code></pre></div></li><li><p><code>aws.region</code> : <code>Required</code>. Specifies the AWS region.</p></li><li><p><code>aws.iamEndpoint</code> : <code>Optional</code>. Specifies a custom HTTP IAM endpoint to use.</p></li><li><p><code>aws.stsEndpoint</code> : <code>Optional</code>. Specifies a custom HTTP STS endpoint to use.</p></li><li><p><code>config.maxRetries</code> : <code>Optional</code>. Specifies the number of max retries the client should use for recoverable errors.</p></li><li><p><code>aws.leaseConfig</code> : <code>Optional</code>. Specifies the lease configuration.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>config</span>:
   <span style=color:#66d9ef>leaseConfig</span>:
     <span style=color:#66d9ef>lease</span>: 1h
@@ -99,9 +99,9 @@ Azure secret engine. <a href=https://www.vaultproject.io/api/secret/azure/index.
     <span style=color:#66d9ef>environment</span>: AzurePublicCloud
 </code></pre></div><ul><li><p><code>credentialSecret</code> : <code>Required</code>. Specifies the k8s secret name containing azure credentials. The <code>data</code> field of the mentioned k8s secret can have the following key-value pairs.</p><ul><li><p><code>subscription-id</code> : <code>Required</code>. Specifies the subscription id for the Azure Active Directory.</p></li><li><p><code>tenant-id</code> : <code>Required</code>. Specifies the tenant id for the Azure Active Directory.</p></li><li><p><code>client-id</code> : <code>Optional</code>. Specifies the OAuth2 client id to connect to Azure.</p></li><li><p><code>client-secret</code> : <code>Optional</code>. Specifies the OAuth2 client secret to connect to Azure.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>subscription-id</span>: &lt;value<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>tenant-id: &lt;value&gt;</span>
+</span><span style=color:#e6db74>  tenant-id: &lt;value&gt;</span>
   <span style=color:#66d9ef>client-id</span>: &lt;value<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>client-secret: &lt;value&gt;</span>
+</span><span style=color:#e6db74>  client-secret: &lt;value&gt;</span>
 </code></pre></div></li><li><p><code>environment</code> : <code>Optional</code>. Specifies the Azure environment. If not specified, Vault will use Azure Public Cloud.</p></li></ul><h4 id=specgcp>spec.gcp</h4><p><code>spec.gcp</code> specifies the configuration required to configure GCP
 secret engine. <a href=https://www.vaultproject.io/api/secret/gcp/index.html#write-config>See more</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>gcp</span>:
@@ -110,20 +110,20 @@ secret engine. <a href=https://www.vaultproject.io/api/secret/gcp/index.html#wri
     <span style=color:#66d9ef>maxTTL</span>: 0s
 </code></pre></div><ul><li><p><code>credentialSecret</code> : <code>Required</code>. Specifies the k8s secret name that contains google application credentials.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>gcp</span>:
-    <span style=color:#66d9ef>credentialSecret</span>: &lt;secret-name<span style=color:#e6db74>&gt;  </span><span style=color:#e6db74>
-</span><span style=color:#e6db74></span><span style=color:#e6db74></span></code></pre></div><p>The <code>data</code> field of the mentioned k8s secret must contain the following key-value pair:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>data</span>:
+    <span style=color:#66d9ef>credentialSecret</span>: &lt;secret-name<span style=color:#e6db74>&gt;  
+</span></code></pre></div><p>The <code>data</code> field of the mentioned k8s secret must contain the following key-value pair:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>sa.json</span>: &lt;google-application-credential&gt;
 </code></pre></div></li><li><p><code>ttl</code> : <code>Optional</code>. Specifies default config TTL for long-lived credentials (i.e. service account keys). Default value is 0s.</p></li><li><p><code>maxTTL</code> : <code>Optional</code>. Specifies the maximum config TTL for long-lived credentials (i.e. service account keys). The default value is 0s.</p></li></ul><h4 id=specpostgres>spec.postgres</h4><p><code>spec.postgres</code> specifies the configuration required to configure PostgreSQL database secret engine. <a href=https://www.vaultproject.io/api/secret/databases/postgresql.html#configure-connection>See more</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml> <span style=color:#66d9ef>spec</span>:
    <span style=color:#66d9ef>postgres</span>:
      <span style=color:#66d9ef>databaseRef</span>:
        <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>      </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;appbinding-namespace&gt;</span>
+</span><span style=color:#e6db74>       namespace: &lt;appbinding-namespace&gt;</span>
      <span style=color:#66d9ef>pluginName</span>: &lt;plugin-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>    </span><span style=color:#e6db74> </span><span style=color:#e6db74>allowedRoles:</span>
+</span><span style=color:#e6db74>     allowedRoles:</span>
        - <span style=color:#e6db74>&#34;rule1&#34;</span>
        - <span style=color:#e6db74>&#34;rule2&#34;</span>
      <span style=color:#66d9ef>maxOpenConnections</span>: &lt;max-open-connection<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>    </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxIdleConnections: &lt;max-idle-connection&gt;</span>
+</span><span style=color:#e6db74>     maxIdleConnections: &lt;max-idle-connection&gt;</span>
      <span style=color:#66d9ef>maxConnectionLifetime</span>: &lt;max-connection-lifetime&gt;
 </code></pre></div><ul><li><p><code>databaseRef</code> : <code>Required</code>. Specifies an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> reference that is required to connect to a PostgreSQL database. It is also used to generate <code>db_name</code> (i.e. <code>/v1/path/config/db_name</code>) where the database secret engine will be configured at. The name of the <code>db_name</code> follows this pattern: <code>k8s.{clusterName}.{namespace}.{name}</code>.</p><ul><li><p><code>name</code> : <code>Required</code>. Specifies the AppBinding name.</p></li><li><p><code>namespace</code> : <code>Required</code>. Specifies the AppBinding namespace.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>postgres</span>:
   <span style=color:#66d9ef>databaseRef</span>:
@@ -147,9 +147,9 @@ the database. Default value 2.</p><div class=highlight><pre style=color:#f8f8f2;
     <span style=color:#66d9ef>mongodb</span>:
       <span style=color:#66d9ef>databaseRef</span>:
         <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;namespace&gt;</span>
+</span><span style=color:#e6db74>        namespace: &lt;namespace&gt;</span>
       <span style=color:#66d9ef>pluginName</span>: &lt;plugin-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>allowedRoles:</span>
+</span><span style=color:#e6db74>      allowedRoles:</span>
         - <span style=color:#e6db74>&#34;role1&#34;</span>
         - <span style=color:#e6db74>&#34;role2&#34;</span>
       <span style=color:#66d9ef>writeConcern</span>: &lt;write-concern&gt;
@@ -172,14 +172,14 @@ or a base64-encoded serialized JSON object. The JSON payload values map to the v
   <span style=color:#66d9ef>mysql</span>:
     <span style=color:#66d9ef>databaseRef</span>:
       <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;appbinding-namespace&gt;</span>
+</span><span style=color:#e6db74>      namespace: &lt;appbinding-namespace&gt;</span>
     <span style=color:#66d9ef>pluginName</span>: &lt;plugin-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>allowedRoles:</span>
+</span><span style=color:#e6db74>    allowedRoles:</span>
       - <span style=color:#e6db74>&#34;role1&#34;</span>
       - <span style=color:#e6db74>&#34;role2&#34;</span>
       - ... ...
     <span style=color:#66d9ef>maxOpenConnections</span>: &lt;max-open-connections<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxIdleConnections: &lt;max-idle-connections&gt;</span>
+</span><span style=color:#e6db74>    maxIdleConnections: &lt;max-idle-connections&gt;</span>
     <span style=color:#66d9ef>maxConnectionLifetime</span>: &lt;max-connection-lifetime&gt;
 </code></pre></div><ul><li><p><code>databaseRef</code> : <code>Required</code>. Specifies an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> reference that is required to connect to a MySQL database. It is also used to generate <code>db_name</code> (i.e. <code>/v1/path/config/db_name</code>) where the database secret engine will be configured at. The naming of <code>db_name</code> follows: <code>k8s.{clusterName}.{namespace}.{name}</code>.</p><ul><li><p><code>name</code> : <code>Required</code>. Specifies the AppBinding name.</p></li><li><p><code>namespace</code> : <code>Required</code>. Specifies the AppBinding namespace.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>mysql</span>:
   <span style=color:#66d9ef>databaseRef</span>:

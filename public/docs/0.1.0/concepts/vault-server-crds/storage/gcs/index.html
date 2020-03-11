@@ -48,9 +48,9 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>gcs</span>:
       <span style=color:#66d9ef>bucket</span>: &lt;bucket_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>chunkSize: &lt;chunk_size&gt;</span>
+</span><span style=color:#e6db74>      chunkSize: &lt;chunk_size&gt;</span>
       <span style=color:#66d9ef>maxParallel</span>: &lt;max_parallet<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>haEnabled: &lt;true/false&gt;</span>
+</span><span style=color:#e6db74>      haEnabled: &lt;true/false&gt;</span>
       <span style=color:#66d9ef>credentialSecret</span>: &lt;secret_name&gt;
 </code></pre></div><p><code>spec.backend.gcs</code> has following fields:</p><h4 id=gcsbucket>gcs.bucket</h4><p><code>gcs.bucket</code> is a required field that specifies the name of the bucket to use for storage.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:

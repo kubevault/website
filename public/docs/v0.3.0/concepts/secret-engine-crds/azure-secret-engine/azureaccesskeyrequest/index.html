@@ -65,14 +65,14 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 </code></pre></div><p>Here, we are going to describe the various sections of the <code>AzureAccessKeyRequest</code> crd.</p><h3 id=azureaccesskeyrequest-spec>AzureAccessKeyRequest Spec</h3><p>AzureAccessKeyRequest <code>Spec</code> contains information about <a href=/docs/v0.3.0/concepts/secret-engine-crds/azure-secret-engine/azurerole>AzureRole</a> and subjects.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>:
     <span style=color:#66d9ef>apiGroup</span>: &lt;role-apiGroup<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>kind: &lt;role-kind&gt;</span>
+</span><span style=color:#e6db74>    kind: &lt;role-kind&gt;</span>
     <span style=color:#66d9ef>name</span>: &lt;role-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;role-namespace&gt;</span>
+</span><span style=color:#e6db74>    namespace: &lt;role-namespace&gt;</span>
   <span style=color:#66d9ef>subjects</span>:
     - <span style=color:#66d9ef>kind</span>: &lt;subject-kind<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>apiGroup: &lt;subject-apiGroup&gt;</span>
+</span><span style=color:#e6db74>      apiGroup: &lt;subject-apiGroup&gt;</span>
       <span style=color:#66d9ef>name</span>: &lt;subject-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;subject-namespace&gt;</span>
+</span><span style=color:#e6db74>      namespace: &lt;subject-namespace&gt;</span>
 </code></pre></div><p>AzureAccessKeyRequest spec has the following fields:</p><h4 id=specroleref>spec.roleRef</h4><p><code>spec.roleRef</code> is a <code>required</code> field that specifies the <a href=/docs/v0.3.0/concepts/secret-engine-crds/azure-secret-engine/azurerole>AzureRole</a> against which credentials will be issued.</p><p>It has the following fields:</p><ul><li><code>roleRef.apiGroup</code> : <code>Optional</code>. Specifies the APIGroup of the resource being referenced.</li><li><code>roleRef.kind</code> : <code>Optional</code>. Specifies the kind of the resource being referenced.</li><li><code>roleRef.name</code> : <code>Required</code>. Specifies the name of the object being referenced.</li><li><code>roleRef.namespace</code> : <code>Required</code>. Specifies the namespace of the referenced object.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>:
     <span style=color:#66d9ef>name</span>: azure-role

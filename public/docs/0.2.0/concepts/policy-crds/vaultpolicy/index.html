@@ -36,7 +36,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 <span style=color:#66d9ef>kind</span>: VaultPolicy
 <span style=color:#66d9ef>metadata</span>:
   <span style=color:#66d9ef>name</span>: &lt;name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;namespace&gt;</span>
+</span><span style=color:#e6db74>  namespace: &lt;namespace&gt;</span>
 <span style=color:#66d9ef>spec</span>:
   ...
 <span style=color:#66d9ef>status</span>:
@@ -51,12 +51,12 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
     <span style=color:#66d9ef>name</span>: vault
     <span style=color:#66d9ef>namespace</span>: demo
   <span style=color:#66d9ef>policy</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;secret/*&#34; {</span>
+</span><span style=color:#e6db74>    path &#34;secret/*&#34; {</span>
       capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>, <span style=color:#e6db74>&#34;update&#34;</span>, <span style=color:#e6db74>&#34;delete&#34;</span>, <span style=color:#e6db74>&#34;list&#34;</span>]
     }
 </code></pre></div><p>VaultPolicy Spec has following fields:</p><h3 id=specpolicy>spec.policy</h3><p><code>spec.policy</code> is a required field that specifies the vault policy in hcl format.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>policy</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;secret/*&#34; {</span>
+</span><span style=color:#e6db74>      path &#34;secret/*&#34; {</span>
         capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>, <span style=color:#e6db74>&#34;update&#34;</span>, <span style=color:#e6db74>&#34;delete&#34;</span>, <span style=color:#e6db74>&#34;list&#34;</span>]
       }
 </code></pre></div><h3 id=specvaultappref>spec.vaultAppRef</h3><p><code>spec.vaultAppRef</code> is a required field that specifies name and namespace of <a href=/docs/0.2.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> that contains information to communicate with Vault.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:

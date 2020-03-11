@@ -49,13 +49,13 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>s3</span>:
       <span style=color:#66d9ef>bucket</span>: &lt;bucket_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>endPoint: &lt;end_point&gt;</span>
+</span><span style=color:#e6db74>      endPoint: &lt;end_point&gt;</span>
       <span style=color:#66d9ef>region</span>: &lt;region<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>credentialSecret: &lt;credential_secret_name&gt;</span>
+</span><span style=color:#e6db74>      credentialSecret: &lt;credential_secret_name&gt;</span>
       <span style=color:#66d9ef>sessionTokenSecret</span>: &lt;session_secret_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxParallel: &lt;max_parallel&gt;</span>
+</span><span style=color:#e6db74>      maxParallel: &lt;max_parallel&gt;</span>
       <span style=color:#66d9ef>s3ForcePathStyle</span>: &lt;<span style=color:#66d9ef>true</span>/<span style=color:#66d9ef>false</span><span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>disableSSL: &lt;true/false&gt;</span>
+</span><span style=color:#e6db74>      disableSSL: &lt;true/false&gt;</span>
 </code></pre></div><p><code>spec.backend.s3</code> has following fields:</p><h4 id=s3bucket>s3.bucket</h4><p><code>s3.bucket</code> is a required field that specifies the name of the bucket to use for storage.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>s3</span>:

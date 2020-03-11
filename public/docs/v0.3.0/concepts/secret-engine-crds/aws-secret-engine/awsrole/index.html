@@ -48,7 +48,7 @@ then the respective role will also be deleted from Vault.</p><p><img src=/docs/v
     <span style=color:#66d9ef>name</span>: vault-app
   <span style=color:#66d9ef>credentialType</span>: iam_user
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span>
+</span><span style=color:#e6db74>    {</span>
       <span style=color:#66d9ef>&#34;Version&#34;: </span><span style=color:#e6db74>&#34;2012-10-17&#34;</span>,
       <span style=color:#66d9ef>&#34;Statement&#34;: </span>[
         {
@@ -64,18 +64,18 @@ then the respective role will also be deleted from Vault.</p><p><img src=/docs/v
 </code></pre></div><blockquote><p>Note: To resolve the naming conflict, name of the role in Vault will follow this format: <code>k8s.{clusterName}.{metadata.namespace}.{metadata.name}</code></p></blockquote><p>Here, we are going to describe the various sections of the <code>AWSRole</code> crd.</p><h3 id=awsrole-spec>AWSRole Spec</h3><p>AWSRole <code>spec</code> contains root IAM credentials configuration and role information.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>path: &lt;aws-secret-engine-path&gt;</span>
+</span><span style=color:#e6db74>  path: &lt;aws-secret-engine-path&gt;</span>
   <span style=color:#66d9ef>credentialType</span>: &lt;credential-type<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>roleARNs:</span>
+</span><span style=color:#e6db74>  roleARNs:</span>
     - <span style=color:#e6db74>&#34;ARN1&#34;</span>
     - <span style=color:#e6db74>&#34;ARN2&#34;</span>
   <span style=color:#66d9ef>policyARNs</span>:
     - <span style=color:#e6db74>&#34;ARN1&#34;</span>
     - <span style=color:#e6db74>&#34;ARN2&#34;</span>
   <span style=color:#66d9ef>policyDocument</span>: &lt;IAM-policy-document<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>policy: &lt;policy-in-yaml-format&gt;</span>
+</span><span style=color:#e6db74>  policy: &lt;policy-in-yaml-format&gt;</span>
   <span style=color:#66d9ef>defaultSTSTTL</span>: &lt;default-TTL-for-STS<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxSTSTTL: &lt;max-TTL-for-STS&gt;</span>
+</span><span style=color:#e6db74>  maxSTSTTL: &lt;max-TTL-for-STS&gt;</span>
 </code></pre></div><p><code>AWSRole</code> spec has the following fields:</p><h4 id=specvaultref>spec.vaultRef</h4><p><code>spec.vaultRef</code> is a <code>required</code> field that specifies the name of an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> reference which is used to connect with a Vault server. AppBinding must be in the same namespace with the AWSRole object.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: vault-app
@@ -92,7 +92,7 @@ The default path value is <code>aws</code>.</p><div class=highlight><pre style=c
     - arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
 </code></pre></div><h4 id=specpolicydocument>spec.policyDocument</h4><p><code>spec.policyDocument</code> is an <code>optional</code> field that specifies the IAM policy document for the role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span>
+</span><span style=color:#e6db74>    {</span>
       <span style=color:#66d9ef>&#34;Version&#34;: </span><span style=color:#e6db74>&#34;2012-10-17&#34;</span>,
       <span style=color:#66d9ef>&#34;Statement&#34;: </span>[
         {

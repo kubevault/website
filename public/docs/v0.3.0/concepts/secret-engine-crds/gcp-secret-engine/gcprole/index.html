@@ -58,11 +58,11 @@ The rolesets determine the permissions that Service Account credentials generate
 </code></pre></div><blockquote><p>Note: To resolve the naming conflict, name of the role in Vault will follow this format: <code>k8s.{clusterName}.{metadata.namespace}.{metadata.name}</code></p></blockquote><p>Here, we are going to describe the various sections of the <code>GCPRole</code> crd.</p><h3 id=gcprole-spec>GCPRole Spec</h3><p>GCPRole <code>spec</code> contains the necessary information required to create a GCP secret engine role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: &lt;appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>path: &lt;gcp-secret-engine-path&gt;</span>
+</span><span style=color:#e6db74>  path: &lt;gcp-secret-engine-path&gt;</span>
   <span style=color:#66d9ef>secretType</span>: &lt;generated-secret-type<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>project: &lt;svc-ac-owner-project&gt;</span>
+</span><span style=color:#e6db74>  project: &lt;svc-ac-owner-project&gt;</span>
   <span style=color:#66d9ef>bindings</span>: &lt;bindings<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>tokenScopes: &lt;OAuth-scopes&gt;</span>
+</span><span style=color:#e6db74>  tokenScopes: &lt;OAuth-scopes&gt;</span>
 </code></pre></div><p>GCPRole spec has the following fields:</p><h4 id=specvaultref>spec.vaultRef</h4><p><code>spec.vaultRef</code> is a <code>required</code> field that specifies the name of an <a href=/docs/v0.3.0/concepts/vault-server-crds/auth-methods/appbinding>AppBinding</a> reference which is used to connect with a Vault server. AppBinding must be on the same namespace with the GCPRole object.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: vault-app

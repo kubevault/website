@@ -68,7 +68,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>namespace</span>: demo
 <span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>vault.hcl</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>disable_mlock = true</span>
+</span><span style=color:#e6db74>    disable_mlock = true</span>
 </code></pre></div><p>To use Consul as a storage backend, first, we need to deploy Consul. Documentation for deploying Consul in Kubernetes can be found <a href=https://www.consul.io/docs/platform/k8s/run.html>here</a>. Below is an example yaml for deploying Consul suitable for demo purposes:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>apiVersion</span>: v1
 <span style=color:#66d9ef>kind</span>: Pod
 <span style=color:#66d9ef>metadata</span>:
@@ -99,21 +99,21 @@ More information about the Consul backend storage can be found in <a href=https:
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>consul</span>:
       <span style=color:#66d9ef>address</span>: &lt;address_of_consul_agent<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>checkTimeout: &lt;check_interval&gt;</span>
+</span><span style=color:#e6db74>      checkTimeout: &lt;check_interval&gt;</span>
       <span style=color:#66d9ef>consistencyMode</span>: &lt;consul_consistency_mode<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>disableRegistration: &lt;disable_registration&gt;</span>
+</span><span style=color:#e6db74>      disableRegistration: &lt;disable_registration&gt;</span>
       <span style=color:#66d9ef>maxParallel</span>: &lt;max_number_of_concurrent_request<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>path: &lt;key-value_store_path&gt;</span>
+</span><span style=color:#e6db74>      path: &lt;key-value_store_path&gt;</span>
       <span style=color:#66d9ef>scheme</span>: &lt;scheme_type<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>service: &lt;service_name&gt;</span>
+</span><span style=color:#e6db74>      service: &lt;service_name&gt;</span>
       <span style=color:#66d9ef>serviceTags</span>: &lt;list_of_tags<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>serviceAddress: &lt;service_specific_address&gt;</span>
+</span><span style=color:#e6db74>      serviceAddress: &lt;service_specific_address&gt;</span>
       <span style=color:#66d9ef>aclTokenSecretName</span>: &lt;aclToken_secret_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>sessionTTL: &lt;minimum_allowed_session_TTL&gt;</span>
+</span><span style=color:#e6db74>      sessionTTL: &lt;minimum_allowed_session_TTL&gt;</span>
       <span style=color:#66d9ef>lockWaitTime</span>: &lt;time_before_lock_acquisition<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>tlsSecretName: &lt;secret_name&gt;</span>
+</span><span style=color:#e6db74>      tlsSecretName: &lt;secret_name&gt;</span>
       <span style=color:#66d9ef>tlsMinVersion</span>: &lt;minimum_TLS_version<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>tlsSkipVerify: &lt;boolean_value&gt;</span>
+</span><span style=color:#e6db74>      tlsSkipVerify: &lt;boolean_value&gt;</span>
 </code></pre></div><p>Here, we are going to describe the various attributes of the <code>spec.backend.consul</code> field.</p><h3 id=consuladdress>consul.address</h3><p>Specifies the address of the Consul agent to communicate with. This can be an IP address, DNS record, or Unix socket. It is recommended that you communicate with a local Consul agent; do not communicate directly with a server.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>consul</span>:
@@ -165,7 +165,7 @@ More information about the Consul backend storage can be found in <a href=https:
   <span style=color:#66d9ef>namespace</span>: demo
 <span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>aclToken</span>: |<span style=color:#e6db74>-
-</span><span style=color:#e6db74>  </span><span style=color:#e6db74> </span><span style=color:#e6db74>ZGF0YQ==</span>
+</span><span style=color:#e6db74>   ZGF0YQ==</span>
 </code></pre></div><h3 id=consulsessionttl>consul.sessionTTL</h3><p>Specifies the minimum allowed session TTL. The consul server has a lower limit of 10s on the session TTL by default. The value of session_ttl here cannot be lesser than 10s unless the session_ttl_min on the consul server&rsquo;s configuration has a lesser value.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>consul</span>:
@@ -185,7 +185,7 @@ More information about the Consul backend storage can be found in <a href=https:
   <span style=color:#66d9ef>namespace</span>: demo
 <span style=color:#66d9ef>data</span>:
   <span style=color:#66d9ef>ca.crt</span>: &lt;tls_ca_file<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>client.crt: &lt;tls_cert_file&gt;</span>
+</span><span style=color:#e6db74>  client.crt: &lt;tls_cert_file&gt;</span>
   <span style=color:#66d9ef>client.key</span>: &lt;tls_key_file&gt;
 </code></pre></div><h3 id=consultlsminversion>consul.tlsMinVersion</h3><p>Specifies the minimum TLS version to use. Accepted values are &ldquo;tls10&rdquo;, &ldquo;tls11&rdquo; or &ldquo;tls12&rdquo;.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:

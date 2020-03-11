@@ -112,7 +112,7 @@ gcp-engine   Success
   <span style=color:#66d9ef>secretType</span>: access_token
   <span style=color:#66d9ef>project</span>: ackube
   <span style=color:#66d9ef>bindings</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>resource &#34;//cloudresourcemanager.googleapis.com/projects/ackube&#34; {</span>
+</span><span style=color:#e6db74>    resource &#34;//cloudresourcemanager.googleapis.com/projects/ackube&#34; {</span>
       roles = [<span style=color:#e6db74>&#34;roles/viewer&#34;</span>]
     }
   <span style=color:#66d9ef>tokenScopes</span>:
@@ -208,7 +208,7 @@ persistentvolumeclaim/csi-pvc-gcp created
   <span style=color:#75715e># If the path was &#34;demo-se&#34;, policy should be like</span>
   <span style=color:#75715e># path &#34;demo-se/*&#34; {}.</span>
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;gcp/*&#34; {</span>
+</span><span style=color:#e6db74>    path &#34;gcp/*&#34; {</span>
       capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>]
     }
 ---

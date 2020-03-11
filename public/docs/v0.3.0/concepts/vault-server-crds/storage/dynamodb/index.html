@@ -55,13 +55,13 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
   <span style=color:#66d9ef>backend</span>:
     <span style=color:#66d9ef>dynamodb</span>:
       <span style=color:#66d9ef>table</span>: &lt;table_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>region: &lt;region&gt;</span>
+</span><span style=color:#e6db74>      region: &lt;region&gt;</span>
       <span style=color:#66d9ef>endpoint</span>: &lt;endpoint<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>haEnabled: &lt;true/false&gt;</span>
+</span><span style=color:#e6db74>      haEnabled: &lt;true/false&gt;</span>
       <span style=color:#66d9ef>readCapacity</span>: &lt;read_capacity<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>writeCapacity: &lt;write_capacity&gt;</span>
+</span><span style=color:#e6db74>      writeCapacity: &lt;write_capacity&gt;</span>
       <span style=color:#66d9ef>credentialSecret</span>: &lt;secret_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>     </span><span style=color:#e6db74> </span><span style=color:#e6db74>sessionTokenSecret: &lt;secret_name&gt;</span>
+</span><span style=color:#e6db74>      sessionTokenSecret: &lt;secret_name&gt;</span>
       <span style=color:#66d9ef>maxParallel</span>: &lt;max_parallel&gt;
 </code></pre></div><p>Here, we are going to describe the various attributes of the <code>spec.backend.dynamodb</code> field.</p><h3 id=dynamodbtable>dynamodb.table</h3><p><code>dynamodb.table</code> is a required field that specifies the name of the DynamoDB table. If the specified table does not exist, then Vault will create it during initialization. If it is not initialized, then Vault will set value to <code>vault-dynamodb-backend</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>backend</span>:

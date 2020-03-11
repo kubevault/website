@@ -37,11 +37,11 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
     <span style=color:#66d9ef>mode</span>:
       <span style=color:#66d9ef>googleKmsGcs</span>:
         <span style=color:#66d9ef>bucket</span>: &lt;bucket_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>kmsProject: &lt;project_name&gt;</span>
+</span><span style=color:#e6db74>        kmsProject: &lt;project_name&gt;</span>
         <span style=color:#66d9ef>kmsLocation</span>: &lt;location<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>kmsKeyRing: &lt;key_ring_name&gt;</span>
+</span><span style=color:#e6db74>        kmsKeyRing: &lt;key_ring_name&gt;</span>
         <span style=color:#66d9ef>kmsCryptoKey</span>: &lt;crypto_key_name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>       </span><span style=color:#e6db74> </span><span style=color:#e6db74>credentialSecret: &lt;secret_name&gt;</span>
+</span><span style=color:#e6db74>        credentialSecret: &lt;secret_name&gt;</span>
 </code></pre></div><p><code>mode.googleKmsGcs</code> has following field:</p><h2 id=googlekmsgcsbucket>googleKmsGcs.bucket</h2><p><code>googleKmsGcs.bucket</code> is a required field that specifies the name of the bucket to store keys.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>unsealer</span>:
     <span style=color:#66d9ef>mode</span>:

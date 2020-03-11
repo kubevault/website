@@ -63,12 +63,12 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 </code></pre></div><p>Here, we are going to describe the various sections of the <code>GCPAccessKeyRequest</code> crd.</p><h3 id=gcpaccesskeyrequest-spec>GCPAccessKeyRequest Spec</h3><p>GCPAccessKeyRequest <code>Spec</code> contains information about
 <a href=/docs/v0.3.0/concepts/secret-engine-crds/gcp-secret-engine/gcprole>GCPRole</a> and subjects.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>: &lt;GCPRole-reference<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>subjects: &lt;list-of-subjects&gt;</span>
+</span><span style=color:#e6db74>  subjects: &lt;list-of-subjects&gt;</span>
 </code></pre></div><p><code>Spec</code> contains two additional fields only if the referred GCPRole has <code>spec.secretType</code> of <code>service_account_key</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>: &lt;GCPRole-reference<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>subjects: &lt;list-of-subjects&gt;</span>
+</span><span style=color:#e6db74>  subjects: &lt;list-of-subjects&gt;</span>
   <span style=color:#66d9ef>keyAlgorithm</span>: &lt;algorithm_used_to_generate_key<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>keyType: &lt;private_key_type&gt;</span>
+</span><span style=color:#e6db74>  keyType: &lt;private_key_type&gt;</span>
 </code></pre></div><p>GCPAccessKeyRequest spec has the following fields:</p><h4 id=specroleref>spec.roleRef</h4><p><code>spec.roleRef</code> is a <code>required</code> field that specifies the
 <a href=/docs/v0.3.0/concepts/secret-engine-crds/gcp-secret-engine/gcprole>GCPRole</a> against which credentials will be issued.</p><p>It has the following fields:</p><ul><li><p><code>roleRef.apiGroup</code> : <code>Optional</code>. Specifies the APIGroup of the resource being referenced.</p></li><li><p><code>roleRef.kind</code> : <code>Optional</code>. Specifies the kind of the resource being referenced.</p></li><li><p><code>roleRef.name</code> : <code>Required</code>. Specifies the name of the object being referenced.</p></li><li><p><code>roleRef.namespace</code> : <code>Required</code>. Specifies the namespace of the referenced object.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>roleRef</span>:

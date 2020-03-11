@@ -49,7 +49,7 @@ namespace/demo created
     <span style=color:#66d9ef>name</span>: vault
     <span style=color:#66d9ef>namespace</span>: demo
   <span style=color:#66d9ef>policy</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>path &#34;secret/*&#34; {</span>
+</span><span style=color:#e6db74>    path &#34;secret/*&#34; {</span>
       capabilities = [<span style=color:#e6db74>&#34;create&#34;</span>, <span style=color:#e6db74>&#34;read&#34;</span>, <span style=color:#e6db74>&#34;update&#34;</span>, <span style=color:#e6db74>&#34;delete&#34;</span>, <span style=color:#e6db74>&#34;list&#34;</span>]
     }
 </code></pre></div><p>We already have deployed Vault using Vault operator. For this tutorial, we deployed Vault with <a href=inmem.md>inmem</a> backend storage and unsealed with <a href=kubernetes_secret.md>kubernetes secret</a> mode.</p><pre><code class=language-console data-lang=console>$ kubectl get vaultserver -n demo

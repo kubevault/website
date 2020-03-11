@@ -36,7 +36,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 <span style=color:#66d9ef>kind</span>: AWSRole
 <span style=color:#66d9ef>metadata</span>:
   <span style=color:#66d9ef>name</span>: &lt;name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;namespace&gt;</span>
+</span><span style=color:#e6db74>  namespace: &lt;namespace&gt;</span>
 <span style=color:#66d9ef>spec</span>:
   ...
 <span style=color:#66d9ef>status</span>:
@@ -49,7 +49,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 <span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>credentialType</span>: iam_user
   <span style=color:#66d9ef>policy</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span>
+</span><span style=color:#e6db74>    {</span>
       <span style=color:#66d9ef>&#34;Version&#34;: </span><span style=color:#e6db74>&#34;2012-10-17&#34;</span>,
       <span style=color:#66d9ef>&#34;Statement&#34;: </span>[
         {
@@ -93,7 +93,7 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
     - arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess
 </code></pre></div><h3 id=specpolicydocument>spec.policyDocument</h3><p><code>spec.policyDocument</code> is an optional field that specifies the IAM policy document for the role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>policyDocument</span>: <span style=color:#e6db74>|
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>{</span>
+</span><span style=color:#e6db74>    {</span>
       <span style=color:#66d9ef>&#34;Version&#34;: </span><span style=color:#e6db74>&#34;2012-10-17&#34;</span>,
       <span style=color:#66d9ef>&#34;Statement&#34;: </span>[
         {

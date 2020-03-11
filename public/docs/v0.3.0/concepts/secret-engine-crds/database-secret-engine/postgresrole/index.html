@@ -42,7 +42,7 @@ If the user deletes the <code>PostgresRole</code> CRD, then the respective role 
 <span style=color:#66d9ef>kind</span>: PostgresRole
 <span style=color:#66d9ef>metadata</span>:
   <span style=color:#66d9ef>name</span>: &lt;name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;namespace&gt;</span>
+</span><span style=color:#e6db74>  namespace: &lt;namespace&gt;</span>
 <span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: vault-app
@@ -58,13 +58,13 @@ If the user deletes the <code>PostgresRole</code> CRD, then the respective role 
 </code></pre></div><blockquote><p>Note: To resolve the naming conflict, name of the role in Vault will follow this format: <code>k8s.{clusterName}.{metadata.namespace}.{metadata.name}</code></p></blockquote><p>Here, we are going to describe the various sections of the <code>PostgresRole</code> crd.</p><h3 id=postgresrole-spec>PostgresRole Spec</h3><p>PostgresRole <code>spec</code> contains information that necessary for creating a database role.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vaultRef</span>:
     <span style=color:#66d9ef>name</span>: &lt;vault-appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>databaseRef:</span>
+</span><span style=color:#e6db74>  databaseRef:</span>
     <span style=color:#66d9ef>name</span>: &lt;database-appbinding-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74>   </span><span style=color:#e6db74> </span><span style=color:#e6db74>namespace: &lt;database-appbinding-namespace&gt;</span>
+</span><span style=color:#e6db74>    namespace: &lt;database-appbinding-namespace&gt;</span>
   <span style=color:#66d9ef>databaseName</span>: &lt;database-name<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>path: &lt;database-secret-engine-path&gt;</span>
+</span><span style=color:#e6db74>  path: &lt;database-secret-engine-path&gt;</span>
   <span style=color:#66d9ef>defaultTTL</span>: &lt;default-ttl<span style=color:#e6db74>&gt;
-</span><span style=color:#e6db74> </span><span style=color:#e6db74> </span><span style=color:#e6db74>maxTTL: &lt;max-ttl&gt;</span>
+</span><span style=color:#e6db74>  maxTTL: &lt;max-ttl&gt;</span>
   <span style=color:#66d9ef>creationStatements</span>:
     - <span style=color:#e6db74>&#34;statement-0&#34;</span>
     - <span style=color:#e6db74>&#34;statement-1&#34;</span>

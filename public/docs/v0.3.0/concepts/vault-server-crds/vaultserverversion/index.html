@@ -46,24 +46,24 @@ Kubernetes</p></div></a><a href=https://appscode.com/products/swift/ class="sing
 </code></pre></div><h3 id=vaultserverversion-spec>VaultServerVersion Spec</h3><p>VaultServerVersion <code>.spec</code> contains image information.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>apiVersion</span>: catalog.kubevault.com/v1alpha1
 <span style=color:#66d9ef>kind</span>: VaultServerVersion
 <span style=color:#66d9ef>metadata</span>:
-  <span style=color:#66d9ef>name</span>: <span style=color:#ae81ff>0.11</span><span style=color:#ae81ff>.1</span>
+  <span style=color:#66d9ef>name</span>: <span style=color:#ae81ff>0.11.1</span>
 <span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vault</span>:
-    <span style=color:#66d9ef>image</span>: vault:<span style=color:#ae81ff>0.11</span><span style=color:#ae81ff>.1</span>
+    <span style=color:#66d9ef>image</span>: vault:<span style=color:#ae81ff>0.11.1</span>
   <span style=color:#66d9ef>exporter</span>:
-    <span style=color:#66d9ef>image: kubevault/vault-exporter</span>: <span style=color:#ae81ff>0.1</span><span style=color:#ae81ff>.0</span>
+    <span style=color:#66d9ef>image: kubevault/vault-exporter</span>: <span style=color:#ae81ff>0.1.0</span>
   <span style=color:#66d9ef>unsealer</span>:
-    <span style=color:#66d9ef>image: kubevault/vault-unsealer</span>: <span style=color:#ae81ff>0.2</span><span style=color:#ae81ff>.0</span>
-  <span style=color:#66d9ef>version</span>: <span style=color:#ae81ff>0.11</span><span style=color:#ae81ff>.1</span>
+    <span style=color:#66d9ef>image: kubevault/vault-unsealer</span>: <span style=color:#ae81ff>0.2.0</span>
+  <span style=color:#66d9ef>version</span>: <span style=color:#ae81ff>0.11.1</span>
 </code></pre></div><p><code>.spec</code> contains following fields:</p><h4 id=specversion>spec.version</h4><p><code>spec.version</code> is a required field that specifies the original version of Vault that has been used to build the docker image specified in <code>spec.vault.image</code> field.</p><h4 id=specdeprecated>spec.deprecated</h4><p><code>spec.deprecated</code> is an optional field that specifies whether the specified docker images are supported by the current KubeVault operator. The default value of this field is false.</p><h4 id=specvaultimage>spec.vault.image</h4><p><code>spec.vault.image</code> is a required field that specifies the docker image which will be used for Vault.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>vault</span>:
-    <span style=color:#66d9ef>image</span>: vault:<span style=color:#ae81ff>0.11</span><span style=color:#ae81ff>.1</span>
+    <span style=color:#66d9ef>image</span>: vault:<span style=color:#ae81ff>0.11.1</span>
 </code></pre></div><h4 id=specunsealerimage>spec.unsealer.image</h4><p><code>spec.unsealer.image</code> is a required field that specifies the docker image which will be used for Unsealer.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>unsealer</span>:
-    <span style=color:#66d9ef>image: kubevault/vault-unsealer</span>: <span style=color:#ae81ff>0.2</span><span style=color:#ae81ff>.0</span>
+    <span style=color:#66d9ef>image: kubevault/vault-unsealer</span>: <span style=color:#ae81ff>0.2.0</span>
 </code></pre></div><h4 id=specexporterimage>spec.exporter.image</h4><p><code>spec.exporter.image</code> is a required field that specifies the docker image which will be used to export Prometheus metrics.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#66d9ef>spec</span>:
   <span style=color:#66d9ef>exporter</span>:
-    <span style=color:#66d9ef>image: kubevault/vault-exporter</span>: <span style=color:#ae81ff>0.1</span><span style=color:#ae81ff>.0</span>
+    <span style=color:#66d9ef>image: kubevault/vault-exporter</span>: <span style=color:#ae81ff>0.1.0</span>
 </code></pre></div></div></div><div class="column is-2"><div class=right-sidebar-area><div class=search-area><form action=#><input id=acSearch type=text placeholder=Search...>
 <button class=search-button>
 <i class="fa fa-search" aria-hidden=true></i></button></form></div><div class=tbl-of-contents><h4>What's on this Page</h4><nav id=TableOfContents><ul><li><a href=#what-is-vaultserverversion>What is VaultServerVersion</a><ul><li><a href=#vaultserverversion-spec>VaultServerVersion Spec</a></li></ul></li></ul></nav></div></div></div></div></div><script>var kdDropdown=document.querySelector(".dropdown");var kdDropdownBtn=document.querySelector(".dropdown-trigger");kdDropdownBtn.addEventListener("click",function(){kdDropdown.classList.toggle("is-active");})</script></div><div class=overlay-bg></div><div class=sidebar-search-area><div class=search-area-top><h3>Search</h3><div class=searchbar-area><input type=search name=search id=searchbox placeholder=Search...>
