@@ -37,8 +37,8 @@
   "datasheetFormID": "9d6f5a4d3fe306ecf3b9ca3c8e121265bcf355b2c3f198a8439cf9035bbda0e7",
   "badges": [
     {
-      "url": "github/stars/kubedb/cli",
-      "alt": "GitHub Stars",
+      "url": "kubedb",
+      "alt": "GitHub",
       "logo": "github"
     },
     {
@@ -161,6 +161,14 @@
       "version": "master",
       "hostDocs": false,
       "show": true
+    },
+    {
+      "version": "v2020.09.04-beta.0",
+      "hostDocs": true
+    },
+    {
+      "version": "v2020.07.10-beta.0",
+      "hostDocs": true
     },
     {
       "version": "v0.13.0-rc.0",
