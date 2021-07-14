@@ -163,6 +163,66 @@
       "show": true
     },
     {
+      "version": "v2021.06.23",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.4.0",
+        "cli": "v0.19.0",
+        "community": "v0.19.0",
+        "enterprise": "v0.6.0",
+        "installer": "v2021.06.23"
+      }
+    },
+    {
+      "version": "v2021.06.21-rc.0",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.4.0-rc.0",
+        "cli": "v0.19.0-rc.0",
+        "community": "v0.19.0-rc.0",
+        "enterprise": "v0.6.0-rc.0",
+        "installer": "v2021.06.21-rc.0"
+      }
+    },
+    {
+      "version": "v2021.04.16",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.3.0",
+        "cli": "v0.18.0",
+        "community": "v0.18.0",
+        "enterprise": "v0.5.0",
+        "installer": "v2021.04.16"
+      }
+    },
+    {
+      "version": "v2021.03.17",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.2.1",
+        "cli": "v0.17.1",
+        "community": "v0.17.1",
+        "enterprise": "v0.4.1",
+        "installer": "v0.17.1"
+      }
+    },
+    {
+      "version": "v2021.03.11",
+      "hostDocs": true,
+      "info": {
+        "autoscaler": "v0.2.0",
+        "cli": "v0.17.0",
+        "community": "v0.17.0",
+        "enterprise": "v0.4.0",
+        "installer": "v0.17.0",
+        "release": "v2021.03.11"
+      }
+    },
+    {
       "version": "v2021.01.26",
       "hostDocs": true,
       "show": true,
@@ -381,7 +441,7 @@
       "hostDocs": false
     }
   ],
-  "latestVersion": "v2021.01.26",
+  "latestVersion": "v2021.06.23",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/kubedb/cli",
