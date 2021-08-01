@@ -3,9 +3,9 @@ title: What is KubeVault
 menu:
   docs_v2021.08.02:
     identifier: what-is-kubevault-concepts
-    name: What is KubeVault
+    name: Overview
     parent: concepts
-    weight: 20
+    weight: 15
 menu_name: docs_v2021.08.02
 section_menu_id: concepts
 info:
@@ -18,7 +18,7 @@ info:
 
 > New to KubeVault? Please start [here](/docs/v2021.08.02/concepts/README).
 
-# KubeVault
+# Overview
 
 ## What is KubeVault
 

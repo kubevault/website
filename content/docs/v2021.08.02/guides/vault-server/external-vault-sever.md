@@ -26,7 +26,7 @@ using [VaultPolicy CRD](/docs/v2021.08.02/concepts/policy-crds/vaultpolicy) in V
 
 ## Before you begin
 
-- Install KubeVault operator in your cluster following the steps [here](/docs/v2021.08.02/setup/operator/install).
+- Install KubeVault operator in your cluster following the steps [here](/docs/v2021.08.02/setup/README).
 
 To keep things isolated, we are going to use a separate namespace called `demo` throughout this tutorial.
 

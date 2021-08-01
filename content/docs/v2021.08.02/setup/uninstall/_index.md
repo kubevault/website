@@ -1,9 +1,10 @@
 ---
-title: Setup | KubeVault CLI
+title: Uninstallation Guide | KubeVault
+description: KubeVault Unistallation Guide
 menu:
   docs_v2021.08.02:
-    identifier: cli-setup
-    name: KubeVault CLI
+    identifier: uninstallation-guide
+    name: Uninstall
     parent: setup
     weight: 30
 menu_name: docs_v2021.08.02

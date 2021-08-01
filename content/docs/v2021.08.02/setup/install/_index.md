@@ -1,11 +1,12 @@
 ---
-title: Developer Guide | KubeVault
+title: Installation Guide | KubeVault
+description: KubeVault Installation Guide
 menu:
   docs_v2021.08.02:
-    identifier: developer-guide
-    name: Developer Guide
+    identifier: installation-guide
+    name: Install
     parent: setup
-    weight: 40
+    weight: 10
 menu_name: docs_v2021.08.02
 info:
   cli: v0.4.0

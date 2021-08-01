@@ -3,7 +3,7 @@ title: KubeVault Concepts
 menu:
   docs_v2021.08.02:
     identifier: concepts-readme
-    name: Overview
+    name: Concepts
     parent: concepts
     weight: 10
 menu_name: docs_v2021.08.02
@@ -24,7 +24,7 @@ info:
 Concepts help you learn about the different parts of KubeVault and the abstractions it uses.
 
 - What is KubeVault?
-  - [Overview](/docs/v2021.08.02/concepts/what-is-kubevault). Provides an introduction to KubeVault operator, including the problems it solves and its use cases.
+  - [Overview](/docs/v2021.08.02/concepts/overview). Provides an introduction to KubeVault operator, including the problems it solves and its use cases.
   - [Operator architecture](/docs/v2021.08.02/concepts/architecture). Provides a high-level illustration of the architecture of the KubeVault operator.
 
 <ul class="nav nav-tabs" id="conceptsTab" role="tablist">
