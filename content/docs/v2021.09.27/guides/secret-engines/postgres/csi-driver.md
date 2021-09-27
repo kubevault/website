@@ -4,7 +4,7 @@ menu:
   docs_v2021.09.27:
     identifier: csi-driver-postgresql
     name: CSI Driver
-    parent: postgresql-secret-engines
+    parent: postgres-secret-engines
     weight: 15
 menu_name: docs_v2021.09.27
 section_menu_id: guides

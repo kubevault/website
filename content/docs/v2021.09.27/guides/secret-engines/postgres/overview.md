@@ -4,7 +4,7 @@ menu:
   docs_v2021.09.27:
     identifier: overview-postgresql
     name: Overview
-    parent: postgresql-secret-engines
+    parent: postgres-secret-engines
     weight: 10
 menu_name: docs_v2021.09.27
 section_menu_id: guides
