@@ -163,6 +163,30 @@
       "show": true
     },
     {
+      "version": "v2021.09.30",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.7.0",
+        "cli": "v0.22.0",
+        "community": "v0.22.0",
+        "enterprise": "v0.9.0",
+        "installer": "v2021.09.30"
+      }
+    },
+    {
+      "version": "v2021.09.09",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "autoscaler": "v0.6.0",
+        "cli": "v0.21.0",
+        "community": "v0.21.0",
+        "enterprise": "v0.8.0",
+        "installer": "v2021.09.09"
+      }
+    },
+    {
       "version": "v2021.08.23",
       "hostDocs": true,
       "show": true,
@@ -453,7 +477,7 @@
       "hostDocs": false
     }
   ],
-  "latestVersion": "v2021.08.23",
+  "latestVersion": "v2021.09.30",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/kubedb/cli",

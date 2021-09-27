@@ -1,0 +1,72 @@
+---
+title: Welcome | KubeVault
+description: Welcome to KubeVault
+menu:
+  docs_v2021.09.27:
+    identifier: readme-kubevault
+    name: Readme
+    parent: welcome
+    weight: -1
+menu_name: docs_v2021.09.27
+section_menu_id: welcome
+url: /docs/v2021.09.27/welcome/
+aliases:
+- /docs/v2021.09.27/
+- /docs/v2021.09.27/README/
+info:
+  cli: v0.5.0
+  installer: v2021.09.27
+  operator: v0.5.0
+  unsealer: v0.5.0
+  version: v2021.09.27
+---
+
+![KubeVault Overview](/docs/v2021.09.27/images/kubevault-overview.svg)
+
+# KubeVault
+
+KubeVault by AppsCode is a collection of tools for running HashiCorp [Vault](https://www.vaultproject.io/) on Kubernetes. 
+
+## Operator
+You can deploy and manage Vault on Kubernetes clusters using KubeVault operator. Using KubeVault operator, you can deploy Vault for following storage backends:
+
+- [Azure Storage](/docs/v2021.09.27/concepts/vault-server-crds/storage/azure)
+- [DynamoDB](/docs/v2021.09.27/concepts/vault-server-crds/storage/dynamodb)
+- [Etcd](/docs/v2021.09.27/concepts/vault-server-crds/storage/etcd)
+- [GCS](/docs/v2021.09.27/concepts/vault-server-crds/storage/gcs)
+- [In Memory](/docs/v2021.09.27/concepts/vault-server-crds/storage/inmem)
+- [MySQL](/docs/v2021.09.27/concepts/vault-server-crds/storage/mysql)
+- [PosgreSQL](/docs/v2021.09.27/concepts/vault-server-crds/storage/postgresql)
+- [AWS S3](/docs/v2021.09.27/concepts/vault-server-crds/storage/s3)
+- [Swift](/docs/v2021.09.27/concepts/vault-server-crds/storage/swift)
+- [Consul](/docs/v2021.09.27/concepts/vault-server-crds/storage/consul)
+- [Raft](/docs/v2021.09.27/concepts/vault-server-crds/storage/raft)
+
+From here you can learn all about Vault operator's architecture and how to deploy and use Vault operator.
+
+- [Concepts](/docs/v2021.09.27/concepts/). Concepts explain the CRDs (CustomResourceDefinition) used by Vault operator.
+
+- [Setup](/docs/v2021.09.27/setup/). Setup contains instructions for installing
+  the Vault operator in various cloud providers.
+
+- [Monitoring](/docs/v2021.09.27/guides/monitoring). Monitoring contains instructions for setup prometheus with Vault server
+
+- [Guides](/docs/v2021.09.27/guides/). Guides show you how to perform tasks with Vault operator.
+
+- [Reference](/docs/v2021.09.27/reference/). Detailed exhaustive lists of
+command-line options, configuration options, API definitions, and procedures.
+
+## CLI
+
+[Command line interface](https://github.com/kubevault/cli) for KubeVault. This is intended to be used as a [kubectl plugin](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/).
+
+## Unsealer
+
+[Unsealer](https://github.com/kubevault/unsealer) automates the process of [initializing](https://www.vaultproject.io/docs/commands/operator/init.html) and [unsealing](https://www.vaultproject.io/docs/concepts/seal.html#unsealing) HashiCorp Vault instances running.
+
+## CSI Driver
+
+KubeVault works seamlessly with [Secrets Store CSI driver for Kubernetes secrets](https://github.com/kubernetes-sigs/secrets-store-csi-driver).
+
+We're always looking for help improving our documentation, so please don't hesitate to [file an issue](https://github.com/kubevault/kubevault/issues/new) if you see some problem. Or better yet, submit your own [contributions](/docs/v2021.09.27/CONTRIBUTING) to help
+make our docs better.
