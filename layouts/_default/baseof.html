@@ -1,5 +1,15 @@
 {{ $p := (index .Site.Data.products .Site.Params.product_key) }}
 
+{{ $title := $p.fullname }}
+{{ if .Title }}
+  {{ $title = .Title }}
+{{ end }}
+
+{{ $summary := $p.summary }}
+{{ if .Summary }}
+  {{ $summary = .Summary }}
+{{ end }}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="{{ $p.website.themeColor }}">
-    <title>{{$p.fullname}}</title>
-    <meta name="description" content="{{ $p.summary | plainify }}">
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $summary | plainify }}">
     <meta name="author" content="{{ $p.author }}">
     <meta name="keywords" content="{{ $p.keywords }}">
     <!-- favicon -->
