@@ -211,6 +211,16 @@
         <div class="full-info">
           {{ .Content }}
         </div>
+
+        <!-- comments area start -->
+        {{ if site.Params.comments.enable }}
+        <section class="comments-area mt-20">
+          <div class="container">
+            {{ partial "comments.html" . }}
+          </div>
+        </section>
+        {{ end }}
+        <!-- comments area end -->
       </div>
       <div class="column is-2">
         <div class="right-sidebar-area">
