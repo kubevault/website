@@ -6,7 +6,7 @@
       "images": "static/assets/images"
     },
     "repoURL": "https://github.com/appscode/static-assets",
-    "version": "master"
+    "version": "mohin/added-various-contact-information"
   },
   "clouds": [
     "aws",
