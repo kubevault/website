@@ -66,8 +66,6 @@ url(./assets/images/bg-image/gradient-bg.webp);">
             </div>
             {{ highlight (printf `$ helm repo add appscode https://charts.appscode.com/stable/
 $ helm repo update
-
-# Install KubeVault Community operator chart
 $ helm install kubevault appscode/kubevault \
 --version %s \
 --namespace kubevault --create-namespace \
