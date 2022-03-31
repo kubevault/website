@@ -33,6 +33,17 @@ navItems.forEach(navItem => {
     }
   })
 })
+
+// Responsive menu back button
+const backButtonAll = document.querySelectorAll(".back-button");	
+// create click event for all back button	
+Array.from(backButtonAll).forEach((el) => {	
+  el.addEventListener("click", () => {	
+    // closeset nav item ancestor	
+    const activeNavElement = el.closest(".nav-item.is-active");	
+    if (activeNavElement) activeNavElement.classList.remove("is-active");	
+  })	
+});
 // navbar area JS v.2022 end
 
 // responsive navbar area
@@ -165,11 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $navbarBurgers.forEach((el) => {
       el.addEventListener("click", () => {
         // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
       });
     });
   }
