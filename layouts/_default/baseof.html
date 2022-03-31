@@ -843,34 +843,36 @@
   {{ block "cta-install" . }}
   {{ $p := (index .Site.Data.products .Site.Params.product_key) }}
   <!--========================== call to action start ========================== -->
-  <section class="cta-area">
-    <div class="container">
-      <div class="cta-area-inner">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column is-8">
-              <h3 data-aos="fade-up" data-aos-duration="500">Ready to Get Started?</h3>
-              <p data-aos="fade-up" data-aos-duration="700">Install {{ $p.name }} in your Kubernetes cluster
-              </p>
-            </div>
-            <div class="column is-4  has-text-centered-touch has-text-right-desktop">
-              <div class="buttons">
-                <a href="/docs/{{ $p.latestVersion }}/setup/" class="button ac-button is-white" data-aos="fade-up"
-                  data-aos-duration="900">TRY NOW FREE</a>
-                   <a href="{{ $.Site.Params.domain_appscode }}/contact/" class="button ac-button is-secondary" style="background-color: transparent; border: 1px solid #e7e7e7; color: #ffffff;"><span>
-                       <lord-icon class="inherit-color" speed="0.50" src="https://cdn.lordicon.com/uvextprq.json"
-                         trigger="loop" target="a.is-secondary" trigger="hover"
-                         style="width:22px;height:22px; margin-right: 8px;">
-                       </lord-icon>
-                     </span>GET IN TOUCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
+   <section class="cta-area">
+     <div class="container">
+       <div class="cta-area-inner">
+         <div class="container">
+           <div class="columns is-vcentered is-multiline">
+             <div class="column is-full-tablet is-half-tablet is-half-desktop">
+               <h3 data-aos="fade-up" data-aos-duration="500">Ready to Get Started?</h3>
+               <p data-aos="fade-up" data-aos-duration="700">Install {{ $p.name }} in your Kubernetes cluster
+               </p>
+             </div>
+             <div
+               class="column is-full-tablet is-half-tablet is-half-desktop has-text-centered-touch has-text-right-desktop">
+               <div class="buttons is-justify-content-flex-end">
+                 <a href="/docs/{{ $p.latestVersion }}/setup/" class="button ac-button is-white" data-aos="fade-up"
+                   data-aos-duration="900">TRY NOW FREE</a>
+                 <a href="{{ $.Site.Params.domain_appscode }}/contact/" class="button ac-button is-secondary"
+                   style="background-color: transparent; border: 1px solid #e7e7e7; color: #ffffff;"><span>
+                     <lord-icon class="inherit-color" speed="0.50" src="https://cdn.lordicon.com/uvextprq.json"
+                       trigger="loop" target="a.is-secondary" trigger="hover"
+                       style="width:22px;height:22px; margin-right: 8px;">
+                     </lord-icon>
+                   </span>GET IN TOUCH</a>
+               </div>
+             </div>
+           </div>
+         </div>
 
-      </div>
-    </div>
-  </section>
+       </div>
+     </div>
+   </section>
   <!-- ==========================call to action end ========================== -->
   {{ end }}
   {{ end }}

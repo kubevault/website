@@ -40,6 +40,15 @@ Responsive Classes
       p {
         text-align: center;
       }
+      .buttons {
+        justify-content: center !important;
+        .button {
+          &.ac-button {
+            letter-spacing: 0;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
     }
   }
 }

@@ -2,6 +2,7 @@
 
 {{ $currentPage := . }}
 {{ $menu := .Params.menu_name }}
+{{ $p := (index .Site.Data.products .Site.Params.product_key) }}
 
 <!-- documentation and search start   -->
 <div class="responsive-menu is-hidden-desktop is-flex is-justify-content-center">
@@ -113,7 +114,7 @@
           style="width:22px;height:22px">
         </lord-icon>
       </label>
-      <input id="acSearch" type="search" placeholder="Search {{ .Site.Params.product_key }} Documentation!">
+      <input id="acSearch" type="search" placeholder="Search in {{ $p.name }} Documentation!">
     </div>
 
   </div>
