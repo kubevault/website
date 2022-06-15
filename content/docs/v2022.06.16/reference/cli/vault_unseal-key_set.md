@@ -17,11 +17,11 @@ info:
 
 ## vault unseal-key set
 
-set vault unseal-key
+`set` vault unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key set vaultserver <name> -n <namespace> [flags]
 
 Examples:
@@ -34,7 +34,7 @@ Examples:
  # default name for unseal-key will be used if --key-name flag is not provided
  # default unseal-key naming format: k8s.{cluster-name or UID}.{vault-namespace}.{vault-name}-unseal-key-{id}
  $ kubectl vault unseal-key set vaultserver vault -n demo --key-id <id> --key-value <value>
-
+```
 
 ```
 vault unseal-key set [flags]

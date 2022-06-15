@@ -17,11 +17,11 @@ info:
 
 ## vault unseal-key sync
 
-sync vault unseal-key
+`sync` vault unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key get vaultserver <name> -n <namespace> [flags]
 
 Examples:
@@ -29,7 +29,7 @@ Examples:
  # old naming conventions: vault-unseal-key-0, vault-unseal-key-1, etc.
  # new naming convention for unseal-key: k8s.{cluster-name or UID}.{vault-namespace}.{vault-name}-unseal-key-{id}
  $ kubectl vault unseal-key sync vaultserver vault -n demo
-
+```
 
 ```
 vault unseal-key sync [flags]

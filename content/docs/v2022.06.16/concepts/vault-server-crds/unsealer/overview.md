@@ -1,9 +1,9 @@
 ---
-title: Unsealer Unsealer
+title: Overview
 menu:
   docs_v2022.06.16:
-    identifier: unsealer-unsealer
-    name: Unsealer Unsealer
+    identifier: unsealer-overview
+    name: Overview
     parent: unsealer-vault-server-crds
     weight: 1
 menu_name: docs_v2022.06.16

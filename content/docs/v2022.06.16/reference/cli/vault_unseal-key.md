@@ -17,11 +17,11 @@ info:
 
 ## vault unseal-key
 
-get, set, delete, list and sync unseal-key
+`get`, `set`, `delete`, `list` and `sync` unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key [command] [flags] to get, set, delete, list or sync vault unseal-keys
 
 Examples:
@@ -30,7 +30,7 @@ Examples:
  $ kubectl vault unseal-key delete [flags]
  $ kubectl vault unseal-key list [flags]
  $ kubectl vault unseal-key sync [flags]
-
+```
 
 ```
 vault unseal-key [flags]

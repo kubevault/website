@@ -57,5 +57,6 @@ KubeVault cli by AppsCode
 * [vault revoke](/docs/v2022.06.16/reference/cli/vault_revoke)	 - Revoke request
 * [vault root-token](/docs/v2022.06.16/reference/cli/vault_root-token)	 - get, set, delete and sync root-token
 * [vault unseal-key](/docs/v2022.06.16/reference/cli/vault_unseal-key)	 - get, set, delete, list and sync unseal-key
+* [vault merge-secrets](/docs/v2022.06.16/reference/cli/vault_merge-secrets) - merge two secrets
 * [vault version](/docs/v2022.06.16/reference/cli/vault_version)	 - Prints binary version number.
 

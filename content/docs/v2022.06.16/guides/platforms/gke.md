@@ -30,7 +30,7 @@ At first, you need to have a GKE cluster. If you don't already have a cluster, c
 
 - You should be familiar with the following CRD:
   - [VaultServer](/docs/v2022.06.16/concepts/vault-server-crds/vaultserver)
-  - [Unsealer](/docs/v2022.06.16/concepts/vault-server-crds/unsealer/unsealer)
+  - [Unsealer](/docs/v2022.06.16/concepts/vault-server-crds/unsealer/overview)
   - [googleKmsGcs](/docs/v2022.06.16/concepts/vault-server-crds/unsealer/google_kms_gcs)
 
 - You will need a [GCS bucket](https://cloud.google.com/storage/docs/) to use it as Vault backend storage. In this tutorial, we are going to use `demo-vault` GCS bucket.
@@ -42,7 +42,7 @@ At first, you need to have a GKE cluster. If you don't already have a cluster, c
 
 We are going to use [gcloud](https://cloud.google.com/sdk/gcloud/) to provision a cluster.
 
-```console
+```bash
 $ gcloud container clusters create vault \
       --enable-autorepair \
       --cluster-version 1.11.4-gke.13 \
@@ -56,7 +56,7 @@ $ gcloud container clusters create vault \
 
 Now, we are going to create service account and set access permission to this service account.
 
-```console
+```bash
 $ gcloud iam service-accounts create vault-sa \
       --display-name "vault service account" \
       --project ackube
@@ -65,13 +65,13 @@ Created service account [vault-sa].
 
 Grant access to bucket:
 
-```console
+```bash
 $ gsutil iam ch \
       serviceAccount:vault-sa@ackube.iam.gserviceaccount.com:objectAdmin \
       gs://demo-vault
 ```
 
-```console
+```bash
 $ gsutil iam ch \
       serviceAccount:vault-sa@ackube.iam.gserviceaccount.com:legacyBucketReader \
       gs://demo-vault
@@ -79,7 +79,7 @@ $ gsutil iam ch \
 
 Grant access to the crypto key:
 
-```console
+```bash
 $ gcloud kms keys add-iam-policy-binding \
       vault-key \
       --location global \
@@ -93,7 +93,7 @@ $ gcloud kms keys add-iam-policy-binding \
 
 See [here](/docs/v2022.06.16/setup/README).
 
-```console
+```bash
 $ kubectl get pods -n kube-system
 NAME                                              READY   STATUS    RESTARTS   AGE
 vault-operator-7cc8cdf7f6-jmhg4                   1/1     Running   6          8m
@@ -103,7 +103,7 @@ vault-operator-7cc8cdf7f6-jmhg4                   1/1     Running   6          8
 
 To keep things isolated, we are going to use a separate namespace called `demo` throughout this tutorial.
 
-```console
+```bash
 $ kubectl create ns demo
 namespace/demo created
 ```
@@ -138,7 +138,7 @@ spec:
 
 Here, `spec.version` specifies the name of the [VaultServerVersion](/docs/v2022.06.16/concepts/vault-server-crds/vaultserverversion) CRD. If that does not exist, then create one.
 
-```console
+```bash
 $ kubectl get vaultserverversions
 NAME     VERSION   VAULT_IMAGE    DEPRECATED   AGE
 1.2.0    1.2.0     vault:1.2.0    false        1m
@@ -161,7 +161,7 @@ spec:
 
 `spec.backend.gcs.credentialSecret` and `spec.unsealer.mode.googleKmsGcs.credentialSecret` specifies the name of the Kubernetes secret containing `vault-sa@ackube.iam.gserviceaccount.com` credential.
 
-```console
+```bash
 $ kubectl get secrets/google-cred -n demo -o yaml
 apiVersion: v1
 data:
@@ -176,7 +176,7 @@ type: Opaque
 
 Now, we are going to create `my-vault` in `demo` namespace.
 
-```console
+```bash
 $ cat examples/guides/provider/gke/my-vault.yaml
 apiVersion: kubevault.com/v1alpha1
 kind: VaultServer
@@ -208,7 +208,7 @@ vaultserver.kubevault.com/my-vault created
 
 Check the `my-vault` status. It may take some time to reach `Running` stage.
 
-```console
+```bash
 $ kubectl get vaultserver/my-vault -n demo
 NAME       NODES   VERSION   STATUS    AGE
 my-vault   1       1.2.0     Running   2m
@@ -216,7 +216,7 @@ my-vault   1       1.2.0     Running   2m
 
 `status` field in `my-vault` will show more detail information.
 
-```console
+```bash
 $ kubectl get vaultserver/my-vault -n demo -o json | jq '.status'
 {
   "clientPort": 8200,
@@ -239,7 +239,7 @@ $ kubectl get vaultserver/my-vault -n demo -o json | jq '.status'
 
 KubeVault operator will create a service `{metadata.name}` for `my-vault` in the same namespace. For this case, service name is `my-vault`. You can specify service configuration in [spec.serviceTemplate](/docs/v2022.06.16/concepts/vault-server-crds/vaultserver#specservicetemplate). KubeVault operator will use that configuration to create service.
 
-```console
+```bash
 $ kubectl get services -n demo
 NAME       TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
 my-vault   ClusterIP   10.3.244.122   <none>        8200/TCP,8201/TCP,9102/TCP   4m
@@ -247,7 +247,7 @@ my-vault   ClusterIP   10.3.244.122   <none>        8200/TCP,8201/TCP,9102/TCP  
 
 The configuration used to run Vault can be found in `{metadata.name}-vault-config` configMap. For this case, it is `my-vault-vault-config`. Confidential data are omitted in this configMap.
 
-```console
+```bash
 $ kubectl get configmaps -n demo
 NAME                    DATA      AGE
 my-vault-vault-config   1         49m
@@ -279,7 +279,7 @@ metadata:
 
 In this `my-vault`, KubeVault operator will use self-signed certificates for Vault and also will create `{metadata.name}-vault-tls` secret containing certificates. You can optionally specify certificates in [spec.tls](/docs/v2022.06.16/concepts/vault-server-crds/vaultserver#spectls).
 
-```console
+```bash
 $ kubectl get secrets -n demo
 NAME                                      TYPE                                  DATA      AGE
 my-vault-vault-tls                        Opaque                                3         1h
@@ -293,7 +293,7 @@ We can see unseal keys and root token in `demo-vault` bucket.
 
 Download and decrypt the root token:
 
-```console
+```bash
 $ export VAULT_TOKEN=$(gsutil cat gs://demo-vault/vault-root-token | \
   gcloud kms decrypt \
     --project ackube \
@@ -311,7 +311,7 @@ s.5DEELd1OiRmwfnrqfqQeguug
 
 For testing purpose, we are going to port forward the active vault pod, since the service we exposed for Vault is ClusterIP type. Make sure Vault cli is installed.
 
-```console
+```bash
 $ kubectl port-forward my-vault-75b6f87dbb-kq4tp -n demo 8200:8200
 Forwarding from 127.0.0.1:8200 -> 8200
 
@@ -336,7 +336,7 @@ HA Enabled      false
 
 Set Vault token for further use. In this case, we are going to use root token(not recommended).
 
-```console
+```bash
 $  export VAULT_TOKEN='s.5DEELd1OiRmwfnrqfqQeguug'
 
 $ vault secrets list
@@ -351,7 +351,7 @@ sys/          system       system_51cd4d05       system endpoints used for contr
 
 We are going to write,read and delete a secret in Vault
 
-```console
+```bash
 $ vault kv put secret/foo A=B
 Success! Data written to: secret/foo
 

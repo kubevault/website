@@ -35,11 +35,11 @@ The KubeVault operator uses an [AppBinding](/docs/v2022.06.16/concepts/vault-ser
 - The additional information required for the Userpass authentication method can be provided as AppBinding's `spec.parameters`.
   
   ```yaml
-  spec:
-    parameters:
-      apiVersion: config.kubevault.com/v1alpha1
-      kind: VaultServerConfiguration
-      path: my-userpass
+    spec:
+      parameters:
+        apiVersion: config.kubevault.com/v1alpha1
+        kind: VaultServerConfiguration
+        path: my-userpass
   ```
 
   - `path` : `optional`. Specifies the path where the Userpass auth is enabled in Vault. If this path is not provided, the path will be set by default path `userpass`.

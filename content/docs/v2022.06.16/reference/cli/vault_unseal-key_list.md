@@ -17,17 +17,17 @@ info:
 
 ## vault unseal-key list
 
-list vault unseal-key
+`list` vault unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key list vaultserver <name> -n <namespace>
 
 Examples:
  # list the vault unseal-keys
  $ kubectl vault unseal-key list vaultserver vault -n demo
-
+```
 
 ```
 vault unseal-key list [flags]

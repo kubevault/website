@@ -17,11 +17,11 @@ info:
 
 ## vault unseal-key get
 
-get vault unseal-key
+`get` vault unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key get vaultserver <name> -n <namespace> [flags]
 
 Examples:
@@ -31,7 +31,7 @@ Examples:
 
  # pass the --key-name flag to get only the decrypted unseal-key value with a specific key name
  $ kubectl vault unseal-key get vaultserver vault -n demo --key-name <name>
-
+```
 
 ```
 vault unseal-key get [flags]

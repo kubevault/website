@@ -17,11 +17,11 @@ info:
 
 ## vault root-token
 
-get, set, delete and sync root-token
+`get`, `set`, `delete` and `sync` root-token
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault root-token [command] [flags] to get, set, delete or sync vault root-token
 
 Examples:
@@ -29,7 +29,7 @@ Examples:
  $ kubectl vault root-token set [flags]
  $ kubectl vault root-token delete [flags]
  $ kubectl vault root-token sync [flags]
-
+```
 
 ```
 vault root-token [flags]

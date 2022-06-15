@@ -17,11 +17,11 @@ info:
 
 ## vault root-token sync
 
-sync vault root-token
+`sync` vault root-token
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault root-token sync vaultserver <name> -n <namespace> [flags]
 
 Examples:
@@ -29,7 +29,7 @@ Examples:
  # old naming conventions: vault-root-token
  # new naming convention for root-token: k8s.{cluster-name or UID}.{vault-namespace}.{vault-name}-root-token
  $ kubectl vault root-token sync vaultserver vault -n demo
-
+```
 
 ```
 vault root-token sync [flags]

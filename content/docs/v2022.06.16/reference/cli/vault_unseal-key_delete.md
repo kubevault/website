@@ -17,11 +17,11 @@ info:
 
 ## vault unseal-key delete
 
-delete vault unseal-key
+`delete` vault unseal-key
 
 ### Synopsis
 
-
+```bash
 $ kubectl vault unseal-key delete vaultserver <name> -n <namespace> [flags]
 
 Examples:
@@ -30,7 +30,7 @@ Examples:
 
  # delete the unseal-key with name set by --key-id flag
  $ kubectl vault unseal-key delete vaultserver vault -n demo --key-id <id>
-
+```
 
 ```
 vault unseal-key delete [flags]

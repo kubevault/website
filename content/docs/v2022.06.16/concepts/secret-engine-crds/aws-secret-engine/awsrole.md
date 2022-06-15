@@ -91,22 +91,12 @@ spec:
 
 #### spec.secretEngineRef
 
-`spec.secretEngineRef` is a `required` field that specifies the name of an [SecretEngine](/docs/v2022.06.16/concepts/vault-server-crds/auth-methods/appbinding) reference which is used to connect with a Vault server. AppBinding must be in the same namespace with the AWSRole object.
+`spec.secretEngineRef` is a `required` field that specifies the name of a `SecretEngine`.
 
 ```yaml
 spec:
   secretEngineRef:
     name: aws-secret-engine
-```
-
-#### spec.path
-
-`spec.path` is an `optional` field that specifies the path where the secret engine is enabled.
-The default path value is `aws`.
-
-```yaml
-spec:
-  path: my-aws-path
 ```
 
 #### spec.credentialType
