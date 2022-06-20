@@ -10789,6 +10789,31 @@ Responsive Classes
   background-color: var(--ac-primary) !important;
 }
 
+.news-message {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #3e393e;
+  background: #ffffff;
+  border: 1px solid #dbdbde;
+  padding: 3px 15px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.news-message:hover strong {
+  text-decoration: underline;
+}
+
+.news-message strong {
+  color: var(--ac-primary);
+}
+
 .hero-area-code-editor {
   opacity: 0;
   visibility: hidden;
@@ -10948,6 +10973,14 @@ Responsive Classes
   }
   .hero-area.is-product p {
     text-align: center;
+  }
+  .news-message-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .hero-area-code-editor {
     max-width: calc(100vw - 30px);
@@ -12226,6 +12259,15 @@ Responsive Classes
   }
   .cta-area .cta-area-inner p {
     text-align: center;
+  }
+  .cta-area .cta-area-inner .buttons {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .cta-area .cta-area-inner .buttons .button.ac-button {
+    letter-spacing: 0;
+    padding: 0.5rem 1rem;
   }
 }
 
