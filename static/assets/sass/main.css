@@ -8368,6 +8368,45 @@ strong {
   background: var(--ac-primary);
 }
 
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.message lord-icon {
+  margin-right: 1rem;
+}
+
+.message.is-warning {
+  background-color: transparent;
+}
+
+.message.is-warning .message-body {
+  border-color: transparent;
+  border-width: 0;
+  color: #3b3030;
+  padding: 1em 1em;
+  background-color: #ffdd57;
+  width: 100%;
+}
+
+.message.is-danger {
+  background-color: transparent;
+}
+
+.message.is-danger .message-body {
+  border-color: transparent;
+  border-width: 0;
+  color: #ffffff;
+  padding: 1em 1em;
+  background-color: #ff3729;
+  width: 100%;
+}
+
 /****************************************
 Responsive Classes
 *****************************************/
@@ -13866,6 +13905,9 @@ Responsive Classes
   }
   .improve-section-area {
     padding-bottom: 20px;
+  }
+  .button.is-link.is-medium.is-active.has-text-weight-normal {
+    margin-bottom: 10px;
   }
 }
 
