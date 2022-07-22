@@ -68,7 +68,7 @@
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/kubevault/features/unlock.png",
+        "src": "/assets/images/products/kubevault/features/automated-unsealing.svg",
         "alt": "http"
       },
       "summary": "",
@@ -86,7 +86,7 @@
       },
       "summary": "",
       "description": "Managing various SecretEngine is extremely easy with KubeVault. KubeVault lets you enable, configure GCP, Azure, AWS, MongoDB, MySQL, Postgres, etc. SecretEngine. Additionally, creating roles in SecretEngine is also possible with KubeVault in a K8s native way."
-    },    
+    },
     {
       "title": "Storage Backend",
       "image": {
@@ -107,7 +107,7 @@
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/kubevault/features/aws.png",
+        "src": "/assets/images/products/kubevault/features/auth.svg",
         "alt": "http"
       },
       "summary": "",
@@ -133,7 +133,7 @@
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/kubevault/features/azure.png",
+        "src": "/assets/images/products/kubevault/features/database-users.svg",
         "alt": "http"
       },
       "summary": "",
@@ -146,7 +146,7 @@
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/kubevault/features/database-view.png",
+        "src": "/assets/images/products/kubevault/features/plugin.svg",
         "alt": "http"
       },
       "summary": "",
