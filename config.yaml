@@ -39,8 +39,12 @@ params:
       map: title
 menu:
   main:
-  - name: Documentation
+  - name: Vault Kubernetes Deployment
+    identifier: vault-kubernetes-deployment
+    parent: Features
     weight: 20
+  - name: Documentation
+    weight: 10
 markup:
   goldmark:
     renderer:

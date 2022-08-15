@@ -1,0 +1,54 @@
+{
+  "name": "Vault Kubernetes Deployment",
+  "id": "vault-kubernetes-deployment",
+  "title": "Vault Kubernetes Deployment",
+  "hero": "/assets/images/databases/illustrations/kc-bg.svg",
+  "summary": "Deploy TLS secured Vault Servers on Kubernetes using KubeVault. You can use cert-manager to manage VaultServer TLS or you can manage TLS with self-signed.",
+  "description": "As the world’s enterprises rapidly move to the cloud, and Containers are taking over the world of software development, Kubernetes is the platform that lets users seamlessly deploy, scale, run applications and manage their life cycles.  <br />  <br />  But, Running Databases or Stateful applications in Kubernetes has always been a concern. And it becomes really difficult in terms of **Run and manage Production-Grade Databases on Kubernetes**. <br />   <br />KubeDB is the Kubernetes Native Database Management Solution which simplifies and automates routine database tasks such as **Provisioning, Monitoring, Upgrading, Patching, Scaling, Volume Expansion, Backup, Recovery, Failure detection, and Repair** for various popular databases on private and public clouds. KubeDB provides a simple mechanism for running your storage system in the same platform as your application.",
+  "keywords": [
+    "Provision",
+    "Failure Detection",
+    "Upgrade",
+    "Scaling",
+    "Volume Expansion",
+    "Backup & Recovery",
+    "Monitor",
+    "Data Protection for Elasticsearch Databases in Kubernetes on Public and Private Cloud"
+  ],
+  "features": [
+    {
+      "title": "Provisioning",
+      "image": "/assets/images/databases/illustrations/colud-chair.gif",
+      "description": "Kubevault provides various ways to deploy & configure Vault in production. Numerous Storage Backend, Auth methods, Auto Unseler Mode, TLS, Secret Engines, Dynamic Secrets, Identity-bases Access, DB user privilege management, etc. makes KubeVault Git-ops ready. You can simply provision Vault Server on Kubernetes using KubeVault. Don’t need to worry about all the knowledge of Kubernetes Concepts & setups."
+    },
+    {
+      "title": "TLS Management",
+      "image": "/assets/images/databases/illustrations/version-control.gif",
+      "description": "Secure your Vault Server using TLS. Deploy TLS secured Vault Servers on Kubernetes using KubeVault. You can use cert-manager to manage Vault Server TLS. Also, you can use TLS with self-signed. Running & Managing Vault & its resources has never been easier."
+    }
+  ],
+  "example": {
+    "apiVersion": "kubedb.com/v1alpha2",
+    "kind": "Elasticsearch",
+    "metadata": {
+      "name": "es-quickstart",
+      "namespace": "demo"
+    },
+    "spec": {
+      "version": "xpack-7.9.1-v1",
+      "enableSSL": true,
+      "replicas": 3,
+      "storageType": "Durable",
+      "storage": {
+        "storageClassName": "standard",
+        "accessModes": ["ReadWriteOnce"],
+        "resources": {
+          "requests": {
+            "storage": "1Gi"
+          }
+        }
+      },
+      "terminationPolicy": "DoNotTerminate"
+    }
+  }
+}
