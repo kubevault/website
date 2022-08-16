@@ -148,7 +148,7 @@ $ helm install kubevault appscode/kubevault \
       <!-- single feature information start  -->
       {{ range $f := $p.features }}
       <div class="column is-half-tablet is-one-third-widescreen">
-        <div class="single-features-item" data-aos="fade-up" data-aos-duration="500">
+        <a href="/features/{{ $f.url }}" class="single-features-item" data-aos="fade-up" data-aos-duration="500">
           <div class="feature-icon">
             <img src="{{ $f.icon.src }}" alt="{{ $f.icon.alt }}" />
           </div>
@@ -157,8 +157,10 @@ $ helm install kubevault appscode/kubevault \
             <h5>{{ $f.title }}</h5>
             <p>{{ $f.summary }}</p>
             <p>{{ $f.description }}</p>
+             <button class="readmore-button mt-15">Read More<span
+                 class="material-icons-outlined">arrow_forward</span></button>
           </div>
-        </div>
+        </a>
       </div>
       {{end}}
       <!-- single feature information end -->

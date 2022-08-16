@@ -8,6 +8,7 @@ disableKinds:
 - taxonomyTerm
 params:
   product_key: kubevault
+  main_menu_dropdown_item: features
   domain_appscode: https://appscode.com
   domain_voyagermesh: https://voyagermesh.com
   domain_stash: https://stash.run
@@ -40,6 +41,64 @@ params:
 menu:
   main:
   - name: Documentation
+    weight: 40
+  - name: Features
+    identifier: features
+    weight: 21
+  - name: Vault Kubernetes Deployment
+    identifier: vault-kubernetes-deployment
+    parent: features
+    pre: /assets/images/products/kubevault/features/vaultserverversions.svg
+    weight: 10
+  - name: Auto Initialization & Unsealing
+    identifier: auto-initialization-and-unsealing
+    parent: features
+    pre: /assets/images/products/kubevault/features/automated-unsealing.svg
+    weight: 11
+  - name: Consume Vault Secrets using Secrets Store CSI Driver
+    identifier: consume-vault-secrets-using-secrets-store-csi-driver
+    parent: features
+    pre: /assets/images/products/kubevault/features/secrets.svg
+    weight: 12
+  - name: Manage DB Users Privileges
+    identifier: manage-db-users-privileges
+    parent: features
+    pre: /assets/images/products/kubevault/features/database-users.svg
+    weight: 13
+  - name: Storage Backend
+    identifier: storage-backend
+    parent: features
+    pre: /assets/images/products/kubevault/features/storageclasses.svg
+    weight: 14
+  - name: Authentication Method
+    identifier: authentication-method
+    parent: features
+    pre: /assets/images/products/kubevault/features/auth.svg
+    weight: 15
+  - name: Database Secret Engine
+    identifier: database-secret-engine
+    parent: features
+    pre: /assets/images/products/kubevault/features/database-view.png
+    weight: 16
+  - name: Azure Secret Engine
+    identifier: azure-secret-engine
+    parent: features
+    pre: /assets/images/products/kubevault/features/azure.png
+    weight: 17
+  - name: AWS Secret Engine
+    identifier: aws-secret-engine
+    parent: features
+    pre: /assets/images/products/kubevault/features/aws.png
+    weight: 18
+  - name: GCP Secret Engine
+    identifier: gcp-secret-engine
+    parent: features
+    pre: /assets/images/products/kubevault/features/google-cloud.png
+    weight: 19
+  - name: Kubectl Plugin
+    identifier: kubectl-plugin
+    parent: features
+    pre: /assets/images/products/kubevault/features/plugin.svg
     weight: 20
 markup:
   goldmark:
