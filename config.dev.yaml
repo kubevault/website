@@ -1,4 +1,4 @@
-title: Tools for running HashiCorp Vault on Kubernetes
+title: Run Production-Grade Vault on Kubernetes - KubeVault
 baseurl: https://kubevault-v1-hugo.web.app
 languageCode: en-us
 assetDir: static
