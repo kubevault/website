@@ -31,7 +31,7 @@
       "id": 5,
       "title": "Store and Unseal your Secret with K8S",
       "description": "When you deploy or scale up a Vault server, you don’t have to worry about unsealing new Vault pods. The KubeVault operator will do it for you. You can simply use Kubernetes Secret to store, unseal keys & vault root token.",
-      "img": "/assets/images/features/illustrations/astore-and-unseal-your-secret-with-k8s.jpg"
+      "img": "/assets/images/features/illustrations/store-and-unseal-your-secret-with-k8s.jpg"
     }
   ]
 }

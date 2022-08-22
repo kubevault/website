@@ -25,7 +25,7 @@
       "id": 4,
       "title": "Integrated Storage Backend",
       "description": "Integrated Storage backend is used to persist Vault's data. Unlike other storage backends, Integrated Storage does not operate from a single source of data. Instead all the nodes in a Vault cluster will have a replicated copy of Vault's data. Data will be replicated across all the nodes. KubeVault Provides support for Integrated Storage Backend via Raft.",
-      "img": "/assets/images/features/illustrations/integrated-storage-backend.gif"
+      "img": "/assets/images/features/illustrations/integrated-storage-backend.jpg"
     }
   ]
 }
