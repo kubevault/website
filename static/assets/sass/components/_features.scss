@@ -81,7 +81,7 @@
   grid-template-columns: 3.75rem auto;
   border: 1px solid $ac-white-light;
   border-radius: 2px;
-  min-height: 126px;
+  min-height: 240px;
 
   &:hover {
     .readmore-button {
@@ -358,7 +358,7 @@ Responsive Classes
 
   .single-features-item {
     padding: 20px;
-    min-height: 126px;
+    min-height: 320px;
 
     .feature-information {
       h5 {

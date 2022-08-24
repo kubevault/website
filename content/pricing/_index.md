@@ -4,5 +4,5 @@ menu:
   main:
     identifier: pricing
     name: Pricing
-    weight: 16
+    weight: 40
 ---

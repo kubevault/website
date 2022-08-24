@@ -642,8 +642,7 @@
                       {{ range .Children }}
                       {{ if eq .Parent $.Site.Params.main_menu_dropdown_item }}
                       <!-- single product start  -->
-                      <a href="/kubernetes/databases/run-and-manage-{{ .Identifier }}-on-kubernetes
-" class="single-product">
+                      <a href="/features/{{ .Identifier }}" class="single-product">
                         {{ if .Pre }}
                         <div class="product-logo">
                           <img src="{{ .Pre }}" alt="Menu Icon">
@@ -674,7 +673,7 @@
                     <div class="product-description is-block">
                       <div class="video-content">
                         <div class="yt-thumbnail">
-                          <a href="https://www.youtube.com/watch?v=hBHxMtSjKo4" class="play-icon yt-video">
+                          <a href="https://www.youtube.com/watch?v=cm0GD7T9Olc" class="play-icon yt-video">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                               stroke="#ffffff">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -683,7 +682,7 @@
                                 d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                           </a>
-                          <img src="https://img.youtube.com/vi/hBHxMtSjKo4/sddefault.jpg" alt="">
+                          <img src="https://img.youtube.com/vi/cm0GD7T9Olc/sddefault.jpg" alt="">
                         </div>
                       </div>
                     </div>
@@ -855,9 +854,10 @@
          <div class="container">
            <div class="columns is-vcentered is-multiline">
              <div class="column is-full-tablet is-half-tablet is-half-desktop">
-               <h3 data-aos="fade-up" data-aos-duration="500">Ready to Get Started?</h3>
-               <p data-aos="fade-up" data-aos-duration="700">Install {{ $p.name }} in your Kubernetes cluster
-               </p>
+               <h3 data-aos="fade-up" data-aos-duration="500">Run Production-Grade Vault on Kubernetes FREE !</h3>
+               <p data-aos="fade-up" data-aos-duration="700">KubeVault community edition is FREE to use on any supported
+                 Kubernetes engines. There is no up-front investment required. We offer a 30 days license FREE of cost
+                 to try KubeVault Enterprise edition.</p>
              </div>
              <div
                class="column is-full-tablet is-half-tablet is-half-desktop has-text-centered-touch has-text-right-desktop">
