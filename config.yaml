@@ -55,8 +55,8 @@ menu:
     parent: features
     pre: /assets/images/products/kubevault/features/automated-unsealing.svg
     weight: 11
-  - name: Consume Vault Secrets using Secrets Store CSI Driver
-    identifier: consume-vault-secrets-using-secrets-store-csi-driver
+  - name: Consume KubeVault Secrets with CSI
+    identifier: consume-kubevault-secrets-with-csi
     parent: features
     pre: /assets/images/products/kubevault/features/secrets.svg
     weight: 12
