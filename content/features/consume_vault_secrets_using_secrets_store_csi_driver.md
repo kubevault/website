@@ -1,9 +1,9 @@
 ---
-title: Consume Vault Secrets using Secrets Store CSI Driver | KubeVault
-id: consume-vault-secrets-using-secrets-store-csi-driver
+title: Consume Vault Secrets with CSI | KubeVault
+id: consume-kubevault-secrets-with-csi
 type: "features"
 layout: "features"
-data: "data/products/kubevault/single-features-data/consume-vault-secrets-using-secrets-store-csi-driver.json"
-url: "/features/consume-vault-secrets-using-secrets-store-csi-driver"
+data: "data/products/kubevault/single-features-data/consume-kubevault-secrets-with-csi.json"
+url: "/features/consume-kubevault-secrets-with-csi"
 description: "Consuming Vault secrets using Secret Store CSI driver in K8s resources is way more simpler with the automation provided by KubeVault."
 ---
