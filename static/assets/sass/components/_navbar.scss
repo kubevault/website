@@ -702,10 +702,10 @@
     .dropdown-trigger {
       .button {
         font-size: 0.813rem;
-        width: 190px;
+        width: 220px;
+        padding: 2px 16px;
         height: 2rem;
         border-radius: 2px;
-        padding: 2px 15px;
         color: $ac-color-heading;
         border: 1px solid $ac-white-light;
 
@@ -1077,7 +1077,7 @@ Responsive Classes
     .dropdown {
       .dropdown-trigger {
         .button {
-          width: 170px;
+          width: 210px;
         }
       }
     }
@@ -1158,8 +1158,8 @@ Responsive Classes
     .dropdown {
       .dropdown-trigger {
         .button {
-          width: 160px;
-          padding: 2px 5px;
+          width: 220px;
+          padding: 2px 16px;
         }
       }
     }
