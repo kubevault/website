@@ -99,6 +99,19 @@
     {{ end }}
   <!-- <link rel="stylesheet" href="/assets/sass/main.css" /> -->
   <script src="https://cdn.pagesense.io/js/appscodeinc/30ddadb503fc4a72b3eede8ce8b08997.js"></script>
+
+      <script>
+        (function () {
+          var zi = document.createElement('script');
+          zi.type = 'text/javascript';
+          zi.async = true;
+          zi.referrerPolicy = 'unsafe-url';
+          zi.src = 'https://ws.zoominfo.com/pixel/63344683335e773aa71b393b';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(zi, s);
+        })();
+      </script>
+
 </head>
 
 <body class="{{$p.key}}">
@@ -1095,6 +1108,11 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+
+      <noscript>
+        <img src="https://ws.zoominfo.com/pixel/63344683335e773aa71b393b" width="1" height="1" style="display: none;" alt="websights"/>
+      </noscript>
+
 </body>
 
 </html>
