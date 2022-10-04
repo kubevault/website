@@ -142,7 +142,7 @@ Follow the below instructions to update the license:
 
 ```bash
 # detect current version
-helm ls -A | grep kubedb
+helm ls -A | grep kubevault
 
 # update license key keeping the current version
 helm upgrade kubevault -n kubevault appscode/kubevault --version=<cur_version> \
@@ -159,7 +159,7 @@ helm upgrade kubevault -n kubevault appscode/kubevault --version=<cur_version> \
 
 ```bash
 # detect current version
-helm ls -A | grep kubedb
+helm ls -A | grep kubevault
 
 # update license key keeping the current version
 helm template kubevault -n kubevault appscode/kubevault --version=<cur_version> \
@@ -172,7 +172,7 @@ helm template kubevault -n kubevault appscode/kubevault --version=<cur_version> 
 
 ```bash
 # detect current version
-helm ls -A | grep kubedb
+helm ls -A | grep kubevault
 
 # update license key keeping the current version
 helm template kubevault appscode/kubevault -n kubevault --version=<cur_version> \
