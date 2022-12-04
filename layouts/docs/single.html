@@ -475,3 +475,13 @@
 {{ define "cta-install" }}
 <section></section>
 {{ end }}
+
+
+{{ define "footer-script" }}
+{{ $js := resources.Get "/assets/js/meilisearch.js" | minify }}
+<script src="{{ $js.RelPermalink }}"></script>
+<script type="text/javascript">
+  activate_search({{ .Site.Params.product_key }}, {{ .Site.Params.search_api_key }}, "acSearch","meilisearch-hits", "meilisearch-hideid");
+  activate_search({{ .Site.Params.product_key }}, {{ .Site.Params.search_api_key }}, "searchbox","meilisearch-mobile-hits", "meilisearch-hideid-mobile");
+</script>
+{{ end }}
