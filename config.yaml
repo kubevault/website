@@ -54,6 +54,11 @@ menu:
     parent: features
     pre: /assets/images/products/kubevault/features/automated-unsealing.svg
     weight: 11
+  - name: Vault Backup & Restore
+    identifier: vault-backup-restore
+    parent: features
+    pre: /assets/images/products/kubevault/features/vault-backup-restore.svg
+    weight: 11
   - name: Consume KubeVault Secrets with CSI
     identifier: consume-kubevault-secrets-with-csi
     parent: features
