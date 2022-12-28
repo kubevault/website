@@ -1,0 +1,17 @@
+apiVersion: appcatalog.appscode.com/v1alpha1
+kind: AppBinding
+metadata:
+  name: vault
+  namespace: demo
+spec:
+  clientConfig:
+    url: https://e2a3839b.ngrok.io 
+    insecureSkipTLSVerify: true
+  parameters:
+    apiVersion: config.kubevault.com/v1alpha1
+    kind: VaultServerConfiguration
+    path: kubernetes ## Kubernetes auth is enabled in this path
+    vaultRole: vault-role ## auth-role name against which login will be done
+    kubernetes:
+      serviceAccountName: vault  ## service account name
+      usePodServiceAccountForCSIDriver: true ##  required while using CSI driver
