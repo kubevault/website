@@ -28,9 +28,25 @@
       "show": true
     },
     {
+      "version": "15.1-v2",
+      "hostDocs": true
+    },
+    {
+      "version": "15.1-v1",
+      "hostDocs": true
+    },
+    {
       "version": "15.1",
       "hostDocs": true,
       "show": true
+    },
+    {
+      "version": "14.0-v10",
+      "hostDocs": true
+    },
+    {
+      "version": "14.0-v9",
+      "hostDocs": true
     },
     {
       "version": "14.0-v8",
@@ -76,6 +92,14 @@
       "version": "14.0",
       "hostDocs": true,
       "show": true
+    },
+    {
+      "version": "13.1-v18",
+      "hostDocs": true
+    },
+    {
+      "version": "13.1-v17",
+      "hostDocs": true
     },
     {
       "version": "13.1-v16",
@@ -166,6 +190,14 @@
       "version": "13.1.0",
       "hostDocs": true,
       "show": true
+    },
+    {
+      "version": "12.4-v21",
+      "hostDocs": true
+    },
+    {
+      "version": "12.4-v20",
+      "hostDocs": true
     },
     {
       "version": "12.4-v19",
@@ -271,6 +303,14 @@
       "version": "12.4.0",
       "hostDocs": true,
       "show": true
+    },
+    {
+      "version": "11.9-v21",
+      "hostDocs": true
+    },
+    {
+      "version": "11.9-v20",
+      "hostDocs": true
     },
     {
       "version": "11.9-v19",
@@ -442,6 +482,14 @@
       "hostDocs": true
     },
     {
+      "version": "10.14-v21",
+      "hostDocs": true
+    },
+    {
+      "version": "10.14-v20",
+      "hostDocs": true
+    },
+    {
       "version": "10.14-v19",
       "hostDocs": true,
       "show": true
@@ -512,12 +560,12 @@
       "show": true
     },
     {
-      "version": "10.14.0-v5",
+      "version": "10.14-v5",
       "hostDocs": true,
       "show": true
     },
     {
-      "version": "10.14-v5",
+      "version": "10.14.0-v5",
       "hostDocs": true,
       "show": true
     },
@@ -608,6 +656,14 @@
     },
     {
       "version": "10.2-beta.20200708",
+      "hostDocs": true
+    },
+    {
+      "version": "9.6.19-v21",
+      "hostDocs": true
+    },
+    {
+      "version": "9.6.19-v20",
       "hostDocs": true
     },
     {
