@@ -3,6 +3,10 @@
   padding: 60px 0 165px;
 
   .section-title {
+    h2 {
+      font-size: 48px;
+    }
+
     p {
       font-size: 18px;
     }
@@ -95,7 +99,7 @@ Responsive Classes
     .section-title {
       text-align: center;
 
-      h1 {
+      h2 {
         font-size: 32px;
       }
     }
@@ -145,7 +149,7 @@ Responsive Classes
 @media (min-width: 769px) and (max-width: 1023.98px) {
   .testimonial-area {
     .section-title {
-      h1 {
+      h2 {
         font-size: 38px;
       }
     }
@@ -160,7 +164,7 @@ Responsive Classes
 @media (min-width: 1024px) and (max-width: 1215px) {
   .testimonial-area {
     .section-title {
-      h1 {
+      h2 {
         font-size: 38px;
       }
     }
