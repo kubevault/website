@@ -44,17 +44,17 @@
       "redirects": [
         {
           "source": "/docs/latest/",
-          "destination": "/docs/v2023.03.03/",
+          "destination": "/docs/v2023.05.05/",
           "type": 302
         },
         {
           "source": "/docs/latest/:rest*",
-          "destination": "/docs/v2023.03.03/:rest",
+          "destination": "/docs/v2023.05.05/:rest",
           "type": 302
         },
         {
           "source": "/docs",
-          "destination": "/docs/v2023.03.03/",
+          "destination": "/docs/v2023.05.05/",
           "type": 302
         }
       ]
