@@ -22,7 +22,7 @@ info:
 
 MongoDB is one of the supported plugins for the database secrets engine. This plugin generates database credentials dynamically based on configured roles for the MongoDB database. You can easily manage [MongoDB secret engine](https://www.vaultproject.io/docs/secrets/databases/mongodb.html) using the KubeVault operator.
 
-![Elasticsearch secret engine](/docs/v2023.9.7/images/guides/secret-engines/mongodb/mongodb_secret_engine_guide.svg)
+![MongoDB secret engine](/docs/v2023.9.7/images/guides/secret-engines/mongodb/mongodb_secret_engine_guide.svg)
 
 You need to be familiar with the following CRDs:
 
@@ -98,11 +98,11 @@ spec:
     vaultRole: vault-policy-controller
 ```
 
-## Enable and Configure Elasticsearch Secret Engine
+## Enable and Configure MongoDB Secret Engine
 
 When a [SecretEngine](/docs/v2023.9.7/concepts/secret-engine-crds/secretengine) crd object is created, the KubeVault operator will enable a secret engine on specified path and configure the secret engine with given configurations.
 
-A sample SecretEngine object for the Elasticsearch secret engine:
+A sample SecretEngine object for the MongoDB secret engine:
 
 ```yaml
 apiVersion: engine.kubevault.com/v1alpha1
@@ -135,7 +135,7 @@ NAME        STATUS    AGE
 mongo-engine   Success   10s
 ```
 
-Since the status is `Success`, the Elasticsearch secret engine is enabled and successfully configured. You can use `kubectl describe secretengine -n <namepsace> <name>` to check for error events, if any.
+Since the status is `Success`, the MongoDB secret engine is enabled and successfully configured. You can use `kubectl describe secretengine -n <namepsace> <name>` to check for error events, if any.
 
 ## Create MongoDB Role
 
@@ -211,7 +211,7 @@ No value found at your-database-path/roles/
 
 ## Generate MongoDB credentials
 
-Here, we are going to make a request to Vault for Elasticsearch credentials by creating `mongo-cred-rqst` SecretAccessRequest in `demo` namespace.
+Here, we are going to make a request to Vault for MongoDB credentials by creating `mongo-cred-rqst` SecretAccessRequest in `demo` namespace.
 
 ```yaml
 apiVersion: engine.kubevault.com/v1alpha1
