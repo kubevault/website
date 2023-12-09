@@ -24,7 +24,7 @@ This guide will show you how you can restore your Vault cluster with Stash.
 
 - At first, you need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. If you do not already have a cluster, you can create one by using Minikube.
 - Install KubeVault in your cluster following the steps [here](/docs/v2023.9.7/setup/README).
-- Install Stash Enterprise in your cluster following the steps [here](https://stash.run/docs/latest/setup/install/enterprise/).
+- Install Stash in your cluster following the steps [here](https://stash.run/docs/latest/setup/install/).
 - Install Stash `kubectl` plugin following the steps [here](https://stash.run/docs/latest/setup/install/kubectl-plugin/).
 - If you are not familiar with how Stash backup and restore Vault cluster, please check the following concept section [here](/docs/v2023.9.7/concepts/backup-restore/overview).
 
