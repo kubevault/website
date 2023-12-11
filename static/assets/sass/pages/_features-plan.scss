@@ -80,7 +80,7 @@
         }
 
         &.enterprise {
-          width: 70%;
+          width: 100%;
 
           .button {
             &.ac-button {
@@ -323,7 +323,7 @@
         display: grid;
         align-items: center;
         // width: 65%;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 100%;
 
         .features-plan {
           font-weight: 400;
