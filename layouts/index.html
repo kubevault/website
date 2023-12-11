@@ -91,7 +91,7 @@ url(./assets/images/bg-image/gradient-bg.webp);">
               <span class="action maximize"></span>
               <span class="action minimize"></span>
             </div>
-            {{ highlight (printf `$ helm install kubevault oci://ghcr.io/appscode-charts/kubevault \
+            {{ highlight (printf `helm install kubevault oci://ghcr.io/appscode-charts/kubevault \
 --version %s \
 --namespace kubevault --create-namespace \
 --set-file global.license=/path/to/the/license.txt \
