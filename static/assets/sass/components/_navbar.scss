@@ -116,8 +116,43 @@
     width: calc(100% - 200px);
     justify-content: flex-end;
 
-    .button {
-      margin-left: 2.5rem;
+    .navbar-left-group {
+      display: flex;
+      align-items: center;
+      @media (min-width: 0px) and (max-width: 1023px) {
+        align-items: flex-start;
+      }
+    }
+
+    .navbar-right-group {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      .buttons{
+        .button {
+          &:has(.tag){
+            gap: 4px;
+          }
+          .tag {
+            background-color: $ac-primary;
+            color: $ac-white;
+          }
+        }
+      }
+
+      @media (min-width: 0px) and (max-width: 1023px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+        .buttons{
+          width: 100%;
+          .button {
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 
