@@ -12,22 +12,22 @@
     "themeColor": ""
   },
   "heroImage": {
-    "src": "/assets/images/products/kubed/kubed-hero.png",
-    "alt": "Kubed"
+    "src": "/assets/images/products/configsyncer/configsyncer-hero.png",
+    "alt": "configsyncer"
   },
   "logo": {
-    "src": "/assets/images/products/kubed/kubed.png",
-    "alt": "Kubed"
+    "src": "/assets/images/products/configsyncer/configsyncer.png",
+    "alt": "configsyncer"
   },
   "logoWhite": {
-    "src": "/assets/images/products/kubed/kubed-white.png",
-    "alt": "Kubed"
+    "src": "/assets/images/products/configsyncer/configsyncer-white.png",
+    "alt": "configsyncer"
   },
   "icon": {
-    "src": "/assets/images/products/kubed/kubed-icon.png",
-    "alt": "Kubed",
+    "src": "/assets/images/products/configsyncer/configsyncer-512x512.svg",
+    "alt": "configsyncer",
     "sizes": {
-      "192x192": "/assets/images/products/kubed/icons/android-icon-192x192.png"
+      "192x192": "/assets/images/products/configsyncer/icons/android-icon-192x192.png"
     }
   },
   "repoURL": "https://github.com/config-syncer/docs",
@@ -42,88 +42,33 @@
   ],
   "features": [
     {
-      "title": "Disaster Recovery",
-      "image": {
-        "src": "/assets/images/products/kubed/features/feature-1.png",
-        "alt": "http"
-      },
-      "icon": {
-        "src": "/assets/images/products/kubed/features/backup.svg",
-        "alt": "http"
-      },
-      "summary": "",
-      "description": "Takes periodic snapshot of a Kubernetes cluster objects"
-    },
-    {
-      "title": "Event Forwarder",
-      "image": {
-        "src": "/assets/images/products/kubed/features/feature-2.png",
-        "alt": "http"
-      },
-      "icon": {
-        "src": "/assets/images/products/kubed/features/event.svg",
-        "alt": "http"
-      },
-      "summary": "",
-      "description": "Forward cluster events to various destinations"
-    },
-    {
       "title": "Configuration Syncer",
       "image": {
-        "src": "/assets/images/products/kubed/features/feature-3.png",
+        "src": "/assets/images/products/configsyncer/features/feature-3.png",
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/kubed/features/configuration.svg",
+        "src": "/assets/images/products/configsyncer/features/configuration.svg",
         "alt": "http"
       },
       "summary": "",
       "description": "Keeps ConfigMaps and Secrets synchronized across Namespaces or Clusters"
-    },
-    {
-      "title": "Recycle Bin",
-      "image": {
-        "src": "/assets/images/products/kubed/features/feature-4.png",
-        "alt": "http"
-      },
-      "icon": {
-        "src": "/assets/images/products/kubed/features/recycle.svg",
-        "alt": "http"
-      },
-      "summary": "",
-      "description": "Acts like a recycle bin for deleted and/or updated Kubernetes objects"
-    },
-    {
-      "title": "Event Notifiers",
-      "image": {
-        "src": "/assets/images/products/kubed/features/feature-5.png",
-        "alt": "http"
-      },
-      "icon": {
-        "src": "/assets/images/products/kubed/features/event-notifiers.svg",
-        "alt": "http"
-      },
-      "summary": "",
-      "description": "Sends event notifications via Email, SMS or Chat"
-    },
-    {
-      "title": "Janitor",
-      "image": {
-        "src": "/assets/images/products/kubed/features/feature-6.png",
-        "alt": "http"
-      },
-      "icon": {
-        "src": "/assets/images/products/kubed/features/janitor.svg",
-        "alt": "http"
-      },
-      "summary": "",
-      "description": "Setup janitors for Elasticsearch and InfluxDB"
     }
   ],
   "versions": [
     {
       "version": "master",
       "hostDocs": false,
+      "show": true
+    },
+    {
+      "version": "v0.14.5",
+      "hostDocs": true,
+      "show": true
+    },
+    {
+      "version": "v0.14.4",
+      "hostDocs": true,
       "show": true
     },
     {
@@ -206,7 +151,7 @@
       "hostDocs": true
     }
   ],
-  "latestVersion": "v0.14.2",
+  "latestVersion": "v0.14.5",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/config-syncer/config-syncer",
