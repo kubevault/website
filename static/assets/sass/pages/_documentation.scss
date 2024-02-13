@@ -85,36 +85,6 @@
   .documentation-body {
     padding: 0 60px;
     width: calc(100% - 674px);
-
-    // .highlight {
-    //   .hljs-variable {
-    //     color: #35a651;
-    //   }
-
-    //   .hljs-string {
-    //     color: #f15855;
-    //   }
-
-    //   .hljs-keyword,
-    //   .hljs-literal,
-    //   .nginx .hljs-title {
-    //     color: #ff08d8;
-    //   }
-
-    //   .hljs-class .hljs-title,
-    //   .smalltalk .hljs-class,
-    //   .hljs-type,
-    //   .hljs-typename,
-    //   .hljs-tag .hljs-attribute,
-    //   .hljs-doctype,
-    //   .hljs-class .hljs-id,
-    //   .hljs-built_in,
-    //   .setting,
-    //   .hljs-params,
-    //   .clojure .hljs-attribute {
-    //     color: #ad6ff3;
-    //   }
-    // }
   }
 
   .right-sidebar {
@@ -172,89 +142,31 @@
     font-size: 2rem;
     padding-bottom: 10px;
     line-height: 1.3;
-    a {
-      font-size: 2rem;
-    }
   }
 
   h2 {
     font-size: 24px;
-    a {
-      font-size: 24px;
-    }
   }
 
   h3 {
     font-size: 18px;
-    a {
-      font-size: 18px;
-    }
   }
 
   h4 {
     font-size: 16px;
-    a {
-      font-size: 16px;
-    }
   }
 
   h5 {
     font-size: 15px;
-    a {
-      font-size: 15px;
-    }
   }
 
   h6 {
     font-size: 13px;
-    a {
-      font-size: 13px;
-    }
   }
 
-  // .highlight {
-  //   pre {
-  //     border: 1px solid $ac-white-light;
-  //     border-radius: 2px;
-
-  //     .hljs {
-  //       background-color: transparent;
-  //       color: #d2d5e1;
-  //     }
-
-  //     // code {
-  //     //   color: $ac-white;
-  //     // }
-  //   }
-
-  //   .hljs-variable {
-  //     color: #35a651;
-  //   }
-
-  //   .hljs-string {
-  //     color: #f15855;
-  //   }
-
-  //   .hljs-keyword,
-  //   .hljs-literal,
-  //   .nginx .hljs-title {
-  //     color: #ff08d8;
-  //   }
-
-  //   .hljs-class .hljs-title,
-  //   .smalltalk .hljs-class,
-  //   .hljs-type,
-  //   .hljs-typename,
-  //   .hljs-tag .hljs-attribute,
-  //   .hljs-doctype,
-  //   .hljs-class .hljs-id,
-  //   .hljs-built_in,
-  //   .setting,
-  //   .hljs-params,
-  //   .clojure .hljs-attribute {
-  //     color: #ad6ff3;
-  //   }
-  // }
+  a{
+    @extend .text-underline;
+  }
 }
 
 .full-info h2 span.share-icon {
@@ -306,7 +218,7 @@ blockquote {
 .full-info ul li pre,
 .full-info ol li pre {
   text-indent: 0px;
-  margin-left: -30px;
+  margin-left: 0px;
 }
 
 .full-info ul li:before {
@@ -422,6 +334,16 @@ ul li b {
   }
 }
 
+// .highlight {
+//   pre {
+//     background-color: #1e242e !important;
+//     font-size: 14px;
+//     margin-bottom: 20px;
+//   }
+
+//   margin-bottom: 40px;
+// }
+
 .full-info ol {
   list-style: none;
   counter-reset: order-list-counter;
@@ -471,6 +393,7 @@ ul li b {
 .tbl-of-contents {
   #TableOfContents {
     max-height: 70vh;
+    padding-bottom: 32px;
 
     &::-webkit-scrollbar {
       width: 4px;
