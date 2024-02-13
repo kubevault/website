@@ -129,6 +129,13 @@
       align-items: center;
       gap: 32px;
       .buttons{
+        iframe {
+          transition: 0.3s ease-in-out;
+          &:hover {
+            box-shadow: 2px 4px 24px rgba(0,0,0,.3)!important;
+            transform: translateY(-2px);
+          }
+        }
         .button {
           &:has(.tag){
             gap: 4px;
@@ -208,8 +215,8 @@
         .whats-new {
           position: absolute;
           z-index: 1;
-          top: -0.5rem;
-          right: -2.5rem;
+          top: -10px;
+          right: -30px;
           font-size: 0.8rem;
           color: $ac-white;
           padding: 0.2rem 0.3rem;
@@ -737,10 +744,10 @@
     .dropdown-trigger {
       .button {
         font-size: 0.813rem;
-        width: 220px;
-        padding: 2px 16px;
+        width: 210px;
         height: 2rem;
         border-radius: 2px;
+        padding: 2px 15px;
         color: $ac-color-heading;
         border: 1px solid $ac-white-light;
 
@@ -816,7 +823,7 @@
     background-color: transparent;
     color: $ac-color-text;
     font-size: 0.875rem;
-    width: calc(100% - 30px);
+    width: 270px;
     padding: 0.2rem 0.875rem;
 
     &:focus {
@@ -1017,8 +1024,8 @@ Responsive Classes
           margin: 6px 0;
 
           .link .whats-new {
-            top: -0.2rem;
-            right: 0.5rem;
+            top: -10px;
+            right: -30px;
           }
         }
       }
@@ -1112,7 +1119,7 @@ Responsive Classes
     .dropdown {
       .dropdown-trigger {
         .button {
-          width: 210px;
+          width: 190px;
         }
       }
     }
@@ -1152,18 +1159,27 @@ Responsive Classes
       margin-left: 0;
       border-left: none;
     }
-
+    .navbar-left {
+      .navbar-brand {
+        margin-right: 1rem;
+      }
+    }
     .navbar-right {
       width: calc(100% - 180px);
 
       .community-items.ml-70 {
         margin-left: 10px !important;
       }
+      .button.ac-button {
+        padding: .5rem 1rem;
+      }
     }
-
+    .navbar-right-group {
+      gap: 8px !important;
+    }
     ul {
       .nav-item {
-        margin-right: 1.5rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -1193,8 +1209,8 @@ Responsive Classes
     .dropdown {
       .dropdown-trigger {
         .button {
-          width: 220px;
-          padding: 2px 16px;
+          width: 180px;
+          padding: 2px 5px;
         }
       }
     }
@@ -1215,9 +1231,6 @@ Responsive Classes
 
       .community-items.ml-70 {
         margin-left: 10px !important;
-      }
-      .ac-searchbar {
-        width: 34%;
       }
     }
 
@@ -1247,21 +1260,9 @@ Responsive Classes
 
 @media (min-width: 1408px) and (max-width: 1600px) {
   .navbar-appscode {
-    &.documentation-menu {
-      .navbar-right {
-        .ac-searchbar {
-          width: 34%;
-        }
-      }
-    }
     .navbar-left {
       .navbar-brand {
         margin-right: 3rem;
-      }
-    }
-    ul {
-      .nav-item {
-        margin-right: 1.5rem;
       }
     }
   }
