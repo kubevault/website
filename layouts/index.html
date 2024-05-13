@@ -2,22 +2,6 @@
 
 {{ $p := (index .Site.Data.products .Site.Params.product_key) }}
 
-<!-- banner adds start  -->
-<div class="banner-area-start modal-1">
-  <div class="modal">
-    <div class="modal-background" onclick="closeModal()"></div>
-    <div class="modal-content">
-      <div class="box p-0 is-flex">
-        <a href="https://appscode.com/webinar/" target="_blank">
-          <img src="/assets/images/webinar/10Feb22.png" alt="">
-        </a>
-      </div>
-    </div>
-    <button class="modal-close is-large" onclick="closeModal()"></button>
-  </div>
-</div>
-<!-- banner adds end -->
-
 <!-- new hero area start   -->
 <!-- style="background-image: url(/assets/images/products/kubedb/hero-product-bg-dark.png);" -->
 <section class="hero-area is-product is-gradient is-dark has-image-bg" style="background-image:
@@ -114,7 +98,7 @@ url(./assets/images/bg-image/gradient-bg.webp);">
         <div class="brand-image-wrapper owl-carousel">
           {{ range $customer := $.Site.Data.customers }}
           {{ if $customer.show }}
-          <div class="single-brand"><img src="{{ $customer.logo }}" alt="{{ $customer.name }}"></div>
+          <div class="single-brand"><img src="{{ $customer.logo }}" alt="{{ $customer.name }}" loading="eager"></div>
           {{ end }}
           {{ end }}
         </div>
@@ -149,7 +133,7 @@ url(./assets/images/bg-image/gradient-bg.webp);">
       <div class="column is-half-tablet is-one-third-widescreen">
         <a href="/features/{{ $f.url }}" class="single-features-item" data-aos="fade-up" data-aos-duration="500">
           <div class="feature-icon">
-            <img src="{{ $f.icon.src }}" alt="{{ $f.icon.alt }}" />
+            <img src="{{ $f.icon.src }}" alt="{{ $f.icon.alt }}" loading="lazy"/>
           </div>
           <div class="feature-information">
 
