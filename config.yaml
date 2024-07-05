@@ -6,8 +6,10 @@ googleAnalytics: UA-62096468-4
 disableKinds:
 - taxonomy
 - taxonomyTerm
+theme: hugo-product-theme
 params:
   product_key: kubevault
+  primary_color: 326CE5
   main_menu_dropdown_item: features
   domain_appscode: https://appscode.com
   domain_bytebuilders: https://appscode.com
@@ -28,7 +30,7 @@ params:
   blog_url: https://appscode.com/blog
   slack_url: https://slack.appscode.com
   github_url: https://github.com/appscode
-  twitter_url: https://x.com/AppsCodeHQ
+  twitter_url: https://twitter.com/AppsCodeHQ
   facebook_url: https://www.facebook.com/appscode
   youtube_url: https://www.youtube.com/c/AppsCodeInc
   contact_email: support@appscode.com
