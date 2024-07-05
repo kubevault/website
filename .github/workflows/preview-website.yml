@@ -13,9 +13,11 @@ concurrency:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Set up Go 1.x
         uses: actions/setup-go@v2
@@ -26,7 +28,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '18'
+          node-version: '20'
           check-latest: true
 
       - name: Install yq
