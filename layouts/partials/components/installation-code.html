@@ -1,6 +1,6 @@
 {{ $p := (index .Site.Data.products .Site.Params.product_key) }}
-{{ highlight (printf `helm install kubedb oci://ghcr.io/appscode-charts/kubedb \
+{{ highlight (printf `helm install kubevault oci://ghcr.io/appscode-charts/kubevault \
   --version %s \
-  --namespace kubedb --create-namespace \
+  --namespace kubevault --create-namespace \
   --set-file global.license=/path/to/the/license.txt \
   --wait --burst-limit=10000 --debug` $p.latestVersion) "bash" "style=dracula" }}
