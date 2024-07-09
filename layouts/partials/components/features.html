@@ -1,0 +1,49 @@
+{{ $p := (index .Site.Data.products .Site.Params.product_key) }}
+<!-- product features area start  -->
+<section class="product-feaures-area section-padding">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="section-title has-text-centered">
+          <h2 class="is-gradient">Special Features</h2>
+          {{ if $p.summary }}
+          <p>
+            {{ $p.summary | plainify }}
+          </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- is-centered -->
+    <div class="columns is-multiline is-centered">
+      <!-- single feature information start  -->
+      {{ range $f := $p.features }}
+      <div class="column is-half-tablet is-one-third-widescreen">
+        <a href="/features/{{ $f.url }}" class="single-features-item">
+          <div class="feature-icon">
+            <img src="{{ $f.icon.src }}" alt="{{ $f.icon.alt }}" loading="lazy"/>
+          </div>
+          <div class="feature-information">
+          
+            <h3>{{ $f.title }}</h3>
+            {{  if $f.summary }} 
+            <p>{{ $f.summary }}</p>
+            {{ end }}
+            <p class="is-ellipsis-3">{{ $f.description }}</p>
+            <button class="readmore-button"><span>Read More</span><span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </a>
+      </div>
+      {{end}}
+      <!-- single feature information end -->
+    </div>
+  </div>
+</section>
+<!-- product features area end -->
