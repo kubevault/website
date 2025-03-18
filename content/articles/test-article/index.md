@@ -1,30 +1,35 @@
 ---
-title: Deploy Cassandra via Kubernetes Cassandra Operator
-Description: Get started with your containerized Cassandra deployment. Learn how to deploy Cassandra database effortlessly using Kubernetes Cassandra Operator.
-alt: Cassandra Operator
+title: How to use HashiCorp Vault in Kubernetes using KubeVault
+Description: How to use HashiCorp Vault in Kubernetes using KubeVault
+alt: KubeVault Operator
 date: "2025-01-15"
 ---
 
-# Deploy Cassandra via Kubernetes Cassandra Operator
+# How to use HashiCorp Vault in Kubernetes using KubeVault
 
 ![Kubernetes Cassandra Operator](./hero.jpg "Cassandra Operator")
 
-In today’s cloud-first era, the need for highly-available, scalable databases is more critical than ever. The industry-leading container orchestration platform, Kubernetes, is well-known for effectively administering containerized workloads. For stateless applications, it makes deployment and scaling easier, but stateful services, like databases, need additional tools to be deployed. **Kubernetes Cassandra Operator** — a tool that makes this complex process much easier and simpler by setting up and maintaining Cassandra databases in a Kubernetes environment.
+Securing sensitive data such as API keys, passwords, and certificates takes top priority in the cloud-native scene of today. Powerful secrets management tool [HashiCorp Vault](https://www.vaultproject.io/) enables companies to safely save and manage data. But running Vault in a Kubernetes cluster requires an additional tool—[KubeVault](https://kubevault.com/).
 
-In this article, we will have an overview of the Cassandra database setup by using the Kubernetes Cassandra operator managed by [KubeDB](https://kubedb.com/). We will also have a look at the features and advantages of the KubeDB Cassandra operator in the Kubernetes environment.
+KubeVault is an operator that automates HashiCorp Vault's deployment, management, and lifecycle inside Kubernetes clusters. It guarantees security, scalability, and automation for cloud-native apps as well as simplifies secret management.
 
-## Why Cassandra in Kubernetes
-Kubernetes is an open-source technology. It was created specifically for container orchestration. It provides a standardized method for managing the lifetime of containers, automating their deployment, and guaranteeing their dependability and availability. For businesses looking to create scalable, robust, and effective cloud-native apps, Kubernetes has become the go-to option.
+This guide will walk over how to run and manage HashiCorp Vault in a Kubernetes cluster using KubeVault. Whether your position is security professional, cloud architect, or DevOps engineer, this detailed guide will enable you to create a strong secret management system in Kubernetes.
 
-Apache Cassandra is a popular NoSQL database. It is widely used for applications that require high read and write throughput. It was made to manage massive volumes of data across multiple nodes. It is popular for its high availability, fault tolerance, and no single point of failure.
+## Why Vault in Kubernetes
 
-By combining Cassandra's scalability and fault tolerance with Kubernetes' orchestration capabilities, Cassandra in Kubernetes allows for smooth deployment, scaling, and management. Kubernetes ensures high availability and portability across environments by automating resource allocation, monitoring, and self-healing. It is perfect for contemporary, distributed applications since it incorporates Cassandra into the cloud-native ecosystem and supports tools for monitoring, backups, and CI/CD.
+HashiCorp Vault is a powerful open-source secrets management tool that is designed to protect, save, and manage access to private data including API keys, passwords, and certificates,  To improve security it offers audit logging, dynamic secrets, access control, and encryption.
 
-## Deploy Cassandra on Kubernetes
+Kubernetes has a built-in Secrets API, although it lacks strong encryption, fine-grained access control, and automatic secret rotation,  Through end-to--end encryption, dynamic secret generation, and flawless policy-based access management, vault solves these constraints. To guarantee safe access to critical data, it supports several authentication techniques including Kubernetes service accounts, AppRole, and OIDC. Vault's audit logging and monitoring features also enable companies to meet compliance criteria.
+
+Running vault in Kubernetes helps companies to protect their applications without involving difficult manual procedures. By means of the Vault Agent Injector, it interacts with Kubernetes workloads which enables applications to dynamically retrieve secrets without changing their code. While operating overhead is lowered, this increases security, automation, and scalability.
+
+Organizations achieve enhanced security, automated secret rotation, and simplified management by running HashiCorp Vault in Kubernetes using KubeVault, so guaranteeing a flawless, safe workflow for cloud-native applications.
+
+## Deploy Vault on Kubernetes
 ### Pre-requisites
-We have to configure the environment to deploy Cassandra on Kubernetes using a Kubernetes Cassandra operator. You need to have a Kubernetes cluster. You should have the basic knowledge of Kubernetes concepts like cluster, pod, service, secret and also have a primary knowledge of [Cassandra](https://cassandra.apache.org/_/index.html) database. Here, we will use [Kind](https://kubernetes.io/docs/tasks/tools/#kind) to create our Kubernetes cluster. Also, we will need to install [Helm](https://helm.sh/docs/intro/install/) to our Kubernetes cluster.
+We have to configure the environment to deploy Vault on Kubernetes using a KubeVault Operator. You need to have a Kubernetes cluster. You should have the basic knowledge of Kubernetes concepts like cluster, pod, service, secret and also have a primary knowledge of [Vault](https://www.vaultproject.io/). Here, we will use [Kind](https://kubernetes.io/docs/tasks/tools/#kind) to create our Kubernetes cluster. Also, we will need to install [Helm](https://helm.sh/docs/intro/install/) to our Kubernetes cluster.
 
-In this article, We will use the Kubernetes Cassandra operator [KubeDB](https://kubedb.com/) to deploy Cassandra on Kubernetes. But before starting, you must ensure that KubeDB is already installed in your Kubernetes cluster. For using KubeDB on Kubernetes cluster, a license is needed, which you can obtain for free from the [Appscode License Server](https://license-issuer.appscode.com/). To get this license, you'll need the Kubernetes cluster ID. You can find this ID by running the command we have provided below.
+In this article, We will use the KubeVault [KubeDB](https://kubevault.com/) to deploy Vault on Kubernetes. But before starting, you must ensure that KubeVault is already installed in your Kubernetes cluster. For using KubeVault on Kubernetes cluster, a license is needed, which you can obtain for free from the [Appscode License Server](https://license-issuer.appscode.com/). To get this license, you'll need the Kubernetes cluster ID. You can find this ID by running the command we have provided below.
 
  
 ```bash
@@ -35,85 +40,73 @@ e5b4a1a0-5a67-4657-b370-db7200108cae
 After providing the necessary information and hitting the submit button, the license server will email a "license.txt" file. To install KubeDB, run the following commands:
 
 ```bash
-$ helm install kubedb oci://ghcr.io/appscode-charts/kubedb \
-  --version v2025.1.9 \
-  --namespace kubedb --create-namespace \
+$ helm install kubevault oci://ghcr.io/appscode-charts/kubevault \
+  --version v2025.2.10 \
+  --namespace kubevault --create-namespace \
   --set-file global.license=/path/to/the/license.txt \
-  --wait --burst-limit=10000 --debug \
-  --set global.featureGates.cassandra=true
+  --wait --burst-limit=10000 --debug
 ```
 
 
 Verify the installation by the following command:
 
 ```bash
-$ kubectl get pods --all-namespaces -l "app.kubernetes.io/instance=kubedb"
-NAMESPACE   NAME                                            READY   STATUS    RESTARTS   AGE
-kubedb      kubedb-kubedb-autoscaler-7d98f45f84-fhtcj       1/1     Running   0          5m
-kubedb      kubedb-kubedb-ops-manager-64bdc96d99-85xhz      1/1     Running   0          5m
-kubedb      kubedb-kubedb-provisioner-c765ffcd5-5fzxc       1/1     Running   0          5m
-kubedb      kubedb-kubedb-webhook-server-7b97d992f8-m8cxw   1/1     Running   0          5m
-kubedb      kubedb-petset-operator-6b5fddcd9-wl2dp          1/1     Running   0          5m
-kubedb      kubedb-petset-webhook-server-59ff65f4fd-tf52g   2/2     Running   0          5m
-kubedb      kubedb-sidekick-f8674fc4f-qkstf                 1/1     Running   0          5m
+$ kubectl get pods --all-namespaces -l "app.kubernetes.io/instance=kubevault"
+NAMESPACE   NAME                                                  READY   STATUS    RESTARTS   AGE
+kubevault   kubevault-kubevault-operator-f89555d55-rwf49          1/1     Running   0          64m
+kubevault   kubevault-kubevault-webhook-server-6497bb6d69-4wvpr   1/1     Running   0          64m
 ``` 
-Within a short time all the pods in kubedb namespace will start running. If all pod statuses are running, we can move on to the next phase.
+Within a short time all the pods in kubevault namespace will start running. If all pod statuses are running, we can move on to the next phase.
 
-For any confusion reguarding KubeDB installation, you can follow the [KubeDB-Setup](https://kubedb.com/docs/latest/setup/) page.
+For any confusion regarding KubeVault installation, you can follow the [KubeDB-Setup](https://kubevault.com/docs/latest/setup/) page.
 
 ### Create a Namespace
-After that, we'll create a new namespace in which we will deploy Cassandra. In this case, we have created cassandra-demo namespace, but you can create namespace with any name that you want. To create the namespace, we can use the following command:
+After that, we'll create a new namespace in which we will deploy Cassandra. In this case, we have created vault-demo namespace, but you can create namespace with any name that you want. To create the namespace, we can use the following command:
 
 ```bash
-$ kubectl create namespace cassandra-demo
-namespace/cassandra-demo created
+$ kubectl create namespace vault-demo
+namespace/vault-demo created
 ``` 
 
 ### Deploy Cassandra via Kubernetes Cassandra operator
 We need to create a yaml configuration to deploy Cassandra database on Kubernetes. We will apply this yaml below:
 
 ```yaml
-apiVersion: kubedb.com/v1alpha2
-kind: Cassandra
+apiVersion: kubevault.com/v1alpha2
+kind: VaultServer
 metadata:
-  name: cassandra-quickstart
-  namespace: cassandra-demo
+  name: vault
+  namespace: demo
 spec:
-  version: 5.0.0
-  topology:
-    rack:
-      - name: myrack
-        replicas: 2
-        storageType: Ephemeral
-        storage:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 1Gi
-        podTemplate:
-          spec:
-            containers:
-              - name: cassandra
-                resources:
-                  limits:
-                    memory: 4Gi
-                    cpu: 4
-                  requests:
-                    cpu: 1
-                    memory: 1Gi
-  deletionPolicy: WipeOut
+  allowedSecretEngines:
+    namespaces:
+      from: All
+  version: 1.18.4
+  replicas: 3
+  backend:
+    raft:
+      storage:
+        storageClassName: "standard"
+        resources:
+          requests:
+            storage: 1Gi
+  unsealer:
+    secretShares: 5
+    secretThreshold: 3
+    mode:
+      kubernetesSecret:
+        secretName: vault-keys
 ```
 
 We will save this yaml configuration to `cassandra.yaml`. Then create the above Cassandra object.
 
 ```bash
 $ kubectl create -f cassandra.yaml
-Cassandra.kubedb.com/cassandra-quickstart created
+vaultserver.kubevault.com/vault created
 ```
 
-This will create a cassandra custom resource. The kubernetes Cassandra Operator will watch this and create two pods of Cassandra in the specified namespace.
-If all the above steps are handled correctly and the Cassandra is deployed, you will see that the following objects are created:
+This will create a vault custom resource. The KubeVault Operator will watch this and create three vault pods in the specified namespace.
+If all the above steps are handled correctly and the Vault is deployed, you will see that the following objects are created:
 
 ```bash
 $ kubectl get all -n cassandra-demo
