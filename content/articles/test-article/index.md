@@ -29,7 +29,7 @@ Organizations achieve enhanced security, automated secret rotation, and simplifi
 ### Pre-requisites
 We have to configure the environment to deploy Vault on Kubernetes using a KubeVault Operator. You need to have a Kubernetes cluster. You should have the basic knowledge of Kubernetes concepts like cluster, pod, service, secret and also have a primary knowledge of [Vault](https://www.vaultproject.io/). Here, we will use [Kind](https://kubernetes.io/docs/tasks/tools/#kind) to create our Kubernetes cluster. Also, we will need to install [Helm](https://helm.sh/docs/intro/install/) to our Kubernetes cluster.
 
-In this article, We will use the KubeVault [KubeDB](https://kubevault.com/) to deploy Vault on Kubernetes. But before starting, you must ensure that KubeVault is already installed in your Kubernetes cluster. For using KubeVault on Kubernetes cluster, a license is needed, which you can obtain for free from the [Appscode License Server](https://license-issuer.appscode.com/). To get this license, you'll need the Kubernetes cluster ID. You can find this ID by running the command we have provided below.
+In this article, We will use the [KubeVault](https://kubevault.com/) to deploy HashiCorp Vault on Kubernetes. But before starting, you must ensure that KubeVault is already installed in your Kubernetes cluster. For using KubeVault on Kubernetes cluster, a license is needed, which you can obtain for free from the [Appscode License Server](https://license-issuer.appscode.com/). To get this license, you'll need the Kubernetes cluster ID. You can find this ID by running the command we have provided below.
 
  
 ```bash
@@ -61,15 +61,15 @@ Within a short time all the pods in kubevault namespace will start running. If a
 For any confusion regarding KubeVault installation, you can follow the [KubeDB-Setup](https://kubevault.com/docs/latest/setup/) page.
 
 ### Create a Namespace
-After that, we'll create a new namespace in which we will deploy Cassandra. In this case, we have created vault-demo namespace, but you can create namespace with any name that you want. To create the namespace, we can use the following command:
+After that, we'll create a new namespace in which we will deploy Vault Server. In this case, we have created vault-demo namespace, but you can create namespace with any name that you want. To create the namespace, we can use the following command:
 
 ```bash
 $ kubectl create namespace vault-demo
 namespace/vault-demo created
 ``` 
 
-### Deploy Cassandra via Kubernetes Cassandra operator
-We need to create a yaml configuration to deploy Cassandra database on Kubernetes. We will apply this yaml below:
+### Deploy VaultServer via Kubernetes KubeVault operator
+We need to create a yaml configuration to deploy HashiCorp Vault Server on Kubernetes. We will apply the following yaml:
 
 ```yaml
 apiVersion: kubevault.com/v1alpha2
@@ -96,144 +96,162 @@ spec:
     mode:
       kubernetesSecret:
         secretName: vault-keys
+  terminationPolicy: WipeOut
 ```
 
-We will save this yaml configuration to `cassandra.yaml`. Then create the above Cassandra object.
+In this yaml,
+
+- `spec.replicas` specifies the number of Vault nodes to deploy. It has to be a positive number. Note: Amazon EKS does not support HA for Vault. As we using Amazon EKS as our backend it has to be 1.
+- `spec.version` specifies the name of the VaultServerVersion CRD. This CRD holds the image name and version of the Vault, Unsealer, and Exporter.
+- `spec.allowedSecretEngines` defines the Secret Engine informations which to be granted in this Vault Server.
+- `spec.backend` is a required field that contains the Vault backend storage configuration.
+- `spec.unsealer` specifies Unsealer configuration. Unsealer handles automatic initializing and unsealing of Vault.
+- `spec.terminationPolicy` field is Wipeout means that vault will be deleted without restrictions. It can also be “Halt”, “Delete” and “DoNotTerminate”. Learn More about these [HERE](https://kubevault.com/docs/v2025.2.10/concepts/vault-server-crds/vaultserver/#specterminationpolicy).
+
+We will save this yaml configuration to `vault.yaml`. Then create the above HashiCorp Vault Server object.
 
 ```bash
-$ kubectl create -f cassandra.yaml
+$ kubectl create -f vault.yaml
 vaultserver.kubevault.com/vault created
 ```
 
-This will create a vault custom resource. The KubeVault Operator will watch this and create three vault pods in the specified namespace.
+This will create a `VaultServer` custom resource. The KubeVault Kubernetes Operator will watch this and create three HashiCorp Vault Server pods in the specified namespace.
 If all the above steps are handled correctly and the Vault is deployed, you will see that the following objects are created:
 
 ```bash
-$ kubectl get all -n cassandra-demo
-NAME                         READY   STATUS    RESTARTS   AGE
-pod/cassandra-quickstart-0   1/1     Running   0          4m51s
-pod/cassandra-quickstart-1   1/1     Running   0          3m23s
+$ kubectl get all -n vault-demo
+NAME          READY   STATUS    RESTARTS   AGE
+pod/vault-0   2/2     Running   0          4m7s
+pod/vault-1   2/2     Running   0          3m38s
+pod/vault-2   2/2     Running   0          3m19s
 
-NAME                                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)     AGE
-service/cassandra-quickstart        ClusterIP   10.96.70.253   <none>        9042/TCP   5m51s
-service/cassandra-quickstart-pods   ClusterIP   None           <none>        9042/TCP   5m51s
+NAME                                       TYPE          VERSION   AGE
+appbinding.appcatalog.appscode.com/vault   VaultServer   1.12.1    4m7s
 
-NAME                                                      TYPE                   VERSION   AGE
-appbinding.appcatalog.appscode.com/cassandra-quickstart   kubedb.com/Cassandra   1.6.22    5m51s
+NAME                              REPLICAS   VERSION   STATUS   AGE
+vaultserver.kubevault.com/vault   3          1.12.1    Ready    4m31s
 
-NAME                                        VERSION   STATUS   AGE
-cassandra.kubedb.com/cassandra-quickstart   5.0.0    Ready    5m51s
+NAME                                                            STATUS    AGE
+vaultpolicy.policy.kubevault.com/vault-auth-method-controller   Success   2m55s
 
+NAME                                                                   STATUS    AGE
+vaultpolicybinding.policy.kubevault.com/vault-auth-method-controller   Success   2m53s
 ```
 
-We have successfully deployed Cassandra to Kubernetes via the Kubernetes Cassandra operator. Now, we will connect to the Cassandra database to insert some sample data and verify whether our Cassandra database is usable or not. First, check the database status,
+We have successfully deployed HashiCorp Vault Server in Kubernetes with the Kubernetes KubeVault operator. Now, we will connect to the deployed Vault Server and verify whether it is usable or not. First, check the status,
 
 ```bash
-$ kubectl get cassandra -n cassandra-demo
-NAME                   VERSION   STATUS   AGE
-cassandra-quickstart   5.0.0    Ready    5m56s
+$ kubectl get vaultserver -n vault-demo
+NAME    REPLICAS   VERSION   STATUS   AGE
+vault   3          1.12.1    Ready    5m48s
 ```
 
-To connect to the database in this case, we should need the required credentials. Let's export the credentials to our current shell as an environment variable. KubeDB will create Secret and Service for the database `cassandra-cluster` that we have deployed. Let’s check them,
+From the output above, we can see that the `VaultServer` is ready to use. 
+
+### Accessing Vault Server Through CLI
+
+We will connect to the Vault by using Vault CLI. Therefore, we need to export the necessary environment variables and port-forward the service.
+
+In one terminal port-forward the vault server service,
 
 ```bash
-$ kubectl get secret -n cassandra-demo -l=app.kubernetes.io/instance=cassandra-quickstart
-NAME                          TYPE     DATA   AGE
-cassandra-quickstart-config   Opaque   1      8m1s
-
-$ kubectl get service -n cassandra-demo -l=app.kubernetes.io/instance=cassandra-quickstart
-NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)     AGE
-cassandra-quickstart        ClusterIP   10.96.70.253   <none>        9042/TCP   8m58s
-cassandra-quickstart-pods   ClusterIP   None           <none>        9042/TCP   8m58s
+kubectl port-forward -n vault-demo service/vault 8200
+Forwarding from 127.0.0.1:8200 -> 8200
+Forwarding from [::1]:8200 -> 8200
 ```
-### Accessing Database Through CLI
 
-You must first have the database credentials in order to access your database via the CLI. KubeDB will create several Kubernetes Secrets and Services for your Cassandra Server instance. To view them, use the following commands:
-
+We will connect to the HashiCorp Vault Server by using Vault CLI. Therefore, we need to export the necessary environment variables. So, in another terminal export the environment variables and interact with the vault server with Vault CLI,
 ```bash
-$ kubectl get secret -n cassandra-demo -l=app.kubernetes.io/instance=cassandra-quickstart 
-NAME                                 TYPE                       DATA   AGE
-cassandra-quickstart-auth            kubernetes.io/basic-auth   2      8m31s
-cassandra-quickstart-config          Opaque                     1      8m31s
+$ export VAULT_ADDR=http://127.0.0.1:8200
+$ export VAULT_TOKEN=(kubectl vault root-token get vaultserver vault -n vault-demo --value-only)
 
-
-$ kubectl get service -n cassandra-demo -l=app.kubernetes.io/instance=cassandra-quickstart 
-NAME                             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-cassandra-quickstart             ClusterIP   10.128.113.192   <none>        9042/TCP   8m37s
-cassandra-quickstart-pods        ClusterIP   None             <none>        9042/TCP   8m37s
+##Check Vault Status
+$ vault status
+Key                     Value
+---                     -----
+Seal Type               shamir
+Initialized             true
+Sealed                  false
+Total Shares            5
+Threshold               3
+Version                 1.12.1
+Build Date              2022-10-27T12:32:05Z
+Storage Type            raft
+Cluster Name            vault-cluster-b199935d
+Cluster ID              5549e2d1-0181-0bfb-752b-59f94dac3325
+HA Enabled              true
+HA Cluster              https://vault-0.vault-internal:8201
+HA Mode                 active
+Active Since            2025-03-20T05:35:11.913829478Z
+Raft Committed Index    429
+Raft Applied Index      429
 ```
 
-From the above list, the `cassandra-quickstart-auth` Secret contains the admin-level credentials needed to connect to the database. The credencials are stored as base64 format. So we need to decode those. Use the following commands to obtain the username and password:
+### Enabling KV SecretEngine
 
+In the same terminal, let's go ahead create a [KV SecretEngine](https://developer.hashicorp.com/vault/docs/secrets/kv) in the HashiCorp VaultServer,
 ```bash
-$ kubectl get secret -n demo cassandra-quickstart-auth  -o jsonpath='{.data.username}' | base64 -d
-admin
-$ kubectl get secret -n demo cassandra-quickstart-auth  -o jsonpath='{.data.password}' | base64 -d
-dS57E93oLDi5wezv
+$ vault secrets enable -path=vault-demo -version=2 kv
+vault secrets enable -path=vault-demo -version=2 kv
+
+$ vault kv put vault-demo/db-cred username=appscode password=kubevault
+===== Secret Path =====
+vault-demo/data/db-cred
+
+======= Metadata =======
+Key                Value
+---                -----
+created_time       2025-03-20T05:47:25.811616153Z
+custom_metadata    <nil>
+deletion_time      n/a
+destroyed          false
+version            1
+
+$ vault kv get vault-demo/db-cred
+===== Secret Path =====
+vault-demo/data/db-cred
+
+======= Metadata =======
+Key                Value
+---                -----
+created_time       2025-03-20T05:47:25.811616153Z
+custom_metadata    <nil>
+deletion_time      n/a
+destroyed          false
+version            1
+
+====== Data ======
+Key         Value
+---         -----
+password    kubevault
+username    appscode
 ```
 
-### Insert sample data to the Cassandra database
-In this section, we are going to login into our Cassandra database pod and insert some sample data.
-First of all, we need to connect to this database using cqlsh. A command-line utility called cqlsh is used to communicate with Apache Cassandra through the Cassandra Query Language (CQL).
-
-```bash
-$ kubectl get pods -n cassandra-demo
-NAME                             READY   STATUS    RESTARTS   AGE
-cassandra-quickstart-rack-r0-0   1/1     Running   0          13m
-cassandra-quickstart-rack-r0-1   1/1     Running   0          12m
-
-# We will connect to `cassandra-quickstart-0` pod using cqlsh.
-$ kubectl exec -it -n cassandra-demo cassandra-quickstart-0 -- cqlsh -u admin -p "dS57E93oLDi5wezv"
-
-Connected to Test Cluster at 127.0.0.1:9042
-[cqlsh 6.2.0 | Cassandra 5.0.2 | CQL spec 3.4.7 | Native protocol v5]
-Use HELP for help.
-cqlsh> 
-
-# We have connected to cqlsh. Now we will create a keyspace named `kubedb` and within this `kubedb` keyspace, we will create a table named `users` and insert data into it.
-cqlsh> CREATE KEYSPACE kubedb  WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
-cqlsh> USE kubedb;
-cqlsh:kubedb> CREATE TABLE users (
-          ... id UUID PRIMARY KEY,
-          ... name TEXT 
-          ... );
-          
-cqlsh:kubedb> INSERT INTO users (id, name, email) VALUES (uuid(), 'cassandra');
-cqlsh:kubedb> INSERT INTO kubedb.users (id, name) VALUES (uuid(), 'cassandra_kubedb');
-cqlsh:kubedb> INSERT INTO kubedb.users (id, name) VALUES (uuid(), 'kubedb_cassandra');
+From the commands above we can see that Vault Server is working seamlessly. First, we have enabled a kv secret engine in the HashiCorp Vault Server. Then wrote and read some data in that secret engine.
 
 
-# Now to see the contents of `users` table, we will use another query, and the output will be like below- 
-cqlsh:kubedb> select * from users;
- id                                   | name
---------------------------------------+-----------
- 65d2d071-7e65-4f82-b359-021893005a41 | kubedb_cassandra
- 0e87779a-ca9c-4007-b281-a975a6991f9f | cassandra
- 3c0e0fe8-b342-4cf3-97dc-90e111c3bce9 | cassandra_kubedb
+## KubeVault Features
+Kubernetes KubeVault Operator comes with a loads of features. Here, we will provide an overview of its features for your reference: 
 
-```
+* **HashiCorp Vault Server:** In this article, we have deployed a basic vault server for demo purpose. However, there are a lot of ways you can configure your vault server based on your specific needs. You can configure TLS, enable monitoring, use various backends, various secret engines and many more. You can find a detailed guide (HERE)[https://kubevault.com/docs/v2025.2.10/concepts/vault-server-crds/vaultserver/].
 
+* **Secret Engine:** Here, we have used the Hashicorp Vault CLI to enable a [secret engine](https://developer.hashicorp.com/vault/docs/secrets). However, KubeVault Kubernetes Operator comes with a Kubernetes `CustomResourceDefinition` (CRD) called `SecretEngine` which is designed to automate the process of enabling and configuring secret engines in Vault in a Kubernetes native way. It supports secret engines for `AWS`, `Azure`, `GCP` and various databases, which you can use depending on your specific needs. You can check out the detailed guide [HERE](https://kubevault.com/docs/v2025.2.10/concepts/secret-engine-crds/secretengine/).
 
-We’ve successfully deployed Cassandra to Kubernetes via Kubernetes Cassandra operator and insert some sample data into it.
+* **Vault Policy:**  Policies offer a declarative means of allowing or prohibiting access to specific Vault paths and actions. KubeVault operator provides a Kubernetes `CustomResourceDefinition` (CRD) named `VaultPolicy` which represents Vault server [policies](https://developer.hashicorp.com/vault/docs/concepts/policies) in a Kubernetes native way. [HERE](https://kubevault.com/docs/v2025.2.10/concepts/policy-crds/vaultpolicy/) is the link to a detailed guide of using `VaultPolicy`.
 
-## Cassandra on Kubernetes: Best Practices
-Implementing Cassandra on Kubernetes with the Kubernetes Cassandra Operator requires following best practices. These procedures ensure the stability and dependability of your application. To optimize your Cassandra deployment within a Kubernetes environment, adhere to these essential recommendations.
+* **Disaster Recovery Strategies:** `KubeVault` uses [Stash](https://stash.run/) to backup and restore HashiCorp Vault. Stash by AppsCode is a cloud native data backup and recovery solution for Kubernetes workloads. Stash utilizes [restic](https://github.com/restic/restic) to securely backup stateful applications to any cloud or on-prem storage backends (for example, S3, GCS, Azure Blob storage, Minio, NetApp, Dell EMC etc.). [HERE](https://kubevault.com/docs/v2025.2.10/concepts/backup-restore/overview/) you can find a detailed guide.
 
-* **Resource Availablility:** As Cassandra needs resources like CPU and Memory to run properly, so ensure that you have given enough CPU and Memory to your Cassandra pods. Also define resource Requests and Limits efficiently for CPU and Memory. You may also need to monitor cluster's resource usage as well as the resource usage for each pods of Cassandra regularly. 
-
-* **Network Configuration:** For stable network identities and DNS resolution for Cassandra pods in your cluster, you may use Statefulset with headless service. While using network policies, ensure you are using it properly so that you do not mistakenly block communication between Cassandra nodes within the same cluster.
-
-* **Version Compatibility:** Ensure that the Cassandra version you have decided to use is compatible with the Kubernetes version you are currently using, especially when deploying with the Kubernetes Cassandra Operator. Because compatibility problems can result in unexpected behavior, planning, and extensive testing are essential. For version upgrades, rolling upgrades can be used to minimize disruptions.
-
-* **Monitoring and Health Checks:** Configure your Cassandra pods for monitoring and health checks. Monitor key metrics such as query performance, CPU utilization, disk I/O, and memory consumption. Visualize performance data using programs like Prometheus and Grafana to see any problems or bottlenecks early. You can have a similar setup of Prometheus like [builtin-prometheus](https://kubedb.com/docs/v2025.1.9/setup/monitoring/builtin-prometheus/) for monitoring .Make proactive use of alerting systems to be informed of irregularities before they affect system availability or performance. Kubernetes provides features for monitoring, whereas Cassandra delivers useful performance indicators. You can proactively find and then fix performance bottlenecks or problems by gathering and evaluating these metrics, guaranteeing peak Cassandra performance. 
-
-* **Disaster Recovery Strategies:** Create a proper disaster recovery strategies for Cassandra to address data corruption, pod failures, and potential cluster-wide outages. By establishing clear, effective recovery plans, you can reduce downtime as well as safeguard data integrity, ensuring continuity even in adverse conditions.
-
-* **Scalability:** You may need to scale your database based on your need. This can be horizontal scaling or vertical scaling. While scaling, do it carefully, ensuring proper token allocation and data distribution across nodes.
-
-* **Security Practices:** One may store any sensetive and important data in the database. So, authentication and authorization is a must. You need to properly maintain the security concepts in your cluster. You may apply Password authentication and may need to modify the cassandra.yaml files to configure a proper security configuration. May be you need to use TLS for securing intra-node and client-server communication. You may also need to run Cassandra in a dedicated namespace which is isolated from other Kubernetes workloads. All these security concepts are based on your need and you must make proper decision of which one you want to use for your specific security need.
+* **VaultOpsRequest:** KubeVault provides another Kubernetes Custom Resource Definitions (CRD) called `VaultOpsRequest` which provides a declarative configuration for Vault administrative operations like restart, reconfigure TLS etc. in a Kubernetes native way. For a detailed guide on how to use `VaultOpsRequest`, go [HERE](https://kubevault.com/docs/v2025.2.10/concepts/vault-ops-request/overview/).
 
 
 ## Conclusion
 
-Cassandra an open-source and widely used data storage known for its scalability and high availability, especially in case of handling large amounts of data efficiently. By following the above process, you can successfully deploy a Cassandra database on Kubernetes, by utilizing the Kubernetes Cassandra Operator. Effective database maintenance, whether on-premises or in the cloud, requires skills as well as consistent procedures. To ensure that your database management fulfills high performance and availability standards, KubeDB offers a comprehensive suite of support tools. Regardless of whether your database infrastructure is built on cloud-based or database-as-a-service platforms, is hosted locally, or spans numerous regions, KubeDB optimizes and improves the entire process in a production-grade environment. By using kubernetes cassandra operator, one can simplify provisioning, Monitoring, Authentication  and the overall process to maintain cassandra database. That is how one can lower administrative burden, increase the manageability, and ensure a better performance for his cassandra cluster.  
+To sum up, using KubeVault to integrate HashiCorp Vault with Kubernetes provides a strong and safe way to handle secrets in a cloud-native environment. Combining Vault's strong security features with Kubernetes clusters guarantees that private information, such as API keys, passwords, and certificates, is safely stored and accessible. You can simplify secret management, automate deployment, and facilitate smooth integration with Kubernetes applications by using KubeVault. 
+
+The primary concepts of Vault, its integration with Kubernetes, and the procedures for configuring KubeVault for your environment have all been covered in this post. We've covered every necessary step for successfully deploying HashiCorp Vault in a Kubernetes environment, from installation to setting up secret engines and granting access to secure data.
+
+Vault with KubeVault provide a complete solution that not only satisfies security needs but also improves operational efficiency as the value of protecting sensitive data—especially in microservices and containerized environments—becomes increasingly relevant. Together with Vault's strong access control systems, Kubernetes' scalability guarantees that your application stays safe as it expands.
+
+It will assist you to simplify secret management, enhance your security posture, and lower administrative overhead whether you are running large, distributed systems or small-scale applications. Following the described guidelines will help you to improve the security of your Kubernetes environment and guarantee that your apps are scalable and safe.
+
+Including KubeVault into your Kubernetes configuration will greatly enhance the way sensitive data is handled in your company while still allowing the flexibility and automation Kubernetes provides. This is a necessary tool that will help you keep ahead in implementing contemporary cloud-native technologies and procedures.
