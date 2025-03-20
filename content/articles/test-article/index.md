@@ -2,7 +2,7 @@
 title: How to use HashiCorp Vault in Kubernetes using KubeVault
 Description: How to use HashiCorp Vault in Kubernetes using KubeVault
 alt: KubeVault Operator
-date: "2025-01-15"
+date: "2025-03-20"
 ---
 
 # How to use HashiCorp Vault in Kubernetes using KubeVault
