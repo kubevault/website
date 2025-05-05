@@ -49,6 +49,8 @@ Within a short time all the pods in kubevault namespace will start running. If a
 
 For any confusion regarding KubeVault installation, you can follow the [KubeVault-Setup](https://kubevault.com/docs/latest/setup/) page.
 
+Also, install Stash in your cluster following the steps [here](https://stash.run/docs/v2024.4.8/setup/install/stash/).
+
 ### Create a Namespace
 After that, we'll create a new namespace in which we will deploy Vault Server. In this case, we have created demo namespace, but you can create namespace with any name that you want. To create the namespace, we can use the following command:
 
@@ -263,7 +265,7 @@ spec:
     gcs:
       bucket: stash-testing
       prefix: demo-vault
-    storageSecretName: repository-creds
+    storageSecretName: gcs-secret
   usagePolicy:
     allowedNamespaces:
       from: Same
@@ -380,7 +382,7 @@ Now, if we navigate to the GCS bucket, we are going to see backed up data is upl
 
 ### Restore Vault
 
-Now, to restore the vault server from this backup snapshot follow this [article.](https://kubevault.com/articles/how-to-backup-vault-in-kubernetes-with-stash/)
+Now, to restore the vault server from this backup snapshot follow this [article.](https://kubevault.com/articles/how-to-restore-vault-in-kubernetes-with-stash/)
 
 
 ## Conclusion

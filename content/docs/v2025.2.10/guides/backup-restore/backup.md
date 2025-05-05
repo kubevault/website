@@ -246,7 +246,7 @@ spec:
     gcs:
       bucket: stash-testing
       prefix: demo-vault
-    storageSecretName: repository-creds
+    storageSecretName: gcs-secret
   usagePolicy:
     allowedNamespaces:
       from: Same
