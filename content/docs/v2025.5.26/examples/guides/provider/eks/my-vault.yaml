@@ -1,0 +1,20 @@
+apiVersion: kubevault.com/v1alpha1
+kind: VaultServer
+metadata:
+  name: my-vault
+  namespace: demo
+spec:
+  replicas: 1
+  version: "1.2.0"
+  backend:
+    s3:
+      bucket: "demo-vault-3"
+      region: "us-east-1"
+  unsealer:
+    secretShares: 4
+    secretThreshold: 2
+    mode:
+      awsKmsSsm:
+        region: "us-east-1"
+        kmsKeyID: "218daa5f-7173-429e-a030-288b30761f79"
+        ssmKeyPrefix: "/cluster/demo"
