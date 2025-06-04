@@ -331,7 +331,7 @@ secretaccessrequest.engine.kubevault.com "postgres-cred-rqst" deleted
 If SecretAccessRequest is `Denied`, then the KubeVault operator will not issue any credential.
 
 ```bash
-$ kubectl vault deny secretaccessrequest mysql-cred-rqst -n demo
+$ kubectl vault deny secretaccessrequest postgres-cred-rqst -n demo
   Denied
 ```
 
