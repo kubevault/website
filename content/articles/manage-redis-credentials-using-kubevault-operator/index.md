@@ -2,7 +2,7 @@
 title: Manage Redis credentials using KubeVault operator
 Description: Get started with your containerized Vault and Redis deployment. Learn how to manage redis credentials using kubevault operator.
 alt: vault in kubernetes
-date: "2025-03-20"
+date: "2025-07-04"
 ---
 
 # Manage Redis credentials using KubeVault operator
@@ -256,7 +256,7 @@ Since the status is `Success`, the Redis secret engine is enabled and successful
 
 ### Create Redis Role
 
-By using [RedisRole](/docs/v2025.5.30/concepts/secret-engine-crds/database-secret-engine/redisrole), you can create a [role](https://www.vaultproject.io/docs/secrets/databases/redis#setup) on the Vault server in Kubernetes native way.
+By using [RedisRole](/docs/v2025.5.30/concepts/secret-engine-crds/database-secret-engine/redis), you can create a [role](https://www.vaultproject.io/docs/secrets/databases/redis#setup) on the Vault server in Kubernetes native way.
 
 A sample RedisRole object is given below:
 
