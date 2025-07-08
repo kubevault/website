@@ -115,7 +115,7 @@ In this yaml,
 - `spec.allowedSecretEngines` defines the Secret Engine informations which to be granted in this Vault Server.
 - `spec.backend` is a required field that contains the Vault backend storage configuration.
 - `spec.unsealer` specifies Unsealer configuration. Unsealer handles automatic initializing and unsealing of Vault.
-- `spec.terminationPolicy` field is Wipeout means that vault will be deleted without restrictions. It can also be “Halt”, “Delete” and “DoNotTerminate”. Learn More about these [Follow this guide to learn more about KubeVault's termination policy](https://kubevault.com/docs/v2025.2.10/concepts/vault-server-crds/vaultserver/#specterminationpolicy).
+- `spec.terminationPolicy` field is Wipeout means that vault will be deleted without restrictions. It can also be “Halt”, “Delete” and “DoNotTerminate”. [Follow this guide to learn more about KubeVault's termination policy](https://kubevault.com/docs/v2025.2.10/concepts/vault-server-crds/vaultserver/#specterminationpolicy).
 
 We will save this yaml configuration to `vault.yaml`. Then create the above HashiCorp Vault Server object.
 
@@ -268,7 +268,7 @@ Since the status is `Success`, the Redis secret engine is enabled and successful
 
 ### Create Redis Role
 
-By using [RedisRole](/docs/v2025.5.30/concepts/secret-engine-crds/database-secret-engine/redis), you can create a [role](https://www.vaultproject.io/docs/secrets/databases/redis#setup) on the Vault server in Kubernetes native way.
+By using [RedisRole](https://kubevault.com/docs/v2025.5.30/concepts/secret-engine-crds/database-secret-engine/redis/#redisrole-crd-specification), you can create a role on the Vault server in Kubernetes native way.
 
 A sample RedisRole object is given below:
 
