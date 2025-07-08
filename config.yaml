@@ -10,6 +10,7 @@ theme: hugo-product-theme
 params:
   product_key: kubevault
   primary_color: 326CE5
+  appscode_notification_show: true
   main_menu_dropdown_item: features
   domain_appscode: https://appscode.com
   domain_bytebuilders: https://appscode.com
