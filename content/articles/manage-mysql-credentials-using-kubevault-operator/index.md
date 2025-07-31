@@ -7,7 +7,7 @@ date: "2025-07-04"
 
 # Manage MySQL credentials using KubeVault operator
 
-![mysql credentials using kubevault operator](./hero.png "mysql credentials using kubevault operator")
+![mysql credentials using kubevault operator](./hero.jpg "mysql credentials using kubevault operator")
 
 Through the use of HashiCorp Vault's dynamic secrets engine, managing MySQL credentials with KubeVault offers a safe and automated method of handling database secrets in Kubernetes.  By integrating directly with Vault, KubeVault can create policy-driven, temporary MySQL credentials on demand, eliminating the need for hardcoded credentials or static Kubernetes Secrets.  This gives teams the option to enforce least privilege access and automatically cycle credentials without downtime, while also removing the dangers associated with long-lived passwords and human secret management.
 
