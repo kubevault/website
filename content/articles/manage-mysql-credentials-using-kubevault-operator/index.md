@@ -15,7 +15,7 @@ Utilizing KubeVault's dynamic secret engine, manage MySQL credentials using Kube
 
 KubeVault allows Kubernetes-based applications to easily request MySQL credentials, which are provisioned as Kubernetes Secrets automatically and maintained current throughout the application's lifecycle.  By managing rotation and revocation in accordance with time-to-live criteria, Vault makes sure that compromised credentials are promptly rendered invalid.  For production-grade MySQL setups, this method improves security posture, auditability, and compliance while significantly lowering operational overhead for DevOps and database teams.
 
-Organizations may standardize secret management across teams and environments without altering how applications use credentials by using KubeVault for MySQL.  Behind the scenes, Vault dynamically issues, rotates, and revokes the credentials that developers previously obtained from Kubernetes Secrets.  This paradigm makes it easier to confidently manage large-scale, cloud-native MySQL deployments by streamlining procedures and enhancing security.
+Organizations may standardize secret management across teams and environments without altering how applications use credentials by using KubeVault for MySQL.  The credentials that developers previously acquired from Kubernetes Secrets are constantly issued, rotated, and revoked by Vault behind the scenes.  This paradigm makes it easier to confidently manage large-scale, cloud-native MySQL deployments by streamlining procedures and enhancing security.
 
 ## Why Use KubeVault for MySQL Secrets Management
 
@@ -28,9 +28,9 @@ Additionally, KubeVault improves auditability and compliance, two important aspe
 ## Deploy Vault on Kubernetes
 ### Pre-requisites
 
-HashiCorp Vault provides a dependable approach to managing sensitive data, including database access, API keys, and passwords, thereby addressing the drawbacks of Kubernetes' native Secrets.  With encryption, fine-grained access control, dynamic credential generation, and automated rotation, Vault provides enterprise-grade security in contrast to standard Kubernetes Secrets.  To satisfy compliance needs, it offers comprehensive audit logs, a variety of authentication options, and a smooth integration with Kubernetes.
+HashiCorp Vault addresses the shortcomings of Kubernetes' native Secrets by offering a reliable method for handling sensitive data, such as database access, API keys, and passwords.   Unlike normal Kubernetes Secrets, Vault offers enterprise-grade security with encryption, fine-grained access control, dynamic credential generation, and automated rotation.   It provides thorough audit logs, many authentication choices, and a seamless interaction with Kubernetes to meet compliance requirements.
 
-To deploy Vault in Kubernetes, you need to set up your environment to o manage MySQL credentials using [KubeVault](https://kubevault.com/) operator.
+You must configure your environment to manage MySQL credentials using [KubeVault](https://kubevault.com/) operator before you can deploy Vault in Kubernetes.
 
 Prerequisites:
 
@@ -40,7 +40,7 @@ Prerequisites:
 
 - [Helm](https://helm.sh/docs/intro/install/) installed on your system.
 
-With these prerequisites in place, you can deploy HashiCorp Vault in Kubernetes using KubeVault. Ensure that KubeVault is already configured in your cluster before starting. You can obtain a free license from the [AppsCode License Server](https://license-issuer.appscode.com/) using your cluster ID. To retrieve the cluster ID, run the following command:
+Once these requirements are met, you can use KubeVault to deploy HashiCorp Vault in Kubernetes.  Ensure that KubeVault is already configured in your cluster before starting.  Using your cluster ID, you can get a free license from the [AppsCode License Server](https://license-issuer.appscode.com/).  Use the following command to get the cluster ID:
 
 ```bash
 $ kubectl get ns kube-system -o jsonpath='{.metadata.uid}'
