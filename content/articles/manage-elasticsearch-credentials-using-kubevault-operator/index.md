@@ -527,6 +527,6 @@ Administrators may preserve performance and dependability while universally hand
 Expand your secrets management expertise with these related guides:
 -  Learn how to [manage PostgreSQL credentials using KubeVault](https://kubevault.com/articles/manage-postgresql-credentials-using-kubevault-operator/).
 -  [Manage Redis credentials using KubeVault](https://kubevault.com/articles/manage-redis-credentials-using-kubevault-operator/) with automated role-based access.
-- Learn how to [manage MongoDB credentials using KubeVault]((https://kubevault.com/articles/manage-mongodb-credentials-using-kubevault-operator/)) for secret management.
+- Learn how to [manage MongoDB credentials using KubeVault](https://kubevault.com/articles/manage-mongodb-credentials-using-kubevault-operator/) for secret management.
 - Learn how to [manage Mysql credentials using KubeVault](https://kubevault.com/articles/manage-mysql-credentials-using-kubevault-operator/) for secret management.
 - Learn how to [manage MariaDB credentials using KubeVault](https://kubevault.com/articles/manage-mariadb-credentials-using-kubevault-operator/) for secret management.
