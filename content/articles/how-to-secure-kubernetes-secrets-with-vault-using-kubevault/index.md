@@ -1,6 +1,6 @@
 ---
-title: How to use HashiCorp Vault in Kubernetes using KubeVault
-Description: Get started with your containerized Vault deployment. Learn how to deploy HashiCorp Vault in Kubernetes using KubeVault Operator.
+title: How to secure kubernetes secret with vault using KubeVault
+Description: Get started with your containerized Vault deployment. Learn how to secure kubernetes secret with HashiCorp Vault using KubeVault Operator.
 alt: vault in kubernetes
 date: "2025-03-20"
 ---
@@ -9,27 +9,28 @@ date: "2025-03-20"
 
 ![vault in kubernetes](./hero.jpg "vault in kubernetes")
 
-Securing sensitive data such as API keys, passwords, and certificates takes top priority in the cloud-native scene of today. Powerful secrets management tool [HashiCorp Vault](https://www.vaultproject.io/) enables companies to safely save and manage data. But running Vault in Kubernetes requires an additional tool—[KubeVault](https://kubevault.com/).
+In today's cloud-native environment, protecting sensitive information like API keys, passwords, and certificates is of utmost importance.  Businesses can securely store and manage data with the help of the robust secrets management solution [HashiCorp Vault](https://www.vaultproject.io/).  However, [KubeVault](https://kubevault.com/) is an additional tool needed to operate Vault in Kubernetes.
 
-KubeVault is an operator that automates HashiCorp Vault's deployment, management, and lifecycle inside Kubernetes clusters. It guarantees security, scalability, and automation for cloud-native apps as well as simplifies secret management.
+ Within Kubernetes clusters, KubeVault is an operator that automates the deployment, maintenance, and lifetime of HashiCorp Vault.  For cloud-native programs, it ensures automation, scalability, and security while streamlining secret management.
 
-This guide will walk over how to run and manage HashiCorp Vault in Kubernetes cluster using KubeVault. Whether your position is security professional, cloud architect, or DevOps engineer, this detailed guide will enable you to create a strong secret management system in Kubernetes.
+ This tutorial will demonstrate how to use KubeVault to run and administer HashiCorp Vault in a Kubernetes cluster.  Regardless of your role—security specialist, cloud architect, or DevOps engineer—this comprehensive tutorial will help you build a robust Kubernetes secret management system.
 
 ## Why Vault in Kubernetes
 
-HashiCorp Vault is a powerful open-source secrets management tool that is designed to protect, save, and manage access to private data including API keys, passwords, and certificates,  To improve security it offers audit logging, dynamic secrets, access control, and encryption.
+A robust open-source secrets management application, HashiCorp Vault is made to safeguard, store, and control access to sensitive information, such as API keys, passwords, and certificates.   It provides encryption, access control, dynamic secrets, and audit logging to increase security.
 
-Kubernetes has a built-in Secrets API, although it lacks strong encryption, fine-grained access control, and automatic secret rotation,  Through end-to--end encryption, dynamic secret generation, and flawless policy-based access management, vault solves these constraints. To guarantee safe access to critical data, it supports several authentication techniques including Kubernetes service accounts, AppRole, and OIDC. Vault's audit logging and monitoring features also enable companies to meet compliance criteria.
+ Despite lacking automatic secret rotation, fine-grained access control, and robust encryption, Kubernetes comes with an integrated Secrets API.   Vault overcomes these limitations with faultless policy-based access management, dynamic secret generation, and end-to-end encryption.  It supports a number of authentication methods, including as OIDC, AppRole, and Kubernetes service accounts, to ensure secure access to important data.  Businesses can also fulfill compliance requirements with the help of Vault's audit logging and monitoring capabilities.
 
-Running vault in Kubernetes helps companies to protect their applications without involving difficult manual procedures. By means of the Vault Agent Injector, it interacts with Kubernetes workloads which enables applications to dynamically retrieve secrets without changing their code. While operating overhead is lowered, this increases security, automation, and scalability.
+A robust open-source secrets management application, HashiCorp Vault is made to safeguard, store, and control access to sensitive information, such as API keys, passwords, and certificates.   It provides encryption, access control, dynamic secrets, and audit logging to increase security.
 
-Organizations achieve enhanced security, automated secret rotation, and simplified management by running HashiCorp Vault in Kubernetes using KubeVault, so guaranteeing a flawless, safe workflow for cloud-native applications.
+ Despite lacking automatic secret rotation, fine-grained access control, and robust encryption, Kubernetes comes with an integrated Secrets API.   Vault overcomes these limitations with faultless policy-based access management, dynamic secret generation, and end-to-end encryption.  It supports a number of authentication methods, including as OIDC, AppRole, and Kubernetes service accounts, to ensure secure access to important data.  Businesses can also fulfill compliance requirements with the help of Vault's audit logging and monitoring capabilities.
 
 ## Deploy Vault on Kubernetes
 ### Pre-requisites
-We have to configure the environment to deploy Vault in Kubernetes using KubeVault Operator. You need to have a Kubernetes cluster. You should have the basic knowledge of Kubernetes concepts like cluster, pod, service, secret and also have a primary knowledge of [Vault](https://www.vaultproject.io/). Here, we will use [Kind](https://kubernetes.io/docs/tasks/tools/#kind) to create our Kubernetes cluster. Also, we will need to install [Helm](https://helm.sh/docs/intro/install/) to our Kubernetes cluster.
 
-In this article, We will use the [KubeVault](https://kubevault.com/) to deploy HashiCorp Vault in Kubernetes. But before starting, you must ensure that KubeVault is already installed in your Kubernetes cluster. For using KubeVault on Kubernetes cluster, a license is needed, which you can obtain for free from the [Appscode License Server](https://license-issuer.appscode.com/). To get this license, you'll need the Kubernetes cluster ID. You can find this ID by running the command we have provided below.
+To deploy Vault in Kubernetes, we first set up the environment using KubeVault Operator.  A Kubernetes cluster is required.  In addition to having a basic understanding of [Vault](https://www.vaultproject.io/), you should also be familiar with the cluster, pod, service, and secret concepts of Kubernetes.  Here, we will build our Kubernetes cluster using [Kind](https://kubernetes.io/docs/tasks/tools/#kind).  Installing [Helm](https://helm.sh/docs/intro/install/) on our Kubernetes cluster is also necessary.
+
+In this article, we will deploy HashiCorp Vault in Kubernetes using the [KubeVault](https://kubevault.com/).  However, you need to make sure that KubeVault is already set up in your Kubernetes cluster before you begin.  A license is required to use KubeVault on a Kubernetes cluster, and it is available for free from the [Appscode License Server](https://license-issuer.appscode.com/).  The Kubernetes cluster ID is required in order to obtain this license.  You can use the command we've included below to find this ID.
 
 
 ```bash
@@ -187,71 +188,134 @@ Raft Committed Index    429
 Raft Applied Index      429
 ```
 
-### Enabling KV SecretEngine
 
-In the same terminal, let's go ahead create a [KV SecretEngine](https://developer.hashicorp.com/vault/docs/secrets/kv) in the HashiCorp VaultServer,
-```bash
-$ vault secrets enable -path=vault-demo -version=2 kv
-vault secrets enable -path=vault-demo -version=2 kv
+### Configuring Kubernetes Authentication in Vault
 
-$ vault kv put vault-demo/db-cred username=appscode password=kubevault
-===== Secret Path =====
-vault-demo/data/db-cred
+Make the Kubernetes Auth Method available  First, in Vault, enable the Kubernetes authentication method.
 
-======= Metadata =======
-Key                Value
----                -----
-created_time       2025-03-20T05:47:25.811616153Z
-custom_metadata    <nil>
-deletion_time      n/a
-destroyed          false
-version            1
-
-$ vault kv get vault-demo/db-cred
-===== Secret Path =====
-vault-demo/data/db-cred
-
-======= Metadata =======
-Key                Value
----                -----
-created_time       2025-03-20T05:47:25.811616153Z
-custom_metadata    <nil>
-deletion_time      n/a
-destroyed          false
-version            1
-
-====== Data ======
-Key         Value
----         -----
-password    kubevault
-username    appscode
+```
+vault auth enable kubernetes
 ```
 
-From the commands above we can see that Vault Server is working seamlessly. First, we have enabled a kv secret engine in the HashiCorp Vault Server. Then wrote and read some data in that secret engine.
+This instructs Vault to identify Kubernetes as a provider of authentication.
 
+Set up Vault to Interact with Kubernetes
+Vault must be able to communicate with the Kubernetes API.  The JWT token used for authentication, the CA certificate, and the Kubernetes API server address must be sent to Vault.
+
+Create the Vault service account token and obtain the URL of the Kubernetes API server:
+
+
+```
+kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}'
+kubectl create token vault -n <namespace>
+```
+
+Next, set up Vault to use the service account token and API server URL to authenticate against the Kubernetes cluster:
+
+```
+vault write auth/kubernetes/config \
+  token_reviewer_jwt="<vault-service-account-token>" \
+  kubernetes_host="<kubernetes-api-url>" \
+  kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+```
+
+In Vault, create a Kubernetes role.  Make a role in Vault that associates a Kubernetes service account with Vault policies while the Kubernetes auth mechanism is enabled.
+
+```
+vault write auth/kubernetes/role/demo-role \
+  bound_service_account_names=demo-sa \
+  bound_service_account_namespaces=demo \
+  policies=demo-policy \
+  ttl=24h
+```
+
+### Storing and Managing Secrets in Vault
+
+Keeping Secrets in Storage  Secrets can be stored in Vault after the kv secrets engine is activated.  Use the path secret/db-password, for example, to store a database password.
+
+```
+vault secrets enable -path=secret kv
+vault kv put secret/db-password password="mypassword"
+```
+
+Creating Policies for Access Control To control who can access the stored secrets, create Vault policies. These policies dictate which paths can be accessed and what operations are allowed.
+
+Create a file named demo-policy.hcl and apply the policy in vault.
+```
+path "secret/data/db-password" {
+  capabilities = ["read"]
+}
+vault policy write demo-policy demo-policy.hcl
+```
+
+### Injecting Secrets into Kubernetes Pods
+
+Verify the installation of the Vault Agent Injector.  The Vault Agent Injector receives secrets from Vault on behalf of the pod while operating as a sidecar alongside your application container.
+
+ Annotate Injection Pods  Add the required Vault annotations to the pod specification in order to inject secrets into it.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-app
+  namespace: demo
+  annotations:
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/role: "demo-role"
+    vault.hashicorp.com/secret-volume-path: "/vault/secrets1"
+    vault.hashicorp.com/secret-secret-db-password: "db-password.txt"
+spec:
+  serviceAccountName: demo-sa
+  containers:
+  - name: demo-container
+    image: nginx
+    volumeMounts:
+    - name: vault-secrets
+      mountPath: /vault/secrets2
+  volumes:
+  - name: vault-secrets3
+    emptyDir: {}
+```
+
+To verify that the secret was injected, enter the running pod:
+
+```
+kubectl exec -it demo-app -- /bin/sh
+# cat /vault/secrets/db-password.txt
+# password: mypassword
+```
 
 ## KubeVault Features
 Kubernetes KubeVault Operator comes with a loads of features. Here, we will provide an overview of its features for your reference:
 
 * **HashiCorp Vault Server:** In this article, we have deployed a basic vault server for demo purpose. However, there are a lot of ways you can configure your vault server based on your specific needs. You can configure TLS, enable monitoring, use various backends, various secret engines and many more. You can find a detailed guide (HERE)[https://kubevault.com/docs/v2025.2.10/concepts/vault-server-crds/vaultserver/].
 
-* **Secret Engine:** Here, we have used the Hashicorp Vault CLI to enable a [secret engine](https://developer.hashicorp.com/vault/docs/secrets). However, KubeVault Kubernetes Operator comes with a Kubernetes `CustomResourceDefinition` (CRD) called `SecretEngine` which is designed to automate the process of enabling and configuring secret engines in Vault in a Kubernetes native way. It supports secret engines for `AWS`, `Azure`, `GCP` and various databases, which you can use depending on your specific needs. You can check out the detailed guide [HERE](https://kubevault.com/docs/v2025.2.10/concepts/secret-engine-crds/secretengine/).
+* **Secret Engine:**  Here, a [secret engine](https://developer.hashicorp.com/vault/docs/secrets) has been enabled using the Hashicorp Vault CLI.  The `SecretEngine` Kubernetes `CustomResourceDefinition` (CRD) included with KubeVault Kubernetes Operator, on the other hand, is intended to automate the process of activating and configuring secret engines in Vault in a native Kubernetes manner.  Secret engines for `AWS`, `Azure`, `GCP`, and other databases are supported, and you can utilize them based on your needs.  The comprehensive guide is available [HERE](https://kubevault.com/docs/v2025.2.10/concepts/secret-engine-crds/secretengine/).
 
-* **Vault Policy:**  Policies offer a declarative means of allowing or prohibiting access to specific Vault paths and actions. KubeVault operator provides a Kubernetes `CustomResourceDefinition` (CRD) named `VaultPolicy` which represents Vault server [policies](https://developer.hashicorp.com/vault/docs/concepts/policies) in a Kubernetes native way. [HERE](https://kubevault.com/docs/v2025.2.10/concepts/policy-crds/vaultpolicy/) is the link to a detailed guide of using `VaultPolicy`.
+* **Vault Policy:**  Policies provide a declarative way to grant or deny access to particular activities and paths in the Vault.  A Kubernetes `CustomResourceDefinition` (CRD) called `VaultPolicy` is provided by the KubeVault operator and represents the Vault server [policies](https://developer.hashicorp.com/vault/docs/concepts/policies) in a native Kubernetes manner.  [HERE] The link to a comprehensive guide on utilizing `VaultPolicy` is (https://kubevault.com/docs/v2025.2.10/concepts/policy-crds/vaultpolicy/).
 
-* **Disaster Recovery Strategies:** `KubeVault` uses [Stash](https://stash.run/) to backup and restore HashiCorp Vault. Stash by AppsCode is a cloud native data backup and recovery solution for Kubernetes workloads. To safely backup stateful apps to any cloud or on-premise storage backend (such as S3, GCS, Azure Blob storage, Minio, NetApp, Dell EMC, etc.), Stash uses [restic](https://github.com/restic/restic). You can find a detailed guide [HERE](https://kubevault.com/docs/v2025.2.10/concepts/backup-restore/overview/).
+* **Disaster Recovery Strategies:** `KubeVault` backs up and restores HashiCorp Vault using [Stash](https://stash.run/).  For Kubernetes workloads, AppsCode's Stash is a cloud-native solution for data backup and recovery.  Stash leverages [restic](https://github.com/restic/restic) to securely backup stateful apps to any on-premise or cloud storage backend (such S3, GCS, Azure Blob storage, Minio, NetApp, Dell EMC, etc.).  [HERE](https://kubevault.com/docs/v2025.2.10/concepts/backup-restore/overview/) A comprehensive guide is available.
 
-* **VaultOpsRequest:** KubeVault provides another Kubernetes Custom Resource Definitions (CRD) called `VaultOpsRequest` which provides a declarative configuration for Vault administrative operations like restart, reconfigure TLS etc. in a Kubernetes native way. For a detailed guide on how to use `VaultOpsRequest`, go [HERE](https://kubevault.com/docs/v2025.2.10/concepts/vault-ops-request/overview/).
+* **VaultOpsRequest:** Another Kubernetes Custom Resource Definition (CRD) offered by KubeVault is called `VaultOpsRequest`. It offers a declarative setup for Vault administrative tasks, such as restarting and reconfiguring TLS, in a native Kubernetes manner.  Go [HERE](https://kubevault.com/docs/v2025.2.10/concepts/vault-ops-request/overview/) for a comprehensive tutorial on using `VaultOpsRequest`.
 
 
 ## Conclusion
 
-To sum up, using KubeVault to integrate HashiCorp Vault with Kubernetes provides a strong and safe way to handle secrets in a cloud-native environment. Combining Vault's strong security features with Kubernetes clusters guarantees that private information, such as API keys, passwords, and certificates, is safely stored and accessible. You can simplify secret management, automate deployment, and facilitate smooth integration with Kubernetes applications by using KubeVault.
+In conclusion, integrating HashiCorp Vault with Kubernetes using KubeVault offers a robust and secure method of managing secrets in a cloud-native setting.  When Kubernetes clusters are combined with Vault's robust security capabilities, private data, including API keys, passwords, and certificates, is securely saved and made available.  With KubeVault, you can streamline secret management, automate deployment, and enable seamless connection with Kubernetes applications.
 
-The primary concepts of Vault, its integration with Kubernetes, and how to run vault in Kubernetes have all been covered in this post. We've covered every necessary step for successfully deploying HashiCorp Vault in a Kubernetes environment, from installation to setting up secret engines and granting access to secure data.
+ This post has explained the main ideas of Vault, how it integrates with Kubernetes, and how to use it with Kubernetes.  Every step required to effectively implement HashiCorp Vault in a Kubernetes environment has been covered, including installation, configuring secret engines, and allowing access to encrypted data.
 
-Vault with KubeVault provide a complete solution that not only satisfies security needs but also improves operational efficiency as the value of protecting sensitive data—especially in microservices and containerized environments—becomes increasingly relevant. Together with Vault's strong access control systems, Kubernetes' scalability guarantees that your application stays safe as it expands.
+As the importance of safeguarding sensitive data—particularly in microservices and containerized environments—becomes more and more apparent, Vault with KubeVault offers a comprehensive solution that not only meets security requirements but also boosts operational efficiency.  Kubernetes' scalability, when combined with Vault's robust access control systems, ensures that your application remains secure as it grows.
 
-It will assist you to simplify secret management, enhance your security posture, and lower administrative overhead whether you are running large, distributed systems or small-scale applications. Following the described guidelines will help you to improve the security of your Kubernetes environment and guarantee that your apps are scalable and safe.
+ Whether you are running small-scale applications or big, distributed systems, it will help you save administrative costs, improve your security posture, and simplify secret management.  You can increase the security of your Kubernetes environment and ensure the scalability and safety of your apps by adhering to the rules provided.
 
-Including KubeVault in your Kubernetes configuration will greatly enhance the way sensitive data is handled in your company while still allowing the flexibility and automation Kubernetes provides. This is a necessary tool that will help you keep ahead in implementing contemporary cloud-native technologies and procedures.
+By integrating KubeVault into your Kubernetes setup, you can retain the flexibility and automation that Kubernetes offers while also significantly improving how sensitive data is managed in your organization.  This is an essential tool that will help you stay ahead of the curve when putting modern cloud-native processes and technology into practice.
+
+
+### Next Steps
+Expand your Vault and Kubernetes expertise with these related guides:
+
+- [How to use HashiCorp Vault in Kubernetes using KubeVault](https://kubevault.com/articles/manage-mysql-credentials-using-kubevault-operator/) - Learn the fundamentals of integrating Vault with Kubernetes through KubeVault operator
+- [How to Backup Vault in Kubernetes with Stash](https://kubevault.com/articles/how-to-backup-vault-in-kubernetes-with-stash/) - Learn backup strategies for your Vault data
+- [How to Restore Vault in Kubernetes with Stash](https://kubevault.com/articles/how-to-restore-vault-in-kubernetes-with-stash/) - Master disaster recovery procedures for Vault
