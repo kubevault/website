@@ -1,11 +1,11 @@
 ---
-title: How to secure kubernetes secret with vault using KubeVault
+title: How to secure kubernetes secret with Vault using KubeVault
 Description: Get started with your containerized Vault deployment. Learn how to secure kubernetes secret with HashiCorp Vault using KubeVault Operator.
 alt: vault in kubernetes
 date: "2025-03-20"
 ---
 
-# How to secure kubernetes secret with vault using KubeVault
+# How to secure kubernetes secret with Vault using KubeVault
 
 ![vault in kubernetes](./hero.jpg "vault in kubernetes")
 
