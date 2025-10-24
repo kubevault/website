@@ -1,7 +1,7 @@
 ---
 title: How to use Kubernetes Auth Configuration in Vault using KubeVault
 Description: Get started with your containerized Vault deployment. Learn How to use HashiCorp Vault Kubernetes authentication method using KubeVault.
-alt: vault in kubernetes
+alt: Kubernetes Auth Configuration in Vault
 date: "2025-10-20"
 ---
 
