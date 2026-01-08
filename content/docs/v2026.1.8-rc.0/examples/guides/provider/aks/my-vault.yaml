@@ -1,0 +1,21 @@
+apiVersion: kubevault.com/v1alpha1
+kind: VaultServer
+metadata:
+  name: my-vault
+  namespace: demo
+spec:
+  replicas: 1
+  version: "1.2.0"
+  backend:
+    azure:
+      container: demo-vault
+      accountName:  vaultstorageac
+      accountKeySecret: azure-ac-key
+  unsealer:
+    secretShares: 4
+    secretThreshold: 2
+    mode:
+      azureKeyVault:
+        vaultBaseURL: https://vault-key-store.vault.azure.net/
+        tenantID: aaaaaaa-bbbb-ccc-dddd-eeeeeeeee
+        aadClientSecret: azure-ad-client-secret
