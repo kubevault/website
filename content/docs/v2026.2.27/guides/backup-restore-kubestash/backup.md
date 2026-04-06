@@ -144,7 +144,7 @@ CREATE TABLE vault_kv_store (
 CREATE INDEX parent_path_idx ON vault_kv_store (parent_path);
 ```
 
-Store for HAEnabled backend
+Store for HAEnabled backend:
 
 ```sql
 CREATE TABLE vault_ha_locks (

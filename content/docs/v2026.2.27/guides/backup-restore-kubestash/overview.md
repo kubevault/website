@@ -18,184 +18,80 @@ info:
 
 # Vault Backup Restore Overview
 
-`Vault` provides a set of standard operating procedures `(SOP)` for backing up a Vault cluster. It protects your Vault cluster
-against data corruption or sabotage of which Disaster Recovery Replication might not be able to protect against.
+KubeVault uses [KubeStash](https://kubestash.com) to backup and restore databases. KubeStash by AppsCode is a cloud native data backup and recovery solution for Kubernetes workloads and databases. KubeStash utilizes [restic](https://github.com/restic/restic) to securely backup stateful applications to any cloud or on-prem storage backends (for example, S3, GCS, Azure Blob storage, Minio, NetApp, Dell EMC etc.).
 
-`KubeVault` supports number of different [Storage Backend](/docs/v2026.2.27/concepts/vault-server-crds/storage/overview) types. Therefore, the exact steps to backup Vault will depend on your
-selected storage backend. The two recommended storage backend types are Consul and Integrated Storage 
-(also known as Raft). 
+## How Backup Works
 
-`KubeVault` currently supports Backup & Restore for `Raft` storage backend. So, this document assumes that `Raft` storage backend is being used. 
+The following diagram shows how KubeStash takes backup of a `VaultServer`. Open the image in a new tab to see the enlarged version.
 
-## Backup & Restore process for Raft
+<figure align="center">
+  <img alt="KubeVault Backup Overview" src="/content/docs/v2026.2.27/guides/backup-restore-kubestash/images/backup_overview.svg">
+  <figcaption align="center">Fig: KubeVault Backup Overview</figcaption>
+</figure>
 
-Your `VaultServer` must be in `Ready` state for Backup & Restore process to work. This will take the snapshot
-using a consistent mode that forwards the request to the cluster leader, and the leader will verify it is still
-in power before taking the snapshot.
+The backup process consists of the following steps:
 
-A simple `VaultServer` YAML with `Raft` storage backend may look like this:
+1. At first, a user creates a `Secret`. This secret holds the credentials to access the backend where the backed up data will be stored.
 
-```yaml
-apiVersion: kubevault.com/v1alpha2
-kind: VaultServer
-metadata:
-  name: vault
-  namespace: demo
-spec:
-  version: 1.10.3
-  replicas: 3
-  allowedSecretEngines:
-    namespaces:
-      from: All
-  backend:
-    raft:
-      storage:
-        storageClassName: "standard"
-        resources:
-          requests:
-            storage: 1Gi
-  unsealer:
-    secretShares: 5
-    secretThreshold: 3
-    mode:
-      kubernetesSecret:
-        secretName: vault-keys
-  terminationPolicy: WipeOut
-```
+2. Then, he creates a `BackupStorage` custom resource that specifies the backend information, along with the `Secret` containing the credentials needed to access the backend.
 
-Let's take a look at some relevant fields:
+3. KubeStash operator watches for `BackupStorage` custom resources. When it finds a `BackupStorage` object, it initializes the `BackupStorage` by uploading the `metadata.yaml` file to the specified backend.
 
-`spec.backend` contains the Backend storage information, `Raft` in this case:
+4. Next, he creates a `BackupConfiguration` custom resource that specifies the target database, addon information (including backup tasks), backup schedules, storage backends for storing the backup data, and other additional settings.
 
-```yaml
-backend:
-  raft:
-    storage:
-      resources:
-        requests:
-          storage: 1Gi
-      storageClassName: standard
-```
+5. KubeStash operator watches for `BackupConfiguration` objects.
 
-`spec.unsealer` contains `VaultServer` unsealing option. In this case which is `Kubernetes` Secret. So, on Vault deployment
-a Secret will be created on the same namespace, which will create the Vault unseal-keys & root-token.
+6. Once the KubeStash operator finds a `BackupConfiguration` object, it creates `Repository` with the information specified in the `BackupConfiguration`.
 
-```yaml
-unsealer:
-    secretShares: 5
-    secretThreshold: 3
-    mode:
-      kubernetesSecret:
-        secretName: vault-keys
-```
+7. KubeStash operator watches for `Repository` custom resources. When it finds the `Repository` object, it Initializes `Repository` by uploading `repository.yaml` file into the `spec.sessions[*].repositories[*].directory` path specified in `BackupConfiguration`.
 
-`KubeVault` operator will create an `AppBinding` with all the necessary information for backup & restore.
-`AppBinding` has the information about the Unsealer option of the `VaultServer`. During the Backup,
-Vault `unseal-keys` & `root-token` will also be backed-up for the completeness of the Backup process. 
+8. Then, it creates a `CronJob` for each session with the schedule specified in `BackupConfiguration` to trigger backup periodically.
 
-`KubeVault` created `AppBinding` YAML may look like this:
+9. KubeStash operator triggers an instant backup as soon as the `BackupConfiguration` is ready. Backups are otherwise triggered by the `CronJob` based on the specified schedule.
 
-```yaml
-apiVersion: appcatalog.appscode.com/v1alpha1
-kind: AppBinding
-metadata:
-  name: vault
-  namespace: demo
-spec:
-  appRef:
-    apiGroup: kubevault.com
-    kind: VaultServer
-    name: vault
-    namespace: demo
-  clientConfig:
-    service:
-      name: vault
-      port: 8200
-      scheme: http
-  parameters:
-    apiVersion: config.kubevault.com/v1alpha1
-    backend: raft
-    backupTokenSecretRef:
-      name: vault-backup-token
-    kind: VaultServerConfiguration
-    kubernetes:
-      serviceAccountName: vault
-      tokenReviewerServiceAccountName: vault-k8s-token-reviewer
-      usePodServiceAccountForCSIDriver: true
-    path: kubernetes
-    stash:
-      addon:
-        backupTask:
-          name: vault-backup-1.10.3
-          params:
-            - name: keyPrefix
-              value: k8s.kubevault.com.demo.vault
-        restoreTask:
-          name: vault-restore-1.10.3
-          params:
-            - name: keyPrefix
-              value: k8s.kubevault.com.demo.vault
-    unsealer:
-      mode:
-        kubernetesSecret:
-          secretName: vault-keys
-      secretShares: 5
-      secretThreshold: 3
-    vaultRole: vault-policy-controller
-```
+10. KubeStash operator watches for `BackupSession` custom resources.
 
-Read more about `AppBinding` [here](/docs/v2026.2.27/concepts/vault-server-crds/appbinding).
+11. When it finds a `BackupSession` object, it creates a `Snapshot` custom resource for each `Repository` specified in the `BackupConfiguration`.
 
-Here:
-- `spec.parameters.stash` section contains the stash parameters for Backup & Restore tasks. 
-- `spec.parameters.stash.addon` contains the information about the `Task` for backup & restore. 
-It also contains the `params` which indicates the `keyPrefix` that is prepended with the name of vault `unseal-keys` & `root-token`, e.g. `k8s.kubevault.com.demo.vault-root-token`, 
-`k8s.kubevault.com.demo.vault-root-token-unseal-key-0`, `k8s.kubevault.com.demo.vault-root-token-unseal-key-1`, etc.
+12. Then it resolves the respective `Addon` and `Function` and prepares backup `Job` definition.
 
-```yaml
-stash:
-  addon:
-    backupTask:
-      name: vault-backup-1.10.3
-      params:
-      - name: keyPrefix
-        value: k8s.kubevault.com.demo.vault
-    restoreTask:
-      name: vault-restore-1.10.3
-      params:
-      - name: keyPrefix
-        value: k8s.kubevault.com.demo.vault
-```
+13. Then, it creates the `Job` to backup the targeted `vaultServer`.
 
+14. The backup `Job` reads necessary information to connect with the database from the `AppBinding` CR. It also reads backend information and access credentials from `BackupStorage` CR, Storage Secret and `Repository` path respectively.
 
-`KubeVault` operator will create a `K8s Secret` containing a `token` during the Vault deployment, which contains the necessary permission
-for the Backup & Restore process. This information is available in the `AppBinding` created by the operator. AppBinding
-`spec.parameters.backupTokenSecretRef` contains the reference of that secret.
+15. Then, the `Job` dumps the targeted `vaultServer` and uploads the output to the backend. KubeStash pipes the output of dump command to uploading process. Hence, backup `Job` does not require a large volume to hold the entire dump output.
 
-```yaml
-spec:
-  parameters:
-    backupTokenSecretRef:
-      name: vault-backup-token
+16. After the backup process is completed, the backup `Job` updates the `status.components[dump]` field of the `Snapshot` resources with backup information of the target `VaultServer`.
 
-```
+## How Restore Process Works
 
-A sample policy document / permission may look like this:
+The following diagram shows how KubeStash restores backed up data into a `VaultServer`. Open the image in a new tab to see the enlarged version.
 
-```hcl
-path "sys/storage/raft/snapshot" {
-        capabilities = ["read"]
-}
+<figure align="center">
+  <img alt="KubeVault Restore Overview" src="/content/docs/v2026.2.27/guides/backup-restore-kubestash/images/restore_overview.svg">
+  <figcaption align="center">Fig: KubeVault Restore Process Overview</figcaption>
+</figure>
 
-path "sys/storage/raft/snapshot-force" {
-        capabilities = ["read"]
-}
-```
+The restore process consists of the following steps:
 
-If your `Vault` deployment isn't managed by `KubeVault`, then you'll need to create the `AppBinding` & `Secret` containing 
-the permissions required for backup & restore separately.
+1. At first, a user creates a `VaultServer` with a Backend where the data will be restored or the user can use the same `VaultServer`.
 
-Up next:
-- Read about step-by-step Backup procedure [here](/docs/v2026.2.27/guides/backup-restore/backup)
-- Read about step-by-step Restore procedure [here](/docs/v2026.2.27/guides/backup-restore/restore)
+2. Then, he creates a `RestoreSession` custom resource that specifies the target vaultServer where the backed-up data will be restored, addon information (including restore tasks), the target snapshot to be restored, the Repository containing that snapshot, and other additional settings.
+
+3. KubeStash operator watches for `RestoreSession` custom resources.
+
+4. When it finds a `RestoreSession` custom resource, it resolves the respective `Addon` and `Function` and prepares a restore `Job` definition.
+
+5. Then, it creates the `Job` to restore the target.
+
+6. The `Job` reads necessary information to connect with the database from respective `AppBinding` CR. It also reads backend information and access credentials from `Repository` CR and storage `Secret` respectively.
+
+7. Then, the `Job` downloads the backed up data from the backend and injects into the desired database. KubeStash pipes the downloaded data to the respective database tool to inject into the database. Hence, restore `Job` does not require a large volume to download entire backup data inside it.
+
+8. Finally, when the restore process is completed, the `Job` updates the `status.components[*]` field of the `RestoreSession` with restore information of the target database.
+
+## Next Steps
+
+- Read about step-by-step Backup procedure [here](/docs/v2026.2.27/guides/backup-restore-kubestash/backup)
+- Read about step-by-step Restore procedure [here](/docs/v2026.2.27/guides/backup-restore-kubestash/restore)
 

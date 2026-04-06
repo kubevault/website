@@ -100,9 +100,23 @@ Once the `RestoreSession` is Succeeded, snapshot will be successfully restored i
 
 Follow this guideline, if you want to restore a snapshot into a different Vault cluster.
 
-For restoring into a **different** cluster, first deploy a `PostgreSQL` database with required tables (`vault_kv_store`, `vault_ha_locks`) and set `max_connections` as per your needs — exactly as described in the [Backup guide](/docs/v2026.2.27/guides/backup-restore-kubestash/backup). Use it as the backend for a new `VaultServer`. The new `Vault` must be `Initialized` & `Unsealed` and will have a completely different set of `unseal keys` & `root token` from the source `Vault`.
+First, deploy a `PostgreSQL` database with the required tables (`vault_kv_store`, `vault_ha_locks`), set `max_connections` as per your needs, and use it as the backend for a new `VaultServer` — exactly as described in the [Backup guide](/docs/v2026.2.27/guides/backup-restore-kubestash/backup). The new `Vault` must be `Initialized` & `Unsealed`, and will have a completely different set of `unseal keys` & `root token` from the source `Vault`.
 
-Before creating the `RestoreSession`, scale down the `VaultServer` and KubeVault operator to `0`, apply the same `BackupStorage` to sync snapshot metadata (this prevents new snapshots from being created during restore), then scale everything back up.
+Once the new `Vault` is `Ready`, create the same storage secret and apply the same `BackupStorage` to sync the snapshot metadata. 
+
+Then, scale down both the `VaultServer` and the KubeVault operator to `0` before applying the `RestoreSession` to restore the data safely.
+
+```bash
+kubectl scale deploy <kubevault-operator-deployment-name> -n <ns> --replicas=0
+kubectl scale sts <vaultServer-statefulSet-name> -n <ns> --replicas=0
+```
+
+Then after restoreSession get successful, scale everything back up.
+
+```bash
+kubectl scale deploy <kubevault-operator-deployment-name> -n <ns> --replicas=3
+kubectl scale sts <vaultServer-statefulSet-name> -n <ns> --replicas=3
+```
 
 `Vault` snapshot carries the signature of `unseal keys`. So, we need to restore the snapshot forcefully & to bypass this, we need to modify the `params` section of `RestoreSession` accordingly.
 
@@ -153,9 +167,9 @@ spec:
     tasks:
       - name: vault-restore
         params:
-          keyPrefix: "k8s.386d2f64-70b0-4bd6-8379-da995931381c.demo.vault-restore"
+          keyPrefix: "<restore-vault-appbinding-key-prefix-value>"
           force: "true"
-          oldKeyPrefix: "k8s.62e86b47-6e7c-4849-89fb-88062a22f451.demo.vault"
+          oldKeyPrefix: "<backup-vault-appbinding-key-prefix-value>"
 ```
 
 Create RestoreSession:
@@ -175,10 +189,7 @@ sample-vault-restore    s3-vault-repo   Succeeded   19s        27s
 
 Once the RestoreSession is Succeeded, the snapshot will be successfully restored into the new Vault cluster.
 
----
-
 To verify whether the Vault data has been successfully restored, export the necessary environment variables and port-forward the `vault-restore` service:
-
 
 ```bash
 $ export VAULT_TOKEN=(kubectl vault root-token get vaultserver <vault-name> -n <ns> --value-only)
