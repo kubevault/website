@@ -132,6 +132,15 @@
       "show": true
     },
     {
+      "version": "v2026.3.23",
+      "hostDocs": true,
+      "show": true,
+      "info": {
+        "cli": "v0.1.0",
+        "installer": "v2026.3.23"
+      }
+    },
+    {
       "version": "v2025.9.19",
       "hostDocs": true,
       "show": true,
@@ -160,7 +169,7 @@
     },
     {
       "version": "v2024.3.18",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.15",
@@ -169,7 +178,7 @@
     },
     {
       "version": "v2023.9.18",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.14",
@@ -178,7 +187,7 @@
     },
     {
       "version": "v2023.05.16",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.13",
@@ -187,7 +196,7 @@
     },
     {
       "version": "v2023.02.22",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.12",
@@ -196,7 +205,7 @@
     },
     {
       "version": "v2022.12.11",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.11",
@@ -205,7 +214,7 @@
     },
     {
       "version": "v2022.08.17",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.10",
@@ -214,7 +223,7 @@
     },
     {
       "version": "v2022.06.20",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.9",
@@ -223,7 +232,7 @@
     },
     {
       "version": "v2022.04.13",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.8",
@@ -232,7 +241,7 @@
     },
     {
       "version": "v2022.03.17",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.7",
@@ -241,7 +250,7 @@
     },
     {
       "version": "v2022.02.22",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.6",
@@ -250,7 +259,7 @@
     },
     {
       "version": "v2022.01.10",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.5",
@@ -259,7 +268,7 @@
     },
     {
       "version": "v2022.01.07",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.4",
@@ -268,7 +277,7 @@
     },
     {
       "version": "v2022.01.01",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.4",
@@ -277,7 +286,7 @@
     },
     {
       "version": "v2021.10.18",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "cli": "v0.0.3",
@@ -286,21 +295,21 @@
     },
     {
       "version": "v2021.10.17",
-      "hostDocs": true,
+      "hostDocs": false,
       "info": {
         "installer": "v2021.10.17"
       }
     },
     {
       "version": "v2021.10.16",
-      "hostDocs": true,
+      "hostDocs": false,
       "info": {
         "installer": "v2021.10.16"
       }
     },
     {
       "version": "v2021.09.15",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true,
       "info": {
         "installer": "v2021.09.15"
@@ -308,7 +317,7 @@
     },
     {
       "version": "v2021.04.24-rc.0",
-      "hostDocs": true,
+      "hostDocs": false,
       "info": {
         "installer": "v2021.04.24-rc.0"
       }
@@ -322,11 +331,11 @@
     },
     {
       "version": "v13.0.0-beta.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "v13.0.0-beta.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "v12.0.0-rc.2",
@@ -334,104 +343,104 @@
     },
     {
       "version": "v12.0.0-rc.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "v12.0.0-rc.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "v12.0.0",
-      "hostDocs": true,
+      "hostDocs": false,
       "show": true
     },
     {
       "version": "v11.0.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "v11.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "10.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "9.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "8.0.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "8.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.4.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.3.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.2.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.1.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.1.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.0.0-rc.3",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.0.0-rc.2",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.0.0-rc.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.0.0-rc.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "7.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "6.0.0-rc.2",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "6.0.0-rc.1",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "6.0.0-rc.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "6.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "5.0.0-rc.11",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "5.0.0",
-      "hostDocs": true
+      "hostDocs": false
     },
     {
       "version": "3.2.2",
@@ -470,7 +479,7 @@
       "hostDocs": false
     }
   ],
-  "latestVersion": "v2025.9.19",
+  "latestVersion": "v2026.3.23",
   "socialLinks": {
     "facebook": "https://facebook.com/appscode",
     "github": "https://github.com/voyagermesh/voyager",

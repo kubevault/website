@@ -42,6 +42,7 @@ metadata:
 spec:
   secret:
     name: vault-token
+    kind: Secret
   clientConfig:
     service:
       name: vault
