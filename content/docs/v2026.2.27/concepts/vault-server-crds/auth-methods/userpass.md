@@ -55,6 +55,7 @@ metadata:
 spec:
   secret:
     name: userpass-cred
+    kind: Secret
   parameters:
     apiVersion: config.kubevault.com/v1alpha1
     kind: VaultServerConfiguration

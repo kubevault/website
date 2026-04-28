@@ -57,6 +57,7 @@ metadata:
 spec:
   secret:
     name: tls
+    kind: Secret
   clientConfig:
     service:
       name: vault
