@@ -3,12 +3,12 @@
     "product_color_primary": "#7272E9",
     "product_icon": "lucide:circle-check",
     "hero_badge": "OFFICIALLY CERTIFIED OPERATOR",
-    "hero_title_1": "Run Any Database Natively on Red Hat OpenShift - <span class=\"text-gradient\">Without the Compromise.</span>",
+    "hero_title_1": "Run Any Database Natively on <br>Red Hat OpenShift —<br><span class=\"text-gradient\">Without the Compromise</span>",
     "hero_description": "Deploy and manage 25+ Production-grade databases as native Kubernetes resources on Red Hat OpenShift. Run production databases with full automation, governance, and portability across on-prem, cloud, edge, and air-gapped environments.",
-    "primary_action_text": "Why KubeDB on MKE",
-    "primary_action_url": "#comparison",
-    "secondary_action_text": "Deploy in Minutes on MKE",
-    "secondary_action_url": "/docs/latest/setup/",
+    "primary_action_text": "View on Red Hat Ecosystem Catalog",
+    "primary_action_url": "https://catalog.redhat.com/en/software/container-stacks/detail/6867c6a358efc229b095b8ee",
+    "secondary_action_text": "Read the Joint Solution Brief",
+    "secondary_action_url": "/solution-briefs/redhat-openshift/",
     "watch_demo_url": "https://www.youtube.com/watch?v=hBHxMtSjKo4",
     "stats_style": "hero-inline-metrics",
     "stats": [
@@ -250,7 +250,7 @@
         "icon": "lucide:shield"
       },
       {
-        "text": "Run anywhere: on-prem, AWS, Azure, GCP",
+        "text": "Run anywhere: OCP, ROSA, ARO, OSD, OKE, OCP+",
         "icon": "lucide:globe"
       }
     ],
