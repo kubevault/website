@@ -21,25 +21,33 @@
       <!-- single feature information start  -->
       {{ range $f := $p.features }}
       <div class="column is-half-tablet is-one-third-widescreen">
-        <a href="/features/{{ $f.url }}" class="single-features-item">
+        {{ if $f.url }}
+        <a href="/features/{{ $f.url }}" class="single-features-item single-features-item--linked">
+        {{ else }}
+        <div class="single-features-item">
+        {{ end }}
           <div class="feature-icon">
             <img src="{{ $f.icon.src }}" alt="{{ $f.icon.alt }}" loading="lazy"/>
           </div>
           <div class="feature-information">
-          
             <h3>{{ $f.title }}</h3>
-            {{  if $f.summary }} 
+            {{ if $f.summary }}
             <p>{{ $f.summary }}</p>
             {{ end }}
             <p class="is-ellipsis-3">{{ $f.description }}</p>
+            {{ if $f.url }}
             <button class="readmore-button"><span>Read More</span><span class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </span>
-            </button>
+              </svg>
+            </span></button>
+            {{ end }}
           </div>
+        {{ if $f.url }}
         </a>
+        {{ else }}
+        </div>
+        {{ end }}
       </div>
       {{end}}
       <!-- single feature information end -->
