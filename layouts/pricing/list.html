@@ -2,41 +2,48 @@
 
 {{ $p := (index .Site.Data.products .Site.Params.product_key) }}
 
-<!-- hero area for page start -->
-<section class="hero-area features-plan">
-  <div class="container section">
-    <div class="columns is-vcentered">
-      <div class="column is-6">
-        <!-- hero content start -->
-        <div class="hero-area-content d-table pr-115">
-          <div class="hero-content-inner d-table-cell" data-aos="fade-up">
-            <h1>
-              Go Cloud Native Confidently
-              with AppsCode
-            </h1>
-            <p>
-              At AppsCode, we focus on helping you achieve the outcomes you need to make your business successful. Our
-              Support plans are designed to give you the right mix of tools and access to expertise so that you can be
-              successful with AppsCode products while optimizing performance, managing risk, and keeping costs under
-              control.
-            </p>
-            <br />
-            <p>
-              Our pricing plans are product specific and you will need a separate subscription for each product.
-            </p>
-          </div>
-        </div>
-        <!-- hero content end -->
+<!-- pricing hero start -->
+<section class="pricing-hero">
+  <div class="pricing-hero-bg" aria-hidden="true">
+    <div class="ph-orb ph-orb-1"></div>
+    <div class="ph-orb ph-orb-2"></div>
+    <div class="ph-grid"></div>
+  </div>
+  <div class="ph-shape ph-shape-ring ph-shape-tl" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-ring ph-shape-br" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-dot ph-shape-d1" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-dot ph-shape-d2" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-dot ph-shape-d3" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-cross ph-shape-c1" aria-hidden="true"></div>
+  <div class="ph-shape ph-shape-cross ph-shape-c2" aria-hidden="true"></div>
+  <div class="container">
+    <div class="pricing-hero-inner">
+      <div class="pricing-hero-badge">
+        <iconify-icon icon="heroicons:currency-dollar" width="13" height="13"></iconify-icon>
+        <span>Pricing &amp; Plans</span>
       </div>
-      <div class="column is-6">
-        <div class="hero-area-img" data-aos="fade-up" data-aos-duration="1000">
-          <img src="/assets/images/support-page/support-img.png" alt="" class="img" />
-        </div>
+      <h1>Go Cloud Native Confidently<br><span class="pricing-hero-gradient">with AppsCode</span></h1>
+      <p class="pricing-hero-lead">
+        At AppsCode, we focus on helping you achieve the outcomes you need to make your business successful. Our
+        Support plans are designed to give you the right mix of tools and access to expertise so that you can be
+        successful with AppsCode products while optimizing performance, managing risk, and keeping costs under
+        control.
+      </p>
+      <p class="pricing-hero-sub">Our pricing plans are product specific and you will need a separate subscription for each product.</p>
+      <div class="buttons is-justify-content-center" style="margin-top: 2rem;">
+        <a href="/docs/latest/setup/" class="button ac-button is-primary">
+          <span class="icon"><iconify-icon icon="heroicons:bolt" width="16" height="16"></iconify-icon></span>
+          <span>Install Now Free</span>
+        </a>
+        <a href="{{ $.Site.Params.domain_appscode }}/contact/" class="button ac-button is-white">
+          <span class="icon"><iconify-icon icon="heroicons:chat-bubble-bottom-center" width="16" height="16"></iconify-icon></span>
+          <span>Talk to Us</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
-<!-- hero area for page end -->
+<!-- pricing hero end -->
 
 <!-- features cta area start -->
 <section class="features-cta-area bgc-2 section-padding-100">
