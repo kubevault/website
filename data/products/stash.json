@@ -60,7 +60,7 @@
     {
       "title": "Declarative API",
       "image": {
-        "src": "/assets/images/addons/illustrations/declarative-api.png",
+        "src": "/assets/images/addons/illustrations/declarative-api.svg",
         "alt": "http"
       },
       "icon": {
@@ -73,7 +73,7 @@
     {
       "title": "Backup Kubernetes Volumes",
       "image": {
-        "src": "/assets/images/addons/illustrations/backup-kubernetes-volumes.png",
+        "src": "/assets/images/addons/illustrations/backup-kubernetes-volumes.svg",
         "alt": "http"
       },
       "icon": {
@@ -86,7 +86,7 @@
     {
       "title": "Backup Database",
       "image": {
-        "src": "/assets/images/addons/illustrations/backup-restore-databases.png",
+        "src": "/assets/images/addons/illustrations/backup-restore-databases.svg",
         "alt": "http"
       },
       "icon": {
@@ -99,7 +99,7 @@
     {
       "title": "Multiple Storage Support",
       "image": {
-        "src": "/assets/images/addons/illustrations/multiple-storage-support.png",
+        "src": "/assets/images/addons/illustrations/multiple-storage-support.svg",
         "alt": "http"
       },
       "icon": {
@@ -112,7 +112,7 @@
     {
       "title": "Deduplication",
       "image": {
-        "src": "/assets/images/addons/illustrations/deduplication.png",
+        "src": "/assets/images/addons/illustrations/deduplication.svg",
         "alt": "http"
       },
       "icon": {
@@ -125,7 +125,7 @@
     {
       "title": "Data Encryption",
       "image": {
-        "src": "/assets/images/addons/illustrations/data-encryption.png",
+        "src": "/assets/images/addons/illustrations/data-encryption.svg",
         "alt": "http"
       },
       "icon": {
@@ -138,11 +138,11 @@
     {
       "title": "Volume Snapshot",
       "image": {
-        "src": "/assets/images/addons/illustrations/volume-snapshot.png",
+        "src": "/assets/images/addons/illustrations/volume-snapshot.svg",
         "alt": "http"
       },
       "icon": {
-        "src": "/assets/images/products/stash/features/volume-snapshot.png",
+        "src": "/assets/images/products/stash/features/volume-snapshot.svg",
         "alt": "http"
       },
       "summary": "",
@@ -151,7 +151,7 @@
     {
       "title": "Policy Based Backup",
       "image": {
-        "src": "/assets/images/addons/illustrations/policy-based-backup.png",
+        "src": "/assets/images/addons/illustrations/policy-based-backup.svg",
         "alt": "http"
       },
       "icon": {
@@ -164,7 +164,7 @@
     {
       "title": "Monitoring",
       "image": {
-        "src": "/assets/images/addons/illustrations/monitoring.png",
+        "src": "/assets/images/addons/illustrations/monitoring.svg",
         "alt": "http"
       },
       "icon": {
