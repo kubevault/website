@@ -1,0 +1,34 @@
+apiVersion: kubevault.com/v1alpha1
+kind: VaultServer
+metadata:
+  name: my-vault
+  namespace: demo
+spec:
+  replicas: 1
+  version: "1.2.0"
+  backend:
+    gcs:
+      bucket: "demo-vault"
+      credentialSecret: "google-cred"
+  serviceTemplates:
+  - alias: vault
+    metadata:
+      annotations:
+        name: vault
+    spec:
+      type: LoadBalancer
+      loadBalancerIP: 104.155.177.205
+  tls:
+    certificates:
+      - alias: ca
+  unsealer:
+    secretShares: 4
+    secretThreshold: 2
+    mode:
+      googleKmsGcs:
+        bucket: "demo-vault"
+        kmsProject: "ackube"
+        kmsLocation: "global"
+        kmsKeyRing: "vault"
+        kmsCryptoKey: "vault-key"
+        credentialSecret: "google-cred"
