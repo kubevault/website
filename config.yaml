@@ -47,7 +47,7 @@ params:
   docs_url: https://appscode.com/docs
   learn_url: https://appscode.com/learn
 menu:
-  main:
+  product_kubevault:
   - name: Documentation
     weight: 40
   - name: Features
@@ -55,64 +55,82 @@ menu:
     weight: 21
   - name: Vault Kubernetes Deployment
     identifier: vault-kubernetes-deployment
+    pageRef: /features/vault-kubernetes-deployment
     parent: features
     pre: /assets/images/products/kubevault/features/vaultserverversions.svg
     weight: 10
   - name: Auto Initialization & Unsealing
     identifier: auto-initialization-and-unsealing
+    pageRef: /features/auto-initialization-and-unsealing
     parent: features
     pre: /assets/images/products/kubevault/features/automated-unsealing.svg
     weight: 11
   - name: Vault Backup & Restore
     identifier: vault-backup-restore
+    pageRef: /features/vault-backup-restore
     parent: features
     pre: /assets/images/products/kubevault/features/vault-backup-restore.svg
     weight: 11
   - name: Consume KubeVault Secrets with CSI
     identifier: consume-kubevault-secrets-with-csi
+    pageRef: /features/consume-kubevault-secrets-with-csi
     parent: features
     pre: /assets/images/products/kubevault/features/secrets.svg
     weight: 12
   - name: Manage DB Users Privileges
     identifier: manage-db-users-privileges
+    pageRef: /features/manage-db-users-privileges
     parent: features
     pre: /assets/images/products/kubevault/features/database-users.svg
     weight: 13
   - name: Storage Backend
     identifier: storage-backend
+    pageRef: /features/storage-backend
     parent: features
     pre: /assets/images/products/kubevault/features/storageclasses.svg
     weight: 14
   - name: Authentication Method
     identifier: authentication-method
+    pageRef: /features/authentication-method
     parent: features
     pre: /assets/images/products/kubevault/features/auth.svg
     weight: 15
   - name: Database Secret Engine
     identifier: database-secret-engine
+    pageRef: /features/database-secret-engine
     parent: features
     pre: /assets/images/products/kubevault/features/database-view.png
     weight: 16
   - name: Azure Secret Engine
     identifier: azure-secret-engine
+    pageRef: /features/azure-secret-engine
     parent: features
     pre: /assets/images/products/kubevault/features/azure.png
     weight: 17
   - name: AWS Secret Engine
     identifier: aws-secret-engine
+    pageRef: /features/aws-secret-engine
     parent: features
     pre: /assets/images/products/kubevault/features/aws.png
     weight: 18
   - name: GCP Secret Engine
     identifier: gcp-secret-engine
+    pageRef: /features/gcp-secret-engine
     parent: features
     pre: /assets/images/products/kubevault/features/google-cloud.png
     weight: 19
   - name: Kubectl Plugin
     identifier: kubectl-plugin
+    pageRef: /features/kubectl-plugin
     parent: features
     pre: /assets/images/products/kubevault/features/plugin.svg
     weight: 20
+  - name: Pricing
+    url: /pricing/
+    weight: 30
+  - name: Articles
+    url: /articles/
+    weight: 35
 markup:
   goldmark:
     renderer:
