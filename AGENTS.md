@@ -34,7 +34,7 @@ You need Hugo (extended) installed locally and Node.js for the PostCSS pipeline.
 - `make gen-prod` — clean `public/` and run `hugo --minify --config=config.yaml`. Production build.
 - `make qa` — `make gen` then `firebase use default && firebase deploy` (deploys to QA/staging Firebase project).
 - `make release` — `make gen-prod` then deploy to the production Firebase project.
-- `make check-links` — run `liche` against the built `public/` to verify links.
+- `make check-links` — run `lychee` against the built `public/` to verify links.
 - `make set-version VERSION=v1.2.3` — rewrite `firebase.json` doc-version redirects (used during a release cut).
 - `make set-assets-repo ASSETS_REPO_URL=…` — rewrite `data/config.json` to point at a different assets repo.
 - `make hugo-tools` — fetch the `appscodelabs/hugo-tools` binary into `bin/`. Other targets call this automatically.
