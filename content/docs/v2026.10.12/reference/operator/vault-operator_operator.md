@@ -1,0 +1,83 @@
+---
+title: Vault-Operator Operator
+menu:
+  docs_v2026.10.12:
+    identifier: vault-operator-operator
+    name: Vault-Operator Operator
+    parent: reference-operator
+menu_name: docs_v2026.10.12
+section_menu_id: reference
+info:
+  cli: v0.26.0
+  installer: v2026.10.12
+  operator: v0.26.0
+  unsealer: v0.26.0
+  version: v2026.10.12
+---
+
+## vault-operator operator
+
+Launch Vault operator
+
+```
+vault-operator operator [flags]
+```
+
+### Options
+
+```
+      --burst int                                               The maximum burst for throttle (default 1000000)
+      --cluster-name string                                     Name of cluster used in a multi-cluster setup
+      --docker-registry string                                  Docker image registry for sidecar, init-container, check-job, recovery-job and kubectl-job (default "kubevault")
+      --feature-gates mapStringBool                             A set of key=value pairs that describe feature gates for alpha/experimental features. Options are:
+                                                                AllAlpha=true|false (ALPHA - default=false)
+                                                                AllBeta=true|false (BETA - default=false)
+                                                                DB2=true|false (ALPHA - default=false)
+                                                                Druid=true|false (ALPHA - default=false)
+                                                                Elasticsearch=true|false (ALPHA - default=false)
+                                                                HanaDB=true|false (ALPHA - default=false)
+                                                                Hazelcast=true|false (ALPHA - default=false)
+                                                                Ignite=true|false (ALPHA - default=false)
+                                                                Kafka=true|false (ALPHA - default=false)
+                                                                MSSQLServer=true|false (ALPHA - default=false)
+                                                                MariaDB=true|false (ALPHA - default=false)
+                                                                Memcached=true|false (ALPHA - default=false)
+                                                                Milvus=true|false (ALPHA - default=false)
+                                                                MongoDB=true|false (ALPHA - default=false)
+                                                                Neo4j=true|false (ALPHA - default=false)
+                                                                Oracle=true|false (ALPHA - default=false)
+                                                                Qdrant=true|false (ALPHA - default=false)
+                                                                RabbitMQ=true|false (ALPHA - default=false)
+                                                                Redis=true|false (ALPHA - default=false)
+                                                                Solr=true|false (ALPHA - default=false)
+                                                                Weaviate=true|false (ALPHA - default=false)
+                                                                ZooKeeper=true|false (ALPHA - default=false)
+      --gen-rotate-tls-recommendation-before-expiry-day int     Rotate TLS recommendation will be generated before given day of expiration.
+      --gen-rotate-tls-recommendation-before-expiry-month int   Rotate TLS recommendation will be generated before given month of expiration. (default 1)
+      --gen-rotate-tls-recommendation-before-expiry-year int    Rotate TLS recommendation will be generated before given year of expiration.
+      --health-probe-bind-address string                        The address the probe endpoint binds to. (default ":8081")
+  -h, --help                                                    help for operator
+      --kubeconfig string                                       Path to kubeconfig file with authorization information (the master location is set by the master flag).
+      --leader-elect                                            Enable leader election for controller manager.
+      --license-file string                                     Path to license file
+      --master string                                           The address of the Kubernetes API server (overrides any value in kubeconfig)
+      --max-namespace-slice-shards int                          Tenant isolation: how many NamespaceSlice shards the hub will ever track for one spoke. (default 32)
+      --max-spoke-namespaces int                                Tenant isolation: how many OpenBao namespace entries a single NamespaceSlice shard holds before a spoke rolls over into the next shard. (default 256)
+      --metrics-bind-address string                             The address the metric endpoint binds to. (default ":8080")
+      --qps float                                               The maximum QPS to the master from this client (default 1e+06)
+      --recommendation-resync-period duration                   Recommendation will be generated after every given duration based on the resource status at that moment. Default value is one hour (default 1h0m0s)
+      --register-crds                                           If true, the operator applies its CustomResourceDefinitions on startup. Normally CRDs are installed by the helm chart and this should be left false.
+      --resync-period duration                                  If non-zero, will re-list this often. (default 10m0s)
+```
+
+### Options inherited from parent commands
+
+```
+      --default-seccomp-profile-type string   Default seccomp profile
+      --use-kubeapiserver-fqdn-for-aks        if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.com/Azure/AKS/issues/522 (default true)
+```
+
+### SEE ALSO
+
+* [vault-operator](/docs/v2026.10.12/reference/operator/vault-operator)	 - Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+
