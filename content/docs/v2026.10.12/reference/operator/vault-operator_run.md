@@ -1,0 +1,77 @@
+---
+title: Vault-Operator Run
+menu:
+  docs_v2026.10.12:
+    identifier: vault-operator-run
+    name: Vault-Operator Run
+    parent: reference-operator
+menu_name: docs_v2026.10.12
+section_menu_id: reference
+info:
+  cli: v0.26.0
+  installer: v2026.10.12
+  operator: v0.26.0
+  unsealer: v0.26.0
+  version: v2026.10.12
+---
+
+## vault-operator run
+
+Launch KubeVault Webhook Server
+
+```
+vault-operator run [flags]
+```
+
+### Options
+
+```
+      --burst int                          The maximum burst for throttle (default 1000000)
+      --cert-dir string                    Directory containing tls.crt + tls.key for the webhook server. Empty disables HTTPS (manager will self-sign).
+      --cluster-name string                Name of cluster used in a multi-cluster setup
+      --enable-mutating-webhook            If true, registers mutating webhooks for KubeVault CRDs. (default true)
+      --enable-validating-webhook          If true, registers validating webhooks for KubeVault CRDs. (default true)
+      --feature-gates mapStringBool        A set of key=value pairs that describe feature gates for alpha/experimental features. Options are:
+                                           AllAlpha=true|false (ALPHA - default=false)
+                                           AllBeta=true|false (BETA - default=false)
+                                           DB2=true|false (ALPHA - default=false)
+                                           Druid=true|false (ALPHA - default=false)
+                                           Elasticsearch=true|false (ALPHA - default=false)
+                                           HanaDB=true|false (ALPHA - default=false)
+                                           Hazelcast=true|false (ALPHA - default=false)
+                                           Ignite=true|false (ALPHA - default=false)
+                                           Kafka=true|false (ALPHA - default=false)
+                                           MSSQLServer=true|false (ALPHA - default=false)
+                                           MariaDB=true|false (ALPHA - default=false)
+                                           Memcached=true|false (ALPHA - default=false)
+                                           Milvus=true|false (ALPHA - default=false)
+                                           MongoDB=true|false (ALPHA - default=false)
+                                           Neo4j=true|false (ALPHA - default=false)
+                                           Oracle=true|false (ALPHA - default=false)
+                                           Qdrant=true|false (ALPHA - default=false)
+                                           RabbitMQ=true|false (ALPHA - default=false)
+                                           Redis=true|false (ALPHA - default=false)
+                                           Solr=true|false (ALPHA - default=false)
+                                           Weaviate=true|false (ALPHA - default=false)
+                                           ZooKeeper=true|false (ALPHA - default=false)
+      --health-probe-bind-address string   The address the probe endpoint binds to. (default ":8081")
+  -h, --help                               help for run
+      --kubeconfig string                  Path to kubeconfig file with authorization information (the master location is set by the master flag).
+      --label-key-blacklist strings        list of keys that are not propagated from a CRD object to its offshoots (default [app.kubernetes.io/name,app.kubernetes.io/version,app.kubernetes.io/instance,app.kubernetes.io/managed-by])
+      --leader-elect                       Enable leader election for the webhook manager.
+      --master string                      The address of the Kubernetes API server (overrides any value in kubeconfig)
+      --metrics-bind-address string        The address the metric endpoint binds to. '0' disables.
+      --qps float                          The maximum QPS to the master from this client (default 1e+06)
+```
+
+### Options inherited from parent commands
+
+```
+      --default-seccomp-profile-type string   Default seccomp profile
+      --use-kubeapiserver-fqdn-for-aks        if true, uses kube-apiserver FQDN for AKS cluster to workaround https://github.com/Azure/AKS/issues/522 (default true)
+```
+
+### SEE ALSO
+
+* [vault-operator](/docs/v2026.10.12/reference/operator/vault-operator)	 - Vault Operator by AppsCode - HashiCorp Vault Operator for Kubernetes
+
