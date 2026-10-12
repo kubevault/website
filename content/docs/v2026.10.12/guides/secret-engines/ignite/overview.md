@@ -98,7 +98,6 @@ spec:
     pluginName: ignite-database-plugin   # optional; this is the default
     allowedRoles:
       - "*"
-    insecure: false
 ```
 
 Apply it and wait for `STATUS=Success`:
