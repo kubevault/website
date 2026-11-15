@@ -28,9 +28,9 @@ The KubeVault operator can perform the following operations for externally provi
 
 - Manage [AWS secret engine](https://www.vaultproject.io/docs/secrets/aws/index.html#aws-secrets-engine) using [AWSRole](/docs/v2026.11.15/concepts/secret-engine-crds/aws-secret-engine/awsrole) and [SecretAccessRequest](/docs/v2026.11.15/concepts/secret-engine-crds/secret-access-request). Guides can be found [here](/docs/v2026.11.15/guides/secret-engines/aws/overview).
 
-- Manage [PostgreSQL Database secret engine](https://www.vaultproject.io/api/secret/databases/postgresql.html) using [PostgresRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/postgres) and [SecretAccessRequest](/docs/v2026.11.15/concepts/secret-engine-crds/secret-access-request). Guides can be found [here](/docs/v2026.11.15/guides/secret-engines/postgres/overview).
+- Manage [PostgreSQL Database secret engine](https://www.vaultproject.io/api/secret/databases/postgresql.html) using [PostgresRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/postgres) and [SecretAccessRequest](/docs/v2026.11.15/concepts/secret-engine-crds/secret-access-request). Guides can be found [here](/docs/v2026.11.15/guides/secret-engines/database/postgres/overview).
 
-- Manage [MongoDB Database secret engine](https://www.vaultproject.io/api/secret/databases/mongodb.html) using [MongoDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mongodb) and [SecretAccessRequest](/docs/v2026.11.15/concepts/secret-engine-crds/secret-access-request). Guides can be found [here](/docs/v2026.11.15/guides/secret-engines/mongodb/overview).
+- Manage [MongoDB Database secret engine](https://www.vaultproject.io/api/secret/databases/mongodb.html) using [MongoDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mongodb) and [SecretAccessRequest](/docs/v2026.11.15/concepts/secret-engine-crds/secret-access-request). Guides can be found [here](/docs/v2026.11.15/guides/secret-engines/database/mongodb/overview).
 
 In this tutorial, we are going to show how we can use KubeVault operator for Vault which is not provisioned by KubeVault operator.
 

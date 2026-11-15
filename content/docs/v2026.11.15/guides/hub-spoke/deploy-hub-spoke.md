@@ -245,9 +245,9 @@ spec:
 
 Because the AppBinding's `deploymentMode` is `RemoteRelay`, the SecretEngine controller configures the hub mount with `plugin_name: remote-postgres-plugin` and `spoke_name: cluster-1`. The hub proxies every credential operation to the spoke relay, which runs the real `postgresql-database-plugin` in-process against the spoke-local database.
 
-Postgres, MySQL, MariaDB, Redis, Valkey, SQL Server, Oracle, RabbitMQ, Druid, HANA, Ignite, Kafka, Milvus, Neo4j, Qdrant, Solr, Weaviate, and etcd are supported through the spoke relay. MongoDB and Elasticsearch are not; a SecretEngine for those against a `RemoteRelay` AppBinding is rejected on apply by the validating webhook.
+Druid, etcd, Ignite, Kafka, MariaDB, Microsoft SQL Server, Milvus, MySQL, Neo4j, Oracle, PostgreSQL, Qdrant, RabbitMQ, Redis, SAP HanaDB, Solr, Valkey and Weaviate are supported through the spoke relay. Elasticsearch and MongoDB are not; a SecretEngine for those against a `RemoteRelay` AppBinding is rejected on apply by the validating webhook.
 
-Request credentials the usual way with a `SecretAccessRequest`; see the [secret engine guides](/docs/v2026.11.15/guides/secret-engines/postgres/overview).
+Request credentials the usual way with a `SecretAccessRequest`; see the [secret engine guides](/docs/v2026.11.15/guides/secret-engines/database/postgres/overview).
 
 ## Day-2 operations
 
@@ -266,7 +266,7 @@ Request credentials the usual way with a `SecretAccessRequest`; see the [secret 
 | `relayPlacementRef` silently ignored | OCM hub CRDs are not installed; the operator logs this at startup |
 | ManifestWork `Degraded` with forbidden errors | the klusterlet work agent lacks permission for KubeVault CRs; the aggregation ClusterRole shipped in the ManifestWork requires OCM >= v0.12 |
 | spoke Pod join init container failing | bootstrap token expired (check `status.relayPlacement.clusters[].tokenExpiry`) or the hub Vault API is unreachable from the spoke |
-| VaultRelay `Connected` but SecretEngine fails | the engine type may not be supported through the spoke relay (MongoDB, Elasticsearch) |
+| VaultRelay `Connected` but SecretEngine fails | the engine type may not be supported through the spoke relay (Elasticsearch, MongoDB) |
 
 ## Cleanup
 
@@ -282,5 +282,5 @@ $ kubectl delete ns demo
 - [VaultRelay concept](/docs/v2026.11.15/concepts/vault-server-crds/vaultrelay)
 - [VaultServer concept](/docs/v2026.11.15/concepts/vault-server-crds/vaultserver)
 - [AppBinding concept](/docs/v2026.11.15/concepts/vault-server-crds/appbinding), in particular `spec.parameters.deploymentMode`
-- [Secret engine guides](/docs/v2026.11.15/guides/secret-engines/postgres/overview)
+- [Secret engine guides](/docs/v2026.11.15/guides/secret-engines/database/postgres/overview)
 - [Tenant Isolation with OpenBao Namespaces](/docs/v2026.11.15/guides/tenant-isolation/overview) — isolate each spoke's client-org databases into per-org OpenBao namespaces on the hub

@@ -5,7 +5,7 @@ menu:
     identifier: postgres-database-crds
     name: PostgresRole
     parent: database-crds-concepts
-    weight: 20
+    weight: 140
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -64,7 +64,6 @@ PostgresRole `spec` contains information that necessary for creating a database 
 spec:
   secretEngineRef:
     name: <vault-appbinding-name>
-  path: <database-secret-engine-path>
   defaultTTL: <default-ttl>
   maxTTL: <max-ttl>
   creationStatements:

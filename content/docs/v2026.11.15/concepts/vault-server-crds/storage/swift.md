@@ -5,7 +5,7 @@ menu:
     identifier: swift-storage
     name: OpenStack Swift
     parent: storage-vault-server-crds
-    weight: 50
+    weight: 180
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -18,7 +18,7 @@ info:
 
 > New to KubeVault? Please start [here](/docs/v2026.11.15/concepts/README).
 
-# Swift
+# OpenStack Swift
 
 In Swift storage backend, Vault data will be stored in [OpenStack Swift Container](http://docs.openstack.org/developer/swift/). Vault documentation for Swift storage can be found in [here](https://www.vaultproject.io/docs/configuration/storage/swift.html).
 

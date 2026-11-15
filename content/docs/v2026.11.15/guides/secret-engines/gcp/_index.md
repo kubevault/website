@@ -5,7 +5,7 @@ menu:
     identifier: gcp-secret-engines
     name: GCP
     parent: secret-engines-guides
-    weight: 10
+    weight: 40
 menu_name: docs_v2026.11.15
 info:
   cli: v0.27.0

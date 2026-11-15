@@ -65,7 +65,7 @@ A `VaultRelay` is a `Kubernetes CustomResourceDefinition (CRD)` which deploys an
 
 - [VaultRelay](/docs/v2026.11.15/concepts/vault-server-crds/vaultrelay)
 
-## NamespaceSlice
+## Namespace Slice
 
 A `NamespaceSlice` is a `Kubernetes CustomResourceDefinition (CRD)` the operator uses internally, modeled on `EndpointSlice`, to report the OpenBao namespaces a hub-spoke spoke needs created on the hub as part of tenant isolation. It is operator-managed only.
 
@@ -87,17 +87,27 @@ Introduces to various methods of automatically `Initialization` & `Unsealing` Va
 The `storage backend` represents the location for the durable storage of Vault's information. Each backend has pros, cons, advantages, and trade-offs. For example, some backends support `High Availability - HA` while others provide a more robust backup and restoration process. Introduces to various `Storage Backend` options supported by `KubeVault`.
 
 - [Overview](/docs/v2026.11.15/concepts/vault-server-crds/storage/overview)
-- [Azure](/docs/v2026.11.15/concepts/vault-server-crds/storage/azure)
-- [DynamoDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/dynamodb)
-- [Etcd](/docs/v2026.11.15/concepts/vault-server-crds/storage/etcd)
-- [GCS](/docs/v2026.11.15/concepts/vault-server-crds/storage/gcs)
-- [In Memory](/docs/v2026.11.15/concepts/vault-server-crds/storage/inmem)
-- [MySQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/mysql)
-- [PosgreSQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/postgresql)
-- [AWS S3](/docs/v2026.11.15/concepts/vault-server-crds/storage/s3)
-- [Swift](/docs/v2026.11.15/concepts/vault-server-crds/storage/swift)
+- [Aerospike](/docs/v2026.11.15/concepts/vault-server-crds/storage/aerospike)
+- [Alibaba Cloud OSS](/docs/v2026.11.15/concepts/vault-server-crds/storage/alicloudoss)
+- [Amazon DynamoDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/dynamodb)
+- [Amazon S3](/docs/v2026.11.15/concepts/vault-server-crds/storage/s3)
+- [Azure Blob Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/azure)
+- [Cassandra](/docs/v2026.11.15/concepts/vault-server-crds/storage/cassandra)
+- [CockroachDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/cockroachdb)
 - [Consul](/docs/v2026.11.15/concepts/vault-server-crds/storage/consul)
+- [CouchDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/couchdb)
+- [etcd](/docs/v2026.11.15/concepts/vault-server-crds/storage/etcd)
+- [Filesystem](/docs/v2026.11.15/concepts/vault-server-crds/storage/filesystem)
+- [Google Cloud Spanner](/docs/v2026.11.15/concepts/vault-server-crds/storage/spanner)
+- [Google Cloud Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/gcs)
+- [In-Memory](/docs/v2026.11.15/concepts/vault-server-crds/storage/inmem)
+- [Microsoft SQL Server](/docs/v2026.11.15/concepts/vault-server-crds/storage/mssql)
+- [MySQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/mysql)
+- [OCI Object Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/oci)
+- [OpenStack Swift](/docs/v2026.11.15/concepts/vault-server-crds/storage/swift)
+- [PostgreSQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/postgresql)
 - [Raft](/docs/v2026.11.15/concepts/vault-server-crds/storage/raft)
+- [ZooKeeper](/docs/v2026.11.15/concepts/vault-server-crds/storage/zookeeper)
 
 ### Authentication Methods for Vault Server
 `Auth methods` are the components in Vault that perform authentication and are responsible for assigning identity and a set of policies to a user. In all cases, Vault will enforce authentication as part of the request processing. In most cases, Vault will delegate the authentication administration and decision to the relevant configured external auth method (e.g., Amazon Web Services, GitHub, Google Cloud Platform, Kubernetes, Microsoft Azure, Okta, JWT/OIDC).
@@ -128,15 +138,28 @@ Introduces to various `Authentication methods` supported by `KubeVault`.
 In a `Secret Engine`, a `role` describes an identity with a set of `permissions`, `groups`, or `policies` you want to attach a user of the Secret Engine. Introduces to various roles supported by `KubeVault`.
 
 - [AWSRole](/docs/v2026.11.15/concepts/secret-engine-crds/aws-secret-engine/awsrole)
-- [GCPRole](/docs/v2026.11.15/concepts/secret-engine-crds/gcp-secret-engine/gcprole)
 - [AzureRole](/docs/v2026.11.15/concepts/secret-engine-crds/azure-secret-engine/azurerole)
-- [PKIRole](/docs/v2026.11.15/concepts/secret-engine-crds/pki-secret-engine/pkirole)
-- [MongoDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mongodb)
-- [MySQLRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mysql)
-- [PostgresRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/postgres)
+- [DruidRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/druid)
 - [ElasticsearchRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/elasticsearch)
+- [EtcdRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/etcd)
+- [GCPRole](/docs/v2026.11.15/concepts/secret-engine-crds/gcp-secret-engine/gcprole)
+- [HanaDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/hanadb)
+- [IgniteRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/ignite)
+- [KafkaRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/kafka)
 - [MariaDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mariadb)
+- [MilvusRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/milvus)
+- [MongoDBRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mongodb)
+- [MSSQLServerRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mssqlserver)
+- [MySQLRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/mysql)
+- [Neo4jRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/neo4j)
+- [OracleRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/oracle)
+- [PKIRole](/docs/v2026.11.15/concepts/secret-engine-crds/pki-secret-engine/pkirole)
+- [PostgresRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/postgres)
+- [QdrantRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/qdrant)
+- [RabbitMQRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/rabbitmq)
 - [RedisRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/redis)
+- [SolrRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/solr)
+- [WeaviateRole](/docs/v2026.11.15/concepts/secret-engine-crds/database-secret-engine/weaviate)
   
 ### Secret Access Request
 A `SecretAccessRequest` is a `Kubernetes CustomResourceDefinition (CRD)` which allows a user to request a Vault server for `credentials` in a Kubernetes native way. A `SecretAccessRequest` can be created under various roleRef e.g: `AWSRole`, `GCPRole`, `ElasticsearchRole`, `MongoDBRole`, etc. Introduces to `SecretAccessRequest` CRD, fields & it's various use cases.

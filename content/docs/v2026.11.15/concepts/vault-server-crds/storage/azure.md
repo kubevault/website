@@ -1,11 +1,11 @@
 ---
-title: Azure | Vault Server Storage
+title: Azure Blob Storage | Vault Server Storage
 menu:
   docs_v2026.11.15:
     identifier: azure-storage
-    name: Azure
+    name: Azure Blob Storage
     parent: storage-vault-server-crds
-    weight: 10
+    weight: 50
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -18,7 +18,7 @@ info:
 
 > New to KubeVault? Please start [here](/docs/v2026.11.15/concepts/README).
 
-# Azure
+# Azure Blob Storage
 
 In Azure storage backend, Vault data will be stored in [Azure Storage Container](https://azure.microsoft.com/en-us/services/storage/). Vault documentation for azure storage can be found in [here](https://www.vaultproject.io/docs/configuration/storage/azure.html).
 

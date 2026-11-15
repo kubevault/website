@@ -5,7 +5,7 @@ menu:
     identifier: neo4jrole-database-crds
     name: Neo4jRole
     parent: database-crds-concepts
-    weight: 20
+    weight: 120
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:

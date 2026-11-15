@@ -5,7 +5,7 @@ menu:
     identifier: mysql-database-crds
     name: MySQLRole
     parent: database-crds-concepts
-    weight: 15
+    weight: 110
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -65,7 +65,6 @@ MySQLRole `spec` contains information that necessary for creating a database rol
 spec:
   secretEngineRef:
     name: <secret-engine-name>
-  path: <database-secret-engine-path>
   defaultTTL: <default-ttl>
   maxTTL: <max-ttl>
   creationStatements:

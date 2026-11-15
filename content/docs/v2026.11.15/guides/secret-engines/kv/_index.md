@@ -5,7 +5,7 @@ menu:
     identifier: kv-secret-engines
     name: Key/Value
     parent: secret-engines-guides
-    weight: 20
+    weight: 50
 menu_name: docs_v2026.11.15
 info:
   cli: v0.27.0

@@ -1,9 +1,9 @@
 ---
-title: NamespaceSlice | KubeVault Concepts
+title: Namespace Slice | KubeVault Concepts
 menu:
   docs_v2026.11.15:
     identifier: namespaceslice-vault-server-crds
-    name: NamespaceSlice
+    name: Namespace Slice
     parent: vault-server-crds-concepts
     weight: 14
 menu_name: docs_v2026.11.15

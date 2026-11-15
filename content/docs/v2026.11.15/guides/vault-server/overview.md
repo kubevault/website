@@ -29,13 +29,31 @@ The KubeVault operator makes it easy to deploy, maintain and manage Vault server
 
 - **Vault Secret Engine Management**: Provides a Kubernetes native way to manage Vault secret engines.
 
-  - [GCP Secret Engine](/docs/v2026.11.15/guides/secret-engines/gcp/overview)
   - [AWS Secret Engine](/docs/v2026.11.15/guides/secret-engines/aws/overview)
   - [Azure Secret Engine](/docs/v2026.11.15/guides/secret-engines/azure/overview)
   - Database Secret Engine
-    - [MongoDB Secret Engine](/docs/v2026.11.15/guides/secret-engines/mongodb/overview)
-    - [MySQL Secret Engine](/docs/v2026.11.15/guides/secret-engines/mysql/overview)
-    - [PostgreSQL Secret Engine](/docs/v2026.11.15/guides/secret-engines/postgres/overview)
+    - [Druid Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/druid/overview)
+    - [Elasticsearch Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/elasticsearch/overview)
+    - [etcd Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/etcd/overview)
+    - [Ignite Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/ignite/overview)
+    - [Kafka Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/kafka/overview)
+    - [MariaDB Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/mariadb/overview)
+    - [Microsoft SQL Server Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/mssqlserver/overview)
+    - [Milvus Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/milvus/overview)
+    - [MongoDB Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/mongodb/overview)
+    - [MySQL Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/mysql/overview)
+    - [Neo4j Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/neo4j/overview)
+    - [Oracle Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/oracle/overview)
+    - [PostgreSQL Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/postgres/overview)
+    - [Qdrant Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/qdrant/overview)
+    - [RabbitMQ Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/rabbitmq/overview)
+    - [Redis Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/redis/overview)
+    - [SAP HanaDB Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/hanadb/overview)
+    - [Solr Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/solr/overview)
+    - [Weaviate Secret Engine](/docs/v2026.11.15/guides/secret-engines/database/weaviate/overview)
+  - [GCP Secret Engine](/docs/v2026.11.15/guides/secret-engines/gcp/overview)
+  - [Key/Value Secret Engine](/docs/v2026.11.15/guides/secret-engines/kv/overview)
+  - [PKI Secret Engine](/docs/v2026.11.15/guides/secret-engines/pki/overview)
 
 ## Setup Vault Server
 

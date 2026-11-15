@@ -5,7 +5,7 @@ menu:
     identifier: consul-storage
     name: Consul
     parent: storage-vault-server-crds
-    weight: 10
+    weight: 80
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -50,7 +50,7 @@ spec:
         secretName: vault-keys
 ```
 
-If you need to disable the server from executing the `mlock` syscall, you can provide [disable_mlock](https://www.vaultproject.io/docs/configuration/#disable_mlock) in a ConfigMap and mention the name in `spec.configSource.configMap.name`.
+If you need to disable the server from executing the `mlock` syscall, you can provide [disable_mlock](https://www.vaultproject.io/docs/configuration/#disable_mlock) in the `vault.hcl` key of a Secret and mention the name of the Secret in `spec.configSecret.name`.
 
 ```yaml
 apiVersion: v1

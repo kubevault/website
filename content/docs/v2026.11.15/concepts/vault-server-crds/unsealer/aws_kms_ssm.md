@@ -3,7 +3,7 @@ title: AWS KMS | Vault Unsealer
 menu:
   docs_v2026.11.15:
     identifier: aws-kms-ssm-unsealer
-    name: Aws KMS
+    name: AWS KMS
     parent: unsealer-vault-server-crds
     weight: 1
 menu_name: docs_v2026.11.15

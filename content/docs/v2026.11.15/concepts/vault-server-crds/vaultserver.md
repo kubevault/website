@@ -123,15 +123,14 @@ The server certificate must allow the following wildcard domains:
 
 #### spec.configSecret
 
-`spec.configSecret` is an optional field that allows the user to provide extra configuration for Vault. This field accepts a [VolumeSource](https://github.com/kubernetes/api/blob/release-1.11/core/v1/types.go#L47). You can use any Kubernetes supported volume source such as configMap, secret, azureDisk, etc.
+`spec.configSecret` is an optional field that allows the user to provide extra configuration for Vault. It is a reference to a Secret, in the same namespace as the `VaultServer`, that holds the configuration.
 
-> Please note that the config file name must be `vault.hcl` to work.
+> Please note that the config file name, the key of the Secret, must be `vault.hcl` to work.
 
 ```yaml
 spec:
   configSecret:
-    <type of volume>: # for example `configSecret`
-      name: <name of volume>
+    name: <name of secret>
 ```
 
 ### spec.dataSources
@@ -177,18 +176,27 @@ spec:
 ```
 List of supported backends:
 
-- [Azure](/docs/v2026.11.15/concepts/vault-server-crds/storage/azure)
+- [Aerospike](/docs/v2026.11.15/concepts/vault-server-crds/storage/aerospike)
+- [Alibaba Cloud OSS](/docs/v2026.11.15/concepts/vault-server-crds/storage/alicloudoss)
+- [Amazon DynamoDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/dynamodb)
+- [Amazon S3](/docs/v2026.11.15/concepts/vault-server-crds/storage/s3)
+- [Azure Blob Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/azure)
+- [Cassandra](/docs/v2026.11.15/concepts/vault-server-crds/storage/cassandra)
+- [CockroachDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/cockroachdb)
 - [Consul](/docs/v2026.11.15/concepts/vault-server-crds/storage/consul)
-- [DynamoDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/dynamodb)
-- [Etcd](/docs/v2026.11.15/concepts/vault-server-crds/storage/etcd)
-- [GCS](/docs/v2026.11.15/concepts/vault-server-crds/storage/gcs)
-- [In Memory](/docs/v2026.11.15/concepts/vault-server-crds/storage/inmem)
-- [MySQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/mysql)
-- [PosgreSQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/postgresql)
-- [AWS S3](/docs/v2026.11.15/concepts/vault-server-crds/storage/s3)
-- [Swift](/docs/v2026.11.15/concepts/vault-server-crds/storage/swift)
+- [CouchDB](/docs/v2026.11.15/concepts/vault-server-crds/storage/couchdb)
+- [etcd](/docs/v2026.11.15/concepts/vault-server-crds/storage/etcd)
 - [Filesystem](/docs/v2026.11.15/concepts/vault-server-crds/storage/filesystem)
+- [Google Cloud Spanner](/docs/v2026.11.15/concepts/vault-server-crds/storage/spanner)
+- [Google Cloud Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/gcs)
+- [In-Memory](/docs/v2026.11.15/concepts/vault-server-crds/storage/inmem)
+- [Microsoft SQL Server](/docs/v2026.11.15/concepts/vault-server-crds/storage/mssql)
+- [MySQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/mysql)
+- [OCI Object Storage](/docs/v2026.11.15/concepts/vault-server-crds/storage/oci)
+- [OpenStack Swift](/docs/v2026.11.15/concepts/vault-server-crds/storage/swift)
+- [PostgreSQL](/docs/v2026.11.15/concepts/vault-server-crds/storage/postgresql)
 - [Raft](/docs/v2026.11.15/concepts/vault-server-crds/storage/raft)
+- [ZooKeeper](/docs/v2026.11.15/concepts/vault-server-crds/storage/zookeeper)
 
 #### spec.unsealer
 
@@ -198,7 +206,7 @@ List of supported backends:
 spec:
   unsealer:
     secretShares: <num_of_secret_shares>
-    secretThresold: <num_of_secret_threshold>
+    secretThreshold: <num_of_secret_threshold>
     retryPeriodSeconds: <retry_period>
     overwriteExisting: <true/false>
     mode:
@@ -295,7 +303,7 @@ VaultServer accepts the following fields to set in `spec.podTemplate:`
 
 You can find the full list of fields [here](https://github.com/kmodules/offshoot-api/blob/kubernetes-1.16.3/api/v1/types.go). Some of the fields of `spec.podTemplate` are described below:
 
-##### spec.podTemplate.spec.imagePullSecret
+##### spec.podTemplate.spec.imagePullSecrets
 
 `spec.podTemplate.spec.imagePullSecrets` is an optional field that points to secrets to be used for pulling docker images if you are using a private docker registry.
 

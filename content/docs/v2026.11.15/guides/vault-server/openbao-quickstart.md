@@ -22,7 +22,7 @@ info:
 
 [OpenBao](https://openbao.org/) is the Linux Foundation's open-source fork of HashiCorp Vault, and it's the distribution KubeVault builds and tests against by default. This guide deploys a single-node OpenBao server with the KubeVault operator and walks through enabling a secret engine and reading/writing a secret — the fastest path to a working OpenBao server on Kubernetes.
 
-For a Raft- or PostgreSQL-backed production setup, see the [Raft Backend](/docs/v2026.11.15/guides/vault-server/vault-server-raft-backend) and [PostgreSQL Backend](/docs/v2026.11.15/guides/vault-server/vault-server-postgres-backend) guides. For the full `VaultServer` field reference, see the [VaultServer](/docs/v2026.11.15/concepts/vault-server-crds/vaultserver) concept doc.
+For a Raft- or PostgreSQL-backed production setup, see the [Raft Backend](/docs/v2026.11.15/guides/storage-backends/raft) and [PostgreSQL Backend](/docs/v2026.11.15/guides/storage-backends/postgresql) guides. For the full `VaultServer` field reference, see the [VaultServer](/docs/v2026.11.15/concepts/vault-server-crds/vaultserver) concept doc.
 
 ## Before you begin
 
@@ -76,7 +76,7 @@ spec:
   terminationPolicy: WipeOut
 ```
 
-The `inmem` backend keeps everything in memory, so data is lost whenever the pod restarts. That is fine for this quickstart, but switch to the [Raft](/docs/v2026.11.15/guides/vault-server/vault-server-raft-backend) or [PostgreSQL](/docs/v2026.11.15/guides/vault-server/vault-server-postgres-backend) backend for anything you want to keep. A restarted pod comes back empty and uninitialized, and the operator will not initialize it again because `vault-keys` still holds the previous unseal keys, so delete and re-create the `VaultServer` if that happens.
+The `inmem` backend keeps everything in memory, so data is lost whenever the pod restarts. That is fine for this quickstart, but switch to the [Raft](/docs/v2026.11.15/guides/storage-backends/raft) or [PostgreSQL](/docs/v2026.11.15/guides/storage-backends/postgresql) backend for anything you want to keep. A restarted pod comes back empty and uninitialized, and the operator will not initialize it again because `vault-keys` still holds the previous unseal keys, so delete and re-create the `VaultServer` if that happens.
 
 Deploy it:
 
@@ -189,7 +189,7 @@ Deleting the namespace removes the `VaultServer`, its pod and the `vault-keys` s
 
 ## Next steps
 
-- Move to a durable backend: [Raft Backend](/docs/v2026.11.15/guides/vault-server/vault-server-raft-backend) or [PostgreSQL Backend](/docs/v2026.11.15/guides/vault-server/vault-server-postgres-backend).
-- Enable a database secret engine and issue dynamic credentials: [Secret Engine guides](/docs/v2026.11.15/guides/secret-engines/postgres/overview).
+- Move to a durable backend: [Raft Backend](/docs/v2026.11.15/guides/storage-backends/raft) or [PostgreSQL Backend](/docs/v2026.11.15/guides/storage-backends/postgresql).
+- Enable a database secret engine and issue dynamic credentials: [Secret Engine guides](/docs/v2026.11.15/guides/secret-engines/database/postgres/overview).
 - Run OpenBao across a hub cluster and multiple spokes: [Deploy Vault in a Hub-Spoke Model](/docs/v2026.11.15/guides/hub-spoke/deploy-hub-spoke).
 - Configure additional auth methods: [Auth Method](/docs/v2026.11.15/guides/vault-server/auth-method).

@@ -1,11 +1,11 @@
 ---
-title: Etcd | Vault Server Storage
+title: etcd | Vault Server Storage
 menu:
   docs_v2026.11.15:
     identifier: etcd-storage
-    name: Etcd
+    name: etcd
     parent: storage-vault-server-crds
-    weight: 20
+    weight: 100
 menu_name: docs_v2026.11.15
 section_menu_id: concepts
 info:
@@ -18,9 +18,9 @@ info:
 
 > New to KubeVault? Please start [here](/docs/v2026.11.15/concepts/README).
 
-# Etcd
+# etcd
 
-In Etcd storage backend, Vault data will be stored in [Etcd](https://etcd.io/). Vault documentation for Etcd storage can be found in [here](https://www.vaultproject.io/docs/configuration/storage/etcd.html).
+In etcd storage backend, Vault data will be stored in [etcd](https://etcd.io/). Vault documentation for etcd storage can be found in [here](https://www.vaultproject.io/docs/configuration/storage/etcd.html).
 
 ```yaml
 apiVersion: kubevault.com/v1alpha1
@@ -39,7 +39,7 @@ spec:
 
 ## spec.backend.etcd
 
-To use Etcd as storage backend in Vault specify `spec.backend.etcd` in [VaultServer](/docs/v2026.11.15/concepts/vault-server-crds/vaultserver) CRD.
+To use etcd as storage backend in Vault specify `spec.backend.etcd` in [VaultServer](/docs/v2026.11.15/concepts/vault-server-crds/vaultserver) CRD.
 
 ```yaml
 spec:
@@ -71,6 +71,15 @@ spec:
   backend:
     etcd:
       haEnable: true
+```
+
+> On the `kubevault.com/v1alpha2` `VaultServer` API, this field is named `haEnabled`, the same as on the other storage backends.
+
+```yaml
+spec:
+  backend:
+    etcd:
+      haEnabled: true
 ```
 
 ### etcd.etcdApi
