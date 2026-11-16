@@ -51,7 +51,7 @@ spec:
       from: All
     secretEngines:
       - mysql
-  version: 1.10.3
+  version: "sigilr-2.6.5.1"
   replicas: 3
   backend:
     raft:
@@ -97,7 +97,7 @@ Specifies the name of the `VaultServerVersion` CRD. This CRD holds the image nam
 
 ```yaml
 spec:
-  version: "1.10.3"
+  version: "sigilr-2.6.5.1"
 ```
 
 #### spec.tls

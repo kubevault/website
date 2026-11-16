@@ -76,7 +76,7 @@ metadata:
   namespace: demo
 spec:
   replicas: 1
-  version: "1.18.4"
+  version: "sigilr-2.6.5.1"
   backend:
     s3:
       bucket: "demo-vault-3"
@@ -94,26 +94,24 @@ spec:
 Here, `spec.version` specifies the name of the [VaultServerVersion](/docs/v2026.11.15/concepts/vault-server-crds/vaultserverversion) CRD. If that does not exist, then create one.
 
 ```bash
-$ kubectl get vaultserverversions
-NAME      VERSION   VAULT_IMAGE    DEPRECATED   AGE
-0.11.1    0.11.1    vault:0.11.1   false        12m
+$ kubectl get vaultserverversions sigilr-2.6.5.1
+NAME             VERSION   VAULT_IMAGE                             DEPRECATED   AGE
+sigilr-2.6.5.1   2.6.5     ghcr.io/sigilr/openbao:2.6.5-sigilr.1                12m
 
-$ kubectl get vaultserverversions/0.11.1 -o yaml
+$ kubectl get vaultserverversions/sigilr-2.6.5.1 -o yaml
 apiVersion: catalog.kubevault.com/v1alpha1
 kind: VaultServerVersion
 metadata:
-  labels:
-    app: vault-operator
-  name: 0.11.1
+  name: sigilr-2.6.5.1
 spec:
-  deprecated: false
+  distribution: Sigilr
   exporter:
-    image: kubevault/vault-exporter:canary
+    image: ghcr.io/kubevault/vault-exporter:v0.1.1
   unsealer:
-    image: kubevault/vault-unsealer:0.2.0
+    image: ghcr.io/kubevault/vault-unsealer:v0.27.0
   vault:
-    image: vault:0.11.1
-  version: 0.11.1
+    image: ghcr.io/sigilr/openbao:2.6.5-sigilr.1
+  version: 2.6.5
 ```
 
 Now, we are going to create `my-vault`
@@ -127,7 +125,7 @@ $ cat examples/guides/provider/eks/my-vault.yaml
     namespace: demo
   spec:
     replicas: 1
-    version: "1.2.0"
+    version: "sigilr-2.6.5.1"
     backend:
       s3:
         bucket: "demo-vault-3"
@@ -151,8 +149,8 @@ Check the `my-vault` status. It may take some time to reach `Running` stage.
 
 ```bash
 $ kubectl get vaultserver/my-vault -n demo
-NAME       NODES     VERSION   STATUS    AGE
-my-vault   1         0.11.1    Running   3m
+NAME       NODES   VERSION          STATUS    AGE
+my-vault   1       sigilr-2.6.5.1   Running   3m
 ```
 
 `status` field in `my-vault` will show more detail information.
@@ -268,7 +266,7 @@ Seal Type       shamir
 Sealed          false
 Total Shares    4
 Threshold       2
-Version         0.11.1
+Version         2.6.5-sigilr.1
 Cluster Name    vault-cluster-e4eda2ce
 Cluster ID      d05fec0c-7e09-20f6-0d88-0283ed9c7b72
 HA Enabled      false

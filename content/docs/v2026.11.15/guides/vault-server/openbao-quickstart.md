@@ -48,9 +48,10 @@ openbao-2.6.1    2.6.1     docker.io/openbao/openbao:2.6.1                      
 openbao-2.7.1    2.7.1     docker.io/openbao/openbao:2.7.1                      45h
 sigilr-2.6.1.1   2.6.1     ghcr.io/sigilr/openbao:2.6.1-sigilr.1                45h
 sigilr-2.6.1.2   2.6.1     ghcr.io/sigilr/openbao:2.6.1-sigilr.2                45h
+sigilr-2.6.5.1   2.6.5     ghcr.io/sigilr/openbao:2.6.5-sigilr.1                45h
 ```
 
-This guide uses `sigilr-2.6.1.2`, the latest Sigilr version at the time of writing. To use upstream OpenBao instead, set one of the `openbao-*` versions as `spec.version`.
+This guide uses `sigilr-2.6.5.1`, the latest Sigilr version at the time of writing. To use upstream OpenBao instead, set one of the `openbao-*` versions as `spec.version`.
 
 ## Deploy a VaultServer
 
@@ -63,7 +64,7 @@ metadata:
   name: vault
   namespace: demo
 spec:
-  version: sigilr-2.6.1.2
+  version: sigilr-2.6.5.1
   replicas: 1
   backend:
     inmem: {}
@@ -90,8 +91,8 @@ Wait for the `STATUS` to become `Ready`:
 ```bash
 $ kubectl get vaultserver -n demo -w
 NAME    REPLICAS   VERSION          STATUS         AGE
-vault   1          sigilr-2.6.1.2   Initializing   8s
-vault   1          sigilr-2.6.1.2   Ready          41s
+vault   1          sigilr-2.6.5.1   Initializing   8s
+vault   1          sigilr-2.6.5.1   Ready          41s
 ```
 
 Behind the scenes, the KubeVault operator:
@@ -140,7 +141,7 @@ Initialized     true
 Sealed          false
 Total Shares    4
 Threshold       2
-Version         2.6.1-sigilr.2
+Version         2.6.5-sigilr.1
 Storage Type    inmem
 Cluster Name    vault-cluster-4ec2d230
 Cluster ID      6d1c3b8b-59f7-cebe-6374-8047a9ba8238
