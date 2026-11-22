@@ -36,14 +36,6 @@ params:
   youtube_url: https://www.youtube.com/c/AppsCodeInc
   contact_email: support@appscode.com
   contact_phone: +1(650)241-8486
-  comments:
-    enable: true
-    giscus:
-      repo: appscode/community
-      repoId: R_kgDOG-h6rw
-      category: KubeVault
-      categoryId: DIC_kwDOG-h6r84COCF3
-      map: title
   docs_url: https://appscode.com/docs
   learn_url: https://appscode.com/learn
 menu:
